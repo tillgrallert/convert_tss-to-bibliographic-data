@@ -53,7 +53,7 @@
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib">Manuscript</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">manuscript</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Journal Entry</tei:form>
@@ -69,7 +69,7 @@
                 <tei:form n="marcgt">letter</tei:form>
                 <tei:form n="bib">Letter</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">personal_communication</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Material</tei:form>
@@ -77,7 +77,7 @@
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib">Manuscript</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">manuscript</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Periodical</tei:form>
@@ -101,7 +101,7 @@
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib">Legislation</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">bill</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Book</tei:form>
@@ -109,7 +109,7 @@
                 <tei:form n="marcgt">book</tei:form>
                 <tei:form n="bib">Book</tei:form>
                 <tei:form n="biblatex">mvbook</tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">book</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Book Chapter</tei:form>
@@ -117,7 +117,7 @@
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib">BookSection</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">chapter</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Computer Software</tei:form>
@@ -128,12 +128,20 @@
                 <tei:form n="csl"></tei:form>
             </tei:nym>
             <tei:nym>
+                <tei:form n="tss">Conference Proceedings</tei:form>
+                <tei:form n="zotero">book</tei:form>
+                <tei:form n="marcgt">book</tei:form>
+                <tei:form n="bib">Book</tei:form>
+                <tei:form n="biblatex">mvbook</tei:form>
+                <tei:form n="csl">book</tei:form>
+            </tei:nym>
+            <tei:nym>
                 <tei:form n="tss">Edited Book</tei:form>
                 <tei:form n="zotero">book</tei:form>
                 <tei:form n="marcgt">book</tei:form>
                 <tei:form n="bib">Book</tei:form>
                 <tei:form n="biblatex">mvbook</tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">book</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Electronic Citation</tei:form>
@@ -153,11 +161,11 @@
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Manuscript</tei:form>
-                <tei:form n="zotero"></tei:form>
+                <tei:form n="zotero">manuscript</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">Manuscript</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">manuscript</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Maps</tei:form>
@@ -165,7 +173,7 @@
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib">Image</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">map</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Motion Picture</tei:form>
@@ -200,12 +208,20 @@
                 <tei:form n="csl"></tei:form>
             </tei:nym>
             <tei:nym>
+                <tei:form n="tss">Thesis</tei:form>
+                <tei:form n="zotero"></tei:form>
+                <tei:form n="marcgt"></tei:form>
+                <tei:form n="bib"></tei:form>
+                <tei:form n="biblatex"></tei:form>
+                <tei:form n="csl">thesis</tei:form>
+            </tei:nym>
+            <tei:nym>
                 <tei:form n="tss">Web Page</tei:form>
                 <tei:form n="zotero">Web Page</tei:form>
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib"></tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">webpage</tei:form>
             </tei:nym>
         </tei:listNym>
     </xsl:variable>
