@@ -29,6 +29,7 @@
         - due to the dependence of fields on the item type in Zotero, everything should also be replicated to the extra field.
         - a lot of information should also be mapped to tags, to make use of the tag cloud (and set of the dearly missing browsing feature)
         - due to Sente's file naming restrictions, I had to use the volume field for issue numbers and vice versa. this is fixed BEFORE converting TSS XML to Zotero RDF.
+        - a lot of periodical references have a purely numerical title, which needs to be removed in POSTPROCESSING the TSS XML
     -->
     
      <!-- fields not yet covered 
@@ -45,7 +46,11 @@
             - publicationCountry: can be mapped to "publisher-place" in CSL JSON and will then be picked up by most CSL styles. BUT field not available in Zotero.
                 - map to: "place: " in extra field
         + Archival Material -> manuscript
-        + Archival Periodical
+        + Archival Periodical -> newspaper article
+        + Bill: since all of the legal texts I am dealing with were published either as part of a book or a periodical, this should be reflected by the itemType in Zotero
+            + Book Section
+            + Newspaper Article
+            + Magazine Article
         + Photo
     -->
     
