@@ -81,11 +81,11 @@
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Periodical</tei:form>
-                <tei:form n="zotero"></tei:form>
-                <tei:form n="marcgt">periodical</tei:form>
-                <tei:form n="bib"></tei:form>
-                <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="zotero">newspaperArticle</tei:form>
+                <tei:form n="marcgt"></tei:form>
+                <tei:form n="bib">Article</tei:form>
+                <tei:form n="biblatex">article</tei:form>
+                <tei:form n="csl">article-newspaper</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Periodical Article</tei:form>
