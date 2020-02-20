@@ -11,6 +11,7 @@
   xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" 
   xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+  xmlns:link="http://purl.org/rss/1.0/modules/link/"
   xmlns:oape="https://openarabicpe.github.io/ns"
     version="3.0">
     
