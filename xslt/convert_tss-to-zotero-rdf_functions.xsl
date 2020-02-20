@@ -34,7 +34,6 @@
      <!-- fields not yet covered 
         + Date read
         + Original publication year
-        + attachments
         + some IDs: ISBN
     -->
     
@@ -171,10 +170,10 @@
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Recipient']" mode="m_tss-to-zotero-rdf"/>
             <!-- publisher: name, location -->
         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf-publisher($tss_reference)"/>
-            <!-- link to notes -->
-            <xsl:for-each select="$tss_reference/descendant::tss:note">
-                <dcterms:isReferencedBy rdf:resource="{concat('#',@xml:id)}"/>
-            </xsl:for-each>
+            <!-- links to notes -->
+            <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
+            <!-- links to attachment references -->
+            <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference" mode="m_links"/>
             <xsl:if test="$tss_reference/descendant::tss:characteristic[@name = 'abstractText'] !=''">
                 <dcterms:isReferencedBy rdf:resource="{concat('#',$tss_reference/descendant::tss:characteristic[@name = 'UUID'],'-abstract')}"/>
             </xsl:if>
@@ -227,6 +226,9 @@
         <!-- notes -->
         <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf"/>
         <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'abstractText']" mode="m_construct-note"/>
+        <!-- attachments -->
+        <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference
+            " mode="m_tss-to-zotero-rdf"/>
     </xsl:function>
     
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf-publisher">
@@ -376,10 +378,10 @@
     
     <xsl:template match="tss:author" mode="m_tss-to-zotero-rdf">
         <rdf:li>
-        <foaf:Person>
-            <xsl:apply-templates select="tss:surname" mode="m_tss-to-zotero-rdf"/>
-            <xsl:apply-templates select="tss:forenames" mode="m_tss-to-zotero-rdf"/>
-        </foaf:Person>
+            <foaf:Person>
+                <xsl:apply-templates select="tss:surname" mode="m_tss-to-zotero-rdf"/>
+                <xsl:apply-templates select="tss:forenames" mode="m_tss-to-zotero-rdf"/>
+            </foaf:Person>
         </rdf:li>
     </xsl:template>
     <xsl:template match="tss:surname" mode="m_tss-to-zotero-rdf">
@@ -518,6 +520,14 @@
         </xsl:if>
     </xsl:template>
     
+    <!-- links to notes and attachment references -->
+    <xsl:template match="tss:note" mode="m_links">
+        <dcterms:isReferencedBy rdf:resource="{concat('#',@xml:id)}"/>
+    </xsl:template>
+    <xsl:template match="tss:attachmentReference" mode="m_links">
+        <link:link rdf:resource="{concat('#',@xml:id)}"/>
+    </xsl:template>
+    
     <!-- notes -->
     <xsl:template match="tss:note" mode="m_tss-to-zotero-rdf">
         <bib:Memo>
@@ -539,6 +549,62 @@
                 </rdf:value>
             </bib:Memo>
         </xsl:if>
+    </xsl:template>
+    
+    <!-- attachments -->
+    <xsl:template match="tss:attachmentReference" mode="m_tss-to-zotero-rdf">
+        <z:Attachment rdf:about="{concat('#',@xml:id)}">
+            <z:itemType>attachment</z:itemType>
+            <!-- local URL -->
+            <xsl:apply-templates select="tss:URL[@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed']" mode="m_tss-to-zotero-rdf"/>
+            <!-- date of attachment: will be overwritten upon import -->
+<!--            <dcterms:dateSubmitted>2018-04-03 07:11:40</dcterms:dateSubmitted>-->
+            <!-- name -->
+            <xsl:apply-templates select="tss:name" mode="m_tss-to-zotero-rdf"/>
+            <z:linkMode>
+                <xsl:choose>
+                    <xsl:when test="tss:URL/@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed'">
+                        <xsl:value-of select="2"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="1"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </z:linkMode>
+            <!-- the type doesn't need to be declared upon import -->
+<!--            <xsl:apply-templates select="@type" mode="m_tss-to-zotero-rdf"/>-->
+        </z:Attachment>
+    </xsl:template>
+    
+    <xsl:template match="tss:name" mode="m_tss-to-zotero-rdf">
+        <dc:title>
+            <xsl:apply-templates/>
+        </dc:title>
+    </xsl:template>
+    <xsl:template match="tss:URL" mode="m_tss-to-zotero-rdf">
+        <xsl:choose>
+            <xsl:when test="@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed'">
+                <rdf:resource rdf:resource="{.}"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <dc:identifier>
+                    <dcterms:URI>
+                        <rdf:value>
+                            <xsl:apply-templates/>
+                        </rdf:value>
+                    </dcterms:URI>
+                </dc:identifier>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- the type doesn't need to be declared upon import -->
+    <xsl:template match="tss:attachmentReference/@type" mode="m_tss-to-zotero-rdf">
+        <!-- type mappings:
+            - application/pdf
+            - text/html 
+        -->
+        <link:type></link:type>
     </xsl:template>
     
     <!-- HTML mark-up inside abstracts and notes? -->
