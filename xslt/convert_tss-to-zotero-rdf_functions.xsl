@@ -545,7 +545,7 @@
                 <xsl:attribute name="rdf:about" select="concat('#',parent::tss:characteristics/tss:characteristic[@name = 'UUID'],'-abstract')"/>
                 <rdf:value>
                     <![CDATA[<h1>]]><xsl:text># abstract</xsl:text><![CDATA[</h1>]]>
-                    <xsl:apply-templates mode="m_mark-up"/>
+                    <xsl:apply-templates select="." mode="m_mark-up"/>
                 </rdf:value>
             </bib:Memo>
         </xsl:if>
@@ -609,14 +609,48 @@
     
     <!-- HTML mark-up inside abstracts and notes? -->
     <xsl:template match="html:*" mode="m_tss-to-zotero-rdf"/>
+    <xsl:template match="tss:characteristic[@name = 'abstractText']" mode="m_mark-up">
+        <xsl:choose>
+            <xsl:when test="html:br">
+                <xsl:for-each-group select="child::node()" group-starting-with="html:br">
+                    <!--<xsl:message>
+                        <xsl:value-of select="current-group()"/>
+                    </xsl:message>-->
+                    <![CDATA[<p>]]><xsl:apply-templates select="current-group()" mode="m_mark-up"/><![CDATA[</p>]]>
+                </xsl:for-each-group>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates mode="m_mark-up"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="html:br" mode="m_mark-up"/>
     <xsl:template match="html:*" mode="m_mark-up">
-         <xsl:value-of select="'&lt;'" disable-output-escaping="no"/>
-         <xsl:value-of select="replace(name(),'html:','')"/>
-        <xsl:value-of select="'&gt;'" disable-output-escaping="no"/>
+        <![CDATA[<]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>
         <xsl:apply-templates mode="m_mark-up"/>
-        <xsl:value-of select="'&lt;/'" disable-output-escaping="no"/>
-         <xsl:value-of select="replace(name(),'html:','')"/>
-        <xsl:value-of select="'&gt;'" disable-output-escaping="no"/>
+        <![CDATA[</]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>
+    </xsl:template>
+    <xsl:template match="tei:*" mode="m_mark-up">
+        <![CDATA[<]]><xsl:value-of select="name()"/>
+        <xsl:if test="@*">
+            <xsl:apply-templates select="@*" mode="m_mark-up"/>
+        </xsl:if>
+        <xsl:choose>
+            <xsl:when test=".=''">
+                <xsl:value-of select="'/&gt;'" disable-output-escaping="no"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'&gt;'" disable-output-escaping="no"/>
+                <xsl:apply-templates mode="m_mark-up"/>
+                <![CDATA[</]]><xsl:value-of select="name()"/><![CDATA[>]]>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:*/@*" mode="m_mark-up">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>="</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
     </xsl:template>
     
 </xsl:stylesheet>
