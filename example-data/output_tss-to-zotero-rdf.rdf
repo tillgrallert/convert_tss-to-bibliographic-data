@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:z="http://www.zotero.org/namespaces/export#"
          xmlns:bib="http://purl.org/net/biblio#"
@@ -8,37 +9,1170 @@
          xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+         xmlns:link="http://purl.org/rss/1.0/modules/link/"
          xmlns:oape="https://openarabicpe.github.io/ns">
-   <bib:Manuscript rdf:about="#05A9098B-5156-4AD4-B1B0-1358D2637790">
-      <z:itemType>manuscript</z:itemType>
-      <dc:title>RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913</dc:title>
+   <bib:Book rdf:about="#3BF740DD-8754-4485-9036-51AB808B9AA8">
+      <z:itemType>book</z:itemType>
+      <dc:title>Damascus Affairs: Egyptian Rule in Syria through the Eyes of an Anonymous Damascene Chronicler, 1831-1841 [edition, translation, commentary]</dc:title>
+      <z:shortTitle>Damascus Affairs</z:shortTitle>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Büssow</foaf:surname>
+                  <foaf:givenName>Johann</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Safi</foaf:surname>
+                  <foaf:givenName>Khaled</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
       <dc:publisher>
          <foaf:Organization>
             <vcard:adr>
                <vcard:Address>
-                  <vcard:locality>Damascus</vcard:locality>
+                  <vcard:locality>Würzburg</vcard:locality>
                </vcard:Address>
             </vcard:adr>
-            <foaf:name/>
+            <foaf:name>Ergon</foaf:name>
          </foaf:Organization>
       </dc:publisher>
-      <dc:subject>Source</dc:subject>
-      <dc:subject>US source</dc:subject>
-      <dc:subject>Digital copy</dc:subject>
-      <dc:subject>official records</dc:subject>
+      <dcterms:isReferencedBy rdf:resource="#3BF740DD-8754-4485-9036-51AB808B9AA8-notes"/>
+      <link:link rdf:resource="#uuid_9A922614-383C-4772-862B-16E895E8CC08"/>
+      <dcterms:isReferencedBy rdf:resource="#3BF740DD-8754-4485-9036-51AB808B9AA8-abstract"/>
+      <dc:subject>Food riot</dc:subject>
+      <dc:subject>journal/diary</dc:subject>
       <dc:subject>Damascus</dc:subject>
-      <prism:volume>22</prism:volume>
-      <dc:date>1912</dc:date>
-      <z:archive>NACP</z:archive>
+      <dc:subject>Public protest</dc:subject>
+      <dc:subject>Riot</dc:subject>
+      <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>19th century</dc:subject>
+      <dc:subject>Cereals</dc:subject>
+      <dc:subject>Project: Food Riots</dc:subject>
+      <dc:subject>Food prices</dc:subject>
+      <dc:date>2012</dc:date>
+      <z:libraryCatalog>OIB</z:libraryCatalog>
       <dc:subject>
          <dcterms:LCC>
-            <rdf:value>RG 84 Damascus Vol.22</rdf:value>
+            <rdf:value>C 97:3-26</rdf:value>
          </dcterms:LCC>
       </dc:subject>
-      <dc:description>SenteCitationID: Rg84DamascusVol22 1912
-doi: 
-uuid: 05A9098B-5156-4AD4-B1B0-1358D2637790
+      <dc:description>Citation Key: Büssow+2012
+place: Würzburg
+uuid: 3BF740DD-8754-4485-9036-51AB808B9AA8
 </dc:description>
       <z:language>en</z:language>
-   </bib:Manuscript>
+      <dcterms:abstract>#Justification of re-edition (7)- the authors are  aware of this text having been published and edited before at least twice. at least one of the two manuscripts held at StaBi, which form the basis of their work, had been used for earlier editions. Yet, even in the case where they come to conclusions similar to those of Sabānū—as, for instance, that the (one) author must have been a clerk in Sherīf Pasha's service (14)—they make no reference to his work. - Aḥmad Ghassān Sabānū re-edited the well-known manuscript held at Stabi (No. 9787 / MS Petermann 188), of which a microfilm copy is available at AUB. The book was published in Damascus in 1980.- al-Khūrī Qusṭanṭīn Pasha al-Mukhallisī had published the first edition in the early 20th century.   </dcterms:abstract>
+   </bib:Book>
+   <bib:Memo rdf:about="#3BF740DD-8754-4485-9036-51AB808B9AA8-notes">
+      <rdf:value>
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.18)&lt;/span&gt;
+    
+        &lt;h1&gt;# The chronicle focuses on the following topics: the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The chronicle focuses on the following topics: the rebellion of the Damascenes against the Ottoman governor in 1831; the Egyptian government and its policies; the various rebellions against Egyptian rule, especially those in Palestine in 1834, in Hawran in 1837-39 and in Mount Lebanon in 1840; the Damascene blood libel case of 1840; and finally the end of Egyptian rule and the first effects of the Ottoman Tanzimat reforms in Damascus.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.20ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Structure &lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Structure&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.22ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Causal Explanation of Events &lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Causal Explanation of Events &lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.24ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Political Actors&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Political Actors&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.96)&lt;/span&gt;
+    
+        &lt;h1&gt;# He agreed that they should try to bring ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;He agreed that they should try to bring about a peace agreement, so the monasteries and the notables (afandiyya)231 [of Jerusalem] sent messengers to the shaykhs suing for peace. They [the shaykhs] answered:&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.161)&lt;/span&gt;
+    
+        &lt;h1&gt;# Christian notables: wujūh&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Now the notables (wujuh) of the Christians have gathered in the house of Master Ibrahim Tannus&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.161)&lt;/span&gt;
+    
+        &lt;h1&gt;# Muslim notables: afandiyya&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;When the Mütesellim saw this, he said to the Muslim notables (afandiyya): ‘What do you have to say?&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.165)&lt;/span&gt;
+    
+        &lt;h1&gt;# aʿyān and afandiyya as members of a council&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;On the same Friday, a session of the Administrative Council (diwan hukm) was held as usual. They set up a Consultative Council (majlis mashwara) made up of the notables (aʿyan), gentlemen (afandiyya) and merchants (tujjar), and an Egyptian Christian called Yusuf ʿAyrut474 became the council’s chief clerk (mubashir kitabat al-diwan), while Khawaja Rufaʾil remained director of the treasury.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.58ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1832 Price Rises and the Death of the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;1832 Price Rises and the Death of the Zarbhane Emini&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.59)&lt;/span&gt;
+    
+        &lt;h1&gt;# Those of them who were hoarding supplies of ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Those of them who were hoarding supplies of wheat began to squirm, for the Vizier announced that anyone who knew that someone was concealing wheat and informed the government would receive a reward (bakhshish) of 100 kuruş&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.59)&lt;/span&gt;
+    
+        &lt;h1&gt;# A few days after the Vizier arrived, the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;A few days after the Vizier arrived, the price of a ratl of bread rose from 44 to 60 fidda, and one mudd of wheat which had cost 6 kuruş was priced at 8 kuruş, but could not be found [even at that price]. Thus all the Vizier’s speeches had no effect.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.61)&lt;/span&gt;
+    
+        &lt;h1&gt;# At the beginning of Lent (al-Sawm al-Kabir),106 the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;At the beginning of Lent (al-Sawm al-Kabir),106 the situation worsened. One mudd of wheat was sold in the city107 for 14 kuruş, one mudd of barley for 8 kuruş, maize for 10 kuruş, and a ratl of rice for 5 kuruş. Because the bakers in the market received only small quantities of flour, the situation at the bakeries was dreadful, and people waited half the day to get their bread. By the first Friday of Lent, things had become even worse. The people, stretched to the limit, snatched about 50 trays108 of bread in the streets and from the bakeries. They even stole dough in the streets, and from the knead-ing troughs inside the bakeries.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.61)&lt;/span&gt;
+    
+        &lt;h1&gt;# Coming back to the [issue of] bread, when ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Coming back to the [issue of] bread, when the authorities [lowered and] set the price of one ratl at 60 fidda, people waited to see what would happen. Within only a few days of their lowering the price, the bread [offered for sale] was as dark as liver104 and even then it as hardly available. By the end of January the price of [1 mudd of] wheat was 8 kuruş, but by the beginning of February, it had risen to 10 kuruş and more. One ratl of flour cost 3 kuruş and a loaf of white bread the size of a large biscuit (qataʾif) was 4 fidda, or 3½ kuruş for a ratl. A loaf of white oven bread (tannuri) was 8 fidda, or about 4½ kuruş for a ratl, and a ratl of brown rusks cost 4½ kuruş, too, as did a ratl of ‘military rice’ (al-ruzz al-ʿaskari),105 and other prices were at a similar level. This entire situation was due to the government’s inaction, while [real] au-thority  remained in the hands of local leaders (awlad al-balad), who  did whatever they wanted. &lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.156)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1840: Ps 6 for a raṭl of bread&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Some soldiers camped in the city’s artisan workshops and trading houses. Neither bread nor flour was to be found, because all the mills had been taken over by the government, as explained before, and the price of one ratl of bread reached 6 kuruş.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.7)&lt;/span&gt;
+    
+        &lt;h1&gt;# The anonymous Arabic chronicle that is presented here1 ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The anonymous Arabic chronicle that is presented here1 offers rich and de-tailed information about political and social transformations between 1831 and 1841 as experienced by a citizen of Damascus.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.7)&lt;/span&gt;
+    
+        &lt;h1&gt;# This edition and translation of the chronicle tries ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;This edition and translation of the chronicle tries to demonstrate that the text is not only a source of historical facts, but also an important document on the ways Arab inhabitants of the Levant in the 1830s and 40s thought and communicated about the social and political realities of their period. The value of the text is greatly enhanced by the fact that we have two ver-sions of it&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.8)&lt;/span&gt;
+    
+        &lt;h1&gt;# Therefore we present the two versions in synop-tic ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Therefore we present the two versions in synop-tic form.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.8)&lt;/span&gt;
+    
+        &lt;h1&gt;# The English translation makes the chronicle ac-cessible to ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The English translation makes the chronicle ac-cessible to a wider readership with an interest in the history of the Middle East. For practical reasons, it follows MS Petermann 188, which is the more elaborate and better preserved of the two texts.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.35ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Translation&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Translation&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.1)&lt;/span&gt;
+    
+        &lt;h1&gt;# The present publication was initiated by the discovery ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The present publication was initiated by the discovery of an anonymous Arabic manuscript among the papers left upon his death by Johann Gott- fried Wetzstein, the first Prussian Consul assigned to the Ottoman Province of Damascus from 1849 to 1861.1 This discovery was made in the 1980s by Ingeborg Huhn as she prepared her doctoral dissertation based on the Wetzstein Papers, which are kept in the State Library of Berlin.2 As it even-tually became clear that the manuscript was a hitherto unknown recension of the Arabic chronicle known  as  Mudhakkirat Tarikhiyya or ‘Historical Memoirs’, which is also among the holdings of the Berlin State Library,3 we decided to publish a parallel edition of both texts together with an anno-tated English translation of the more elaborate version of the text (MS Pe-termann 188).&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;At least the MS Petermann 188 has been edited before by Sabānū&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#FDEADB"&gt;
+        
+        &lt;span&gt;(p.1ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Johann Gottfried Wetzstein (1815-1905) &lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#FDEADB"&gt;
+            &lt;p&gt;&gt;Johann Gottfried Wetzstein (1815-1905) &lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.7ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Introduction&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Introduction&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.1ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# Preface&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;Preface&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;By Ingeborg Huhn&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.7)&lt;/span&gt;
+    
+        &lt;h1&gt;# Previous editions&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Given the importance of the events described in the text, it is not surprising that one of the two known recensions of this chronicle was edited as early as the 1920s by a Lebanese scholar, Qustantin al-Basha al-Mukhallisi,4 and that a second edition, by a Syrian scholar, Ghassan Sabanu, was published in 1980.5 Nevertheless, only relatively few historians of the period have used the text as a source,6 although many fields of study still might profit from it.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.8)&lt;/span&gt;
+    
+        &lt;h1&gt;# The title we have chosen for this book, ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The title we have chosen for this book, ‘Damascus Affairs’, attempts to capture the basic element of the text’s historical narrative: selected public events or ‘affairs’ (Ar. hawadith or maddat) that were discussed in the author’s hometown Damascus during the years 1831-41.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.12)&lt;/span&gt;
+    
+        &lt;h1&gt;# The four decades between 1830 and 1870, in ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The four decades between 1830 and 1870, in particular, can be regarded as a prolonged period of crisis, which reached its peak during anti-Christian riots in Mount Lebanon and Damascus in 1860.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.12)&lt;/span&gt;
+    
+        &lt;h1&gt;# Damascene politics was dominated by four political camps ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Damascene politics was dominated by four political camps that were identified with four areas of the city (see map 2):&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.12)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1) The citadel and the adjacent areas to the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The citadel and the adjacent areas to the north and west of it housed the political and military  centres of power&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.13)&lt;/span&gt;
+    
+        &lt;h1&gt;# 2) The residential areas around the government quarter were ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The residential areas around the government quarter were home to the loyalist ʿAzm&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.13)&lt;/span&gt;
+    
+        &lt;h1&gt;# 3) The southern neighbourhoods, especially the suburb of Midan,25 ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The southern neighbourhoods, especially the suburb of Midan,25 were the stronghold of an oppositional faction, which was led by local militia leaders and by wealthy grain merchants.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.13)&lt;/span&gt;
+    
+        &lt;h1&gt;# 4) Finally, the Eastern part of the walled city ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Finally, the Eastern part of the walled city comprised the most impor-tant centres of the non-Muslim population&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.14ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# The Author and His Presumptive Public&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;The Author and His Presumptive Public&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.14)&lt;/span&gt;
+    
+        &lt;h1&gt;# in both versions the text is marked by ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;in both versions the text is marked by internal stylistic breaks which suggest that it was compiled from different sources.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.35ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1831 Mehmed Selim Pasha Enters Damascus&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;1831 Mehmed Selim Pasha Enters Damascus&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.14)&lt;/span&gt;
+    
+        &lt;h1&gt;# Thus, we can locate the author - or ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Thus, we can locate the author - or at least the author of this particular episode - in the scribal offices of the government building in Damascus. This also explains why the text quotes extensively from government documents and presents first-hand reports on the provincial administration.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;This has already been noted by Sabānū, who should have been mentioned here&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.15)&lt;/span&gt;
+    
+        &lt;h1&gt;# Greek Orthodox&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;the author of the text belonged to the Greek Ortho-dox community, for he addresses the Greek Orthodox Patriarch residing in Damascus as ‘our lord the patriarch’36 and he sympathises with the Greek Orthodox in his description of quarrels between them and the Catholics in 1832.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.15)&lt;/span&gt;
+    
+        &lt;h1&gt;# textile industries / market&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;the author of these passages was well acquainted with the textile market and its social milieu.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.15)&lt;/span&gt;
+    
+        &lt;h1&gt;# partisan of the loyal-ist ʿAzm faction.&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;a partisan of the loyal-ist ʿAzm faction.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.16)&lt;/span&gt;
+    
+        &lt;h1&gt;# Finally, the author’s language shows him to be ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Finally, the author’s language shows him to be a native of Syria, as he uses a number of terms and expressions typical for Levantine dialects, such as zalama (pl. zilim) for ‘man’ or ‘infantry soldier’, and siran for ‘trip’ or ‘out-ing’.40 It would be most interesting to see whether this dialect vocabulary is attributable to a specific town or region within Syria.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;Sabānū 1980@7 did exactly that and claimed that the author had a recognisable Tripolitanian accent&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.16)&lt;/span&gt;
+    
+        &lt;h1&gt;# likely author: ʿAbdallah Nawfal from Tripoli&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;So it does indeed seem likely that the author was ʿAbdallah Nawfal, the father of the young Salim. At any rate, the passage indicates a close relationship with the Nawfal family.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.16)&lt;/span&gt;
+    
+        &lt;h1&gt;# The Lebanese historian ʿIsa Iskandar al-Maʾluf (1868-1956) has ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The Lebanese historian ʿIsa Iskandar al-Maʾluf (1868-1956) has advanced the thesis that the author of the chronicle was a native of Tripoli in  Lebanon (Ta r a b u l u s a l - S h a m),  ʿAbdallah ibn Jirjis Nawfal (1797-1866).&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;This again fits Sabānū's judgement, which they at least mention in the footnote&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.17)&lt;/span&gt;
+    
+        &lt;h1&gt;# Nawfal Niʿmatallah Nawfal&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The most prominent of them was ʿAbdallah Nawfal’s  nephew, Nawfal Niʿmatallah Nawfal (1812-87), who spent his childhood years in Cairo and returned to Syria in 1828, where he served in several official positions and acquired some fame as an historian.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.18)&lt;/span&gt;
+    
+        &lt;h1&gt;# Our author was obviously not a professional scholar, ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Our author was obviously not a professional scholar, but one of many Syrian ‘commoner chroniclers’ who kept diaries and compiled historical re-ports during this period.51 Thus he does not cite any other writings as sec-ondary sources and concentrates exclusively on the period he himself wit-nessed. For whom, then, did he write? Considering the numerous blank lines and amendments in MS Petermann 188 (see fig. 1), one might take it for the unfinished autograph of a chronicle that had not yet circulated in public.52 However, the discovery of MS Wetzstein, a second version of the chronicle written by another hand, clearly demonstrates that the chronicle was copied several times and can thus be considered a published text.53 It seems probable that the text, especially the more concise and entertaining version in MS Wetzstein, was read out in front of a, mainly Christian, audi-ence in private gatherings or in coffeehouses.5&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E0ECF4"&gt;
+        
+        &lt;span&gt;(p.18ff)&lt;/span&gt;
+    
+        &lt;h1&gt;# The Text: Contents and Structure &lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E0ECF4"&gt;
+            &lt;p&gt;&gt;The Text: Contents and Structure&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.20)&lt;/span&gt;
+    
+        &lt;h1&gt;# The author’s own observations are mostly marked by ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The author’s own observations are mostly marked by phrases such as ‘you could see … (wa-tanzur)’.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.20)&lt;/span&gt;
+    
+        &lt;h1&gt;# Oral re-ports that the author received from other ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Oral re-ports that the author received from other people or overheard in conversa-tions in Damascus are introduced by phrases such as ‘it was said that… (wa-qila)’.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.20)&lt;/span&gt;
+    
+        &lt;h1&gt;# Excerpts from written communications, which the author may ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Excerpts from written communications, which the author may have accessed through his work in the government offices, are mostly introduced by phrases such as ‘a report arrived … and this is a copy of it (wa-hadhihi su-ratuhu)’.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.21)&lt;/span&gt;
+    
+        &lt;h1&gt;# The character of a montage - which is ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The character of a montage - which is not unique among Arab chronicles of the time74 - becomes clearer when one notes the logical and stylistic breaks in the text.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.22)&lt;/span&gt;
+    
+        &lt;h1&gt;# Like most contemporary works in this genre, the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Like most contemporary works in this genre, the chronicle is largely descrip-tive. However, in several passages, the author presents a brief causal analysis, and almost all these causes belong to four types.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.59)&lt;/span&gt;
+    
+        &lt;h1&gt;# meat and bread price&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;One okka of meat cost 20 fidda and one ratl of bread was sold for 1 kuruş and 4 fidda, and other prices rose in the same way. People became agitated and wanted the Vizier to arrive so that the situation would ease and prices come down.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.24)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1) ahālī&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Among them is the term ahali (here mostly translated as ‘the city’s local inhabitants’). Ahali was generally used as a neutral term for the population of a certain location, as in ‘the people of Damascus’. However, in the chronicle the term consistently refers to the Muslim population. Then there is a group designated as awlad al-balad (here: ‘the local towns-men’ or ‘the locals’). In the chronicle, this term mostly refers to members of the above-mentioned localist faction, who led the revolt of 1831. The author does not count himself and the Greek Orthodox among the ‘locals’.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.24)&lt;/span&gt;
+    
+        &lt;h1&gt;# 2) notables: Āğā, aʿyān, wujūh, and efendiyya&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The principal political and military leaders of the Muslim majority population are the aghas or paramilitary chieftains, while the civil elites are referred to as ‘notables’ (aʿyan, wujuh, and in Muslim contexts also afandiyya). They act as political representatives of certain population groups, who negotiate with the Ottoman or Egyptian rulers. The Christian and Jewish communities have ‘notables’ of their own.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E3EDE7"&gt;
+        
+        &lt;span&gt;(p.24)&lt;/span&gt;
+    
+        &lt;h1&gt;# 3) artisans: ahālī al-ḥiraf&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E3EDE7"&gt;
+            &lt;p&gt;&gt;members of the artisans’ guilds (ahali al-hiraf)&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;from different reliigious communites&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.24)&lt;/span&gt;
+    
+        &lt;h1&gt;# in direct contrast to agents of disorder: the ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;in direct contrast to agents of disorder: the ‘locals’ who are driven by emotions and the desire for dominance, the un-disciplined Ottoman soldiery, the rebellious mountain peasantry and what the author calls the ‘foolish’ or ‘ignorant’ (al-juhhal) among the Christians&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.25)&lt;/span&gt;
+    
+        &lt;h1&gt;# ʿarāḍa&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;On the third day of the celebration, a group of foolish (juhhal) Christians gath-ered intending to stage a parade (ʿarada). When their own Christian notables (wu-juh) forbade the parade, some of them turned to the Deputy Governor asking his permission to stage a parade, which he granted them. Thus they gathered and decorated a camel on top of which they seated Hamza al-Dhikra, a Muslim from the Kharab neighbourhood.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;reference to p.72 below&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.72)&lt;/span&gt;
+    
+        &lt;h1&gt;# ʿarāḍa: celebrating, mocking Muslims&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;On the third day of the celebration, a group of foolish (juhhal) Christians gathered intending to stage a parade (ʿarada). When their own Christian no-tables (wujuh) forbade the parade, some of them turned to the Deputy Gov-ernor asking his permission to stage a parade, which he granted them. Thus they gathered and decorated a camel on top of which they seated Hamza al-Dhikra, a Muslim from the Kharab neighbourhood. They also put two bot-tles of arak147 on the camel’s back and carried two or three torches in the shape of crosses which they decorated with flowers and fruits. The proces-sion departed from Taliʿ al-Qubba with lines [of men] on either side, carry-ing wooden staffs. A crowd followed, also with sticks, some performing ac-robatic stunts, and others, led by a man with a baton, chanting rhymes like ‘Hail to the victorious Ibrahim Pasha! May God curse those who have been humiliated! (Ibrahim Pasha ya mansur, Allah yalʿan al-maqhur)’ and such like. The torches in the shape of crosses were carried amongst them and bringing up the rear was the decorated camel with the Muslim on its back. Whenever they advanced a few paces, he would take one of the bottles and wave it above the [on-looking] Muslims’ heads, shouting: ‘Christ is risen!’,148 while taking a swig [from the bottle].&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.77)&lt;/span&gt;
+    
+        &lt;h1&gt;# muḥtasib, prices of foodstuffs&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The Egyptians appointed a price inspector (muhtasib) by the name of Mustafa Agha Ibn Shubayb, who controlled all the prices, and no one could any longer exceed the [fixed] price by even one misriyya.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.79)&lt;/span&gt;
+    
+        &lt;h1&gt;# Most of the fools went around in parades, ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Most of the fools went around in parades, arak bottles in their hands, shouting in the streets of the city: ‘Pray to Jesus! Who can stand against us?! Our swords are drawn! The Lord is with us!’ And so they went on, non-stop, with songs and wearing their finery, for those three days, so that they made the Muslims very angry.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;again ʿarāḍa&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.77)&lt;/span&gt;
+    
+        &lt;h1&gt;# Then, Mehmed ʿAli Pasha sent a governor (vali) ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Then, Mehmed ʿAli Pasha sent a governor (vali) to Damascus by the name of [Mehmed] Şerif Bey.168 He entered Damascus with a great parade, and the aʿyan came and welcomed him, among them Khawaja Hanna Bahri, who en-tered Damascus walking beside him.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;according to the index, the original would have used ʿarāḍa, but the source uses mawkib&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#FFF9D6"&gt;
+        
+        &lt;span&gt;(p.123)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1839: Ps 18 for the kile of wheat&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#FFF9D6"&gt;
+            &lt;p&gt;&gt;Wheat [for example] was sold from the threshing floor at 18 kuruş a kile&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.83-84)&lt;/span&gt;
+    
+        &lt;h1&gt;# Parade (ʿarāḍa) of Christian fools&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;On the third day of the decorations, a Saturday, a group of foolish Chris-tians staged a parade, carrying sticks and dressed up, forming a parade, and singing songs. The procession went along with incense burners, perfume bottles and candles towards Bab Tuma, the Zaynabiyya, Mazz al-Qasab, ʿAmara, Surujiyya and the Saray, where they collected donations. Then they went on to Darwishiyya, Suq Jaqmaq,183 Khayyatin, Suq al-Silah, al-Buzuriyya, Maʾdhanat al-Shahm, and Taliʿ al-Qubba. That day, you could see the inhabitants of the whole city in the streets watching the scene, and the local people almost exploded with anger at what the Christians had done.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.26)&lt;/span&gt;
+    
+        &lt;h1&gt;# The text of our two manuscripts must have ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The text of our two manuscripts must have been compiled in the early 1840s, at a time of intense sectarian strife. In fact, the last events it reports concern the destruction of a church by angry Muslim crowds in a village close to Damascus.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.216)&lt;/span&gt;
+    
+        &lt;h1&gt;# index: ʿarāḍa&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;parade (ʿarada), 25, 35, 47, 52, 56, 57, 72-3, 77, 79, 83-4 100, 142, 144&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;Problem: these references combine mawkib and ʿarāḍa into one item&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.35)&lt;/span&gt;
+    
+        &lt;h1&gt;# Mehmed Selīm Pasha, arrival at Damascus&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;a vizier2 by the name of Mehmed Selim Pasha3 entered Damascus amidst a great parade.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;parade here is mawkib&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.47)&lt;/span&gt;
+    
+        &lt;h1&gt;# After a few days the Çorbacı arrived, and ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;After a few days the Çorbacı arrived, and the townspeople went out to welcome him and accompanied him into the city with a great parade.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.52)&lt;/span&gt;
+    
+        &lt;h1&gt;# The bodies of the Vizier and the other ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The bodies of the Vizier and the other victims were taken and laid out in front of the gate of the citadel, naked, one by one, and people came to look at them from morning till evening that day. They also took the heads of the Vizier and his uncle and paraded them, firing guns and beating drums.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.76)&lt;/span&gt;
+    
+        &lt;h1&gt;# Egyptians sent a regiment of four thousand soldiers ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;Egyptians sent a regiment of four thousand soldiers to meet him when he was about two hours away, and he entered the camp with a great parade. Mehmed ʿAli’s family88 welcomed him and had a marquee erected for him alongside them.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.58)&lt;/span&gt;
+    
+        &lt;h1&gt;# rising bread prices&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;With regard to prices, [already] before the Vizier arrived, all the bread sell-ers had raised their prices, and wheat was no longer to be found.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.60)&lt;/span&gt;
+    
+        &lt;h1&gt;# 1832: bread riot of artisans&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;On the day when the price of bread reached 60 fidda, the local ar-tisans rose up and demonstrated against the high cost of bread.1&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;began to raise the prices of their own produce&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.60)&lt;/span&gt;
+    
+        &lt;h1&gt;# artisan strike: hunt strike breakers&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;The artisans went around [the city], [encouraging people] to revolt. When some of them arrived at the shop of ʿAsaʿisa, where they found an artisan at work, they wanted him to join the strike, but he refused. [Mean-while] the son of ʿAsaʿisa started to fight with one of the artisans and in-jured his hand.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.109)&lt;/span&gt;
+    
+        &lt;h1&gt;# [18 April 1838], an announcement concerning the official ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;[18 April 1838], an announcement concerning the official ex-change rates was issued.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.109)&lt;/span&gt;
+    
+        &lt;h1&gt;# provisions for the military&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;When the military camp was set up near the water in the centre of the Lajah, Ibrahim Pasha issued orders to the people of the Hawran that they should provide bread, 3 ratl for every feddan [of agricultural land in their possession]. [In addition], bread and rusk still came from Damascus.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.46)&lt;/span&gt;
+    
+        &lt;h1&gt;# There is a neighbourhood by the name of ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;There is a neighbourhood by the name of ʿAmara whose inhabitants are uneducated and wayward peasants and, because of their primitive understanding, they rioted for two hours. News of this reached the Vizier, and he immediately sent the soldiers to the city to kill, and rob and insult [them]. First the soldiers attacked a neighbourhood called Qanawat; they plun-dered it, abused its women and set fire to it. This was precisely the place where the salyane had been assessed first! He then sent an order to the citadel to shell the city with cannon and rifle fire. The soldiers were killing, plundering, burning and rob-bing, and those in the citadel shelled the city with cannon fire, intending to de-stroy it. The inhabitants of the city rose up to protect their honour and life.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#E3EDE7"&gt;
+        
+        &lt;span&gt;(p.24)&lt;/span&gt;
+    
+        &lt;h1&gt;# 4) ‘honourable’ or ‘respectable people’&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#E3EDE7"&gt;
+            &lt;p&gt;&gt;‘honourable’ or ‘respectable people’ (ahl al-ʿird or ashab al-ʿird).&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;ahl al-ʿirḍ, also from different reliigious communites, people who do not take to the streets&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.86)&lt;/span&gt;
+    
+        &lt;h1&gt;# opening of a winery&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;After that, an order was issued by Ibrahim Pasha that a [government] win-ery (khammara) should be established in Damascus, and he ordered the ad-ministrative council to make an announcement in the Christian and Jewish quarters and elsewhere so that the rights to it could be auctioned.185 The auction continued for fifteen days, and the licence was eventually sold for 700 purses (kis). The licence became valid on the Feast of the Cross and there were Christians, Jews and Muslims among the licensees. They took the Khan al-Masbana in the Kharab neighbourhood and the starch factory (Qaʿat al-Nashaʾ) and turned them over to wine production. The Muslims were visibly very downcast, because nothing like this had ever happened before in Damascus. One could see that the customers there were Muslims, Christians and Jews, and that arak and wine were openly served in coffee-houses and in the streets, including in ʿAli Ibn Munin’s coffeehouse, the Bab Sharqi Coffeehouse, the Bab Tuma Coffeehouse and stalls in Bab al-Jabiya, in the Horse Market, and in Bab al-Musalla.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;alcohol&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.86)&lt;/span&gt;
+    
+        &lt;h1&gt;# alcohol trade, prices&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;A general order was issued to the effect that those who sold arak and wine or offered to sell arak and wine without a licence from the official wine producers would be subject to severe punishment (zayan).186 The authorities fixed the price of a ratl of arak at 12 kuruş and a ratl of wine at 6 kuruş.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    
+         &lt;div style="background-color:#DCD9C7"&gt;
+        
+        &lt;span&gt;(p.143)&lt;/span&gt;
+    
+        &lt;h1&gt;# People lined the streets, and a huge crowd ...&lt;/h1&gt;
+    
+        &lt;blockquote style="background-color:#DCD9C7"&gt;
+            &lt;p&gt;&gt;People lined the streets, and a huge crowd followed him, most of whom were not able even to catch a glimpse of him [because the street was too crowded].&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;&lt;/p&gt;
+    
+         &lt;/div&gt;
+    </rdf:value>
+   </bib:Memo>
+   <bib:Memo rdf:about="#3BF740DD-8754-4485-9036-51AB808B9AA8-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;#Justification of re-edition (7)&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;- the authors are  aware of this text having been published and edited before at least twice. at least one of the two manuscripts held at StaBi, which form the basis of their work, had been used for earlier editions. Yet, even in the case where they come to conclusions similar to those of Sabānū—as, for instance, that the (one) author must have been a clerk in Sherīf Pasha's service (14)—they make no reference to his work. &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;- Aḥmad Ghassān Sabānū re-edited the well-known manuscript held at Stabi (No. 9787 / MS Petermann 188), of which a microfilm copy is available at AUB. The book was published in Damascus in 1980.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;- al-Khūrī Qusṭanṭīn Pasha al-Mukhallisī had published the first edition in the early 20th century.   &lt;/p&gt;
+                </rdf:value>
+   </bib:Memo>
+   <z:Attachment rdf:about="#uuid_9A922614-383C-4772-862B-16E895E8CC08">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0&#xA;            IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBs&#xA;            ZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAi&#xA;            Pgo8ZGljdD4KCTxrZXk+UmVsYXRpdmUgUGF0aDwva2V5PgoJPHN0cmluZz5Cw7xzc293LCBK&#xA;            b2hhbm4vQsO8c3NvdyAyMDEyIERhbWFzY3VzIEFmZmFpcnMgRWd5cHRpYW4gUnVsZSBpbiBT&#xA;            eXJpYSB0aHJvdWdoIHRoZSBFeWVzIG9mIGFuIEFub255bW91cyBEYW1hc2NlbmUgQ2hyLnBk&#xA;            Zjwvc3RyaW5nPgo8L2RpY3Q+CjwvcGxpc3Q+Cg==&#xA;            "/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
 </rdf:RDF>
