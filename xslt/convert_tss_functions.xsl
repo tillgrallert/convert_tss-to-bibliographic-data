@@ -14,11 +14,12 @@
      <xsl:function name="oape:bibliography-tss-note-to-html">
         <!-- expects a <tss:note> as input -->
         <xsl:param name="tss_note"/>
+         <![CDATA[<div style="background-color:]]><xsl:apply-templates select="$tss_note/@color" mode="m_tss-to-notes-html"/><![CDATA[">]]>
         <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-to-notes-html"/>
         <xsl:apply-templates select="$tss_note/tss:title" mode="m_tss-to-notes-html"/>
-<!--        <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-to-notes-html"/>-->
         <xsl:apply-templates select="$tss_note/tss:quotation" mode="m_tss-to-notes-html"/>
         <xsl:apply-templates select="$tss_note/tss:comment" mode="m_tss-to-notes-html"/>
+         <![CDATA[</div>]]>
     </xsl:function>
     
     <xsl:template match="tss:title" mode="m_tss-to-notes-html">
@@ -28,14 +29,45 @@
         <![CDATA[<span>]]><xsl:text>(p.</xsl:text><xsl:apply-templates/><xsl:text>)</xsl:text><![CDATA[</span>]]>
     </xsl:template>
     <xsl:template match="tss:quotation" mode="m_tss-to-notes-html">
-        <![CDATA[<blockquote style="background-color:]]><xsl:value-of select="parent::tss:note/@color"/><![CDATA[">]]>
+        <![CDATA[<blockquote style="background-color:]]><xsl:apply-templates select="parent::tss:note/@color" mode="m_tss-to-notes-html"/><![CDATA[">]]>
             <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates/><![CDATA[</p>]]>
+        <![CDATA[</blockquote>]]>
+    </xsl:template>
+    <!-- this was an aborted trial -->
+    <xsl:template match="tss:quotation">
+        <![CDATA[<blockquote style="]]><xsl:value-of select="parent::tss:note/@style"/><![CDATA[">]]>
+        <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates/><![CDATA[</p>]]>
         <![CDATA[</blockquote>]]>
     </xsl:template>
     <xsl:template match="tss:comment" mode="m_tss-to-notes-html">
         <![CDATA[<p>]]><xsl:apply-templates/><![CDATA[</p>]]>
     </xsl:template>
-
+    
+    <xsl:template match="@color" mode="m_tss-to-notes-html">
+        <xsl:choose>
+            <xsl:when test=". = 'yellow'">
+                <xsl:text>#FFF9D6</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'orange'">
+                <xsl:text>#FDEADB</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'red'">
+                <xsl:text>#FFDDDD</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'purple'">
+                <xsl:text>#E9DCEB</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'blue'">
+                <xsl:text>#E0ECF4</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'green'">
+                <xsl:text>#E3EDE7</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>#DCD9C7</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     <!-- map reference types -->
     <xsl:variable name="v_reference-types">
         <tei:listNym>

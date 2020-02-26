@@ -56,6 +56,7 @@
     
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf">
         <xsl:param name="tss_reference"/>
+        <xsl:param name="p_individual-notes"/>
         <!-- check reference type, since the first child after the root depends on it -->
         <xsl:variable name="v_reference-type">
             <xsl:variable name="v_temp" select="lower-case($tss_reference/tss:publicationType/@name)"/>
@@ -176,7 +177,14 @@
             <!-- publisher: name, location -->
         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf-publisher($tss_reference)"/>
             <!-- links to notes -->
-            <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
+            <xsl:choose>
+                <xsl:when test="$p_individual-notes = true()">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
+                </xsl:when>
+                <xsl:when test="$p_individual-notes = false()">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_links"/>
+                </xsl:when>
+            </xsl:choose>
             <!-- links to attachment references -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference" mode="m_links"/>
             <xsl:if test="$tss_reference/descendant::tss:characteristic[@name = 'abstractText'] !=''">
@@ -229,7 +237,18 @@
             </xsl:if>
         </xsl:element>
         <!-- notes -->
-        <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf"/>
+        <xsl:choose>
+            <xsl:when test="$p_individual-notes = true()">
+                <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf">
+                    <xsl:sort select="tss:pages" order="ascending"/>
+                </xsl:apply-templates>
+            </xsl:when>
+            <xsl:when test="$p_individual-notes = false()">
+                <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
+                    <xsl:sort select="tss:pages" order="ascending"/>
+                </xsl:apply-templates>
+            </xsl:when>
+        </xsl:choose>
         <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'abstractText']" mode="m_construct-note"/>
         <!-- attachments -->
         <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference
@@ -529,6 +548,9 @@
     <xsl:template match="tss:note" mode="m_links">
         <dcterms:isReferencedBy rdf:resource="{concat('#',@xml:id)}"/>
     </xsl:template>
+    <xsl:template match="tss:notes" mode="m_links">
+        <dcterms:isReferencedBy rdf:resource="{concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')}"/>
+    </xsl:template>
     <xsl:template match="tss:attachmentReference" mode="m_links">
         <link:link rdf:resource="{concat('#',@xml:id)}"/>
     </xsl:template>
@@ -540,6 +562,18 @@
             <xsl:attribute name="rdf:about" select="concat('#',@xml:id)"/>
             <rdf:value>
                 <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
+            </rdf:value>
+        </bib:Memo>
+    </xsl:template>
+    <xsl:template match="tss:notes" mode="m_tss-to-zotero-rdf">
+        <bib:Memo>
+            <!-- each note needs an ID -->
+            <xsl:attribute name="rdf:about" select="concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')"/>
+            <rdf:value>
+                <xsl:for-each select="tss:note">
+                    <xsl:sort select="tss:pages" order="ascending" data-type="number"/>
+                    <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
+                </xsl:for-each>
             </rdf:value>
         </bib:Memo>
     </xsl:template>
