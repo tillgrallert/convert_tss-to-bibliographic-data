@@ -152,10 +152,18 @@
                 <tei:form n="csl">chapter</tei:form>
             </tei:nym>
             <tei:nym>
-                <tei:form n="tss">Computer Software</tei:form>
-                <tei:form n="zotero">Computer Programme</tei:form>
+                <tei:form n="tss">CD/DVD</tei:form>
+                <tei:form n="zotero">computerProgram</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">Data</tei:form>
+                <tei:form n="biblatex"></tei:form>
+                <tei:form n="csl"></tei:form>
+            </tei:nym>
+            <tei:nym>
+                <tei:form n="tss">Computer Software</tei:form>
+                <tei:form n="zotero">computerProgram</tei:form>
+                <tei:form n="marcgt"></tei:form>
+                <tei:form n="bib">Data</tei:form>
                 <tei:form n="biblatex"></tei:form>
                 <tei:form n="csl"></tei:form>
             </tei:nym>
@@ -190,6 +198,14 @@
                 <tei:form n="bib">Article</tei:form>
                 <tei:form n="biblatex">article</tei:form>
                 <tei:form n="csl">article-journal</tei:form>
+            </tei:nym>
+            <tei:nym>
+                <tei:form n="tss">Magazine Article</tei:form>
+                <tei:form n="zotero">magazineArticle</tei:form>
+                <tei:form n="marcgt"></tei:form>
+                <tei:form n="bib">Article</tei:form>
+                <tei:form n="biblatex">article</tei:form>
+                <tei:form n="csl">article-magazine</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Manuscript</tei:form>
@@ -240,18 +256,26 @@
                 <tei:form n="csl"></tei:form>
             </tei:nym>
             <tei:nym>
-                <tei:form n="tss">Thesis</tei:form>
-                <tei:form n="zotero"></tei:form>
+                <tei:form n="tss">Presentation</tei:form>
+                <tei:form n="zotero">presentation</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">ConferenceProceedings</tei:form>
+                <tei:form n="biblatex"></tei:form>
+                <tei:form n="csl"></tei:form>
+            </tei:nym>
+            <tei:nym>
+                <tei:form n="tss">Thesis type</tei:form>
+                <tei:form n="zotero">thesis</tei:form>
+                <tei:form n="marcgt"></tei:form>
+                <tei:form n="bib">Thesis</tei:form>
                 <tei:form n="biblatex"></tei:form>
                 <tei:form n="csl">thesis</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Web Page</tei:form>
-                <tei:form n="zotero">Web Page</tei:form>
+                <tei:form n="zotero">webpage</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">Document</tei:form>
                 <tei:form n="biblatex"></tei:form>
                 <tei:form n="csl">webpage</tei:form>
             </tei:nym>
