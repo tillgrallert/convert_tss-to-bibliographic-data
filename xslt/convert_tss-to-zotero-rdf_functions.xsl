@@ -56,7 +56,11 @@
     
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf">
         <xsl:param name="tss_reference"/>
-        <xsl:param name="p_individual-notes"/>
+<!--        <xsl:param name="p_individual-notes"/>-->
+        <xsl:param name="p_include-attachments"/>
+        <xsl:param name="p_include-notes"/>
+        <!-- values are: individual, single, both -->
+        <xsl:param name="p_note-type"/>
         <!-- check reference type, since the first child after the root depends on it -->
         <xsl:variable name="v_reference-type">
             <xsl:variable name="v_temp" select="lower-case($tss_reference/tss:publicationType/@name)"/>
@@ -67,7 +71,7 @@
                 <!-- fallback: -->
                 <xsl:otherwise>
                     <xsl:message terminate="yes">
-                        <xsl:text>reference type not found</xsl:text>
+                        <xsl:text>reference type "</xsl:text><xsl:value-of select="$v_temp"/><xsl:text>" not found</xsl:text>
                     </xsl:message>
                 </xsl:otherwise>
             </xsl:choose>
@@ -177,16 +181,24 @@
             <!-- publisher: name, location -->
         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf-publisher($tss_reference)"/>
             <!-- links to notes -->
-            <xsl:choose>
-                <xsl:when test="$p_individual-notes = true()">
-                    <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
-                </xsl:when>
-                <xsl:when test="$p_individual-notes = false()">
-                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_links"/>
-                </xsl:when>
-            </xsl:choose>
+            <xsl:if test="$p_include-notes = true()">
+                <xsl:choose>
+                    <xsl:when test="$p_note-type = 'individual'">
+                        <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
+                    </xsl:when>
+                    <xsl:when test="$p_note-type = 'single'">
+                        <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_links"/>
+                    </xsl:when>
+                    <xsl:when test="$p_note-type = 'both'">
+                        <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_links"/>
+                        <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_links"/>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:if>
             <!-- links to attachment references -->
-            <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference" mode="m_links"/>
+            <xsl:if test="$p_include-attachments = true()">
+                <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference" mode="m_links"/>
+            </xsl:if>
             <xsl:if test="$tss_reference/descendant::tss:characteristic[@name = 'abstractText'] !=''">
                 <dcterms:isReferencedBy rdf:resource="{concat('#',$tss_reference/descendant::tss:characteristic[@name = 'UUID'],'-abstract')}"/>
             </xsl:if>
@@ -237,22 +249,34 @@
             </xsl:if>
         </xsl:element>
         <!-- notes -->
-        <xsl:choose>
-            <xsl:when test="$p_individual-notes = true()">
-                <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf">
-                    <xsl:sort select="tss:pages" order="ascending"/>
-                </xsl:apply-templates>
-            </xsl:when>
-            <xsl:when test="$p_individual-notes = false()">
-                <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
-                    <xsl:sort select="tss:pages" order="ascending"/>
-                </xsl:apply-templates>
-            </xsl:when>
-        </xsl:choose>
+        <xsl:if test="$p_include-notes = true()">
+            <xsl:choose>
+                <xsl:when test="$p_note-type = 'individual'">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf">
+                        <xsl:sort select="tss:pages" order="ascending"/>
+                    </xsl:apply-templates>
+                </xsl:when>
+                <xsl:when test="$p_note-type = 'single'">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
+                        <xsl:sort select="tss:pages" order="ascending"/>
+                    </xsl:apply-templates>
+                </xsl:when>
+                <xsl:when test="$p_note-type = 'both'">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
+                        <xsl:sort select="tss:pages" order="ascending"/>
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf">
+                        <xsl:sort select="tss:pages" order="ascending"/>
+                    </xsl:apply-templates>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:if>
         <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'abstractText']" mode="m_construct-note"/>
         <!-- attachments -->
-        <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference
+        <xsl:if test="$p_include-attachments = true()">
+            <xsl:apply-templates select="$tss_reference/descendant::tss:attachmentReference
             " mode="m_tss-to-zotero-rdf"/>
+        </xsl:if>
     </xsl:function>
     
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf-publisher">

@@ -30,6 +30,6 @@
     </xsl:template>
     
     <xsl:template match="tss:reference" mode="m_tss-to-zotero-rdf">
-         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., false())"/>
+         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., false(), false(), 'both')"/>
     </xsl:template>
 </xsl:stylesheet>
