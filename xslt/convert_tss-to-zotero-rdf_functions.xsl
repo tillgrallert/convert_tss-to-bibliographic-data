@@ -28,14 +28,14 @@
     <!-- to do
         - due to the dependence of fields on the item type in Zotero, everything should also be replicated to the extra field.
         - a lot of information should also be mapped to tags, to make use of the tag cloud (and set of the dearly missing browsing feature)
+        - map strcuture of abstract to HTML for abstract notes
+        - create short titles based on the title
         - due to Sente's file naming restrictions, I had to use the volume field for issue numbers and vice versa. this is fixed BEFORE converting TSS XML to Zotero RDF.
         - a lot of periodical references have a purely numerical title, which needs to be removed in POSTPROCESSING the TSS XML
     -->
     
      <!-- fields not yet covered 
         + Date read
-        + Original publication year
-        + some IDs: ISBN
     -->
     
     <!-- undecided mappings:
@@ -52,6 +52,12 @@
             + Newspaper Article
             + Magazine Article
         + Photo
+    -->
+    
+    <!-- Problems upon import into Zotero: 
+        - Software: DVDs are translated into Software, which removes authors if they are not 'Contributors' or 'Programmers'
+        - Presentation: only one in my database, skip
+            + removes authors if they are not 'Contributors' or 'Presenters'
     -->
     
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf">
@@ -230,7 +236,13 @@
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Date Hijri']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'DOI']" mode="m_extra-field"/>
+                <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'ISBN']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'OCLCID']" mode="m_extra-field"/>
+                
+                <!-- original date, title -->
+                <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Original publication year']" mode="m_extra-field"/>
+                <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Orig.Title']" mode="m_extra-field"/>
+                <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Translated title']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'issue']" mode="m_extra-field"/>
                 <!-- make this dependent on the reference type: letter etc. -->
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field"/>
@@ -241,6 +253,8 @@
              <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'language']" mode="m_tss-to-zotero-rdf"/>
             <!-- abstract -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'abstractText']" mode="m_tss-to-zotero-rdf"/>
+            <!-- ISBN, ISSN etc. -->
+            <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'ISBN']" mode="m_tss-to-zotero-rdf"/>
             <!-- add <z:type> for archival material -->
             <xsl:if test="$v_reference-type-sente = 'Archival File'">
                 <xsl:element name="z:type">
@@ -302,6 +316,14 @@
         <xsl:if test=".!=''">
             <xsl:value-of select="concat('doi', $v_separator-key-value,.,$v_new-line)"/>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'ISBN']" mode="m_extra-field">
+        <xsl:if test=".!=''">
+            <xsl:value-of select="concat('isbn', $v_separator-key-value,.,$v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'ISBN']" mode="m_tss-to-zotero-rdf">
+        <dc:identifier><xsl:value-of select="concat('ISBN ', .)"/></dc:identifier>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'OCLCID']" mode="m_extra-field">
         <xsl:if test=".!=''">
@@ -379,21 +401,41 @@
             <xsl:value-of select="concat('place', $v_separator-key-value,.,$v_new-line)"/>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
+        <xsl:if test=".!=''">
+            <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
+        <xsl:if test=".!=''">
+            <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Orig.Title']" mode="m_extra-field">
+        <xsl:if test=".!=''">
+            <xsl:value-of select="concat('original-title', $v_separator-key-value,.,$v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Translated title']" mode="m_extra-field">
+        <xsl:if test=".!=''">
+            <xsl:value-of select="concat('translated-title', $v_separator-key-value,.,$v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
     
     <!-- contributors -->
     <xsl:template match="tss:authors" mode="m_tss-to-zotero-rdf">
-        <!-- is the sequence of roles relevant?! -->
-            <xsl:if test="tss:author/@role = 'Author'">
+        <!-- the authors should be further differentiated -->
+        <xsl:if test="tss:author/@role = ('Author', 'Compiler', 'Photographer')">
                 <bib:authors>
                     <rdf:Seq>
-                            <xsl:apply-templates select="tss:author[@role = 'Author']" mode="m_tss-to-zotero-rdf"/>
+                        <xsl:apply-templates select="tss:author[@role = ('Author', 'Compiler','Photographer')]" mode="m_tss-to-zotero-rdf"/>
                     </rdf:Seq>
                 </bib:authors>
             </xsl:if>
-            <xsl:if test="tss:author/@role = 'Editor'">
+            <xsl:if test="tss:author/@role = ('Editor', 'Director')">
                 <bib:editors>
                     <rdf:Seq>
-                            <xsl:apply-templates select="tss:author[@role = 'Editor']" mode="m_tss-to-zotero-rdf"/>
+                        <xsl:apply-templates select="tss:author[@role = ('Editor', 'Director')]" mode="m_tss-to-zotero-rdf"/>
                     </rdf:Seq>
                 </bib:editors>
             </xsl:if>
@@ -438,9 +480,17 @@
     <xsl:template match="tss:forenames" mode="m_tss-to-zotero-rdf">
         <foaf:givenName><xsl:apply-templates/></foaf:givenName>
     </xsl:template>
-    <xsl:template match="tss:keyword" mode="m_tss-to-zotero-rdf">
+    
+    <!-- keywords, tags, status -->
+    <xsl:template match="tss:keyword[matches(@assigner,'Sente User')]" mode="m_tss-to-zotero-rdf">
         <dc:subject>
             <xsl:apply-templates/>
+        </dc:subject>
+        <!-- add all members of the QuickTag hierarchy -->
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf">
+        <dc:subject>
+            <xsl:text>status_</xsl:text><xsl:value-of select="replace(.,' ','-')"/>
         </dc:subject>
     </xsl:template>
     
@@ -594,6 +644,9 @@
             <!-- each note needs an ID -->
             <xsl:attribute name="rdf:about" select="concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')"/>
             <rdf:value>
+                <!-- title: there should be a title added here -->
+                <![CDATA[<h1>]]><xsl:text># notes</xsl:text><![CDATA[</h1>]]>
+                <!-- notes -->
                 <xsl:for-each select="tss:note">
                     <xsl:sort select="tss:pages" order="ascending" data-type="number"/>
                     <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
