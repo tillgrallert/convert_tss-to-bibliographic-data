@@ -307,7 +307,7 @@
                        <vcard:locality><xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']"/></vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name><xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'publisher']"/></foaf:name>
+                <foaf:name><xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = ('publisher', 'affiliation')]"/></foaf:name>
             </foaf:Organization>
         </dc:publisher>
     </xsl:function>
