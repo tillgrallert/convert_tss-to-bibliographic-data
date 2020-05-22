@@ -230,6 +230,8 @@
             <!-- call number -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Signatur']" mode="m_tss-to-zotero-rdf"/>
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'call-num']" mode="m_tss-to-zotero-rdf"/>
+            <!-- retrieval date -->
+            <xsl:apply-templates select="$tss_reference/descendant::tss:date[@type = 'Retrieval']" mode="m_tss-to-zotero-rdf"/>
             <!-- extra field: map all sorts of custom fields -->
             <dc:description>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Citation identifier']" mode="m_extra-field"/>
@@ -255,6 +257,8 @@
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'abstractText']" mode="m_tss-to-zotero-rdf"/>
             <!-- ISBN, ISSN etc. -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'ISBN']" mode="m_tss-to-zotero-rdf"/>
+            <!-- number of volumes -->
+            <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Number of volumes']" mode="m_tss-to-zotero-rdf"/>
             <!-- add <z:type> for archival material -->
             <xsl:if test="$v_reference-type-sente = 'Archival File'">
                 <xsl:element name="z:type">
@@ -515,7 +519,7 @@
         <xsl:variable name="v_year" select="if(@year!='') then(format-number(@year,'0000')) else()"/>
         <xsl:variable name="v_month" select="if(@month!='') then(format-number(@month,'00')) else('xx')"/>
         <xsl:variable name="v_day" select="if(@day!='') then(format-number(@day,'00')) else('xx')"/>
-        <dc:date>
+        <xsl:variable name="v_date-formatted">
             <xsl:value-of select="if(@year!='') then(format-number(@year,'0000')) else()"/>
             <xsl:if test="@month!=''">
                 <xsl:text>-</xsl:text>
@@ -525,7 +529,15 @@
                 <xsl:text>-</xsl:text>
                 <xsl:value-of select="format-number(@day,'00')"/>
             </xsl:if>
-        </dc:date>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="@type = 'Retrieval'">
+                <dcterms:dateSubmitted><xsl:value-of select="$v_date-formatted"/></dcterms:dateSubmitted>
+            </xsl:when>
+            <xsl:otherwise>
+                <dc:date><xsl:value-of select="$v_date-formatted"/></dc:date>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'URL']" mode="m_tss-to-zotero-rdf">
         <dc:identifier>
@@ -536,6 +548,9 @@
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Edition']" mode="m_tss-to-zotero-rdf">
         <prism:edition><xsl:value-of select="."/></prism:edition>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Number of volumes']" mode="m_tss-to-zotero-rdf">
+        <z:numberOfVolumes><xsl:value-of select="."/></z:numberOfVolumes>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'volume']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
