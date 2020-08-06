@@ -8,7 +8,8 @@
  xmlns:dc="http://purl.org/dc/elements/1.1/"
  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:vcard="http://nwalsh.com/rdf/vCard#"
-  xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" 
+  xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" 
+  xmlns:tei="http://www.tei-c.org/ns/1.0" 
   xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
   xmlns:link="http://purl.org/rss/1.0/modules/link/"
@@ -231,7 +232,7 @@
                 <dcterms:isReferencedBy rdf:resource="{concat('#',$tss_reference/descendant::tss:characteristic[@name = 'UUID'],'-abstract')}"/>
             </xsl:if>
         <!-- tags, keywords etc. -->
-        <xsl:apply-templates select="$tss_reference/descendant::tss:keyword" mode="m_tss-to-zotero-rdf"/>
+        <xsl:apply-templates select="$tss_reference/descendant::tss:keywords" mode="m_tss-to-zotero-rdf"/>
         <!-- URLs -->
         <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'URL']" mode="m_tss-to-zotero-rdf"/>
             <!-- Identitifiers -->
@@ -761,22 +762,26 @@
             <rdf:value>
                 <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
             </rdf:value>
+            <!-- add tag for colour -->
+            <dc:subject><xsl:value-of select="concat('colour_', @color)"/></dc:subject>
         </bib:Memo>
     </xsl:template>
     <xsl:template match="tss:notes" mode="m_tss-to-zotero-rdf">
-        <bib:Memo>
-            <!-- each note needs an ID -->
-            <xsl:attribute name="rdf:about" select="concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')"/>
-            <rdf:value>
-                <!-- title: there should be a title added here -->
-                <![CDATA[<h1>]]><xsl:text># notes</xsl:text><![CDATA[</h1>]]>
-                <!-- notes -->
-                <xsl:for-each select="tss:note">
-                    <xsl:sort select="tss:pages" order="ascending" data-type="number"/>
-                    <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
-                </xsl:for-each>
-            </rdf:value>
-        </bib:Memo>
+        <xsl:if test="tss:note">
+            <bib:Memo>
+                <!-- each note needs an ID -->
+                <xsl:attribute name="rdf:about" select="concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')"/>
+                <rdf:value>
+                    <!-- title: there should be a title added here -->
+                    <![CDATA[<h1>]]><xsl:text># notes</xsl:text><![CDATA[</h1>]]>
+                    <!-- notes -->
+                    <xsl:for-each select="tss:note">
+                        <xsl:sort select="tss:pages" order="ascending" data-type="number"/>
+                        <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
+                    </xsl:for-each>
+                </rdf:value>
+            </bib:Memo>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'abstractText']" mode="m_construct-note">
         <xsl:if test=".!=''">
@@ -787,6 +792,7 @@
                     <![CDATA[<h1>]]><xsl:text># abstract</xsl:text><![CDATA[</h1>]]>
                     <xsl:apply-templates select="." mode="m_mark-up"/>
                 </rdf:value>
+                <dc:subject>abstract</dc:subject>
             </bib:Memo>
         </xsl:if>
     </xsl:template>
