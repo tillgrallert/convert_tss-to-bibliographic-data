@@ -432,11 +432,11 @@
             <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
+    <!--<xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
         </xsl:if>
-    </xsl:template>
+    </xsl:template>-->
     <xsl:template match="tss:characteristic[@name = 'Orig.Title']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <xsl:value-of select="concat('original-title', $v_separator-key-value,.,$v_new-line)"/>
