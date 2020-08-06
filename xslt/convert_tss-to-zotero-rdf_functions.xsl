@@ -519,11 +519,87 @@
     </xsl:template>
     
     <!-- keywords, tags, status -->
-    <xsl:template match="tss:keyword[matches(@assigner,'Sente User')]" mode="m_tss-to-zotero-rdf">
+    <!-- there is a need to filter out automatically assigned keywords imported from catalogues -->
+    <xsl:template match="tss:keywords" mode="m_tss-to-zotero-rdf">
+        <!-- remove duplicate tags -->
+        <xsl:variable name="v_keywords">
+            <xsl:apply-templates select="tss:keyword[not(contains(@assigner,'via MARC'))]" mode="m_tss-to-zotero-rdf"/>
+        </xsl:variable>
+        <!--<xsl:message>
+            <xsl:value-of select="$v_keywords"/>
+        </xsl:message>-->
+        <xsl:for-each-group select="$v_keywords/descendant-or-self::dc:subject" group-by=".">
+            <xsl:sort select="current-grouping-key()" order="ascending"/>
+            <xsl:copy-of select="."/>
+        </xsl:for-each-group>
+    </xsl:template>
+    <xsl:template match="tss:keyword" mode="m_tss-to-zotero-rdf">
         <dc:subject>
             <xsl:apply-templates/>
         </dc:subject>
         <!-- add all members of the QuickTag hierarchy -->
+        <!-- <tss:keyword assigner="Sente User till" quickTagHierarchy="Economic report|Source|">Economic report</tss:keyword> -->
+        <xsl:if test="@quickTagHierarchy != ''">
+            <xsl:call-template name="t_convert-quickTags">
+                <xsl:with-param name="p_quickTagHierarchy" select="@quickTagHierarchy"/>
+                <xsl:with-param name="p_initial-run" select="true()"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template name="t_convert-quickTags">
+        <xsl:param name="p_quickTagHierarchy"/>
+        <!--  -->
+        <xsl:param name="p_initial-run"/>
+        <!-- convert the quickTag hierarchy into a proper node tree -->
+        <xsl:param name="p_tag-tree">
+         <html:ol>
+             <xsl:for-each select="tokenize($p_quickTagHierarchy, '\|')">
+                 <xsl:sort select="position()" order="descending"/>
+                 <xsl:if test=". != ''">
+                     <html:li><xsl:value-of select="."/></html:li>
+                 </xsl:if>
+             </xsl:for-each>
+         </html:ol>
+        </xsl:param>
+        <!-- go one step up in the hierarchy -->
+        <xsl:variable name="v_tag-tree-one-level-up">
+            <html:ol>
+                <xsl:for-each select="$p_tag-tree/descendant::html:li[following-sibling::html:li]">
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+            </html:ol>
+        </xsl:variable>
+        <!-- content: transformed -->
+        <xsl:apply-templates select="$p_tag-tree/html:ol" mode="m_html-to-zotero-tags"/>
+        <!-- content: each component tag -->
+        <xsl:if test="$p_initial-run = true()">
+            <xsl:apply-templates select="$p_tag-tree/html:ol/html:li" mode="m_html-to-zotero-tags"/>
+        </xsl:if>
+        <!-- if there the two variables are different, run this template on the second one -->
+        <xsl:if test="not($p_tag-tree = $v_tag-tree-one-level-up)">
+            <xsl:call-template name="t_convert-quickTags">
+                <xsl:with-param name="p_tag-tree" select="$v_tag-tree-one-level-up"/>
+                <xsl:with-param name="p_initial-run" select="false()"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="html:ol" mode="m_html-to-zotero-tags">
+        <dc:subject>
+            <xsl:for-each select="html:li">
+                <!-- the quickTag hierarchy is identified by starting with gt -->
+                <!--<xsl:if test="preceding-sibling::html:li">
+                    <xsl:text> </xsl:text>
+                </xsl:if>
+                <xsl:text>> </xsl:text>-->
+                <xsl:value-of select="."/>
+                <xsl:if test="following-sibling::html:li">
+                    <xsl:text> > </xsl:text>
+                </xsl:if>
+            </xsl:for-each>
+        </dc:subject>
+    </xsl:template>
+    <xsl:template match="html:li" mode="m_html-to-zotero-tags">
+        <dc:subject><xsl:value-of select="."/></dc:subject>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf">
         <dc:subject>
