@@ -180,6 +180,27 @@
                 <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'Shortened title']">
                     <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Shortened title']" mode="m_tss-to-zotero-rdf"/>
                 </xsl:when>
+                <!-- fallback: create a short title -->
+                <xsl:otherwise>
+                    <xsl:variable name="v_title-temp" select="if($v_reference-is-section = true()) then($tss_reference/descendant::tss:characteristic[@name = 'articleTitle']) else($tss_reference/descendant::tss:characteristic[@name = 'publicationTitle'])"/>
+                    <xsl:analyze-string select="$v_title-temp" regex="^(.+?)([:|\.|\?])(.+)$">
+                        <xsl:matching-substring>
+                            <z:shortTitle><xsl:value-of select="regex-group(1)"/></z:shortTitle>
+                        </xsl:matching-substring>
+                        <xsl:non-matching-substring>
+                            <z:shortTitle>
+                            <xsl:for-each select="tokenize($v_title-temp,'\s')">
+                                <xsl:if test="position() &lt;= 5">
+                                    <xsl:value-of select="."/>
+                                    <xsl:if test="position() &lt;= 4">
+                                        <xsl:text> </xsl:text>
+                                    </xsl:if>
+                                </xsl:if>
+                            </xsl:for-each>
+                            </z:shortTitle>
+                        </xsl:non-matching-substring>
+                    </xsl:analyze-string>
+                </xsl:otherwise>
             </xsl:choose>
             <!-- contributors: authors, editors etc. -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:authors" mode="m_tss-to-zotero-rdf"/>
