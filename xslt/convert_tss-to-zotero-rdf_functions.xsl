@@ -36,6 +36,7 @@
     
      <!-- fields not yet covered 
         + Date read
+        + DOI is currently only mapped to the extra field
     -->
     
     <!-- undecided mappings:
@@ -451,11 +452,22 @@
     <xsl:template match="tss:authors" mode="m_tss-to-zotero-rdf">
         <!-- the authors should be further differentiated -->
         <xsl:if test="tss:author/@role = ('Author', 'Compiler', 'Photographer')">
-                <bib:authors>
+            <xsl:choose>
+                <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = 'Presentation'">
+                    <z:presenters> 
+                        <rdf:Seq> 
+                             <xsl:apply-templates select="tss:author[@role = ('Author')]" mode="m_tss-to-zotero-rdf"/>
+                        </rdf:Seq> 
+                    </z:presenters>
+                </xsl:when>
+                <xsl:otherwise>
+            <bib:authors>
                     <rdf:Seq>
                         <xsl:apply-templates select="tss:author[@role = ('Author', 'Compiler','Photographer')]" mode="m_tss-to-zotero-rdf"/>
                     </rdf:Seq>
                 </bib:authors>
+                </xsl:otherwise>
+            </xsl:choose>
             </xsl:if>
             <xsl:if test="tss:author/@role = ('Editor', 'Director')">
                 <bib:editors>
