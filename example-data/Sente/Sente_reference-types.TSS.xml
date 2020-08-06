@@ -771,7 +771,8 @@
                <tss:note xml:id="uuid_C932AA19-4D43-4B8E-8C4E-8D30B7E8EBC9" correspAttachment="#uuid_" editor="Sente User Sebastian" color="unknown" inputOs="iOS" when-iso="2013-09-16T14:26:40+0000">
                   <title>Art 1</title>
                   <comment>Art 1: the law is concerned with the roads in the empire. the highest class are the roads from the provincial capitals to Istanbul.
-            [apparently the law is only concerned with the roads outside of any settlement]</comment>
+            [apparently the law is only concerned with the roads outside of any settlement]
+            $$road works$$ $$terminology$$ some other text</comment>
                   <quotation/>
                   <pages>261</pages>
                   <locationInAttachedFile/>

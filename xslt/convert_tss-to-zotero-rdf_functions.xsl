@@ -760,6 +760,12 @@
             </rdf:value>
             <!-- add tag for colour -->
             <dc:subject><xsl:value-of select="concat('colour_', @color)"/></dc:subject>
+            <!-- add tags from SenteAssistant of the pattern $$some note$$ -->
+            <xsl:analyze-string select="tss:comment" regex="\$\$([^\$]+)\$\$">
+                <xsl:matching-substring>
+                    <dc:subject><xsl:value-of select="regex-group(1)"/></dc:subject>
+                </xsl:matching-substring>
+            </xsl:analyze-string>
         </bib:Memo>
     </xsl:template>
     <xsl:template match="tss:notes" mode="m_tss-to-zotero-rdf">
