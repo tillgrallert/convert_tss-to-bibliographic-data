@@ -3,6 +3,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
     xmlns:mods="http://www.loc.gov/mods/v3" 
+    xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns="http://www.loc.gov/mods/v3"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:oape="https://openarabicpe.github.io/ns"
@@ -23,24 +24,24 @@
     </xsl:function>
     
     <xsl:template match="tss:title" mode="m_tss-to-notes-html">
-        <![CDATA[<h1>]]><xsl:text># </xsl:text><xsl:apply-templates/><![CDATA[</h1>]]>
+        <![CDATA[<h1>]]><xsl:text># </xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</h1>]]>
     </xsl:template>
     <xsl:template match="tss:pages" mode="m_tss-to-notes-html">
         <![CDATA[<span>]]><xsl:text>(p.</xsl:text><xsl:apply-templates/><xsl:text>)</xsl:text><![CDATA[</span>]]>
     </xsl:template>
     <xsl:template match="tss:quotation" mode="m_tss-to-notes-html">
         <![CDATA[<blockquote style="background-color:]]><xsl:apply-templates select="parent::tss:note/@color" mode="m_tss-to-notes-html"/><![CDATA[">]]>
-            <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates/><![CDATA[</p>]]>
+        <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
         <![CDATA[</blockquote>]]>
     </xsl:template>
     <!-- this was an aborted trial -->
     <xsl:template match="tss:quotation">
         <![CDATA[<blockquote style="]]><xsl:value-of select="parent::tss:note/@style"/><![CDATA[">]]>
-        <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates/><![CDATA[</p>]]>
+        <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
         <![CDATA[</blockquote>]]>
     </xsl:template>
     <xsl:template match="tss:comment" mode="m_tss-to-notes-html">
-        <![CDATA[<p>]]><xsl:apply-templates/><![CDATA[</p>]]>
+        <![CDATA[<p>]]><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
     </xsl:template>
     
     <xsl:template match="@color" mode="m_tss-to-notes-html">
@@ -295,4 +296,52 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
+    
+    <!-- HTML mark-up inside abstracts and notes? -->
+    <xsl:template match="html:*" mode="m_tss-to-zotero-rdf"/>
+    <xsl:template match="tss:characteristic" mode="m_mark-up">
+        <xsl:choose>
+            <xsl:when test="html:br">
+                <xsl:for-each-group select="child::node()" group-starting-with="html:br">
+                    <!--<xsl:message>
+                        <xsl:value-of select="current-group()"/>
+                    </xsl:message>-->
+                    <![CDATA[<p>]]><xsl:apply-templates select="current-group()" mode="m_mark-up"/><![CDATA[</p>]]>
+                </xsl:for-each-group>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates mode="m_mark-up"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="html:br" mode="m_mark-up">
+        <![CDATA[<br/>]]>
+    </xsl:template>
+    <xsl:template match="html:*" mode="m_mark-up">
+        <![CDATA[<]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>
+        <xsl:apply-templates mode="m_mark-up"/>
+        <![CDATA[</]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>
+    </xsl:template>
+    <xsl:template match="tei:*" mode="m_mark-up">
+        <![CDATA[<]]><xsl:value-of select="name()"/>
+        <xsl:if test="@*">
+            <xsl:apply-templates select="@*" mode="m_mark-up"/>
+        </xsl:if>
+        <xsl:choose>
+            <xsl:when test=".=''">
+                <xsl:value-of select="'/&gt;'" disable-output-escaping="no"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'&gt;'" disable-output-escaping="no"/>
+                <xsl:apply-templates mode="m_mark-up"/>
+                <![CDATA[</]]><xsl:value-of select="name()"/><![CDATA[>]]>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:*/@*" mode="m_mark-up">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>="</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
+    </xsl:template>
 </xsl:stylesheet>
