@@ -27,10 +27,6 @@
     <xsl:variable name="v_cite-key-whitespace-replacement" select="'+'"/>
     
     <!-- to do
-        - due to the dependence of fields on the item type in Zotero, everything should also be replicated to the extra field.
-        - a lot of information should also be mapped to tags, to make use of the tag cloud (and set of the dearly missing browsing feature)
-        - map strcuture of abstract to HTML for abstract notes
-        - create short titles based on the title
         - due to Sente's file naming restrictions, I had to use the volume field for issue numbers and vice versa. this is fixed BEFORE converting TSS XML to Zotero RDF.
         - a lot of periodical references have a purely numerical title, which needs to be removed in POSTPROCESSING the TSS XML
     -->
