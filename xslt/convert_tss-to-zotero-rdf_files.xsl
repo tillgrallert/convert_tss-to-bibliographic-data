@@ -8,7 +8,8 @@
  xmlns:dc="http://purl.org/dc/elements/1.1/"
  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:vcard="http://nwalsh.com/rdf/vCard#"
-  xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" 
+  xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" 
+  xmlns:tei="http://www.tei-c.org/ns/1.0" 
   xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
   xmlns:link="http://purl.org/rss/1.0/modules/link/"
@@ -17,6 +18,9 @@
     
     <xsl:output method="xml" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
     <xsl:include href="convert_tss-to-zotero-rdf_functions.xsl"/>
+    
+    <xsl:param name="p_include-attachments" select="true()"/>
+    <xsl:param name="p_include-notes" select="true()"/>
     
     <xsl:variable name="v_file-name" select="substring-before(tokenize(base-uri(),'/')[last()],'.TSS.xml')"/>
     
@@ -30,6 +34,6 @@
     </xsl:template>
     
     <xsl:template match="tss:reference" mode="m_tss-to-zotero-rdf">
-         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., false(), false(), 'both')"/>
+         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., $p_include-attachments, $p_include-notes, 'both')"/>
     </xsl:template>
 </xsl:stylesheet>
