@@ -25,6 +25,7 @@
     <xsl:variable name="v_new-line" select="'&#x0A;'"/>
     <xsl:variable name="v_separator-key-value" select="': '"/>
     <xsl:variable name="v_cite-key-whitespace-replacement" select="'+'"/>
+    <xsl:param name="p_letters-discard-reference-in-title" select="true()"/>
     
     <!-- to do
         - due to Sente's file naming restrictions, I had to use the volume field for issue numbers and vice versa. this is fixed BEFORE converting TSS XML to Zotero RDF.
@@ -41,8 +42,11 @@
         + Archival Journal Entry
         + Archival Letter -> letter
             - issue: used for numbers of letters and series, i.e. "Slave Trade 1"
+                - mapped to the extra field as:
+                    + Series: Slave Trade
+                    + Series Number: 1
             - publicationCountry: can be mapped to "publisher-place" in CSL JSON and will then be picked up by most CSL styles. BUT field not available in Zotero.
-                - map to: "place: " in extra field
+                - mapped to: "place: " in extra field
         + Archival Material -> manuscript
         + Archival Periodical -> newspaper article
         + Bill: since all of the legal texts I am dealing with were published either as part of a book or a periodical, this should be reflected by the itemType in Zotero
@@ -181,7 +185,8 @@
                 <!-- fallback: create a short title -->
                 <xsl:otherwise>
                     <xsl:variable name="v_title-temp" select="if($v_reference-is-section = true()) then($tss_reference/descendant::tss:characteristic[@name = 'articleTitle']) else($tss_reference/descendant::tss:characteristic[@name = 'publicationTitle'])"/>
-                    <xsl:analyze-string select="$v_title-temp" regex="^(.+?)([:|\.|\?])(.+)$">
+                    <xsl:variable name="v_title-short">
+                        <xsl:analyze-string select="$v_title-temp" regex="^(.+?)([:|\.|\?])(.+)$">
                         <xsl:matching-substring>
                             <z:shortTitle><xsl:value-of select="regex-group(1)"/></z:shortTitle>
                         </xsl:matching-substring>
@@ -198,6 +203,11 @@
                             </z:shortTitle>
                         </xsl:non-matching-substring>
                     </xsl:analyze-string>
+                    </xsl:variable>
+                    <!-- If the reference is an archival source, no short title should be constructed -->
+                    <xsl:if test="not(contains($v_reference-type-sente, 'Archival'))">
+                        <xsl:copy-of select="$v_title-short"/>
+                    </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>
             <!-- contributors: authors, editors etc. -->
@@ -267,6 +277,9 @@
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'issue']" mode="m_extra-field"/>
                 <!-- make this dependent on the reference type: letter etc. -->
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field"/>
+                <xsl:if test="contains($v_reference-type-sente, 'Archival')">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']" mode="m_extra-field"/>
+                </xsl:if>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'UUID']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'volume']" mode="m_extra-field"/>
             </dc:description>
@@ -403,7 +416,23 @@
                      <xsl:text>volume</xsl:text>
                  </xsl:otherwise>
              </xsl:choose>-->
-            <xsl:value-of select="concat('issue', $v_separator-key-value,.,$v_new-line)"/>
+            <!-- check if the referene is an archival letter. if so split into Series and Issue number -->
+            <xsl:choose>
+                <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Letter')">
+                    <xsl:analyze-string select="." regex="^([^\d]+)\s+(\d+)\s*$">
+                        <xsl:matching-substring>
+                            <xsl:value-of select="concat('Series', $v_separator-key-value, regex-group(1), $v_new-line)"/>
+                            <xsl:value-of select="concat('Series Number', $v_separator-key-value, regex-group(2),$v_new-line)"/>
+                        </xsl:matching-substring>
+                        <xsl:non-matching-substring>
+                            <xsl:value-of select="concat('issue', $v_separator-key-value,.,$v_new-line)"/>
+                        </xsl:non-matching-substring>
+                    </xsl:analyze-string>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('issue', $v_separator-key-value,.,$v_new-line)"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
      <xsl:template match="tss:characteristic[@name = 'volume']" mode="m_extra-field">
@@ -610,6 +639,50 @@
             <dc:title><xsl:apply-templates/></dc:title>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'publicationTitle'][contains(ancestor::tss:reference/tss:publicationType/@name, 'Letter')]" mode="m_tss-to-zotero-rdf">
+        <!-- need to test if title is only an automatically formatted reference: indicator is the presence of the call number -->
+        <xsl:variable name="v_call-num">
+            <xsl:choose>
+                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur'] != ''">
+                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur']"/>
+                </xsl:when>
+                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num'] != ''">
+                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num']"/>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:if test=".!=''">
+            <xsl:choose>
+                <xsl:when test="$v_call-num != '' and contains(., $v_call-num)">
+                    <!-- what should happen in this case? -->
+                    <!-- Pull in the issue "number" -->
+                    <dc:title><xsl:apply-templates select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'issue']"/></dc:title>
+                </xsl:when>
+                <xsl:otherwise>
+                    <dc:title><xsl:apply-templates/></dc:title>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'publicationTitle'][contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')]" mode="m_extra-field">
+        <!-- need to test if title is only an automatically formatted reference: indicator is the presence of the call number -->
+        <xsl:variable name="v_call-num">
+            <xsl:choose>
+                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur'] != ''">
+                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur']"/>
+                </xsl:when>
+                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num'] != ''">
+                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num']"/>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:if test=".!=''">
+                <xsl:if test="$v_call-num != '' and contains(., $v_call-num)">
+                    <!-- write Citation to extra field -->
+                     <xsl:value-of select="concat('Citation', $v_separator-key-value,.,$v_new-line)"/>
+                </xsl:if>
+        </xsl:if>
+    </xsl:template>
     <xsl:template match="tss:characteristic[@name = ('Short Titel', 'Shortened title')]" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
             <z:shortTitle><xsl:apply-templates/></z:shortTitle>
@@ -721,7 +794,7 @@
         <xsl:if test=".!=''">
         <xsl:choose>
             <!-- for archival reference the call-number should be mapped to location in archive -->
-            <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Archival File', 'Archival Material', 'Archival Letter')">
+            <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')">
                 <dc:coverage>
                     <xsl:apply-templates/>
                 </dc:coverage>
