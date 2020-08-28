@@ -62,7 +62,7 @@
             </tss:dates>
             <tss:characteristics>
                <tss:characteristic name="UUID">05A9098B-5156-4AD4-B1B0-1358D2637790</tss:characteristic>
-               <tss:characteristic name="publicationTitle">RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913</tss:characteristic>
+               <tss:characteristic name="publicationTitle">Correspondence [Letters received], 1912-1913</tss:characteristic>
                <tss:characteristic name="volume">22</tss:characteristic>
                <tss:characteristic name="issue"/>
                <tss:characteristic name="pages"/>
@@ -1950,6 +1950,335 @@
                   <name/>
                   <URL storageMethod="Base Directory-Relative, Optionally Alias-Backed" xml:id="uuid_1A55A9D8-568D-4E2F-BB95-E22F4972D949"
                      >/BachCore/SenteLibrary/BachSecondary.sente6lib/Contents/Attachments/Büssow, Johann/Büssow 2012 Damascus Affairs Egyptian Rule in Syria through the Eyes of an Anonymous Damascene Chr.pdf</URL>
+               </tss:attachmentReference>
+            </tss:attachments>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date type="Publication" year="1898"/>
+               <tss:date day="20" month="3" type="Entry" year="2010"/>
+               <tss:date day="12" month="1" type="Modification" year="2014"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">BArch N 1581/5, Dienstlicher Schriftwechsel, 1898-1916</tss:characteristic>
+               <tss:characteristic name="abstractText"
+                  >Enthält u.a.:&lt;br&gt;&lt;br&gt;Schreiben des Justizministeriums zur Änderung des Familiennamens in Loytved-Hardegg, 1908&lt;br&gt;&lt;br&gt;Enthält auch:&lt;br&gt;&lt;br&gt;&quot;Der Sammler. Wochenschrift für alte und neue Kunst&quot;, 1921</tss:characteristic>
+               <tss:characteristic name="issue">Dienstlicher Schriftwechsel</tss:characteristic>
+               <tss:characteristic name="language">German</tss:characteristic>
+               <tss:characteristic name="UUID">96E4AF27-95CA-47B6-8FAF-073A1DC1FE04</tss:characteristic>
+               <tss:characteristic name="Signatur">N 1581/5</tss:characteristic>
+               <tss:characteristic name="Repository">BArch</tss:characteristic>
+               <tss:characteristic name="Standort">Bundesarchiv Koblenz</tss:characteristic>
+               <tss:characteristic name="Citation identifier">BarchN15815Dienstlicher 1898</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">German source</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Ottoman Empire</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+            </tss:keywords>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date type="Publication" year="1898"/>
+               <tss:date day="20" month="3" type="Entry" year="2010"/>
+               <tss:date day="12" month="1" type="Modification" year="2014"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">BArch N 1581/128, Personalakte des Auswärtigen Amtes, 1898-1923</tss:characteristic>
+               <tss:characteristic name="issue">Personalakte des Auswärtigen Amtes</tss:characteristic>
+               <tss:characteristic name="language">German</tss:characteristic>
+               <tss:characteristic name="UUID">3EE27851-6694-4637-9371-E3F05FDAA7A9</tss:characteristic>
+               <tss:characteristic name="Signatur">N 1581/128</tss:characteristic>
+               <tss:characteristic name="Repository">BArch</tss:characteristic>
+               <tss:characteristic name="Standort">Bundesarchiv Koblenz</tss:characteristic>
+               <tss:characteristic name="Citation identifier">BarchN1581128Personalakte 1898</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">German source</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Ottoman Empire</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+            </tss:keywords>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:authors>
+               <tss:author role="Author">
+                  <tss:surname>Loytved-Hardegg</tss:surname>
+                  <tss:forenames>Julius Harry</tss:forenames>
+                  <tss:initials/>
+               </tss:author>
+            </tss:authors>
+            <tss:dates>
+               <tss:date type="Publication" year="1892"/>
+               <tss:date day="20" month="3" type="Entry" year="2010"/>
+               <tss:date day="12" month="1" type="Modification" year="2014"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">BArch N 1581/164, Tagebücher und Exkurisonsberichte aus dem Ostjordanland, ca.1892-1912</tss:characteristic>
+               <tss:characteristic name="issue">Tagebücher und Exkurisonsberichte aus dem Ostjordanland</tss:characteristic>
+               <tss:characteristic name="language">German</tss:characteristic>
+               <tss:characteristic name="UUID">8BFBE6D8-8D98-4E45-A7EC-03AEB25AAAF8</tss:characteristic>
+               <tss:characteristic name="Signatur">N 1581/164</tss:characteristic>
+               <tss:characteristic name="Repository">BArch</tss:characteristic>
+               <tss:characteristic name="Primary contributor role">Author</tss:characteristic>
+               <tss:characteristic name="Standort">Bundesarchiv Koblenz</tss:characteristic>
+               <tss:characteristic name="Citation identifier">LoytvedHardegg 1892</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">German source</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Ottoman Empire</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+            </tss:keywords>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date day="22" month="6" type="Publication" year="1895"/>
+               <tss:date day="26" month="4" type="Entry" year="2011"/>
+               <tss:date day="14" month="5" type="Modification" year="2015"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">BOA BEO 628/47037, 28 Dhu II 1312 aH [22 Jun. 1895]</tss:characteristic>
+               <tss:characteristic name="abstractText"
+                  >Şam'daki Esad Efendi'nin polis müdüriyetine tayininin adem-i cevazı müstağni-i beyan bulunmuş olmağla ol-babda bir müracaat vukuunda reddi lazım geleceği. (Zabtiye; 29329)&lt;br&gt;&lt;br&gt;Some application by Asʿad Efendi, director of the police in Damascus, must be denied. The dating of all these BOA files is weird, as Asʿad Efendi was ousted from the police job in 1888</tss:characteristic>
+               <tss:characteristic name="status">Reviewed</tss:characteristic>
+               <tss:characteristic name="UUID">C96AB808-532F-4DA7-9325-4C3BE430549F</tss:characteristic>
+               <tss:characteristic name="Signatur">BEO 628/47037</tss:characteristic>
+               <tss:characteristic name="Date Hijri">28 Dhu II 1312</tss:characteristic>
+               <tss:characteristic name="Repository">BOA</tss:characteristic>
+               <tss:characteristic name="Citation identifier">BoaBeo6284703728 1895</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User BachPrivat">Damascus</tss:keyword>
+               <tss:keyword assigner="Sente User BachPrivat">official records</tss:keyword>
+               <tss:keyword assigner="Sente User BachPrivat">Ottoman source</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">2011 Cairo</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Digital copy</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Police</tss:keyword>
+            </tss:keywords>
+            <tss:attachments>
+               <tss:attachmentReference>
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1895%20BOA%20BEO%20628_47037%2C%2028%20Dhu%20II%201312%20aH%20%5B22%20Jun.%201895%5D.pdf</URL>
+               </tss:attachmentReference>
+            </tss:attachments>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date day="9" month="9" type="Publication" year="1912"/>
+               <tss:date day="10" month="01" type="Retrieval" year="2014"/>
+               <tss:date day="10" month="1" type="Entry" year="2014"/>
+               <tss:date day="22" month="6" type="Modification" year="2015"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">BOA BEO 4082/306107 Şam'da münteşir Bred ...</tss:characteristic>
+               <tss:characteristic name="abstractText"
+                  >Şam'da münteşir Brede namındaki gazetede münderic ve mesul müdürünün müebbeden nefyini mucib olan makale-i mezmunun işarı. (Dahiliye)&lt;br&gt;On the lifetime ban for the responsible editor of the periodical Barada in Damascus in order to enforce  publication of compliant articles</tss:characteristic>
+               <tss:characteristic name="language">Ottoman Turkish</tss:characteristic>
+               <tss:characteristic name="rating">3</tss:characteristic>
+               <tss:characteristic name="status">To be read</tss:characteristic>
+               <tss:characteristic name="UUID">F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE</tss:characteristic>
+               <tss:characteristic name="Signatur">BEO 4082/306107</tss:characteristic>
+               <tss:characteristic name="Date Hijri">27 Ram 1330</tss:characteristic>
+               <tss:characteristic name="Web data source">devletarsivleri.gov.tr</tss:characteristic>
+               <tss:characteristic name="Repository">BOA</tss:characteristic>
+               <tss:characteristic name="Citation identifier">BoaBeo4082306107Şamda 1912</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Published</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">Censorship</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Ottoman source</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Press</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+            </tss:keywords>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date month="2" type="Publication" year="1878"/>
+               <tss:date day="7" month="3" type="Entry" year="2018"/>
+               <tss:date day="18" month="7" type="Modification" year="2018"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">Commercial No.1 (1878). Reports from H.M. Consuls on Manufactures and Commerce of their Consular Districts</tss:characteristic>
+               <tss:characteristic name="abstractText">Beirut, </tss:characteristic>
+               <tss:characteristic name="language">en</tss:characteristic>
+               <tss:characteristic name="publicationCountry">London</tss:characteristic>
+               <tss:characteristic name="publisher">Harrison and Sons</tss:characteristic>
+               <tss:characteristic name="status">To be read</tss:characteristic>
+               <tss:characteristic name="UUID">7319621C-6E16-44AA-B9FC-9DACF27CE8BE</tss:characteristic>
+               <tss:characteristic name="volume">Commercial No.1, Part I</tss:characteristic>
+               <tss:characteristic name="Signatur">C.1950</tss:characteristic>
+               <tss:characteristic name="Othertype">parliamentary papers</tss:characteristic>
+               <tss:characteristic name="Repository">HCPP</tss:characteristic>
+               <tss:characteristic name="Citation identifier">CommercialNo1 1878</tss:characteristic>
+               <tss:characteristic name="URL">https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054667?accountid=11004</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="RIS">Foreign Affairs and Diplomacy -- Commercial and Other Statistical Reports -- Commercial Reports -- Commercial Reports</tss:keyword>
+               <tss:keyword assigner="RIS">Trade and Commerce -- International Trade and Navigation -- Commercial Reports -- Commercial Reports</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User till">British source</tss:keyword>
+               <tss:keyword assigner="Sente User till">Digital copy</tss:keyword>
+               <tss:keyword assigner="Sente User till">Economic report</tss:keyword>
+               <tss:keyword assigner="Sente User till">Parliamentary Papers</tss:keyword>
+               <tss:keyword assigner="Sente User till">Source</tss:keyword>
+            </tss:keywords>
+            <tss:attachments>
+               <tss:attachmentReference type="Portable Document Format (PDF)">
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial%20No.1%20(1878).%20Reports%20from%20H.M.%20Consuls%20on%20Manufactures%20and%20Commerce%20of%20their%20Consul.pdf</URL>
+               </tss:attachmentReference>
+               <tss:attachmentReference>
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial%20No.1%20(1878).%20Reports%20from%20H.M.%20Consuls%20on%20Manufactures%20and%20Commerce%20of%20their%20Consul.pdf</URL>
+               </tss:attachmentReference>
+            </tss:attachments>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date month="4" type="Publication" year="1878"/>
+               <tss:date day="17" month="7" type="Entry" year="2018"/>
+               <tss:date day="18" month="7" type="Modification" year="2018"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle"
+                  >Commercial. No. 10 (1878). (Trade reports.) Reports from Her Majesty's consuls on the manufactures, commerce, &amp;amp;c., of their consular districts. Part II.</tss:characteristic>
+               <tss:characteristic name="abstractText">Damascus (514-517)</tss:characteristic>
+               <tss:characteristic name="language">en</tss:characteristic>
+               <tss:characteristic name="publicationCountry">London</tss:characteristic>
+               <tss:characteristic name="publisher">Harrison and Sons</tss:characteristic>
+               <tss:characteristic name="status">Reviewed</tss:characteristic>
+               <tss:characteristic name="UUID">8D37BB50-595D-4CA1-9CF9-DA19BFD6332E</tss:characteristic>
+               <tss:characteristic name="Signatur">C.1993</tss:characteristic>
+               <tss:characteristic name="Short Titel">Commercial Reports</tss:characteristic>
+               <tss:characteristic name="Repository">HCPP</tss:characteristic>
+               <tss:characteristic name="Citation identifier">CommercialNo10 1878</tss:characteristic>
+               <tss:characteristic name="URL">https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054668</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">Digital copy</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">statistics</tss:keyword>
+               <tss:keyword assigner="Sente User till">British source</tss:keyword>
+               <tss:keyword assigner="Sente User till">Economic report</tss:keyword>
+               <tss:keyword assigner="Sente User till">Source</tss:keyword>
+            </tss:keywords>
+            <tss:attachments>
+               <tss:attachmentReference>
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial.%20No.%2010%20(1878).%20(Trade%20reports.)%20Reports%20from%20Her%20Majesty%27s%20consuls%20on%20the%20manufact.pdf</URL>
+               </tss:attachmentReference>
+            </tss:attachments>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date month="7" type="Publication" year="1878"/>
+               <tss:date day="7" month="4" type="Entry" year="2009"/>
+               <tss:date day="20" month="6" type="Modification" year="2014"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle">FO 78/2848, Consul General at Beirut; Eldridge, Drafts and Dispatches, Political. 1878 July-Dec.</tss:characteristic>
+               <tss:characteristic name="publicationCountry">Beirut</tss:characteristic>
+               <tss:characteristic name="rating">3</tss:characteristic>
+               <tss:characteristic name="UUID">48D7FF32-AE89-49BB-921D-18E8B0B8B0A8</tss:characteristic>
+               <tss:characteristic name="Signatur">FO 78/2848</tss:characteristic>
+               <tss:characteristic name="BibTeX cite tag">Fo782848ConsulGeneralAtBeirutEldridge:1878</tss:characteristic>
+               <tss:characteristic name="Repository">PRO</tss:characteristic>
+               <tss:characteristic name="Citation identifier">Fo782848ConsulGeneral 1878</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User till">British source</tss:keyword>
+               <tss:keyword assigner="Sente User till">order/library</tss:keyword>
+               <tss:keyword assigner="Sente User till">Source</tss:keyword>
+            </tss:keywords>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date type="Publication" year="1880"/>
+               <tss:date day="31" month="12" type="Modification" year="2013"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle"
+                  >FO 78/3156, Consuls General at Bagdad, Robertson, Miles, Plowden, Eldridge. Vice-Consul at Damascus. Jago. Consular, Commercial and Sanitary, 1880</tss:characteristic>
+               <tss:characteristic name="abstractText"
+                  >pages not numbered&lt;br&gt;&lt;br&gt;mainly concerned with the British investigations of the poisoning of Ms. Joseph Dummar at Damascus with Prussic Acid (Blausäure)</tss:characteristic>
+               <tss:characteristic name="language">english</tss:characteristic>
+               <tss:characteristic name="status">Started</tss:characteristic>
+               <tss:characteristic name="UUID">6BA7D40D-0230-4EB5-9EAC-BD4B71D00937</tss:characteristic>
+               <tss:characteristic name="Signatur">FO 78/3156</tss:characteristic>
+               <tss:characteristic name="BibTeX cite tag">Fo783156ConsulsGeneralAtBagdadRobertson:1880</tss:characteristic>
+               <tss:characteristic name="Date read">2008-06-05</tss:characteristic>
+               <tss:characteristic name="Repository">PRO</tss:characteristic>
+               <tss:characteristic name="Standort">National Archives, Kew</tss:characteristic>
+               <tss:characteristic name="Citation identifier">Fo783156ConsulsGeneral 1880</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User till">British source</tss:keyword>
+               <tss:keyword assigner="Sente User till">Digital copy</tss:keyword>
+               <tss:keyword assigner="Sente User till">Source</tss:keyword>
+            </tss:keywords>
+            <tss:attachments>
+               <tss:attachmentReference type="PDF-Dokument">
+                  <name>Local file</name>
+                  <source>Manual Link</source>
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1880%20FO%2078_3156%2C%20Consuls%20General%20at%20Bagdad%2C%20Robertson%2C%20Miles%2C%20Plowden%2C%20Eldridge.%20Vice-Consul%20at%20Dam.pdf</URL>
+               </tss:attachmentReference>
+            </tss:attachments>
+         </tss:reference>
+         <tss:reference>
+            <tss:publicationType name="Archival File"/>
+            <tss:dates>
+               <tss:date type="Publication" year="1882"/>
+               <tss:date day="21" month="4" type="Entry" year="2009"/>
+               <tss:date day="20" month="8" type="Modification" year="2012"/>
+            </tss:dates>
+            <tss:characteristics>
+               <tss:characteristic name="publicationTitle"
+                  >FO 78/3423, Consul General at Beyrout. Eldridge. Consuls at Smyrna, Samos, Dennis, Moore. Vice-Consuls at Beyrout, Damascus, Scio and Tchesme. Block, Jago, Dickson, Anamissaki. Consular, Commercial and Sanitary. 1882 Jan.-Dec.</tss:characteristic>
+               <tss:characteristic name="abstractText"
+                  >Contains mostly consular notes on salaries, expenses, conduct of duties&lt;br&gt;&lt;br&gt;&lt;a href=&quot;sente:/BachBibliographie/Fo783423ConsulGeneral+1882&quot;&gt;sente:/BachBibliographie/Fo783423ConsulGeneral+1882&lt;/a&gt;&lt;br&gt;&lt;br&gt;Draft  Beirut No.9, 20 May 1882, to Eldridge&lt;br&gt;John Dickson is appointed VC at Damascus and placed under Eldridge's supervision&lt;br&gt;&lt;br&gt;Beirut Consular 3, 3 January 1882, Eldridge to Granville&lt;br&gt;inclosed list of persons acting as VC under within his district&lt;br&gt;&lt;br&gt;Beirut Consular 6, 28 January 1882, Eldridge to Granville&lt;br&gt;forwarding Jago's application for prolonged leave of absence. No suitable personal at hand to replace him. Suggest sending a trainee to Beirut; Dickson could then go to Damascus&lt;br&gt;&lt;br&gt;Beirut COnsular 8, 28 March 1882, Eldridge to Granville&lt;br&gt;confirming to have received the approval for Jago's leave of absence, which Jago proposed to beginn towards the end of April. Dickson will proceed to Damascus.&lt;br&gt;&lt;br&gt;Beirut Consular 9, 1 April 1882, Eldridge to Granville&lt;br&gt;£85&quot;13&quot;6  salary to Dickson for last quarter&lt;br&gt;£25 to the chief clerk&lt;br&gt;&lt;br&gt;Beirut Consular 13, 8 May 1882, Eldridge to Granville&lt;br&gt;Jago left Damascus 4 May, Dickson proceeds there&lt;br&gt;&lt;br&gt;Beirut Consular 14, 25 May 1882, Eldridge to Granville&lt;br&gt;reply to a confidential report that some positions of unpaid VC in Asian Turkey and Syria were achieved through bribery. Eldridge serves for 19 years in Syria and has files all the placements under his jurisdiction.&lt;br&gt;If the British adopted the French system of appointing salaried nationals everything would be fine. But under the current system he has to pick the most suitable foreign resident who is willing to serve as VC. The gentlemen are the best to be found on the spot.&lt;br&gt;Strict rules for employing Dragomans and Cavasses laid down in 1863: 4 each for independent consulats at main places of the province; 3 at dependent ones, and 2 each at VC. He stuck to the rule.&lt;br&gt;On arrival he instructed the VCs to reduce the number of protégés and &quot;deprived a large number of persons of British protection.&quot;&lt;br&gt;The above mentioned report advised to allocate only 1 Dragoman and 1 Cavass to VCs, as this would relate to British VCs only, it is a grave step in diminishing the public image of Britain.&lt;br&gt;Dragomans are local Ottoman subjects and unpaid as well, thus they are often absent with their own business and hence the necessity of 2 dragomans.&lt;br&gt;A lengthy account of the duties and functions of the Beirut Consulate follows, finished with an account of the expenses for rent in comparison with Damascus: &quot;while only £32 is paid for the larger Consular residence and office in Damascus&quot;. Then Haiffa, Sidon, Lattakia, Tripoli. BUt not Damascus&lt;br&gt;&lt;br&gt;Alich, 15 October 1882&lt;br&gt;&lt;br&gt;Draft Damascus 1, 18 Mar 1882, Jago&lt;br&gt;Expenses for official telegrams&lt;br&gt;&lt;br&gt;Draft Damascus 1, 29 May to Dickson&lt;br&gt;information that the Queen has appointed him VC in Damascus&lt;br&gt;£500 as salary, £200 allowances&lt;br&gt;&lt;br&gt;Draft Damascus 2, 19 May 1882, to Dickson&lt;br&gt;again about his institution&lt;br&gt;&lt;br&gt;Draft Damascus 4, 27 June 1882, to Dickson&lt;br&gt;Letter of support/introduction from the FO/Granvill for Mr. Tresco, the director of the Jewish School at Damascus&lt;br&gt;&lt;br&gt;Draft Damascus 5, 27 June 1882, to Dickson&lt;br&gt;on the same issue, Dickson is recommended to visit the school from time to time and he should &quot;do so whenever a convenient opportunity may occur&quot;&lt;br&gt;&lt;br&gt;Damascus Consular 1, 2 January 1882, Jago to Granville&lt;br&gt;£172&quot;7&quot;11 salary and allowances for last quarter&lt;br&gt;&lt;br&gt;Damascus Consular 2, 2 January 1882, Jago to Granville&lt;br&gt;Return of births,  and &quot;nil&quot; deaths and marriages for 1881 (enclosure not included)&lt;br&gt;&lt;br&gt;Damascus Consular 3, 2 January 1882, Jago to Granville&lt;br&gt;expenses for telegrams £5&quot;6&quot;2&lt;br&gt;&lt;br&gt;Damascus No.4, 20 January 1882, Jago to Granville&lt;br&gt;10 years absence from England and impaired health causing Jago to ask for prolonged leave of absence from his post, proposes late April as starting date. Last visit to England in 1872.&lt;br&gt;&lt;br&gt;Damascus Cons.5, 6, 31 March 1882, Jago to Granville&lt;br&gt;telegrams, expenses&lt;br&gt;&lt;br&gt;Damascus Consular 7, 1 April 1882, Jago to Granville&lt;br&gt;£172&quot;7&quot;11 salary and allowances for last quarter&lt;br&gt;&lt;br&gt;Damascus No.8, 4 May 1882, Jago to Granville&lt;br&gt;He will leave Damascus tomorrow for England&lt;br&gt;&lt;br&gt;Damascus Consular 9, 12 May 1882, Dickson to Granville&lt;br&gt;In compliance with given orders he proceeded to Damascus and took charge as acting VC&lt;br&gt;&lt;br&gt;Damascus COnsular 10, 29 May 1882, Dickson to Granville&lt;br&gt;statement of the gross amount of all fees and remuneration received at the VC in Damascus for the year that ended 31 March 1882: £20&quot;13&quot;2&lt;br&gt;&lt;br&gt;Damascus Consular 11, 30 May 1882, Dickson to Granville&lt;br&gt;statement of expenses for his journey from Beirut on 10 May&lt;br&gt;&lt;br&gt;Damascus Consular 1, 17 June 1882, Dickson to Granville&lt;br&gt;receipt of his appointment as VC&lt;br&gt;&lt;br&gt;Damascus Consular 4, 1 July 1882, Dickson to Granvill&lt;br&gt;£115 as outfit, to the order of the Imperial Ottoman Bank&lt;br&gt;&lt;br&gt;Damascus Consular 5, 19 July 1882, Dickson to Granvill&lt;br&gt;concerning the letter of introduction for Mr.Tresco/Fresco, and the visits to the Jewish School&lt;br&gt;&lt;br&gt;Damascus Consular 9, 19 October 1882, Dickson to Granville&lt;br&gt;Spanish Consul asked Dickson to act for him during his absence. On  the 12th this was granted by the Embassy in Constantinople. DIckson will be in charge from 2 November &lt;br&gt;&lt;br&gt;</tss:characteristic>
+               <tss:characteristic name="status">Complete</tss:characteristic>
+               <tss:characteristic name="UUID">C725363F-E65E-4BB4-99E4-A4E35CB219F0</tss:characteristic>
+               <tss:characteristic name="Signatur">FO 78/3423</tss:characteristic>
+               <tss:characteristic name="BibTeX cite tag">Fo783423ConsulGeneralAtBeyroutEldridge:1882</tss:characteristic>
+               <tss:characteristic name="Date read">2009-09-25</tss:characteristic>
+               <tss:characteristic name="Repository">PRO</tss:characteristic>
+               <tss:characteristic name="Standort">National Archives, Kew</tss:characteristic>
+               <tss:characteristic name="Citation identifier">Fo783423ConsulGeneral 1882</tss:characteristic>
+               <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+            </tss:characteristics>
+            <tss:keywords>
+               <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+               <tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+               <tss:keyword assigner="Sente User till">British source</tss:keyword>
+               <tss:keyword assigner="Sente User till">Digital copy</tss:keyword>
+               <tss:keyword assigner="Sente User till">Read</tss:keyword>
+               <tss:keyword assigner="Sente User till">Saida</tss:keyword>
+               <tss:keyword assigner="Sente User till">Source</tss:keyword>
+            </tss:keywords>
+            <tss:attachments>
+               <tss:attachmentReference type="PDF-Dokument">
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1882%20FO%2078_3423%2C%20Consul%20General%20at%20Beyrout.%20Eldridge.%20Consuls%20at%20Smyrna%2C%20Samos%2C%20Dennis%2C%20Moore.%20Vice.pdf</URL>
+               </tss:attachmentReference>
+               <tss:attachmentReference type="RTF-Dokument (Rich Text Format)">
+                  <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1882%20FO%2078_3423%2C%20Consul%20General%20at%20Beyrout.%20Eldridge.%20Consuls%20at%20Smyrna%2C%20Samos%2C%20Dennis%2C%20Moore.%20Vice.rtf</URL>
                </tss:attachmentReference>
             </tss:attachments>
          </tss:reference>
