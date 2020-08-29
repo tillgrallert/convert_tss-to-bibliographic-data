@@ -28,8 +28,7 @@
     <xsl:param name="p_letters-discard-reference-in-title" select="true()"/>
     
     <!-- to do
-        - due to Sente's file naming restrictions, I had to use the volume field for issue numbers and vice versa. this is fixed BEFORE converting TSS XML to Zotero RDF.
-        - a lot of periodical references have a purely numerical title, which needs to be removed in POSTPROCESSING the TSS XML
+        - Preprocess Sente export
     -->
     
      <!-- fields not yet covered 
@@ -294,7 +293,7 @@
             <!-- add <z:type> for archival material -->
             <xsl:if test="$v_reference-type-sente = 'Archival File'">
                 <xsl:element name="z:type">
-                    <xsl:text>file</xsl:text>
+                    <xsl:text>File</xsl:text>
                 </xsl:element>
             </xsl:if>
         </xsl:element>
@@ -639,7 +638,7 @@
             <dc:title><xsl:apply-templates/></dc:title>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="tss:characteristic[@name = 'publicationTitle'][contains(ancestor::tss:reference/tss:publicationType/@name, 'Letter')]" mode="m_tss-to-zotero-rdf">
+    <xsl:template match="tss:characteristic[@name = 'publicationTitle'][contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')]" mode="m_tss-to-zotero-rdf" priority="10">
         <!-- need to test if title is only an automatically formatted reference: indicator is the presence of the call number -->
         <xsl:variable name="v_call-num">
             <xsl:choose>
@@ -754,7 +753,12 @@
                      <prism:volume><xsl:value-of select="."/></prism:volume>
                  </xsl:otherwise>
              </xsl:choose>-->
-            <prism:number><xsl:value-of select="."/></prism:number>
+            <xsl:choose>
+                <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Letter')"/>
+                <xsl:otherwise>
+                    <prism:number><xsl:value-of select="."/></prism:number>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'pages']" mode="m_tss-to-zotero-rdf">
