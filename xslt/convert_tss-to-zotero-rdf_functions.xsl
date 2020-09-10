@@ -794,16 +794,8 @@
     </xsl:template>
     
     <!-- call-numbers -->
-    <xsl:template match="tss:characteristic[@name = ('Signatur', 'call-num')]" mode="m_tss-to-zotero-rdf">
+    <xsl:template match="tss:characteristic[@name = ('call-num')]" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
-        <xsl:choose>
-            <!-- for archival reference the call-number should be mapped to location in archive -->
-            <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')">
-                <dc:coverage>
-                    <xsl:apply-templates/>
-                </dc:coverage>
-            </xsl:when>
-            <xsl:otherwise>
                 <dc:subject>
                     <dcterms:LCC>
                         <rdf:value>
@@ -811,8 +803,27 @@
                         </rdf:value>
                     </dcterms:LCC>
                 </dc:subject>
-            </xsl:otherwise>
-        </xsl:choose>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = ('Signatur')]" mode="m_tss-to-zotero-rdf">
+        <xsl:if test=".!=''">
+            <xsl:choose>
+                <!-- for archival reference the call-number should be mapped to location in archive -->
+                <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')">
+                    <dc:coverage>
+                        <xsl:apply-templates/>
+                    </dc:coverage>
+                </xsl:when>
+                <xsl:otherwise>
+                    <dc:subject>
+                        <dcterms:LCC>
+                            <rdf:value>
+                                <xsl:apply-templates/>
+                            </rdf:value>
+                        </dcterms:LCC>
+                    </dc:subject>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     
