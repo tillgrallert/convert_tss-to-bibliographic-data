@@ -250,7 +250,7 @@
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Photograph</tei:form>
-                <tei:form n="zotero"></tei:form>
+                <tei:form n="zotero">artwork</tei:form>
                 <tei:form n="marcgt"></tei:form>
                 <tei:form n="bib"></tei:form>
                 <tei:form n="biblatex"></tei:form>
