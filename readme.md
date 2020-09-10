@@ -9,7 +9,8 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 
 # to do
 
-- convert
+- some fields and reference types are not yet mapped
+- reference types
 
 # features
 ## abstracts
