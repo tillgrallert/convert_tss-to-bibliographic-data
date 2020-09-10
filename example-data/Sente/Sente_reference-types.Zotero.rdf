@@ -64,7 +64,7 @@ volume: 5225
    </bib:BookSection>
    <bib:Manuscript rdf:about="#05A9098B-5156-4AD4-B1B0-1358D2637790">
       <z:itemType>manuscript</z:itemType>
-      <dc:title>RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913</dc:title>
+      <dc:title>Correspondence [Letters received], 1912-1913</dc:title>
       <dc:publisher>
          <foaf:Organization>
             <vcard:adr>
@@ -89,7 +89,6 @@ volume: 5225
       <dcterms:dateSubmitted/>
       <dc:description>Citation Key: Rg84DamascusVol22+1912
 place: Damascus
-Citation: RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913
 uuid: 05A9098B-5156-4AD4-B1B0-1358D2637790
 volume: 22
 </dc:description>
@@ -150,7 +149,7 @@ volume: 22
                   " , gazhane | May 7
                   
                   " , waggon Cheikh Meskine | Jun 19</dcterms:abstract>
-      <z:type>file</z:type>
+      <z:type>File</z:type>
    </bib:Manuscript>
    <bib:Memo rdf:about="#05A9098B-5156-4AD4-B1B0-1358D2637790-abstract">
       <rdf:value>
@@ -577,14 +576,7 @@ uuid: 04E0AD90-9847-4D6A-BBD4-E217B44196B7
    </bib:Memo>
    <bib:Article rdf:about="#0000EA9E-0A6B-4619-B226-9F117C302528">
       <z:itemType>newspaperArticle</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Periodical>
-            <prism:volume>7</prism:volume>
-            <prism:number>20</prism:number>
-            <dc:title>al-Jinān</dc:title>
-         </bib:Periodical>
-      </dcterms:isPartOf>
-      <dc:title>20</dc:title>
+      <dc:title>al-Jinān</dc:title>
       <z:shortTitle>Jinān</z:shortTitle>
       <dc:publisher>
          <foaf:Organization>
@@ -605,6 +597,8 @@ uuid: 04E0AD90-9847-4D6A-BBD4-E217B44196B7
             <rdf:value>http://hdl.handle.net/2027/njp.32101007749359</rdf:value>
          </dcterms:URI>
       </dc:identifier>
+      <prism:volume>7</prism:volume>
+      <prism:number>20</prism:number>
       <bib:pages>685-720</bib:pages>
       <dc:date>1876-10-15</dc:date>
       <z:archive>PUL</z:archive>
@@ -1520,14 +1514,7 @@ volume: 2
    </bib:Memo>
    <bib:Article rdf:about="#004FDF22-6FC7-4FEA-929F-69FE2C7CA4A8">
       <z:itemType>newspaperArticle</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Periodical>
-            <prism:volume>696</prism:volume>
-            <prism:number>14/27</prism:number>
-            <dc:title>Servet-i Fünūn</dc:title>
-         </bib:Periodical>
-      </dcterms:isPartOf>
-      <dc:title>32640</dc:title>
+      <dc:title>Servet-i Fünūn</dc:title>
       <z:shortTitle>Servet-i Fünūn</z:shortTitle>
       <dc:publisher>
          <foaf:Organization>
@@ -1551,6 +1538,8 @@ volume: 2
             <rdf:value>http://gazeteler.ankara.edu.tr/dergiler/482/171366/32640.pdf</rdf:value>
          </dcterms:URI>
       </dc:identifier>
+      <prism:volume>14/27</prism:volume>
+      <prism:number>696</prism:number>
       <bib:pages>305-320</bib:pages>
       <dc:date>1904-08-25</dc:date>
       <z:archive>MKA</z:archive>
@@ -1559,10 +1548,10 @@ volume: 2
       <dc:description>Citation Key: servet-mka+32640
 date_mali: 1320-06-12
 oclc: 6298921
-issue: 14/27
+issue: 696
 place: Der-i Saʿādet
 uuid: 004FDF22-6FC7-4FEA-929F-69FE2C7CA4A8
-volume: 696
+volume: 14/27
 </dc:description>
       <z:language>ota</z:language>
       <dcterms:abstract> 
@@ -1586,14 +1575,7 @@ volume: 696
    </bib:Memo>
    <bib:Article rdf:about="#006C0BE1-C4D4-49F8-98C4-48F40E972EB3">
       <z:itemType>newspaperArticle</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Periodical>
-            <prism:volume>265</prism:volume>
-            <prism:number>6</prism:number>
-            <dc:title>Ḥadīqat al-Akhbār</dc:title>
-         </bib:Periodical>
-      </dcterms:isPartOf>
-      <dc:title>265</dc:title>
+      <dc:title>Ḥadīqat al-Akhbār</dc:title>
       <z:shortTitle>Ḥadīqat</z:shortTitle>
       <dc:publisher>
          <foaf:Organization>
@@ -1609,6 +1591,8 @@ volume: 696
       <dc:subject>Source</dc:subject>
       <dc:subject>newspaper/periodical</dc:subject>
       <dc:subject>weekly</dc:subject>
+      <prism:volume>6</prism:volume>
+      <prism:number>265</prism:number>
       <bib:pages>1-4</bib:pages>
       <dc:date>1863-05-14</dc:date>
       <z:archive>StaBi</z:archive>
@@ -1616,10 +1600,10 @@ volume: 696
       <dc:description>Citation Key: hadiqat265
 date_rumi: 1863-05-02
 date_hijri: 1279-11-26
-issue: 6
+issue: 265
 place: Bayrūt
 uuid: 006C0BE1-C4D4-49F8-98C4-48F40E972EB3
-volume: 265
+volume: 6
 </dc:description>
       <z:language>ar</z:language>
    </bib:Article>
@@ -1627,7 +1611,7 @@ volume: 265
       <z:itemType>newspaperArticle</z:itemType>
       <dcterms:isPartOf>
          <bib:Periodical>
-            <prism:volume>6357</prism:volume>
+            <prism:number>6357</prism:number>
             <dc:title>lisān al-ḥāl</dc:title>
          </bib:Periodical>
       </dcterms:isPartOf>
@@ -1671,9 +1655,9 @@ volume: 265
       </dc:subject>
       <dcterms:dateSubmitted/>
       <dc:description>Citation Key: lisan+6357
+issue: 6357
 place: Bayrūt
 uuid: 003057D3-2DD7-4F24-B7F4-258EFDFBC8CE
-volume: 6357
 </dc:description>
       <z:language>ar</z:language>
       <dcterms:abstract>celebrations of Greek Catholic Patriach Cyril VIII's jubilee	- Sun, 11 Jun: various clerics involved in the celebration. i.a. five bishops. at 7:30 commenced the procession headed by the Patriarch, Bishops, and Priest. Music played until they entered the church. First he delivered a religious sermon, then he thanked the Bishopric, Priests, and the people (*shaʿb*). The procession then returned to the Patriarchate. A priest walked in front and blessed the people. Arabic translation of what he shouted.</dcterms:abstract>
@@ -1696,7 +1680,7 @@ volume: 6357
       <z:itemType>newspaperArticle</z:itemType>
       <dcterms:isPartOf>
          <bib:Periodical>
-            <prism:volume>134</prism:volume>
+            <prism:number>134</prism:number>
             <dc:title>thamarāt al-funūn</dc:title>
          </bib:Periodical>
       </dcterms:isPartOf>
@@ -1729,9 +1713,9 @@ volume: 6357
       </dc:subject>
       <dcterms:dateSubmitted/>
       <dc:description>Citation Key: thamarat+134a
+issue: 134
 place: Bayrūt
 uuid: B4B947DD-C061-43FC-90E7-4675C271DFE7
-volume: 134
 </dc:description>
       <z:language>ar</z:language>
       <dcterms:abstract>- news from Damascus: al-ahrām, the Egyptian newspaper, is banned from Syria
@@ -1785,7 +1769,6 @@ volume: 134
       <dc:subject>Read</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
-      <prism:number>Slave Trade 1</prism:number>
       <dc:date>1880-02-10</dc:date>
       <z:archive>PRO</z:archive>
       <dc:coverage>FO 84/1571</dc:coverage>
@@ -4528,6 +4511,2557 @@ uuid: 3BF740DD-8754-4485-9036-51AB808B9AA8
         &lt;br/&gt;
     - al-Khūrī Qusṭanṭīn Pasha al-Mukhallisī had published the first edition in the early 20th century.   &lt;/p&gt;
                 </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#96E4AF27-95CA-47B6-8FAF-073A1DC1FE04">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Dienstlicher Schriftwechsel, 1898-1916</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#96E4AF27-95CA-47B6-8FAF-073A1DC1FE04-abstract"/>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Ottoman Empire</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <prism:number>Dienstlicher Schriftwechsel</prism:number>
+      <dc:date>1898</dc:date>
+      <z:archive>BArch</z:archive>
+      <z:libraryCatalog>Bundesarchiv Koblenz</z:libraryCatalog>
+      <dc:coverage>N 1581/5</dc:coverage>
+      <dc:description>Citation Key: BarchN15815Dienstlicher+1898
+issue: Dienstlicher Schriftwechsel
+uuid: 96E4AF27-95CA-47B6-8FAF-073A1DC1FE04
+</dc:description>
+      <z:language>de</z:language>
+      <dcterms:abstract>Enthält u.a.:Schreiben des Justizministeriums zur Änderung des Familiennamens in Loytved-Hardegg, 1908Enthält auch:"Der Sammler. Wochenschrift für alte und neue Kunst", 1921</dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#96E4AF27-95CA-47B6-8FAF-073A1DC1FE04-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;Enthält u.a.:&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Schreiben des Justizministeriums zur Änderung des Familiennamens in Loytved-Hardegg, 1908&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Enthält auch:&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    "Der Sammler. Wochenschrift für alte und neue Kunst", 1921&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#3EE27851-6694-4637-9371-E3F05FDAA7A9">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Personalakte des Auswärtigen Amtes, 1898-1923</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Ottoman Empire</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <prism:number>Personalakte des Auswärtigen Amtes</prism:number>
+      <dc:date>1898</dc:date>
+      <z:archive>BArch</z:archive>
+      <z:libraryCatalog>Bundesarchiv Koblenz</z:libraryCatalog>
+      <dc:coverage>N 1581/128</dc:coverage>
+      <dc:description>Citation Key: BarchN1581128Personalakte+1898
+issue: Personalakte des Auswärtigen Amtes
+uuid: 3EE27851-6694-4637-9371-E3F05FDAA7A9
+</dc:description>
+      <z:language>de</z:language>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Manuscript rdf:about="#8BFBE6D8-8D98-4E45-A7EC-03AEB25AAAF8">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Tagebücher und Exkurisonsberichte aus dem Ostjordanland, ca.1892-1912</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Loytved-Hardegg</foaf:surname>
+                  <foaf:givenName>Julius Harry</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Ottoman Empire</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <prism:number>Tagebücher und Exkurisonsberichte aus dem Ostjordanland</prism:number>
+      <dc:date>1892</dc:date>
+      <z:archive>BArch</z:archive>
+      <z:libraryCatalog>Bundesarchiv Koblenz</z:libraryCatalog>
+      <dc:coverage>N 1581/164</dc:coverage>
+      <dc:description>Citation Key: LoytvedHardegg+1892
+issue: Tagebücher und Exkurisonsberichte aus dem Ostjordanland
+uuid: 8BFBE6D8-8D98-4E45-A7EC-03AEB25AAAF8
+</dc:description>
+      <z:language>de</z:language>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Manuscript rdf:about="#C96AB808-532F-4DA7-9325-4C3BE430549F">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>28 Dhu II 1312 aH [22 Jun. 1895]</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#C96AB808-532F-4DA7-9325-4C3BE430549F-abstract"/>
+      <dc:subject>2011 Cairo</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Ottoman source</dc:subject>
+      <dc:subject>Police</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1895-06-22</dc:date>
+      <z:archive>BOA</z:archive>
+      <dc:coverage>BEO 628/47037</dc:coverage>
+      <dc:description>Citation Key: BoaBeo6284703728+1895
+date_hijri: 1312-12-28
+uuid: C96AB808-532F-4DA7-9325-4C3BE430549F
+</dc:description>
+      <dcterms:abstract>Şam'daki Esad Efendi'nin polis müdüriyetine tayininin adem-i cevazı müstağni-i beyan bulunmuş olmağla ol-babda bir müracaat vukuunda reddi lazım geleceği. (Zabtiye; 29329)Some application by Asʿad Efendi, director of the police in Damascus, must be denied. The dating of all these BOA files is weird, as Asʿad Efendi was ousted from the police job in 1888</dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#C96AB808-532F-4DA7-9325-4C3BE430549F-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;Şam'daki Esad Efendi'nin polis müdüriyetine tayininin adem-i cevazı müstağni-i beyan bulunmuş olmağla ol-babda bir müracaat vukuunda reddi lazım geleceği. (Zabtiye; 29329)&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Some application by Asʿad Efendi, director of the police in Damascus, must be denied. The dating of all these BOA files is weird, as Asʿad Efendi was ousted from the police job in 1888&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Şam'da münteşir Bred ...</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE-abstract"/>
+      <dc:subject>Censorship</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Ottoman source</dc:subject>
+      <dc:subject>Press</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1912-09-09</dc:date>
+      <z:archive>BOA</z:archive>
+      <dc:coverage>BEO 4082/306107</dc:coverage>
+      <dcterms:dateSubmitted>2014-01-10</dcterms:dateSubmitted>
+      <dc:description>Citation Key: BoaBeo4082306107Şamda+1912
+date_hijri: 1330-09-27
+uuid: F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE
+</dc:description>
+      <z:language>ota</z:language>
+      <dcterms:abstract>Şam'da münteşir Brede namındaki gazetede münderic ve mesul müdürünün müebbeden nefyini mucib olan makale-i mezmunun işarı. (Dahiliye)On the lifetime ban for the responsible editor of the periodical Barada in Damascus in order to enforce  publication of compliant articles</dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;Şam'da münteşir Brede namındaki gazetede münderic ve mesul müdürünün müebbeden nefyini mucib olan makale-i mezmunun işarı. (Dahiliye)&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    On the lifetime ban for the responsible editor of the periodical Barada in Damascus in order to enforce  publication of compliant articles&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#7319621C-6E16-44AA-B9FC-9DACF27CE8BE">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Commercial No.1 (1878). Reports from H.M. Consuls on Manufactures and Commerce of their Consular Districts</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>London</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name>Harrison and Sons</foaf:name>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#7319621C-6E16-44AA-B9FC-9DACF27CE8BE-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Economic report</dc:subject>
+      <dc:subject>Foreign Affairs and Diplomacy -- Commercial and Other Statistical Reports -- Commercial Reports -- Commercial Reports</dc:subject>
+      <dc:subject>Parliamentary Papers</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>Trade and Commerce -- International Trade and Navigation -- Commercial Reports -- Commercial Reports</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:identifier>
+         <dcterms:URI>
+            <rdf:value>https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054667?accountid=11004</rdf:value>
+         </dcterms:URI>
+      </dc:identifier>
+      <prism:volume>Commercial No.1, Part I</prism:volume>
+      <dc:date>1878-02</dc:date>
+      <z:archive>HCPP</z:archive>
+      <dc:coverage>C.1950</dc:coverage>
+      <dc:description>Citation Key: CommercialNo1+1878
+place: London
+uuid: 7319621C-6E16-44AA-B9FC-9DACF27CE8BE
+volume: Commercial No.1, Part I
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>Beirut, </dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#7319621C-6E16-44AA-B9FC-9DACF27CE8BE-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Beirut, </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#8D37BB50-595D-4CA1-9CF9-DA19BFD6332E">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Commercial. No. 10 (1878). (Trade reports.) Reports from Her Majesty's consuls on the manufactures, commerce, &amp;amp;c., of their consular districts. Part II.</dc:title>
+      <z:shortTitle>Commercial Reports</z:shortTitle>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>London</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name>Harrison and Sons</foaf:name>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#8D37BB50-595D-4CA1-9CF9-DA19BFD6332E-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Economic report</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>statistics</dc:subject>
+      <dc:identifier>
+         <dcterms:URI>
+            <rdf:value>https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054668</rdf:value>
+         </dcterms:URI>
+      </dc:identifier>
+      <dc:date>1878-04</dc:date>
+      <z:archive>HCPP</z:archive>
+      <dc:coverage>C.1993</dc:coverage>
+      <dc:description>Citation Key: CommercialNo10+1878
+place: London
+uuid: 8D37BB50-595D-4CA1-9CF9-DA19BFD6332E
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>Damascus (514-517)</dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#8D37BB50-595D-4CA1-9CF9-DA19BFD6332E-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Damascus (514-517)</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#48D7FF32-AE89-49BB-921D-18E8B0B8B0A8">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Consul General at Beirut; Eldridge, Drafts and Dispatches, Political. 1878 July-Dec.</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Beirut</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>order/library</dc:subject>
+      <dc:date>1878-07</dc:date>
+      <z:archive>PRO</z:archive>
+      <dc:coverage>FO 78/2848</dc:coverage>
+      <dc:description>Citation Key: Fo782848ConsulGeneral+1878
+place: Beirut
+uuid: 48D7FF32-AE89-49BB-921D-18E8B0B8B0A8
+</dc:description>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Manuscript rdf:about="#6BA7D40D-0230-4EB5-9EAC-BD4B71D00937">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Consuls General at Bagdad, Robertson, Miles, Plowden, Eldridge. Vice-Consul at Damascus. Jago. Consular, Commercial and Sanitary, 1880</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#6BA7D40D-0230-4EB5-9EAC-BD4B71D00937-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1880</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
+      <dc:coverage>FO 78/3156</dc:coverage>
+      <dc:description>Citation Key: Fo783156ConsulsGeneral+1880
+uuid: 6BA7D40D-0230-4EB5-9EAC-BD4B71D00937
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>pages not numberedmainly concerned with the British investigations of the poisoning of Ms. Joseph Dummar at Damascus with Prussic Acid (Blausäure)</dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#6BA7D40D-0230-4EB5-9EAC-BD4B71D00937-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;pages not numbered&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    mainly concerned with the British investigations of the poisoning of Ms. Joseph Dummar at Damascus with Prussic Acid (Blausäure)&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Manuscript rdf:about="#C725363F-E65E-4BB4-99E4-A4E35CB219F0">
+      <z:itemType>manuscript</z:itemType>
+      <dc:title>Consul General at Beyrout. Eldridge. Consuls at Smyrna, Samos, Dennis, Moore. Vice-Consuls at Beyrout, Damascus, Scio and Tchesme. Block, Jago, Dickson, Anamissaki. Consular, Commercial and Sanitary. 1882 Jan.-Dec.</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality/>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#C725363F-E65E-4BB4-99E4-A4E35CB219F0-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Read</dc:subject>
+      <dc:subject>Saida</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1882</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
+      <dc:coverage>FO 78/3423</dc:coverage>
+      <dc:description>Citation Key: Fo783423ConsulGeneral+1882
+uuid: C725363F-E65E-4BB4-99E4-A4E35CB219F0
+</dc:description>
+      <dcterms:abstract>Contains mostly consular notes on salaries, expenses, conduct of duties&lt;a href="sente:/BachBibliographie/Fo783423ConsulGeneral+1882"&gt;sente:/BachBibliographie/Fo783423ConsulGeneral+1882&lt;/a&gt;Draft  Beirut No.9, 20 May 1882, to EldridgeJohn Dickson is appointed VC at Damascus and placed under Eldridge's supervisionBeirut Consular 3, 3 January 1882, Eldridge to Granvilleinclosed list of persons acting as VC under within his districtBeirut Consular 6, 28 January 1882, Eldridge to Granvilleforwarding Jago's application for prolonged leave of absence. No suitable personal at hand to replace him. Suggest sending a trainee to Beirut; Dickson could then go to DamascusBeirut COnsular 8, 28 March 1882, Eldridge to Granvilleconfirming to have received the approval for Jago's leave of absence, which Jago proposed to beginn towards the end of April. Dickson will proceed to Damascus.Beirut Consular 9, 1 April 1882, Eldridge to Granville£85"13"6  salary to Dickson for last quarter£25 to the chief clerkBeirut Consular 13, 8 May 1882, Eldridge to GranvilleJago left Damascus 4 May, Dickson proceeds thereBeirut Consular 14, 25 May 1882, Eldridge to Granvillereply to a confidential report that some positions of unpaid VC in Asian Turkey and Syria were achieved through bribery. Eldridge serves for 19 years in Syria and has files all the placements under his jurisdiction.If the British adopted the French system of appointing salaried nationals everything would be fine. But under the current system he has to pick the most suitable foreign resident who is willing to serve as VC. The gentlemen are the best to be found on the spot.Strict rules for employing Dragomans and Cavasses laid down in 1863: 4 each for independent consulats at main places of the province; 3 at dependent ones, and 2 each at VC. He stuck to the rule.On arrival he instructed the VCs to reduce the number of protégés and "deprived a large number of persons of British protection."The above mentioned report advised to allocate only 1 Dragoman and 1 Cavass to VCs, as this would relate to British VCs only, it is a grave step in diminishing the public image of Britain.Dragomans are local Ottoman subjects and unpaid as well, thus they are often absent with their own business and hence the necessity of 2 dragomans.A lengthy account of the duties and functions of the Beirut Consulate follows, finished with an account of the expenses for rent in comparison with Damascus: "while only £32 is paid for the larger Consular residence and office in Damascus". Then Haiffa, Sidon, Lattakia, Tripoli. BUt not DamascusAlich, 15 October 1882Draft Damascus 1, 18 Mar 1882, JagoExpenses for official telegramsDraft Damascus 1, 29 May to Dicksoninformation that the Queen has appointed him VC in Damascus£500 as salary, £200 allowancesDraft Damascus 2, 19 May 1882, to Dicksonagain about his institutionDraft Damascus 4, 27 June 1882, to DicksonLetter of support/introduction from the FO/Granvill for Mr. Tresco, the director of the Jewish School at DamascusDraft Damascus 5, 27 June 1882, to Dicksonon the same issue, Dickson is recommended to visit the school from time to time and he should "do so whenever a convenient opportunity may occur"Damascus Consular 1, 2 January 1882, Jago to Granville£172"7"11 salary and allowances for last quarterDamascus Consular 2, 2 January 1882, Jago to GranvilleReturn of births,  and "nil" deaths and marriages for 1881 (enclosure not included)Damascus Consular 3, 2 January 1882, Jago to Granvilleexpenses for telegrams £5"6"2Damascus No.4, 20 January 1882, Jago to Granville10 years absence from England and impaired health causing Jago to ask for prolonged leave of absence from his post, proposes late April as starting date. Last visit to England in 1872.Damascus Cons.5, 6, 31 March 1882, Jago to Granvilletelegrams, expensesDamascus Consular 7, 1 April 1882, Jago to Granville£172"7"11 salary and allowances for last quarterDamascus No.8, 4 May 1882, Jago to GranvilleHe will leave Damascus tomorrow for EnglandDamascus Consular 9, 12 May 1882, Dickson to GranvilleIn compliance with given orders he proceeded to Damascus and took charge as acting VCDamascus COnsular 10, 29 May 1882, Dickson to Granvillestatement of the gross amount of all fees and remuneration received at the VC in Damascus for the year that ended 31 March 1882: £20"13"2Damascus Consular 11, 30 May 1882, Dickson to Granvillestatement of expenses for his journey from Beirut on 10 MayDamascus Consular 1, 17 June 1882, Dickson to Granvillereceipt of his appointment as VCDamascus Consular 4, 1 July 1882, Dickson to Granvill£115 as outfit, to the order of the Imperial Ottoman BankDamascus Consular 5, 19 July 1882, Dickson to Granvillconcerning the letter of introduction for Mr.Tresco/Fresco, and the visits to the Jewish SchoolDamascus Consular 9, 19 October 1882, Dickson to GranvilleSpanish Consul asked Dickson to act for him during his absence. On  the 12th this was granted by the Embassy in Constantinople. DIckson will be in charge from 2 November </dcterms:abstract>
+      <z:type>File</z:type>
+   </bib:Manuscript>
+   <bib:Memo rdf:about="#C725363F-E65E-4BB4-99E4-A4E35CB219F0-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;Contains mostly consular notes on salaries, expenses, conduct of duties&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;a href="sente:/BachBibliographie/Fo783423ConsulGeneral+1882"&gt;sente:/BachBibliographie/Fo783423ConsulGeneral+1882&lt;/a&gt;&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft  Beirut No.9, 20 May 1882, to Eldridge&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    John Dickson is appointed VC at Damascus and placed under Eldridge's supervision&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut Consular 3, 3 January 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    inclosed list of persons acting as VC under within his district&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut Consular 6, 28 January 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    forwarding Jago's application for prolonged leave of absence. No suitable personal at hand to replace him. Suggest sending a trainee to Beirut; Dickson could then go to Damascus&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut COnsular 8, 28 March 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    confirming to have received the approval for Jago's leave of absence, which Jago proposed to beginn towards the end of April. Dickson will proceed to Damascus.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut Consular 9, 1 April 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £85"13"6  salary to Dickson for last quarter&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £25 to the chief clerk&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut Consular 13, 8 May 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Jago left Damascus 4 May, Dickson proceeds there&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Beirut Consular 14, 25 May 1882, Eldridge to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    reply to a confidential report that some positions of unpaid VC in Asian Turkey and Syria were achieved through bribery. Eldridge serves for 19 years in Syria and has files all the placements under his jurisdiction.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    If the British adopted the French system of appointing salaried nationals everything would be fine. But under the current system he has to pick the most suitable foreign resident who is willing to serve as VC. The gentlemen are the best to be found on the spot.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Strict rules for employing Dragomans and Cavasses laid down in 1863: 4 each for independent consulats at main places of the province; 3 at dependent ones, and 2 each at VC. He stuck to the rule.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    On arrival he instructed the VCs to reduce the number of protégés and "deprived a large number of persons of British protection."&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The above mentioned report advised to allocate only 1 Dragoman and 1 Cavass to VCs, as this would relate to British VCs only, it is a grave step in diminishing the public image of Britain.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Dragomans are local Ottoman subjects and unpaid as well, thus they are often absent with their own business and hence the necessity of 2 dragomans.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    A lengthy account of the duties and functions of the Beirut Consulate follows, finished with an account of the expenses for rent in comparison with Damascus: "while only £32 is paid for the larger Consular residence and office in Damascus". Then Haiffa, Sidon, Lattakia, Tripoli. BUt not Damascus&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Alich, 15 October 1882&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft Damascus 1, 18 Mar 1882, Jago&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Expenses for official telegrams&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft Damascus 1, 29 May to Dickson&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    information that the Queen has appointed him VC in Damascus&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £500 as salary, £200 allowances&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft Damascus 2, 19 May 1882, to Dickson&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    again about his institution&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft Damascus 4, 27 June 1882, to Dickson&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Letter of support/introduction from the FO/Granvill for Mr. Tresco, the director of the Jewish School at Damascus&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Draft Damascus 5, 27 June 1882, to Dickson&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    on the same issue, Dickson is recommended to visit the school from time to time and he should "do so whenever a convenient opportunity may occur"&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 1, 2 January 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £172"7"11 salary and allowances for last quarter&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 2, 2 January 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Return of births,  and "nil" deaths and marriages for 1881 (enclosure not included)&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 3, 2 January 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    expenses for telegrams £5"6"2&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus No.4, 20 January 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    10 years absence from England and impaired health causing Jago to ask for prolonged leave of absence from his post, proposes late April as starting date. Last visit to England in 1872.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Cons.5, 6, 31 March 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    telegrams, expenses&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 7, 1 April 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £172"7"11 salary and allowances for last quarter&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus No.8, 4 May 1882, Jago to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    He will leave Damascus tomorrow for England&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 9, 12 May 1882, Dickson to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    In compliance with given orders he proceeded to Damascus and took charge as acting VC&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus COnsular 10, 29 May 1882, Dickson to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    statement of the gross amount of all fees and remuneration received at the VC in Damascus for the year that ended 31 March 1882: £20"13"2&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 11, 30 May 1882, Dickson to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    statement of expenses for his journey from Beirut on 10 May&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 1, 17 June 1882, Dickson to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    receipt of his appointment as VC&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 4, 1 July 1882, Dickson to Granvill&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    £115 as outfit, to the order of the Imperial Ottoman Bank&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 5, 19 July 1882, Dickson to Granvill&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    concerning the letter of introduction for Mr.Tresco/Fresco, and the visits to the Jewish School&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Consular 9, 19 October 1882, Dickson to Granville&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Spanish Consul asked Dickson to act for him during his absence. On  the 12th this was granted by the Embassy in Constantinople. DIckson will be in charge from 2 November &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#B482243C-FBF3-4A7A-93A2-A2ED8ED20F45">
+      <z:itemType>letter</z:itemType>
+      <dc:title>481</dc:title>
+      <z:shortTitle>&amp;quot;Zustände im Vilayet Aleppo&amp;quot;</z:shortTitle>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Auswärtiges Amt</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Pera</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#B482243C-FBF3-4A7A-93A2-A2ED8ED20F45-abstract"/>
+      <dc:subject>Aleppo</dc:subject>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Read</dc:subject>
+      <dc:subject>Russo-Turkish War, 1877-1878</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>Violence</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1878-11-20</dc:date>
+      <z:archive>PA AA</z:archive>
+      <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
+      <dc:coverage>R14525</dc:coverage>
+      <dc:description>Citation Key: AaR14525Pera481+1878
+issue: 481
+place: Pera
+Citation: AA R14525 Pera 481, to Auswärtiges Amt 20 Nov. 1878
+uuid: B482243C-FBF3-4A7A-93A2-A2ED8ED20F45
+</dc:description>
+      <z:language>de</z:language>
+      <dcterms:abstract>Angaben über einen Bericht aus Aleppo: Nachricht vom Ende Krieges ist freudig aufgenommen worden, da nun weder Rekrutierung noch Kriegssteuern anstehen.Fears of clashes between locals and 17.000 armed Circassians, who embarked at Salonica, are strife in rural areas of the province.</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#B482243C-FBF3-4A7A-93A2-A2ED8ED20F45-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;Angaben über einen Bericht aus Aleppo: Nachricht vom Ende Krieges ist freudig aufgenommen worden, da nun weder Rekrutierung noch Kriegssteuern anstehen.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Fears of clashes between locals and 17.000 armed Circassians, who embarked at Salonica, are strife in rural areas of the province.&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#B52146DF-3D30-47C7-8B0B-5E8B9D096F89">
+      <z:itemType>letter</z:itemType>
+      <dc:title/>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Schroeder</foaf:surname>
+                  <foaf:givenName>Paul</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>zu Hohenlohe-Schillingsfürst</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Beirut</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name>Reichskanzler</foaf:name>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#B52146DF-3D30-47C7-8B0B-5E8B9D096F89-abstract"/>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Ernst Lütticke</dc:subject>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Read</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1895-04-23</dc:date>
+      <z:archive>PA AA</z:archive>
+      <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
+      <dc:coverage>R141505</dc:coverage>
+      <dc:description>Citation Key: Schroeder+1895
+place: Beirut
+Citation: AA R141505 Beirut, Schroeder to zu Hohenlohe-Schillingsfürst 23 Apr. 1895
+uuid: B52146DF-3D30-47C7-8B0B-5E8B9D096F89
+</dc:description>
+      <z:language>de</z:language>
+      <dcterms:abstract>16 Apr: Lütticke returned to his post at Damascus</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#B52146DF-3D30-47C7-8B0B-5E8B9D096F89-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    16 Apr: Lütticke returned to his post at Damascus</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#71FD38EF-7B2D-4680-B929-31E7156E2AA9">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Notiz ad I 13125</dc:title>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Berlin</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#71FD38EF-7B2D-4680-B929-31E7156E2AA9-abstract"/>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Ernst Lütticke</dc:subject>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Read</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1890-08-05</dc:date>
+      <z:archive>PA AA</z:archive>
+      <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
+      <dc:coverage>R141505</dc:coverage>
+      <dc:description>Citation Key: AaR141505BerlinNotiz+1890b
+Series: Notiz ad I
+Series Number: 13125
+place: Berlin
+Citation: AA R141505 Berlin Notiz ad I 13125, 5 Aug. 1890
+uuid: 71FD38EF-7B2D-4680-B929-31E7156E2AA9
+</dc:description>
+      <z:language>de</z:language>
+      <dcterms:abstract>Königlich sächsisches allgemeines Ehrenzeichen an den Kawass des deutschen Konsulats in Damaskus, Melhem Schamanu [Sulaymān Shamʿūn].</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#71FD38EF-7B2D-4680-B929-31E7156E2AA9-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Königlich sächsisches allgemeines Ehrenzeichen an den Kawass des deutschen Konsulats in Damaskus, Melhem Schamanu [Sulaymān Shamʿūn].</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#32A1FFB5-A819-420F-9857-F836A3E73CA9">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Telegram IC 16069/23.XI.1914</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Wangenheim</foaf:surname>
+                  <foaf:givenName/>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Auswärtiges Amt</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Therapia</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#32A1FFB5-A819-420F-9857-F836A3E73CA9-abstract"/>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Read</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1914-11-23</dc:date>
+      <z:archive>PA AA</z:archive>
+      <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
+      <dc:coverage>R141506</dc:coverage>
+      <dc:description>Citation Key: Wangenheim+1914
+issue: Telegram IC 16069/23.XI.1914
+place: Therapia
+Citation: AA R141506 Therapia Telegram IC 16069/23.XI.1914, Wangenheim to Auswärtiges Amt 23 Nov. 1914
+uuid: 32A1FFB5-A819-420F-9857-F836A3E73CA9
+</dc:description>
+      <dcterms:abstract>Loytved is the right man for the job at Damascus. Padel will proceed to Haifa to take charge as consul there.</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#32A1FFB5-A819-420F-9857-F836A3E73CA9-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Loytved is the right man for the job at Damascus. Padel will proceed to Haifa to take charge as consul there.</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#08D3EE85-F9B0-4155-80D3-E376895D8B2B">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Secretarial Department 1046</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Nazim Pasha</foaf:surname>
+                  <foaf:givenName/>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Richards</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#08D3EE85-F9B0-4155-80D3-E376895D8B2B-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Director of education</dc:subject>
+      <dc:subject>Education</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>Surveillance</dc:subject>
+      <dc:subject>expanding government control</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1901-11-28</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
+      <dc:coverage>FO 195/2097</dc:coverage>
+      <dc:description>Citation Key: NazimPasha+1901
+date_rumi: 1317-11-15
+Series: Secretarial Department
+Series Number: 1046
+place: Damascus
+Citation: FO 195/2097 Damascus Secretarial Department 1046, Nazim Pasha to Richards 15 Tish II 1317 R [28 Nov. 1901]
+uuid: 08D3EE85-F9B0-4155-80D3-E376895D8B2B
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>DE of Syria received an order from the minister of public instruction, which had tables printed (2 copies inclosed), "with a view of showing the localities of foreign and non-Moslem schools, their grade, date of establishment, whether they are licensed or not, the number of scholars, the names of the responsible directors, their nationality etc. etc." asking R to fill in the tables within five weeks</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#08D3EE85-F9B0-4155-80D3-E376895D8B2B-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    DE of Syria received an order from the minister of public instruction, which had tables printed (2 copies inclosed), "with a view of showing the localities of foreign and non-Moslem schools, their grade, date of establishment, whether they are licensed or not, the number of scholars, the names of the responsible directors, their nationality etc. etc." asking R to fill in the tables within five weeks</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#3C73D2C4-11A6-4A86-B77D-1E5F4CFC87A5">
+      <z:itemType>letter</z:itemType>
+      <dc:title>20 Confidential</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Richards</foaf:surname>
+                  <foaf:givenName>William Shortland</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>O'Conor</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#3C73D2C4-11A6-4A86-B77D-1E5F4CFC87A5-abstract"/>
+      <dc:subject>Baramke</dc:subject>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>exilation</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:date>1902-02-26</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
+      <dc:coverage>FO 195/2122</dc:coverage>
+      <dc:description>Citation Key: Richards+1902ax
+issue: 20 Confidential
+place: Damascus
+Citation: FO 195/2122 Damascus 20 Confidential, Richards to O'Conor 26 Feb. 1902
+uuid: 3C73D2C4-11A6-4A86-B77D-1E5F4CFC87A5
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>Hussein Avni Effendi the DE approached R on behalf of some army officers to beg R to solicit  O'C's intervention at Constantinople for the relaxation of Fou'ad Pasha's confinement. R gave no assurances.glosses 7 Mar: recipient sees no way to interfere. inform R</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#3C73D2C4-11A6-4A86-B77D-1E5F4CFC87A5-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;
+        &lt;tei:persName&gt;Hussein Avni Effendi
+                &lt;/tei:persName&gt;
+             the DE approached R on behalf of some army officers to beg R to solicit  O'C's intervention at Constantinople for the relaxation of 
+        &lt;tei:persName&gt;Fou'ad Pasha
+                &lt;/tei:persName&gt;
+            's confinement. R gave no assurances.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    glosses 7 Mar: recipient sees no way to interfere. inform R&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#EAEE0CC3-AD59-4ADB-9B81-DE239F285FD3">
+      <z:itemType>letter</z:itemType>
+      <dc:title>27</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Richards</foaf:surname>
+                  <foaf:givenName>William Shortland</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>O'Conor</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#EAEE0CC3-AD59-4ADB-9B81-DE239F285FD3-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Public opinion</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>critique, authorities</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>provincial administration</dc:subject>
+      <dc:subject>salaries</dc:subject>
+      <dc:date>1902-03-12</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
+      <dc:coverage>FO 195/2122</dc:coverage>
+      <dc:description>Citation Key: Richards+1902z
+issue: 27
+place: Damascus
+Citation: FO 195/2122 Damascus 27, Richards to O'Conor 12 Mar. 1902
+uuid: EAEE0CC3-AD59-4ADB-9B81-DE239F285FD3
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>Vali's already handsome salary was doubled to £T50 /month and caused much astonishment and unfavourable comment as the public was made to understand that Constantinople contemplates decreasing all salaries of higher officials.</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#EAEE0CC3-AD59-4ADB-9B81-DE239F285FD3-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Vali's already handsome salary was doubled to £T50 /month and caused much astonishment and unfavourable comment as the public was made to understand that Constantinople contemplates decreasing all salaries of higher officials.</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#4AFB5E21-A304-4EC3-8F87-676AD9253FB3">
+      <z:itemType>letter</z:itemType>
+      <dc:title>81</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Monahan</foaf:surname>
+                  <foaf:givenName>J.H.</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>O'Conor</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#4AFB5E21-A304-4EC3-8F87-676AD9253FB3-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Greek Catholic</dc:subject>
+      <dc:subject>Greek Catholic Patriarchate</dc:subject>
+      <dc:subject>Public ritual</dc:subject>
+      <dc:subject>Reception</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1902-08-13</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
+      <dc:coverage>FO 195/2122</dc:coverage>
+      <dc:description>Citation Key: Monahan+1902x
+issue: 81
+place: Damascus
+Citation: FO 195/2122 Damascus 81, Monahan to O'Conor 13 Aug. 1902
+uuid: 4AFB5E21-A304-4EC3-8F87-676AD9253FB3
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>8 Aug: the new Catholic Patriarch, Kyrillos Jehha, arrived at Damascus. "He was received at the station by the Chief of Police and the dragoman of the vilayet as representatives of the Vali, an officer representing the Mushir […], dragomans of the foreign consulates, a bishop priest and deacon representing the Greek Orthodox Patriarch, and lay representatives of the Greek Catholic, Greek Orthodox and other Christian communities besides several Greek Catholic bishops and priests." proceeded to church and then to the Patriarchate where the reception was attended by the acting French consul. Upon asking the Vali received communication from the Porte confirming the election of the Patriarchate.</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#4AFB5E21-A304-4EC3-8F87-676AD9253FB3-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    8 Aug: the new Catholic Patriarch, Kyrillos Jehha, arrived at Damascus. "He was received at the station by the Chief of Police and the dragoman of the vilayet as representatives of the Vali, an officer representing the Mushir […], dragomans of the foreign consulates, a bishop priest and deacon representing the Greek Orthodox Patriarch, and lay representatives of the Greek Catholic, Greek Orthodox and other Christian communities besides several Greek Catholic bishops and priests." proceeded to church and then to the Patriarchate where the reception was attended by the acting French consul. Upon asking the Vali received communication from the Porte confirming the election of the Patriarchate.</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#0A7E7815-3248-41FA-B91B-A4E6EF90EF78">
+      <z:itemType>letter</z:itemType>
+      <dcterms:isPartOf>
+         <bib:Book>
+            <dc:title>Draft 51</dc:title>
+         </bib:Book>
+      </dcterms:isPartOf>
+      <dc:title>General Report for September Quarter</dc:title>
+      <z:shortTitle>Quarterly Report</z:shortTitle>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Devey</foaf:surname>
+                  <foaf:givenName>George Pollard</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Lowther</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#0A7E7815-3248-41FA-B91B-A4E6EF90EF78-abstract"/>
+      <dc:subject>Ayn Fija</dc:subject>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Cereals</dc:subject>
+      <dc:subject>Constitution</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Elections</dc:subject>
+      <dc:subject>Food prices</dc:subject>
+      <dc:subject>Hijaz Railway</dc:subject>
+      <dc:subject>Military</dc:subject>
+      <dc:subject>Municipal government</dc:subject>
+      <dc:subject>Parliament</dc:subject>
+      <dc:subject>Propriety</dc:subject>
+      <dc:subject>Public gathering</dc:subject>
+      <dc:subject>Public places</dc:subject>
+      <dc:subject>Public ritual</dc:subject>
+      <dc:subject>Public works</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>Young Turk Revolution</dc:subject>
+      <dc:subject>administrative change</dc:subject>
+      <dc:subject>construction works</dc:subject>
+      <dc:subject>freedom of speech</dc:subject>
+      <dc:subject>gender roles</dc:subject>
+      <dc:subject>illuminations</dc:subject>
+      <dc:subject>inauguration</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>prices: cereals</dc:subject>
+      <dc:subject>prices: fruit</dc:subject>
+      <dc:subject>prices: high</dc:subject>
+      <dc:subject>provincial administration</dc:subject>
+      <dc:subject>water works</dc:subject>
+      <dc:date>1908-10-01</dc:date>
+      <z:archive>PRO</z:archive>
+      <dc:coverage>FO 618/3</dc:coverage>
+      <dc:description>Citation Key: Devey+1908n
+Series: Draft
+Series Number: 51
+place: Damascus
+Citation: FO 618/3 Damascus Draft 51, &lt;i&gt;Quarterly Report&lt;/i&gt;, Devey to Lowther 1 Oct. 1908
+uuid: 0A7E7815-3248-41FA-B91B-A4E6EF90EF78
+</dc:description>
+      <dcterms:abstract>[…]"the great ‘coup d’Etat’ which took place in Turkey on the 24th July occupied all minds and arouses every emotion with the proclamation of the Constitution, in Damascus as in all other important centres in the Empire. Among its results worthy of remark here were (a) celebrations and festivities (b) dismissal or resignation oaf notoriously corrupt  officials (c) formation of clubs and associations (d) parliamentary elections (e) reforms in various governmental departments. (f) release or rehabilitation of political exiles or persons [xxx].Rejoicings and joyful manifestation are only coming now to an end, after lasting more than two months: more than 25 well organized great meetings were held int he different quarters of the city, mostly attended by several thousands [sic] demonstrators and spectators, and hundreds of speeches were delivered, all condemning autocracy as despotic &amp; tyrannical and eulogizing liberty and constitutional government. About £2000 were spent on the festivities and had not notables of Damascus with the young Turks lately recommended their cessation they might have continued for another month or more. It is to be remarked with pleasure that all these gathering &amp; demonstrations were conducted most orderly without any dispute or ill feeling among those who assembled.Many corrupt officials were either dismissed or withdrew themselves.The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams of Cazas, Moh.d P. Adm [Muḥammad Pasha al-ʿAẓm] of Idara Mejliss with about 30 other minor officials vacated their posts, mostly to the general satisfaction of the public and it is debated now among ‘Young Turkey’ adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity. Doubtless the proper course will be followed in leaving this matter to the jurisdiction  of Parliament when it assembles, and the ignorious[?] dismissal of the more corrupt, rapacious &amp; outrageous among officials suffices for the moment. Moreover, the vacancies are not being easily filled up by really good substitutes, for such persons are at present  rare, and often unwilling to serve. Damascus Clubs &amp; associations, besides the Union &amp; Progress number now five viz Hurriyet, Ulema, Medical, Commercial, Free Ottoman besides a Shoemaker guild. the first two are showing much activity wh.[ich] is likely to excite mutation . The misapprehension &amp; with uncalled solicitude Ulema are anxious to comcure [?sic] &amp; uphold Islam against the liberal views of the Young Turks, while the latter have no intention at present to interfere with religious precepts. The first point of dispute was about women’s wear which the Ulema wanted to be cut on a very simple mode, one piece enveloping the whole body, and the liberals denied them the right of interfering with this matter which should be regarded as pertaining to individual free choice. In this campaign the Ulema were defeated but not without their rivals using threats of applying force.There is little record as to practical work effected [?] by other clubs though their moral influence cannot be other than good.The Parliamentary elections are under preparation the last two months and in some cazas the voters have already voted for the electors, but in Damascus city this process will begin in a week’s time. It is not even announced yet how many deputies will represent this Vilayet in the Parliament but it is supposed that they will be seven or eight. The Hauran people still reject their privilege to elect a deputy and the efforts of the government in dissuading them from this self-inflicted loss seem to be futile. The Mutessarif of Kerak lately resigned on grounds of health, but before doing so had been able to set going a local society or club for instruction of the people of his district who indeed are little  less backward &amp;ignorant than this of Hauran.The reforms in the various departments of the government proceed slowly. The Municipality suppressed most improperly awarded pensions paid to persons doing nothing for it  and succeeded in amassing about £3000 through various economies. The Public Instruction Department formed a new chamber to consider the reorganization of the educational system in this Vilayet. In the departments no special reforms worth mentioning have been introduced but many are being talked of &amp; discussed. The political exiles who had been releases or rehabilitated included many persons of rank, both military and civil. Mushir Fuad Pasha’s release was the occasion of great demonstrations in Damascus, but the rehabilitation of others, with a few exceptions, was not publicly noticed, for this disgraces persons were always enjoying personal freedom  and a very few persons knew that they were ‘Ikamet Mamours’ [iqāma maʾmūr]. The chief names among these were, Nouri P. Ferik of Cavalry, another Ferik called Nouri Pasha sent to live here without duties, Ferik Ibrahim Pasha (those three Feriks kept for Constantinople), Ferik Lt. Osman P., Liva Behjet Pasha (those two died recently), Colonel Bedri Bey (now of Liva Bedri P. in Constantinople). The Maàriz Mushiri [?] &amp; his assistant, and many minor officials or private persons; such as members of the Bedr Khan family, numbering more than a hundred. Further as reported in desp. No. 32, the Ismailians subjected to religious persecution were pardoned. Happily no sort of disorder or riotous intention was displayed here for the purpose of releasing prisoners and ordinary criminals generally, as took place in some other places."Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four of the five battalions employed for earthworks on the line were allowed to return to their garrisons. "about 1400 of these battalions on expiry of service were disbanded. Moreover, the four battalions of the 40th Reg, sent to Medina from this Army Corps in June last, to guard the line, are also ordered back to their headquarters. At present only two battalions are to be kept there to take care of the line as regards repairs &amp; protection." No aspirations to commence construction beyond Medina due to increasing Bedouin raids "Public security in the Vilayet has been during the quarter satisfactory and order was properly kept. The Bedouins have been quiet &amp; peaceful during the summer, and only on two or three occasions made petty rais &amp; drove or carried away animals or goods but the spoils were restored to their owners without great difficulties." Druze and Bedouins seem under the spell of the government and calmly wait for the implementation of the promised reforms"the crops this year were in general very good and the grain harvest in most of the districts of the Province was exceptionally abundant. The apricot produce was above the average while walnuts were much below. All prices of fruit and cereals are still high and the peasants this year will do well. An exception might be mentioned as  as regards locusts which made a perceptible damage in the Kalamoun district but had a very slight effect in some other Cazas. But the loss to the Vilayet in general has been small.As respects trade, no special remarks need be made; strikes at Beirut at the Customs and on local railways have produced only exiguous loss here. With reference to the latter we may note that public opinion judges that the smaller employés  were underpaid, while the profits of the Company &amp; of its directors were considerable and the public at the same time ill served.Public health has been satisfactory on the whole this summer, but the Ain Fijeh water has not been received the general approbation anticipated which is to be regretted, as theres is absolute proof the it is the best &amp; purest spring water of al this neighbourhood. Its distribution to all quarters of the city proceeds slowly."</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#0A7E7815-3248-41FA-B91B-A4E6EF90EF78-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;[…]&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    "the great ‘coup d’Etat’ which took place in Turkey on the 24th July occupied all minds and arouses every emotion with the proclamation of the Constitution, in Damascus as in all other important centres in the Empire. Among its results worthy of remark here were (a) celebrations and festivities (b) dismissal or resignation oaf notoriously corrupt  officials (c) formation of clubs and associations (d) parliamentary elections (e) reforms in various governmental departments. (f) release or rehabilitation of political exiles or persons [xxx].&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Rejoicings and joyful manifestation are only coming now to an end, after lasting more than two months: more than 25 well organized great meetings were held int he different quarters of the city, mostly attended by several thousands [sic] demonstrators and spectators, and hundreds of speeches were delivered, all condemning autocracy as despotic &amp; tyrannical and eulogizing liberty and constitutional government. About £2000 were spent on the festivities and had not notables of Damascus with the young Turks lately recommended their cessation they might have continued for another month or more. It is to be remarked with pleasure that all these gathering &amp; demonstrations were conducted most orderly without any dispute or ill feeling among those who assembled.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Many corrupt officials were either dismissed or withdrew themselves.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams of Cazas, Moh.d P. Adm [Muḥammad Pasha al-ʿAẓm] of Idara Mejliss with about 30 other minor officials vacated their posts, mostly to the general satisfaction of the public and it is debated now among ‘Young Turkey’ adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity. Doubtless the proper course will be followed in leaving this matter to the jurisdiction 
+        &lt;tei:pb/&gt; of Parliament when it assembles, and the ignorious[?] dismissal of the more corrupt, rapacious &amp; outrageous among officials suffices for the moment. Moreover, the vacancies are not being easily filled up by really good substitutes, for such persons are at present  rare, and often unwilling to serve. &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Damascus Clubs &amp; associations, besides the Union &amp; Progress number now five viz Hurriyet, Ulema, Medical, Commercial, Free Ottoman besides a Shoemaker guild. the first two are showing much activity wh.[ich] is likely to excite mutation . The misapprehension &amp; with uncalled solicitude Ulema are anxious to comcure [?sic] &amp; uphold Islam against the liberal views of the Young Turks, while the latter have no intention at present to interfere with religious precepts. 
+        &lt;u&gt;
+        The first point of dispute was about women’s wear which the Ulema wanted to be cut on a very simple mode, one piece enveloping the whole body, and the liberals denied them the right of interfering with this matter which should be regarded as pertaining to individual free choice. In this campaign the Ulema were defeated but not without their rivals using threats of applying force.
+        &lt;/u&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    There is little record as to practical work effected [?] by other clubs though their moral influence cannot be other than good.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    
+        &lt;tei:pb/&gt;&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The Parliamentary elections are under preparation the last two months and in some cazas the voters have already voted for the electors, but in Damascus city this process will begin in a week’s time. It is not even announced yet how many deputies will represent this Vilayet in the Parliament but it is supposed that they will be seven or eight. The Hauran people still reject their privilege to elect a deputy and the efforts of the government in dissuading them from this self-inflicted loss seem to be futile. The Mutessarif of Kerak lately resigned on grounds of health, but before doing so had been able to set going a local society or club for instruction of the people of his district who indeed are little  less backward &amp;ignorant than this of Hauran.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The reforms in the various departments of the government proceed slowly. The Municipality suppressed most improperly awarded pensions paid to persons doing nothing for it  and succeeded in amassing about £3000 through various economies. The Public Instruction Department formed a new chamber to consider the reorganization of the educational system in this Vilayet. In the departments no special reforms worth mentioning have been introduced but many are being talked of &amp; discussed. &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The political exiles who had been releases or rehabilitated included many persons of rank, both military and civil. Mushir Fuad Pasha’s release was the occasion of great demonstrations in Damascus, but the rehabilitation of others, with a few exceptions, was not publicly noticed, for this disgraces persons were always enjoying personal freedom 
+        &lt;tei:pb/&gt; and a very few persons knew that they were ‘Ikamet Mamours’ [iqāma maʾmūr]. The chief names among these were, Nouri P. Ferik of Cavalry, another Ferik called Nouri Pasha sent to live here without duties, Ferik Ibrahim Pasha (those three Feriks kept for Constantinople), Ferik Lt. Osman P., Liva Behjet Pasha (those two died recently), Colonel Bedri Bey (now of Liva Bedri P. in Constantinople). The Maàriz Mushiri [?] &amp; his assistant, and many minor officials or private persons; such as members of the Bedr Khan family, numbering more than a hundred. Further as reported in desp. No. 32, the Ismailians subjected to religious persecution were pardoned. Happily no sort of disorder or riotous intention was displayed here for the purpose of releasing prisoners and ordinary criminals generally, as took place in some other places."&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four of the five battalions employed for earthworks on the line were allowed to return to their garrisons. "about 1400 of these battalions on expiry of service were disbanded. Moreover, the four battalions of the 40th Reg, sent to Medina from this Army Corps in June last, to guard the line, are also ordered back to their headquarters. At present only two battalions are to be kept there to take care of the line as regards repairs &amp; protection." No aspirations to commence construction beyond Medina due to increasing Bedouin raids 
+        &lt;tei:pb/&gt;&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    "Public security in the Vilayet has been during the quarter satisfactory and order was properly kept. The Bedouins have been quiet &amp; peaceful during the summer, and only on two or three occasions made petty rais &amp; drove or carried away animals or goods but the spoils were restored to their owners without great difficulties." Druze and Bedouins seem under the spell of the government and calmly wait for the implementation of the promised reforms&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    "the crops this year were in general very good and the grain harvest in most of the districts of the Province was exceptionally abundant. The apricot produce was above the average while walnuts were much below. All prices of fruit and cereals are still high and the peasants this year will do well. An exception might be mentioned as 
+        &lt;tei:pb/&gt; as regards locusts which made a perceptible damage in the Kalamoun district but had a very slight effect in some other Cazas. But the loss to the Vilayet in general has been small.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    As respects trade, no special remarks need be made; strikes at Beirut at the Customs and on local railways have produced only exiguous loss here. With reference to the latter we may note that public opinion judges that the smaller employés  were underpaid, while the profits of the Company &amp; of its directors were considerable and the public at the same time ill served.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Public health has been satisfactory on the whole this summer, but the Ain Fijeh water has not been received the general approbation anticipated which is to be regretted, as theres is absolute proof the it is the best &amp; purest spring water of al this neighbourhood. Its distribution to all quarters of the city proceeds slowly."&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#B2BCC68E-CAA9-4365-BD5C-3579718227D7">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Jerusalem, K.Nr. 154 / J. Nr. 2252, 17 Jul 1917, Dr. Brode to Reichskanzler Dr. Michaelis</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Brode</foaf:surname>
+                  <foaf:givenName>Dr.</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Jerusalem</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name>Reichskanzler</foaf:name>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#B2BCC68E-CAA9-4365-BD5C-3579718227D7-abstract"/>
+      <dc:subject>4th Army</dc:subject>
+      <dc:subject>Agriculture</dc:subject>
+      <dc:subject>Cereals</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Economic report</dc:subject>
+      <dc:subject>Food prices</dc:subject>
+      <dc:subject>German source</dc:subject>
+      <dc:subject>Harvest</dc:subject>
+      <dc:subject>Jerusalem</dc:subject>
+      <dc:subject>Kerak</dc:subject>
+      <dc:subject>Nablus</dc:subject>
+      <dc:subject>Poverty relief</dc:subject>
+      <dc:subject>Project: Food Riots</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>forced sales</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>prices: cereals</dc:subject>
+      <dc:subject>prices: fruit</dc:subject>
+      <dc:subject>statistics</dc:subject>
+      <dc:date>1917-07-17</dc:date>
+      <z:archive>PA AA</z:archive>
+      <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
+      <dc:coverage>Damaskus 8</dc:coverage>
+      <dc:description>Citation Key: Brode+1917
+issue: K.Nr. 154 / J. Nr. 2252
+place: Jerusalem
+uuid: B2BCC68E-CAA9-4365-BD5C-3579718227D7
+</dc:description>
+      <z:language>de</z:language>
+      <dcterms:abstract># Jerusalem, K.Nr. 154 / J. Nr. 2252, 17 Jul 1917, Dr. Brode to Reichskanzler Dr. MichaelisIm Anschluss an den Bericht vom 28.v.M.J.Nr.1964 K.Nr. 136"Der Geschäftsführer des jetzt in Liquidation befindlichen Getreidesyndikats, Oberleutnant Dragoman Dr. Grobba [Dr. Fritz Grobba] hat dem kommandierenden General des XXII. Armeekorps Freiherrn von Kress über die diesjährige Ernte- und Verpflegungsaussichten einen Bericht erstatten [sic], dessen Abschrift ich mich beehre Euer Exzellenz zur hochgeneigten Einsicht anliegend zu überreichen. Was meinen Amtsbezirk bezw. die Etappeninspektion Jerusalem anlangt, so darf ich in folgendem die Ergebnisse dieses Berichts in kurzer Übersicht zusammenfassen. Ich bemerke dabei im Voraus, dass die von Oberleutnant Grobba kritisch verwerteten Zahlen, da auf türkischen Schätzungen beruhend, nicht unbedingt zuverlässig sein können, meines Erachtens jedoch wenigstens in ihren grossen Zügen annähernd richtig sein dürften, sodass sie die allgemeine Lage sowie deren zukünftige Entwicklung mit einiger Sicherheit erkennen lassen.Wie Euer Exzellenz aus den Vorberichten bekannt ist, hat im Bereich der IV. Armee die Verpflegungsfrage für die Zivilbevölkerung insofern eine endgültige Regelung gefunden als die **Zivil**behörde hiermit beauftragt worden ist. Die oberste Leitung ist jetzt dem Wali von Syrien (d.h. Damaskus) Tahsin Bey übertragen worden, der seinerseits wieder angeordnet hat, dass der Bedarf der Zivilbevölkerung durch die Etappeninspektionen durch (zwangsweisen) Ankauf sicher zu stellen ist. Auf diese Weise soll, wenigstens für einen bedeutenden Teil dieses Bedarfs, die  Fürsorge und die Verantwortung doch wiederum der Militärbehörde - Etappeninspektionen - zufallen.Der Etappeninspektion Jerusalem unterstehen:1. _Gänzlich_ d.h. sowohl bezüglich der Erhebung der Zehnten von der Ernte, wie des Verfügunsrechts über die Ernte: 1. Das selbständige Mutessariflik Jerusalem (Kazas: Jerusalem, Jaffa, Hebron, Berseba, Gaza) 2. Aus dem Berzirk der Provinz Syrien (Damaskus) der westliche Teil des Mutessarifliks Kerak (im Ostjordanlande) nämlich der eigentliche Kreis Kerak, der Zentralkreis Salt nebst dem Amtsbezirk Madeba.Anmerkung: Die Etappeninspektion umfasst demnach nicht den ganzen Teil _meines_ Amtsbezirks, zu dem das ganze Sandjak Kerak gehört.2. _Zumteil_ d.h. nur bezüglich Erhebung des (dopplten) Zehnten: + Von der Provinz Beirut, der Reg.Bezirk NablusDas vorraussichtliche Ernteergebnis in meinem Amtsbezirk, von Nablus also abgesehen, ist im eigentlichen Bezirk Jerusalem und im Ostjordanlande verschieden. Zunächst hat sich die Anbaufläche im Bezirk Jerusalem verringert, da ein Teil der Kazas Berseba und Gaza sich in Feindeshand befindet, ferner infloge der militärischen Einziehungen und Requisitionen Arbeitskräfte und Tiere fehlen und weil schliesslich dem Fellachen bei der drückenden Steuerlast und der nicht enden wollenden behördlichen Schikanen jede Lust fehlt, sein Land über seinen eigenen Bedarf hinaus zu bestellen. Beeinträchtigt wird das Ernteergebnis noch durch ungünstige Witterungseinflüsse. Diese Missstände fehlen im Ostjordanland gänzlich, dessen Bewohner im allgemeinen vom Militärdienste befreit sind, ihre Arbeitstiere besser dem militärischen Zugriff entziehen können und  schliesslich [...][...] Jerusalem unterstehenden Gebiete [...][...] sei es durch freien  Ankauf [...]Wird noch ein weiterer Zehnt von jedem Produkt zwangsweise angekauft, wie vorgeschlagen ist, so ermässigt sich der Fehlbetrag auf 1425000 kg Brotgetreide, 1220200 kg Viehfutter und 3093750 kg Trockengemüse. Dieser Fehlbetrag wäre dann wohl, da "freie" Aufkäufe im hiesigen Bezirk mit Rücksicht auf die Bedürfnisse der Zivilbevölkerung schwerlich mehr möglich sein würden, vom Norden her mit der Bahn heranzuschaffen. Bei diesen geplanten grossen Zwangsankäufen von insgesamt 3/8 der Ernte an Brotgetreide für die Armee bleibt der leidende Teil der Zivilbevölkerung. Ihr täglicher Bedarf ist von Djemal Pascha auf 250 gr Getreide (300 g Brot) festgesetzt worden; in Friedenszeiten verbrauchte der Landeseinwohner täglich 600 - 800 g Brot, so dass die jetzige Rationierung für ihn eine schwer erträgliche Einschränkung bedeutet. Es fragt sich aber, ob die Regierung überhaupt imstande sein wird, der Bevölkerung, die ihr zugemessene Menge verschaffen zu können. Nimmt man die gesamt Bevölkerungszahl der der Etappe Jerusalem unterstehenden Gebiete (Jerusalem, der westliche Teil von Kerak und Nablus) mit 612081 Seelen an - was vielleicht ziemlich genau stimmen könnte - , so würden diese jährlich  (250 g pro Kopf täglich) 55852300 kg Brotgetreide benötigen. Die Gesamternte an Brotgetreide (Weizen und Durra) beträgt aber überhaupt nur 5876800 kg, so dass diese also bei der geplanten knappen Rationierung nur einen geringen Ueberschuss von rund 3 Millionen kg lässt. Nun nimmt aber die Armee vorweg ihren Anteil von entweder 2/8 (nur von Weizen) gleich 10 Millionen kg oder aber vielleicht auch von 3/8 gleich 15 Millionen kg. Für die Zivilbevölkerung würde sich demnach ein Fehlbetrag von 7084301 bis zu 12084300 kg Brotgetreide ergeben.Dieser Fehlbetrag hat an sich nicht solche erschreckende Bedeutung, wie es auf den ersten Blick wohl erscheinen mag. Allerdings müsste ein etwaiger Ersatz von norden her mit der Eisenbahn herangeschafft werden, die neben ihren bisherigen unzulänglichen Leistungen für die Armeebedürfnisse schwerlich noch 12000t für die Zivilbevölkerung bewältigen könnte. Selbst wenn sie dazu imstand wäre, fragt es sich doch, ob die Ernteergebnisse in den Wilajets Damaskus oder Aleppo derartige sind, dass ein Betrag in dieser Höhe abgegeben werden könnte. Ich möchte es verneinen. Trotz alledem sehe ich aber die Lage nicht zu pessimistisch an; wohlgemerkt nicht etwa im Vertrauen auf eine etwaige gute Organisation und sparsame Wirtschaft - so etwas ist unter türkischer Leitung nun einmal unmöglich -, sondern weil trotz aller Statistik, schliesslich doch eine, wenn auch knapp ausreichende Menge an Lebensmitteln in unserem Besitz vorhanden ist. Jede hier nach einem einheitlichen Gesichtspunkte aufgestellte Statistik hat den Fehler, dass sie ein den Tatsachen nicht entsprechendes gleichmässiges Mass zugrundelegt. Die Bevölkerung lebt ja mit Vorliebe von Brot, wenn es aber nicht reicht, kann sie sich, wenigstens als Zusatz, der vor dem Verhungern schützt, mit anderen Produkten begnügen, wie Feigen, Kaktusfeigen, Apfelsinen, Weintrauben, Früchten usw. Die Bevölkerung ist ja im Grunde sehr genügsam und des öfteren in ihren grossen Teilen an Hungerperioden gewöhnt. Dazu kommt noch, dass die Verhältnisse in Stadt und Land verschiedenen sind. Gerade die Landbewohner werden Mittel finden, um einigermassen durchzukommen; nur für grössere Städte, vor allem Jerusalem, wird die Frage brennend werden. Hierfür besteht nach meiner Meinung die grösste Besorgnis. Trotz der schwierigen Ankaufs- und Transportverhältnisse - eine Eisenbahnlinie steht ja für die Versorgung Jerusalems aus dem Ostjordenlande nicht zur Verfügung - wäre es aber technisch möglich, auch diese Kalamatität zu bewältigen, wenn man eben nicht mit der geringen Leistungsfähigkeit und der Ungeschicklichkeit der türkischen Etappe rechnen müsste. Da auf dieser, wie bereits angeführt, letzten Endes doch die gesamte Fürsorge für die Verpflegung der Zivilbevölkerung ruht, die Etappe aber aller Voraussicht nach nicht einmal im Stande sein wird, den Heeresbedarf regelmässig zu decken, so wird sie notgedrungen die Zivilbevölkerung hungern lassen müssen. Der Schmuggelhandel wird ja die Leiden etwas mildern, die Wohlhabenderen Bevölkerungsteile werden sich ferner selbst genügend versorgen können. Die grosse Masse der Armen aber dürfte schwere Zeiten erleben. Unter diesen Umständen halte ich es keineswegs für unmöglich, dass man dann gelegentlich türkischerseits wiedereinmal die Frage wenigstens teilweisen Evakuierung von Jerusalem aufrollt.Die in Liquidation befindliche Getreidekommission hat auch jetzt noch der Regierung ihre Dienste zur Verfügung gestellt und hoffe, mit den ihr zu Transportzwecken über-lassenen 500 Eseln monatlich 125000 kg Getreide heranschaffen zu können. Dies würde ungefähr etwas mehr als der vierte Teil des monatlichen Bedarfs sein (250 g täglich für etwa 53000 Seelen). Die Getreidekommission wird daher zunächst, um wenigstens etwas vollkommen zu erreichen, den Bedarf der Wohltätigkeitsanstalten und bestimmter Bevölkerungsteile, darunter auch die deutsche Kolonie, gänzlich decken. Die Vorarbeiten hierzu sind im Gange.Wie die Sache sich nun weiter entwickeln wird bleibt abzuwarten."Dr. Brode- 3 copies attached. The report and the attachments are also sent to the embassy and the consular agents in Constantinople, Beirut, Aleppo, Damascus. The attachment is also sent to the command of the 22. Army Corps.</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#B2BCC68E-CAA9-4365-BD5C-3579718227D7-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;# Jerusalem, K.Nr. 154 / J. Nr. 2252, 17 Jul 1917, 
+        &lt;tei:persName&gt;Dr. Brode
+                &lt;/tei:persName&gt;
+             to Reichskanzler 
+        &lt;tei:persName&gt;Dr. Michaelis
+                &lt;/tei:persName&gt;
+            &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Im Anschluss an den 
+        &lt;tei:ref&gt;Bericht vom 28.v.M.J.Nr.1964 K.Nr. 136
+                &lt;/tei:ref&gt;
+            &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    
+        &lt;tei:pb n="1"/&gt;&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    "Der Geschäftsführer des jetzt in Liquidation befindlichen Getreidesyndikats, 
+        &lt;tei:persName&gt;Oberleutnant Dragoman Dr. Grobba
+                &lt;/tei:persName&gt;
+             [
+        &lt;tei:persName&gt;Dr. Fritz Grobba
+                &lt;/tei:persName&gt;
+            ] hat dem kommandierenden General des XXII. Armeekorps 
+        &lt;tei:persName&gt;Freiherrn von Kress
+                &lt;/tei:persName&gt;
+             über die diesjährige Ernte- und Verpflegungsaussichten einen Bericht erstatten [sic], dessen Abschrift ich mich beehre Euer Exzellenz zur hochgeneigten Einsicht anliegend zu überreichen. &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Was meinen Amtsbezirk bezw. die Etappeninspektion Jerusalem anlangt, so darf ich in folgendem die Ergebnisse dieses Berichts in kurzer Übersicht zusammenfassen. Ich bemerke dabei im Voraus, dass die von Oberleutnant Grobba kritisch verwerteten Zahlen, da auf türkischen Schätzungen beruhend, nicht unbedingt zuverlässig sein können, meines Erachtens jedoch wenigstens in ihren grossen Zügen annähernd richtig sein dürften, sodass sie die allgemeine Lage sowie deren zukünftige Entwicklung mit einiger Sicherheit erkennen lassen.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Wie Euer Exzellenz aus den Vorberichten bekannt ist, hat im Bereich der IV. Armee die Verpflegungsfrage für die Zivilbevölkerung insofern eine endgültige Regelung gefunden als die **Zivil**behörde hiermit beauftragt worden ist. Die oberste Leitung ist jetzt dem Wali von Syrien (d.h. Damaskus) 
+        &lt;tei:persName&gt;Tahsin Bey
+                &lt;/tei:persName&gt;
+             übertragen worden, der seinerseits wieder angeordnet hat, dass der Bedarf der Zivilbevölkerung durch die Etappeninspektionen durch (zwangsweisen) Ankauf sicher zu stellen ist. Auf diese Weise soll, wenigstens für einen bedeutenden Teil dieses Bedarfs, die 
+        &lt;tei:pb n="2"/&gt; Fürsorge und die Verantwortung doch wiederum der Militärbehörde - Etappeninspektionen - zufallen.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Der Etappeninspektion Jerusalem unterstehen:&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    1. _Gänzlich_ d.h. sowohl bezüglich der Erhebung der Zehnten von der Ernte, wie des Verfügunsrechts über die Ernte:&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+     1. Das selbständige 
+        &lt;tei:placeName&gt;Mutessariflik 
+        &lt;tei:placeName&gt;Jerusalem
+                &lt;/tei:placeName&gt;
+            
+                &lt;/tei:placeName&gt;
+             (Kazas: 
+        &lt;tei:placeName&gt;Jerusalem
+                &lt;/tei:placeName&gt;
+            , 
+        &lt;tei:placeName&gt;Jaffa
+                &lt;/tei:placeName&gt;
+            , 
+        &lt;tei:placeName&gt;Hebron
+                &lt;/tei:placeName&gt;
+            , 
+        &lt;tei:placeName&gt;Berseba
+                &lt;/tei:placeName&gt;
+            , 
+        &lt;tei:placeName&gt;Gaza
+                &lt;/tei:placeName&gt;
+            )&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+     2. Aus dem Berzirk der Provinz Syrien (Damaskus) der westliche Teil des Mutessarifliks Kerak (im Ostjordanlande) nämlich der eigentliche Kreis Kerak, der Zentralkreis Salt nebst dem Amtsbezirk 
+        &lt;tei:placeName&gt;Madeba
+                &lt;/tei:placeName&gt;
+            .&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Anmerkung: Die Etappeninspektion umfasst demnach nicht den ganzen Teil _meines_ Amtsbezirks, zu dem das ganze Sandjak Kerak gehört.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    2. _Zumteil_ d.h. nur bezüglich Erhebung des (dopplten) Zehnten:&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+     + Von der Provinz Beirut, der 
+        &lt;tei:placeName&gt;Reg.Bezirk 
+        &lt;tei:placeName&gt;Nablus
+                &lt;/tei:placeName&gt;
+            
+                &lt;/tei:placeName&gt;
+            &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Das vorraussichtliche Ernteergebnis in meinem Amtsbezirk, von Nablus also abgesehen, ist im eigentlichen Bezirk Jerusalem und im Ostjordanlande verschieden. Zunächst hat sich die Anbaufläche im Bezirk Jerusalem verringert, da ein Teil der Kazas Berseba und Gaza sich in Feindeshand befindet, ferner infloge der militärischen Einziehungen und Requisitionen Arbeitskräfte und Tiere fehlen und weil schliesslich dem Fellachen bei der drückenden Steuerlast und der nicht enden wollenden behördlichen Schikanen jede Lust fehlt, sein Land über seinen eigenen Bedarf hinaus zu bestellen. Beeinträchtigt wird das Ernteergebnis noch durch ungünstige Witterungseinflüsse. Diese Missstände fehlen im Ostjordanland gänzlich, dessen Bewohner im allgemeinen vom Militärdienste befreit sind, ihre Arbeitstiere besser dem militärischen Zugriff entziehen können und 
+        &lt;tei:pb n="3"/&gt; schliesslich [...]&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    [...] Jerusalem unter
+        &lt;tei:pb n="4"/&gt;stehenden Gebiete [...]&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    [...] sei es durch freien 
+        &lt;tei:pb n="5"/&gt; Ankauf [...]&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Wird noch ein weiterer Zehnt von jedem Produkt zwangsweise angekauft, wie vorgeschlagen ist, so ermässigt sich der Fehlbetrag auf 
+        &lt;tei:measure commodity="grain" unit="kg" quantity="142500"&gt;1425000 kg Brotgetreide
+                &lt;/tei:measure&gt;
+            , 
+        &lt;tei:measure commodity="fodder" unit="kg" quantity="1220200"&gt;1220200 kg Viehfutter
+                &lt;/tei:measure&gt;
+             und 
+        &lt;tei:measure commodity="vegetables" unit="kg" quantity="3093750"&gt;3093750 kg Trockengemüse
+                &lt;/tei:measure&gt;
+            . Dieser Fehlbetrag wäre dann wohl, da "freie" Aufkäufe im hiesigen Bezirk mit Rücksicht auf die Bedürfnisse der Zivilbevölkerung schwerlich mehr möglich sein würden, vom Norden her mit der Bahn heranzuschaffen. &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Bei diesen geplanten grossen Zwangsankäufen von insgesamt 3/8 der Ernte an Brotgetreide für die Armee bleibt der leidende Teil der Zivilbevölkerung. Ihr 
+        &lt;tei:measureGrp&gt;
+        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglicher Bedarf
+                &lt;/tei:measure&gt;
+             ist von Djemal Pascha auf 
+        &lt;tei:measure commodity="grain" unit="gr" quantity="250"&gt;250 gr Getreide
+                &lt;/tei:measure&gt;
+             (
+        &lt;tei:measure commodity="bread" unit="gr" quantity="300"&gt;300 g Brot
+                &lt;/tei:measure&gt;
+            )
+                &lt;/tei:measureGrp&gt;
+             festgesetzt worden; in Friedenszeiten verbrauchte der Landeseinwohner 
+        &lt;tei:measureGrp&gt;
+        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglich
+                &lt;/tei:measure&gt;
+             
+        &lt;tei:measure commodity="bread" unit="gr" quantity="600"&gt;600
+                &lt;/tei:measure&gt;
+             - 
+        &lt;tei:measure commodity="bread" unit="gr" quantity="800"&gt;800 g Brot
+                &lt;/tei:measure&gt;
+            
+                &lt;/tei:measureGrp&gt;
+            , so dass die jetzige Rationierung für ihn eine schwer erträgliche Einschränkung bedeutet. Es fragt sich aber, ob die Regierung überhaupt imstande sein wird, der Bevölkerung, die ihr zugemessene Menge verschaffen zu können. Nimmt man die gesamt Bevölkerungszahl der der Etappe Jerusalem unterstehenden Gebiete (Jerusalem, der westliche Teil von Kerak und Nablus) mit 
+        &lt;tei:measure commodity="people" unit="person" quantity="1"&gt;612081 Seelen
+                &lt;/tei:measure&gt;
+             an - was vielleicht ziemlich genau stimmen könnte - , so würden diese jährlich 
+        &lt;tei:pb n="6"/&gt; (
+        &lt;tei:measureGrp&gt;
+        &lt;tei:measure commodity="wheat" unit="gr" quantity="250"&gt;250 g
+                &lt;/tei:measure&gt;
+             
+        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;pro Kopf täglich
+                &lt;/tei:measure&gt;
+            
+                &lt;/tei:measureGrp&gt;
+            ) 55852300 kg Brotgetreide benötigen. Die Gesamternte an Brotgetreide (Weizen und Durra) beträgt aber überhaupt nur 5876800 kg, so dass diese also bei der geplanten knappen Rationierung nur einen geringen Ueberschuss von rund 3 Millionen kg lässt. Nun nimmt aber die Armee vorweg ihren Anteil von entweder 2/8 (nur von Weizen) gleich 10 Millionen kg oder aber vielleicht auch von 3/8 gleich 15 Millionen kg. Für die Zivilbevölkerung würde sich demnach ein Fehlbetrag von 7084301 bis zu 12084300 kg Brotgetreide ergeben.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Dieser Fehlbetrag hat an sich nicht solche erschreckende Bedeutung, wie es auf den ersten Blick wohl erscheinen mag. Allerdings müsste ein etwaiger Ersatz von norden her mit der Eisenbahn herangeschafft werden, die neben ihren bisherigen unzulänglichen Leistungen für die Armeebedürfnisse schwerlich noch 12000t für die Zivilbevölkerung bewältigen könnte. Selbst wenn sie dazu imstand wäre, fragt es sich doch, ob die Ernteergebnisse in den Wilajets Damaskus oder Aleppo derartige sind, dass ein Betrag in dieser Höhe abgegeben werden könnte. Ich möchte es verneinen. Trotz alledem sehe ich aber die Lage nicht zu pessimistisch an; wohlgemerkt nicht etwa im Vertrauen auf eine etwaige gute Organisation und sparsame Wirtschaft - so etwas ist unter türkischer Leitung nun einmal unmöglich -, sondern weil trotz aller Statistik, schliesslich doch eine, wenn auch knapp ausreichende Menge an Lebensmitteln in unserem Besitz vorhanden ist. Jede hier nach einem einheitlichen Gesichtspunkte aufgestellte Statistik hat den Fehler, dass sie ein den Tatsachen nicht entsprechendes gleichmässiges Mass zugrundelegt. Die Bevölkerung lebt ja mit Vorliebe von Brot, wenn es aber nicht reicht, kann sie sich, wenigstens als Zu
+        &lt;tei:pb n="7"/&gt;satz, der vor dem Verhungern schützt, mit anderen Produkten begnügen, wie Feigen, Kaktusfeigen, Apfelsinen, Weintrauben, Früchten usw. Die Bevölkerung ist ja im Grunde sehr genügsam und des öfteren in ihren grossen Teilen an Hungerperioden gewöhnt. Dazu kommt noch, dass die Verhältnisse in Stadt und Land verschiedenen sind. Gerade die Landbewohner werden Mittel finden, um einigermassen durchzukommen; nur für grössere Städte, vor allem Jerusalem, wird die Frage brennend werden. Hierfür besteht nach meiner Meinung die grösste Besorgnis. Trotz der schwierigen Ankaufs- und Transportverhältnisse - eine Eisenbahnlinie steht ja für die Versorgung Jerusalems aus dem Ostjordenlande nicht zur Verfügung - wäre es aber technisch möglich, auch diese Kalamatität zu bewältigen, wenn man eben nicht mit der geringen Leistungsfähigkeit und der Ungeschicklichkeit der türkischen Etappe rechnen müsste. Da auf dieser, wie bereits angeführt, letzten Endes doch die gesamte Fürsorge für die Verpflegung der Zivilbevölkerung ruht, die Etappe aber aller Voraussicht nach nicht einmal im Stande sein wird, den Heeresbedarf regelmässig zu decken, so wird sie notgedrungen die Zivilbevölkerung hungern lassen müssen. Der Schmuggelhandel wird ja die Leiden etwas mildern, die Wohlhabenderen Bevölkerungsteile werden sich ferner selbst genügend versorgen können. Die grosse Masse der Armen aber dürfte schwere Zeiten erleben. Unter diesen Umständen halte ich es keineswegs für unmöglich, dass man dann gelegentlich türkischerseits wiedereinmal die Frage wenigstens teilweisen Evakuierung von Jerusalem aufrollt.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Die in Liquidation befindliche Getreidekommission hat auch jetzt noch der Regierung ihre Dienste zur Verfügung gestellt und hoffe, mit den ihr zu Transportzwecken über-
+        &lt;tei:pb n="8"/&gt;lassenen 500 Eseln monatlich 125000 kg Getreide heranschaffen zu können. Dies würde ungefähr etwas mehr als der vierte Teil des monatlichen Bedarfs sein (
+        &lt;tei:measureGrp&gt;
+        &lt;tei:measure commodity="wheat" unit="gr" quantity="250"&gt;250 g
+                &lt;/tei:measure&gt;
+             
+        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglich
+                &lt;/tei:measure&gt;
+            
+                &lt;/tei:measureGrp&gt;
+             für etwa 53000 Seelen). Die Getreidekommission wird daher zunächst, um wenigstens etwas vollkommen zu erreichen, den Bedarf der Wohltätigkeitsanstalten und bestimmter Bevölkerungsteile, darunter auch die deutsche Kolonie, gänzlich decken. Die Vorarbeiten hierzu sind im Gange.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Wie die Sache sich nun weiter entwickeln wird bleibt abzuwarten."&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Dr. Brode&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    &lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    - 3 copies attached. The report and the attachments are also sent to the embassy and the consular agents in Constantinople, Beirut, Aleppo, Damascus. The attachment is also sent to the command of the 22. Army Corps.&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#CB8E0905-7871-403B-83DE-6AAFCF42E669">
+      <z:itemType>letter</z:itemType>
+      <dcterms:isPartOf>
+         <bib:Book>
+            <dc:title>Draft 42</dc:title>
+         </bib:Book>
+      </dcterms:isPartOf>
+      <dc:title>June Quarter Report</dc:title>
+      <z:shortTitle>Quarterly Report</z:shortTitle>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Mishāqa</foaf:surname>
+                  <foaf:givenName>Nāṣīf</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Marling</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#CB8E0905-7871-403B-83DE-6AAFCF42E669-abstract"/>
+      <dc:subject>Bedouins</dc:subject>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Military</dc:subject>
+      <dc:subject>Military reserve forces</dc:subject>
+      <dc:subject>Mutiny</dc:subject>
+      <dc:subject>Opposition</dc:subject>
+      <dc:subject>Police</dc:subject>
+      <dc:subject>Press review</dc:subject>
+      <dc:subject>Public health</dc:subject>
+      <dc:subject>Redifs</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>Umayyad Mosque</dc:subject>
+      <dc:subject>Violence</dc:subject>
+      <dc:subject>administrative change</dc:subject>
+      <dc:subject>corruption</dc:subject>
+      <dc:subject>critique</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>report on state of affairs</dc:subject>
+      <dc:date>1913-07-10</dc:date>
+      <z:archive>PRO</z:archive>
+      <dc:coverage>FO 618/3</dc:coverage>
+      <dc:description>Citation Key: Mishāqa+1913a
+Series: Draft
+Series Number: 42
+place: Damascus
+Citation: PRO FO 618/3 Damascus Draft 42, &lt;i&gt;Quarterly Report&lt;/i&gt;, Mishāqa to Marling 10 Jul. 1913
+uuid: CB8E0905-7871-403B-83DE-6AAFCF42E669
+</dc:description>
+      <dcterms:abstract>no administrative changes in Hama and ḤawrānKerak : "a whole flock of sheep to the number of about 5,000 + 42 camels were robbed by Bedouins, property belonging to British Indian Merchants"Shawqī Bey, from the istiʾnāf court, and Ismāʿīl Ḥaqqī Bey, the judicial inspector, returned from their tour of insepction to Hama and Homs and went to Ḥawrān and KerakSeveral members of the courts in Damascus "have been either dismissed or degraded being found guilty of bribery +  corruption, but I regret to say that those who have been replaced them are of no better character, corruption + bribery is still going on a large scale in the diff. courts.The desultory talk about decentralization has been hushed up temporarily on account of the outrages occurring at Consple. + the severe capital punishment inflicted on several persons of high social standing, concerned in the murder of the Grand Ministre Shuskat Pasha.Previous however to the above mentioned incidents a meeting was held in the house of the ex-deputy Abdur Rahman  Abdu Ruhma Bey el Yussuf, composed chiefly of the Union + Progress Party. A telegram was sent by this Party to the murdered Grand Vizir controversing Reforms demanded by the Union + Liberty Party (Titilafiyin) at Paris. The telegram has Many of the signatures turned to be falsely signed without the knowledge of their owners.The Local Press here and at Beirut opened a voley of a severe  criticism and exposed the ex-deputy's name blaming and attacking him for a speech he delivered on the occasion in which he insulted in low terms persons of high standing + good reputation from  the Union + Liberty Party, such as the ex-deputy Shukri Bey Asali and Abdul Wahab Eff. Inglisy, who in their turn convoked a meeting and a telegram was sent on behalf of the Damascene people in general endorsing the reforms demanded by the Paris Party  tho that first tel sent by the Paris Party and and dementing a telegram was the second sent  by the Union + Liberty Progress Party at Damascus. However the idea of decentralization has been as above referred hushed up for the time being but it is more likely to reappear in a more vigorous form.The Sanitary Dept. + Private Doctors report bad Public health during the quarter; Scarletine fever is now at an end but was for about two months derrating nearly  months an epidemic in this district + in its surroundings. At Baalbek it is reported that hardly any house escaped the visit by this disease. Death however did not exceed 7 to 8 %.Small pox made its appearance first in the Hauran district and then here. But the Sanitary Dept. has taken the usual necessary measures by vaccination to fight it which is now disappearing. Several fatal cases of typhoid fever have been reported and it still exists in different quarters of the town.Among the high officials removed may be mentioned H.E. the General Suleiman Faik Pasha, of the VIII Army Corps, order from the Ministry of War at Consple. reached this quarter  while he was on an inspection tour at Homs + Palmyra. H.E. left soon after his arrival to Damascus and his place has been occupied by H.E. the Cpt. Moh.d Shefik Pasha. It is alleged that the removal of ex-general is due to the instigation of the ex-1st Etat Major (Nouri Bey) […] His removal nevertheless has been much regretted on account of his kind and gentle character.On the 22nd of May two insubordinate Rediff infantry battalions to the number of about 700 arrived from Yemen, they behaved badly in the town and on  one occasion policemen at Souk Ali Pasha who trying to arrest one of them on acc.t of drunkness + ill behaviour  was badly handled by them, and they succeeded in getting their like ration. This incident insubordination having ended in success encouraged the Rediff battalion infantry of Nebk to the number of about 150 men to fully ar to make a mutiny: Fully armed they proceeded to the Big Omiades Mosque and disobeyed orders, demanding also their liberation (Tizkarahs), H.E. The ex-General + the Vali blocked up the Mosque by gendarmes + Policemen  and decided to famish out the revolting soldiers and sever measures were to be taken but a telegraphic order was received  from Consple to the Ministry of War at Consple to grant  them their liberation. Thus Badr eddin Bey (Nakib el Ashraf) with several other Ulamas were sent to the Mosque who preached  the revolted soldiers were asked to yield and their liberation was guaranteed which indeed was given to them in the same day. This incident of Sleakness on the Part of the Mil. Auth. made a very bad impression on the native people here who are loosing faith in the Gov.t Power. This incident will undoubtedly encourage others whenever opportunity is presented.The season product proved very good. Fruits are very abundant especially apricots. The coming season however is not very promising for cereals as rain was quite short at the end. "Admin changes: in the districts.- the chief of police in Damascus, Amīn Bey, was removed to Beirut and replaced with the Damascene Muḥammad Efendi Qudmānī - most members of the penal division of the istiʾnāf court have been dismissed; providing all the names </dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#CB8E0905-7871-403B-83DE-6AAFCF42E669-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;no administrative changes in Hama and Ḥawrān&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Kerak 
+        &lt;tei:pb/&gt;: "a whole flock of sheep to the number of about 5,000 + 42 camels were robbed by Bedouins, property belonging to British Indian Merchants"&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    
+        &lt;tei:persName&gt;Shawqī Bey
+                &lt;/tei:persName&gt;
+            , from the istiʾnāf court, and 
+        &lt;tei:persName&gt;Ismāʿīl Ḥaqqī Bey
+                &lt;/tei:persName&gt;
+            , the judicial inspector, returned from their tour of insepction to Hama and Homs and went to Ḥawrān and Kerak&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Several members of the courts in Damascus "have been either dismissed or degraded being found guilty of bribery + 
+        &lt;tei:pb/&gt; corruption, but I regret to say that those who have been replaced them are of no better character, corruption + bribery is still going on a large scale in the diff. courts.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The desultory talk about decentralization has been hushed up temporarily on account of the outrages occurring at Consple. + the severe capital punishment inflicted on several persons of high social standing, concerned in the murder of the Grand Ministre Shuskat Pasha.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Previous however to the above mentioned incidents a meeting was held in the house of the ex-deputy Abdur Rahman 
+        &lt;tei:pb/&gt; Abdu Ruhma Bey el Yussuf, composed chiefly of the Union + Progress Party. A telegram was sent by this Party to the murdered Grand Vizir controversing Reforms demanded by the Union + Liberty Party (Titilafiyin) at Paris. 
+        &lt;tei:del&gt;The telegram has
+                &lt;/tei:del&gt;
+             Many of the signatures turned to be falsely signed without the knowledge of their owners.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The Local Press here and at Beirut opened a voley of a severe  criticism and exposed the ex-deputy's name blaming and attacking him for a speech he delivered on the occasion in which he insulted in low terms persons of high standing + good reputation from 
+        &lt;tei:pb/&gt; the Union + Liberty Party, such as the ex-deputy 
+        &lt;tei:persName&gt;Shukri Bey Asali
+                &lt;/tei:persName&gt;
+             and 
+        &lt;tei:persName&gt;Abdul Wahab Eff. Inglisy
+                &lt;/tei:persName&gt;
+            , who in their turn convoked a meeting and a telegram was sent on behalf of the Damascene people in general endorsing the reforms demanded by the Paris Party  
+        &lt;tei:del&gt;tho that first tel sent by the Paris Party and
+                &lt;/tei:del&gt;
+             and dementing 
+        &lt;tei:del&gt;a telegram was the second sent 
+                &lt;/tei:del&gt;
+             by the Union + 
+        &lt;tei:del&gt;Liberty
+                &lt;/tei:del&gt;
+             Progress Party at Damascus. However the idea of decentralization has been as above referred hushed up for the time being but it is more likely to reappear in a more vigorous form.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The Sanitary Dept. + Private Doctors report bad Public health during the quarter; Scarletine fever is now at an end but was for about two months derrating 
+        &lt;tei:del&gt;nearly 
+        &lt;tei:pb/&gt; months
+                &lt;/tei:del&gt;
+             an epidemic in this district + in its surroundings. At Baalbek it is reported that hardly any house escaped the visit by this disease. Death however did not exceed 7 to 8 %.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Small pox made its appearance first in the Hauran district and then here. But the Sanitary Dept. has taken the usual necessary measures by vaccination to fight it which is now disappearing. Several fatal cases of typhoid fever have been reported and it still exists in different quarters of the town.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    Among the high officials removed may be mentioned H.E. the General 
+        &lt;tei:persName&gt;Suleiman Faik Pasha
+                &lt;/tei:persName&gt;
+            , of the VIII Army Corps, order from the Ministry of War at Consple. reached this quarter 
+        &lt;tei:pb/&gt; while he was on an inspection tour at Homs + Palmyra. H.E. left soon after his arrival to Damascus and his place has been occupied by H.E. the Cpt. 
+        &lt;tei:persName&gt;Moh.d Shefik Pasha
+                &lt;/tei:persName&gt;
+            . It is alleged that the removal of ex-general is due to the instigation of the ex-1st Etat Major (Nouri Bey) […] His removal nevertheless has been much regretted on account of his kind and gentle character.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    On the 22nd of May two insubordinate Rediff infantry battalions to the number of about 700 arrived from Yemen, they behaved badly in the town and on 
+        &lt;tei:pb/&gt; one occasion policemen at Souk Ali Pasha who trying to arrest one of them on acc.t of drunkness + ill behaviour  was badly handled by them, and they succeeded in getting their like ration. This 
+        &lt;tei:del&gt;incident
+                &lt;/tei:del&gt;
+             insubordination having ended in success encouraged the Rediff battalion infantry of Nebk to the number of about 150 men 
+        &lt;tei:del&gt;to fully ar
+                &lt;/tei:del&gt;
+             to make a mutiny: Fully armed they proceeded to the Big Omiades Mosque and disobeyed orders, demanding also their liberation (Tizkarahs), H.E. The ex-General + the Vali blocked up the Mosque by gendarmes + Policemen  and decided to famish out the revolting soldiers and sever measures were to be taken but a telegraphic order was received  from 
+        &lt;tei:del&gt;Consple to
+                &lt;/tei:del&gt;
+             the Ministry of War at Consple to grant 
+        &lt;tei:pb/&gt; them their liberation. Thus 
+        &lt;tei:persName&gt;Badr eddin Bey
+                &lt;/tei:persName&gt;
+             (Nakib el Ashraf) with several other Ulamas were sent to the Mosque who preached  the revolted soldiers were asked to yield and their liberation was guaranteed which indeed was given to them in the same day. This incident of Sleakness on the Part of the Mil. Auth. made a very bad impression on the native people here who are loosing faith in the Gov.t Power. This incident will undoubtedly encourage others whenever opportunity is presented.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    The season product proved very good. Fruits are very abundant especially apricots. The coming season however is not very promising for cereals as rain was quite short at the end. 
+        &lt;tei:pb/&gt;"&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    
+        &lt;u&gt;
+        Admin changes:
+        &lt;/u&gt;
+     in the districts.&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    - the chief of police in Damascus, Amīn Bey, was removed to Beirut and replaced with the Damascene Muḥammad Efendi Qudmānī 
+        &lt;tei:pb/&gt;&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    - most members of the penal division of the istiʾnāf court have been dismissed; providing all the names 
+        &lt;tei:pb/&gt;&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#DD1EF23C-42F8-4A46-867C-9284A088A9FE">
+      <z:itemType>letter</z:itemType>
+      <dc:title/>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Mishāqa</foaf:surname>
+                  <foaf:givenName>Nāṣīf</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Cevdet Pasha</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#DD1EF23C-42F8-4A46-867C-9284A088A9FE-abstract"/>
+      <dc:subject>Consular body</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>US source</dc:subject>
+      <dc:subject>assault</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <prism:volume>8</prism:volume>
+      <dc:date>1878-06-25</dc:date>
+      <z:archive>NACP</z:archive>
+      <dc:coverage>RG 84 Damascus Vol.8</dc:coverage>
+      <dc:description>Citation Key: Mishāqa+1878f
+place: Damascus
+Citation: NACP RG 84 Damascus Vol.8 Damascus, Mishāqa to Cevdet Pasha 25 Jun. 1878
+uuid: DD1EF23C-42F8-4A46-867C-9284A088A9FE
+volume: 8
+</dc:description>
+      <z:language>ar</z:language>
+      <dcterms:abstract>concerning attacks of the Iranian Cavass in Damascuslast Fri, 21 Jun,</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#DD1EF23C-42F8-4A46-867C-9284A088A9FE-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;concerning attacks of the Iranian Cavass in Damascus&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    last Fri, 21 Jun,&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#4C0122E2-B460-4424-A971-E8B4D2DDF92E">
+      <z:itemType>letter</z:itemType>
+      <dc:title>86</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Khouri</foaf:surname>
+                  <foaf:givenName>Constantin</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Mishāqa</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Beirut</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#4C0122E2-B460-4424-A971-E8B4D2DDF92E-abstract"/>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>US source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <prism:volume>17</prism:volume>
+      <dc:date>1890-10-02</dc:date>
+      <z:archive>NACP</z:archive>
+      <dc:coverage>RG 84 Damascus Vol.17</dc:coverage>
+      <dc:description>Citation Key: Khouri+1890a
+issue: 86
+place: Beirut
+Citation: NACP RG 84 Damascus Vol.17 Beirut 86, Khouri to Mishāqa 2 Oct. 1890
+uuid: 4C0122E2-B460-4424-A971-E8B4D2DDF92E
+volume: 17
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>receipt for despatches</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#4C0122E2-B460-4424-A971-E8B4D2DDF92E-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    receipt for despatches</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#0BFF64A1-DAD0-4F50-B5A5-053E5F60CBF9">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Circular</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Bissinger</foaf:surname>
+                  <foaf:givenName>Eduard</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Mishāqa</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Beirut</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#0BFF64A1-DAD0-4F50-B5A5-053E5F60CBF9-abstract"/>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Education</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>US source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>statistics</dc:subject>
+      <prism:volume>17</prism:volume>
+      <dc:date>1891-04-29</dc:date>
+      <z:archive>NACP</z:archive>
+      <dc:coverage>RG 84 Damascus Vol.17</dc:coverage>
+      <dc:description>Citation Key: Bissinger+1891f
+issue: Circular
+place: Beirut
+Citation: NACP RG 84 Damascus Vol.17 Beirut Circular, Bissinger to Mishāqa 29 Apr. 1891
+uuid: 0BFF64A1-DAD0-4F50-B5A5-053E5F60CBF9
+volume: 17
+</dc:description>
+      <z:language>en</z:language>
+      <dcterms:abstract>State Dep requests information on schools, libraries, museums etc. for the use of "The Bureau of American Republics"notably the English, French, and German colleagues could supply helpful information</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#0BFF64A1-DAD0-4F50-B5A5-053E5F60CBF9-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    
+                    
+                    &lt;p&gt;State Dep requests information on schools, libraries, museums etc. for the use of "The Bureau of American Republics"&lt;/p&gt;
+                
+                    
+                    &lt;p&gt;
+        &lt;br/&gt;
+    notably the English, French, and German colleagues could supply helpful information&lt;/p&gt;
+                </rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#5DD4F7A3-C36B-4C6C-A877-D1CC6BCB5EAC">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Consular 1</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Devey</foaf:surname>
+                  <foaf:givenName>George Pollard</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Lowther</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#5DD4F7A3-C36B-4C6C-A877-D1CC6BCB5EAC-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Commodity prices</dc:subject>
+      <dc:subject>Consular Service</dc:subject>
+      <dc:subject>Consular body</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Exchange rates</dc:subject>
+      <dc:subject>Inspection</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>critique</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:date>1908-05-16</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
+      <dc:coverage>FO 369/175</dc:coverage>
+      <dc:subject>
+         <dcterms:LCC>
+            <rdf:value>244/F.12672/08</rdf:value>
+         </dcterms:LCC>
+      </dc:subject>
+      <dc:description>Citation Key: Devey+1908p
+Series: Consular
+Series Number: 1
+place: Damascus
+Citation: PRO FO 369/175 (244/F.12672/08) Damascus Consular 1, Devey to Lowther 16 May 1908
+uuid: 5DD4F7A3-C36B-4C6C-A877-D1CC6BCB5EAC
+</dc:description>
+      <z:language>English</z:language>
+      <dcterms:abstract>"Bayrout Consult Genl's superintendence over Damascus &amp;amp; Jerusalem Consulates: Proposes discontinuance of; no action necessary"&lt;br&gt;"Expense of transporting Office,£3-16-6, begs permission to charge"&lt;br&gt;- since his arrival, the office has been transferred twice, once in Oct 1906 and second in Oct 1907. total cost of Ps 548 = £ 3"16"6</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#5DD4F7A3-C36B-4C6C-A877-D1CC6BCB5EAC-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    "Bayrout Consult Genl's superintendence over Damascus &amp;amp; Jerusalem Consulates: Proposes discontinuance of; no action necessary"&lt;br&gt;"Expense of transporting Office,£3-16-6, begs permission to charge"&lt;br&gt;- since his arrival, the office has been transferred twice, once in Oct 1906 and second in Oct 1907. total cost of Ps 548 = £ 3"16"6</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#B5E7AC1C-6351-4998-9066-1718F288AADD">
+      <z:itemType>letter</z:itemType>
+      <dc:title>Consular 2</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Devey</foaf:surname>
+                  <foaf:givenName>George Pollard</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Lowther</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Damascus</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#B5E7AC1C-6351-4998-9066-1718F288AADD-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Consular Service</dc:subject>
+      <dc:subject>Consular body</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Inspection</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>critique</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1908-05-16</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
+      <dc:coverage>FO 369/175</dc:coverage>
+      <dc:subject>
+         <dcterms:LCC>
+            <rdf:value>244/F.12672/08</rdf:value>
+         </dcterms:LCC>
+      </dc:subject>
+      <dc:description>Citation Key: Devey+1908ab
+Series: Consular
+Series Number: 2
+place: Damascus
+Citation: PRO FO 369/175 (244/F.12672/08) Damascus Consular 2, Devey to Lowther 16 May 1908
+uuid: B5E7AC1C-6351-4998-9066-1718F288AADD
+</dc:description>
+      <z:language>English</z:language>
+      <dcterms:abstract>["Bayrout Consult Genl's superintendence over Damascus &amp;amp; Jerusalem Consulates: Proposes discontinuance of; no action necessary"]&lt;br&gt;"accidental loss of eleven shillings fee stamps, gives explanation of"</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#B5E7AC1C-6351-4998-9066-1718F288AADD-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    ["Bayrout Consult Genl's superintendence over Damascus &amp;amp; Jerusalem Consulates: Proposes discontinuance of; no action necessary"]&lt;br&gt;"accidental loss of eleven shillings fee stamps, gives explanation of"</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#0D7C7D08-B006-41AB-974F-204CAD9D7A18">
+      <z:itemType>letter</z:itemType>
+      <dc:title/>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Major Ramsay</foaf:surname>
+                  <foaf:givenName/>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Government of India</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Baghdad</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#0D7C7D08-B006-41AB-974F-204CAD9D7A18-abstract"/>
+      <dc:subject>Baghdad</dc:subject>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Crowd</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Food riot</dc:subject>
+      <dc:subject>Public gathering</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1908-09-21</dc:date>
+      <z:archive>PRO</z:archive>
+      <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
+      <dc:coverage>FO 371/560</dc:coverage>
+      <dc:subject>
+         <dcterms:LCC>
+            <rdf:value>44/F.37953/08</rdf:value>
+         </dcterms:LCC>
+      </dc:subject>
+      <dc:description>Citation Key: MajorRamsay+1908
+place: Baghdad
+Citation: PRO FO 371/560 (44/F.37953/08) Baghdad, Major Ramsay to Government of India 21 Sep. 1908
+uuid: 0D7C7D08-B006-41AB-974F-204CAD9D7A18
+</dc:description>
+      <z:language>English</z:language>
+      <dcterms:abstract>&lt;br&gt;(44/F37953/08)&lt;br&gt;Therapia 721, 27 Oct 1908, Lowther &lt;br&gt;“Wheat Riots at Baghdad, Major Bemsay’s No 864 reporting on”&lt;br&gt;Enclosing the despatch by the Consul General in Baghdad&lt;br&gt;&lt;br&gt;#Inclosure no. 1&lt;br&gt;Bagdad, 21 Sep 1908, Major Ramsay to Government of India&lt;br&gt;“Sir,&lt;br&gt;In continuation of my letter [No. 847] dated the 14th instant, I have the honour to report that the telegram of which the purport was given in the third paragraph of that letter appears to have been malevolently added to in Bagdad before it was made partially public. The original telegram, as received from Constantinople, contained no reference to the use of military force against the Young Turk Committee in provincial towns. The perverted version of the telegram was made known in Karbala.&lt;br&gt;2. On the 16th instant there was a riot in which some of the grain stored were pillaged. The exportation of wheat has for some time been prohibited, and on the 14th and 15th instant it was rumoured that a certain Jew had received permission from Constantinople to export some wheat and that he was going to load it on the 16th. On that morning a crowd went to the Vali to protest. It is said that the Vali assured them that no order had been issued allowing the export of wheat, and it is said that the Vali strengthened his assurance by saying that when an attempt to load wad made it would time for the people to make serious complaints. It is not possible to know exactly what was said, much less what was understood, but the crowd went straight off to the grain stores and took what they could carry. It was at first reported that the loss was enormous, but the estimates have since been largely reduced, and I am inclined to think that the loss cannot have been very great. The populace took what it could during an interval of about an hour and a-half, but the entrances to the store are narrow and they were choked by the crowd, so much so that a number of the rioters found it convenient to pass their stolen wheat over the wall. In these circumstances a very large quantity of wheat cannot have been removed. Messrs. Lynch’s experience is that with the best arrangement, and all wheat in bags, not more than 100 tons could be removed in an hour and a-half. A very small proportion of this can have been taken by a struggling crowd. &lt;br&gt;One man claimed compensation for about 600l. [£ 600] worth of wheat which he said he held on behalf of a British subject and which he said had been pillaged during the riot. I went to his place of business to examine his books, and he then said that he did not want the intervention of the Consulate and would settle the matter himself.&lt;br&gt;Another man who claimed compensation on behalf of Messrs. Andrew Weir and Co. of London had to admit that he could not produce proof that any Court would accept. &lt;br&gt;A third man’s claim is still under consideration, but from what I have heard I am pretty fairly certain that it will not stand examination.&lt;br&gt;There is no doubt that all of these men have lost wheat, but they cannot prove that it was the property of British subjects.&lt;br&gt;3. There are a number of deserters about Bagdad who are a continual source of &amp;lt;pb/&amp;gt; danger to peaceful people. I understand that the Commander of the VIth Army Corps has written to Constantinople to say that it is necessary either to come to some settlement with them or to shoot them.&lt;br&gt;4. The Young Turk Committee at Karbala has made all the officials publicly swear loyalty to the Constitution, but the Mutessarif shows a strong dislike to interference, and the Vali of Bagdad is said to be troubled with many differences between the two parties.&lt;br&gt;&lt;br&gt;I have, &amp;amp;c. …</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#0D7C7D08-B006-41AB-974F-204CAD9D7A18-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    &lt;br&gt;(44/F37953/08)&lt;br&gt;Therapia 721, 27 Oct 1908, Lowther &lt;br&gt;“Wheat Riots at Baghdad, Major Bemsay’s No 864 reporting on”&lt;br&gt;Enclosing the despatch by the Consul General in Baghdad&lt;br&gt;&lt;br&gt;#Inclosure no. 1&lt;br&gt;Bagdad, 21 Sep 1908, Major Ramsay to Government of India&lt;br&gt;“Sir,&lt;br&gt;In continuation of my letter [No. 847] dated the 14th instant, I have the honour to report that the telegram of which the purport was given in the third paragraph of that letter appears to have been malevolently added to in Bagdad before it was made partially public. The original telegram, as received from Constantinople, contained no reference to the use of military force against the Young Turk Committee in provincial towns. The perverted version of the telegram was made known in Karbala.&lt;br&gt;2. On the 16th instant there was a riot in which some of the grain stored were pillaged. The exportation of wheat has for some time been prohibited, and on the 14th and 15th instant it was rumoured that a certain Jew had received permission from Constantinople to export some wheat and that he was going to load it on the 16th. On that morning a crowd went to the Vali to protest. It is said that the Vali assured them that no order had been issued allowing the export of wheat, and it is said that the Vali strengthened his assurance by saying that when an attempt to load wad made it would time for the people to make serious complaints. It is not possible to know exactly what was said, much less what was understood, but the crowd went straight off to the grain stores and took what they could carry. It was at first reported that the loss was enormous, but the estimates have since been largely reduced, and I am inclined to think that the loss cannot have been very great. The populace took what it could during an interval of about an hour and a-half, but the entrances to the store are narrow and they were choked by the crowd, so much so that a number of the rioters found it convenient to pass their stolen wheat over the wall. In these circumstances a very large quantity of wheat cannot have been removed. Messrs. Lynch’s experience is that with the best arrangement, and all wheat in bags, not more than 100 tons could be removed in an hour and a-half. A very small proportion of this can have been taken by a struggling crowd. &lt;br&gt;One man claimed compensation for about 600l. [£ 600] worth of wheat which he said he held on behalf of a British subject and which he said had been pillaged during the riot. I went to his place of business to examine his books, and he then said that he did not want the intervention of the Consulate and would settle the matter himself.&lt;br&gt;Another man who claimed compensation on behalf of Messrs. Andrew Weir and Co. of London had to admit that he could not produce proof that any Court would accept. &lt;br&gt;A third man’s claim is still under consideration, but from what I have heard I am pretty fairly certain that it will not stand examination.&lt;br&gt;There is no doubt that all of these men have lost wheat, but they cannot prove that it was the property of British subjects.&lt;br&gt;3. There are a number of deserters about Bagdad who are a continual source of &amp;lt;pb/&amp;gt; danger to peaceful people. I understand that the Commander of the VIth Army Corps has written to Constantinople to say that it is necessary either to come to some settlement with them or to shoot them.&lt;br&gt;4. The Young Turk Committee at Karbala has made all the officials publicly swear loyalty to the Constitution, but the Mutessarif shows a strong dislike to interference, and the Vali of Bagdad is said to be troubled with many differences between the two parties.&lt;br&gt;&lt;br&gt;I have, &amp;amp;c. …</rdf:value>
+      <dc:subject>abstract</dc:subject>
+   </bib:Memo>
+   <bib:Letter rdf:about="#F5803088-11A8-4319-95FF-F534C6FA6282">
+      <z:itemType>letter</z:itemType>
+      <dc:title>35</dc:title>
+      <bib:authors>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Lowther</foaf:surname>
+                  <foaf:givenName>Sir G.</foaf:givenName>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </bib:authors>
+      <z:recipients>
+         <rdf:Seq>
+            <rdf:li>
+               <foaf:Person>
+                  <foaf:surname>Grey</foaf:surname>
+               </foaf:Person>
+            </rdf:li>
+         </rdf:Seq>
+      </z:recipients>
+      <dc:publisher>
+         <foaf:Organization>
+            <vcard:adr>
+               <vcard:Address>
+                  <vcard:locality>Constantinople</vcard:locality>
+               </vcard:Address>
+            </vcard:adr>
+            <foaf:name/>
+         </foaf:Organization>
+      </dc:publisher>
+      <dcterms:isReferencedBy rdf:resource="#F5803088-11A8-4319-95FF-F534C6FA6282-abstract"/>
+      <dc:subject>British source</dc:subject>
+      <dc:subject>Damascus</dc:subject>
+      <dc:subject>Digital copy</dc:subject>
+      <dc:subject>Source</dc:subject>
+      <dc:subject>official records</dc:subject>
+      <dc:date>1910-01-22</dc:date>
+      <z:archive>PRO</z:archive>
+      <dc:coverage>FO 371/1002</dc:coverage>
+      <dc:subject>
+         <dcterms:LCC>
+            <rdf:value>44/3391/F.3391/10</rdf:value>
+         </dcterms:LCC>
+      </dc:subject>
+      <dc:description>Citation Key: Lowther+1910a
+issue: 35
+place: Constantinople
+Citation: FO 371/1002 (44/3391/F.3391/10) Constantinople 35, Lowther to Grey 22 Jan. 1910
+uuid: F5803088-11A8-4319-95FF-F534C6FA6282
+</dc:description>
+      <dcterms:abstract>Damascus, general report for the December quarter [1909]&lt;br&gt;notes: “Principally about transfers, promotions &amp;amp;c. of minor local officials.&lt;br&gt;The local (European) Gendarmerie officer is not able to accomplish much&lt;br&gt;Two motor cars have arrived to try to start a motor car service to Baghdad&lt;br&gt;See passages marked.”</dcterms:abstract>
+   </bib:Letter>
+   <bib:Memo rdf:about="#F5803088-11A8-4319-95FF-F534C6FA6282-abstract">
+      <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Damascus, general report for the December quarter [1909]&lt;br&gt;notes: “Principally about transfers, promotions &amp;amp;c. of minor local officials.&lt;br&gt;The local (European) Gendarmerie officer is not able to accomplish much&lt;br&gt;Two motor cars have arrived to try to start a motor car service to Baghdad&lt;br&gt;See passages marked.”</rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
 </rdf:RDF>
