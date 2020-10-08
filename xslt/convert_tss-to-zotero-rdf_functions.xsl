@@ -238,6 +238,7 @@
             </xsl:if>
         <!-- tags, keywords etc. -->
         <xsl:apply-templates select="$tss_reference/descendant::tss:keywords" mode="m_tss-to-zotero-rdf"/>
+            <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf"/>
         <!-- URLs -->
         <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'URL']" mode="m_tss-to-zotero-rdf"/>
             <!-- Identitifiers -->
