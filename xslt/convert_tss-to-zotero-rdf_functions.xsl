@@ -830,14 +830,26 @@
     
     <!-- links to notes and attachment references -->
     <xsl:template match="tss:note" mode="m_links">
-        <dcterms:isReferencedBy rdf:resource="{concat('#',@xml:id)}"/>
+        <dcterms:isReferencedBy rdf:resource="{concat('#', oape:get-id(.))}"/>
     </xsl:template>
     <xsl:template match="tss:notes" mode="m_links">
         <dcterms:isReferencedBy rdf:resource="{concat('#',parent::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'],'-notes')}"/>
     </xsl:template>
     <xsl:template match="tss:attachmentReference" mode="m_links">
-        <link:link rdf:resource="{concat('#',@xml:id)}"/>
+        <link:link rdf:resource="{concat('#', oape:get-id(.))}"/>
     </xsl:template>
+    
+    <xsl:function name="oape:get-id">
+        <xsl:param name="p_node"/>
+        <xsl:choose>
+            <xsl:when test="$p_node/@xml:id">
+                <xsl:value-of select="$p_node/@xml:id"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="generate-id($p_node)"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
     
     <!-- notes -->
     <xsl:template match="tss:note" mode="m_tss-to-zotero-rdf">
@@ -890,10 +902,17 @@
     
     <!-- attachments -->
     <xsl:template match="tss:attachmentReference" mode="m_tss-to-zotero-rdf">
-        <z:Attachment rdf:about="{concat('#',@xml:id)}">
+        <z:Attachment rdf:about="{concat('#', oape:get-id(.))}">
             <z:itemType>attachment</z:itemType>
             <!-- local URL -->
-            <xsl:apply-templates select="tss:URL[@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed']" mode="m_tss-to-zotero-rdf"/>
+            <xsl:choose>
+                <xsl:when test="tss:URL[@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed']">
+                    <xsl:apply-templates select="tss:URL[@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed']" mode="m_tss-to-zotero-rdf"/>
+                </xsl:when>
+                <xsl:when test="tss:URL[not(@*)]">
+                    <xsl:apply-templates select="tss:URL[not(@*)]" mode="m_tss-to-zotero-rdf"/>
+                </xsl:when>
+            </xsl:choose>
             <!-- date of attachment: will be overwritten upon import -->
 <!--            <dcterms:dateSubmitted>2018-04-03 07:11:40</dcterms:dateSubmitted>-->
             <!-- name -->
