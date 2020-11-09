@@ -29,6 +29,7 @@
     
     <!-- to do
         - Preprocess Sente export
+        - prevent data duplication through the extra field as this will be picked up by CSL styles
     -->
     
      <!-- fields not yet covered 
@@ -355,7 +356,12 @@
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'ISBN']" mode="m_extra-field">
         <xsl:if test=".!=''">
-            <xsl:value-of select="concat('isbn', $v_separator-key-value,.,$v_new-line)"/>
+            <xsl:choose>
+                <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Book Chapter')"/>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('isbn', $v_separator-key-value,.,$v_new-line)"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'ISBN']" mode="m_tss-to-zotero-rdf">
@@ -406,6 +412,7 @@
         <xsl:text>date_hijri</xsl:text>
         <xsl:value-of select="concat($v_separator-key-value, $v_date-normalised, $v_new-line)"/>
     </xsl:template>
+    <!-- not needed for book,  -->
     <xsl:template match="tss:characteristic[@name = 'issue']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <!--<xsl:choose>
@@ -429,12 +436,14 @@
                         </xsl:non-matching-substring>
                     </xsl:analyze-string>
                 </xsl:when>
+                <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Journal Article')"/>
                 <xsl:otherwise>
                     <xsl:value-of select="concat('issue', $v_separator-key-value,.,$v_new-line)"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:if>
     </xsl:template>
+    <!-- not needed for book,  -->
      <xsl:template match="tss:characteristic[@name = 'volume']" mode="m_extra-field">
          <xsl:if test=".!=''">
              <!--<xsl:choose>
@@ -445,12 +454,23 @@
                      <xsl:text>volume</xsl:text>
                  </xsl:otherwise>
              </xsl:choose>-->
-             <xsl:value-of select="concat('volume', $v_separator-key-value,.,$v_new-line)"/>
+             <xsl:choose>
+                 <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Book Chapter', 'Journal Article')"/>
+                 <xsl:otherwise>
+                     <xsl:value-of select="concat('volume', $v_separator-key-value,.,$v_new-line)"/>
+                 </xsl:otherwise>
+             </xsl:choose>
          </xsl:if>
     </xsl:template>
+    <!-- not needed for book,  -->
     <xsl:template match="tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field">
         <xsl:if test=".!=''">
-            <xsl:value-of select="concat('place', $v_separator-key-value,.,$v_new-line)"/>
+            <xsl:choose>
+                <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Book Chapter')"/>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('place', $v_separator-key-value,.,$v_new-line)"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
@@ -939,7 +959,11 @@
     </xsl:template>
     <xsl:template match="tss:URL" mode="m_tss-to-zotero-rdf">
         <xsl:choose>
+            <!-- test for local files -->
             <xsl:when test="@storageMethod = 'Base Directory-Relative, Optionally Alias-Backed'">
+                <rdf:resource rdf:resource="{.}"/>
+            </xsl:when>
+            <xsl:when test="starts-with(., 'file:')">
                 <rdf:resource rdf:resource="{.}"/>
             </xsl:when>
             <xsl:otherwise>

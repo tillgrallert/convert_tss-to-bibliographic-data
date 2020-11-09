@@ -32,6 +32,7 @@
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#010B85AC-5A0A-4880-BB1E-C9F5B5FBFEB5-notes"/>
+      <link:link rdf:resource="#uuid_6DF89DC8-35F5-4E84-A27A-805E17E5EB17"/>
       <dc:subject/>
       <dc:subject>Availability</dc:subject>
       <dc:subject>British source</dc:subject>
@@ -62,6 +63,12 @@ volume: 5225
 </dc:description>
       <z:language>en</z:language>
    </bib:BookSection>
+   <z:Attachment rdf:about="#uuid_6DF89DC8-35F5-4E84-A27A-805E17E5EB17">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1914 Diplomatic and Consular Reports 5225 Report for the year 1913 on the trade of Baghdad.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#05A9098B-5156-4AD4-B1B0-1358D2637790">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Correspondence [Letters received], 1912-1913</dc:title>
@@ -76,12 +83,15 @@ volume: 5225
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#05A9098B-5156-4AD4-B1B0-1358D2637790-notes"/>
+      <link:link rdf:resource="#uuid_0D814241-B411-495E-B2E8-285CF30F8A5A"/>
+      <link:link rdf:resource="#uuid_6D473AEE-DF0F-41A4-AC45-58EC466E68F7"/>
       <dcterms:isReferencedBy rdf:resource="#05A9098B-5156-4AD4-B1B0-1358D2637790-abstract"/>
       <dc:subject>Damascus</dc:subject>
       <dc:subject>Digital copy</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>US source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_To-be-reviewed</dc:subject>
       <prism:volume>22</prism:volume>
       <dc:date>1912</dc:date>
       <z:archive>NACP</z:archive>
@@ -368,6 +378,18 @@ volume: 22
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_0D814241-B411-495E-B2E8-285CF30F8A5A">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1912 RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913 22.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#uuid_6D473AEE-DF0F-41A4-AC45-58EC466E68F7">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1912 RG 84 Damascus Vol.22, Correspondence [Letters received], 1912-1913 22.txt"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Book rdf:about="#0221D2E1-5475-425E-B8A2-4A74C6591B2F">
       <z:itemType>book</z:itemType>
       <dcterms:isPartOf>
@@ -419,6 +441,7 @@ volume: 22
       <dc:subject>German source</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>journal/diary</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <bib:pages>28</bib:pages>
       <dc:date>1888-12-27</dc:date>
       <dcterms:dateSubmitted/>
@@ -478,6 +501,7 @@ uuid: 0221D2E1-5475-425E-B8A2-4A74C6591B2F
       <dc:subject>Source</dc:subject>
       <dc:subject>US source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <prism:volume>10</prism:volume>
       <dc:date>1909-02-27</dc:date>
       <z:archive>NACP</z:archive>
@@ -527,6 +551,7 @@ volume: 10
       <dc:subject>Source</dc:subject>
       <dc:subject>newspaper/periodical</dc:subject>
       <dc:subject>weekly</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:date>1881</dc:date>
       <z:libraryCatalog>AUB, StaBi, SOAS, British Library</z:libraryCatalog>
       <dc:coverage>Mic-NA:000147, 2" Ad 5921</dc:coverage>
@@ -633,12 +658,14 @@ volume: 7
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#02F93798-B3D9-458F-B285-EDA468FCFDE5-notes"/>
+      <link:link rdf:resource="#uuid_41055F2A-9334-4C99-ABC6-BB389D6A100E"/>
       <dc:subject>Alliance Israelite Universelle</dc:subject>
       <dc:subject>Damascus</dc:subject>
       <dc:subject>Education</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>newspaper/periodical</dc:subject>
       <dc:subject>statistics</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:identifier>
          <dcterms:URI>
             <rdf:value>http://www.jpress.org.il/publications/Bulletin-en.asp</rdf:value>
@@ -655,6 +682,12 @@ volume: 37, année 1912
 </dc:description>
       <z:language>fr</z:language>
    </bib:Article>
+   <z:Attachment rdf:about="#uuid_41055F2A-9334-4C99-ABC6-BB389D6A100E">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1913 Bulletin de l'Alliance Israélite Universelle 37, année 1912 Turquie d'Asie #2.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Book rdf:about="#64DC4931-7114-4DCB-B22E-2FA554FC1B2D">
       <z:itemType>book</z:itemType>
       <dc:title>Kitāb Muḥīṭ al-Muḥīṭ: qāmūs muṭawwal li-l-lugha al-ʿarabiyya</dc:title>
@@ -687,6 +720,7 @@ volume: 37, année 1912
       <dc:subject>Online</dc:subject>
       <dc:subject>Secondary source</dc:subject>
       <dc:subject>Source</dc:subject>
+      <dc:subject>status_Started</dc:subject>
       <dc:identifier>
          <dcterms:URI>
             <rdf:value>http://archive.org/details/kitabmuhitalmuhi01bustuoft</rdf:value>
@@ -703,9 +737,7 @@ volume: 37, année 1912
       </dc:subject>
       <dcterms:dateSubmitted>2012-04-18</dcterms:dateSubmitted>
       <dc:description>Citation Key: AlBustānī+1867
-place: Bayrūt
 uuid: 64DC4931-7114-4DCB-B22E-2FA554FC1B2D
-volume: 1: Alif - Ṣād
 </dc:description>
       <z:language>ar</z:language>
       <dcterms:abstract>The book is differently divided into two volumes by different libraries. At least StaBi did not follow the actual print version, which states on page 1228: "the printing of this first volume of the muḥīṭ was finished on 7 Aug 1867</dcterms:abstract>
@@ -743,6 +775,9 @@ volume: 1: Alif - Ṣād
       <dcterms:isReferencedBy rdf:resource="#000D8742-688D-4BB5-8D8A-A3B18004585D-notes"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_7FF06A81-5BC7-4DA2-866E-320915718445"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_CB9FA285-D0C4-4D8A-BC3E-92B78C478149"/>
+      <link:link rdf:resource="#uuid_0A18BC06-9797-400A-A90B-B538D088C9CE"/>
+      <link:link rdf:resource="#uuid_CA841630-F366-4C67-B117-74A394A223C4"/>
+      <link:link rdf:resource="#uuid_BFEFE40D-BB4C-4315-B742-113FBAC55F3F"/>
       <dcterms:isReferencedBy rdf:resource="#000D8742-688D-4BB5-8D8A-A3B18004585D-abstract"/>
       <dc:subject>19th century</dc:subject>
       <dc:subject>Damascus</dc:subject>
@@ -764,7 +799,6 @@ volume: 1: Alif - Ṣād
       </dc:subject>
       <dcterms:dateSubmitted/>
       <dc:description>Citation Key: Midhat+1903
-place: London
 uuid: 000D8742-688D-4BB5-8D8A-A3B18004585D
 </dc:description>
       <z:language>en</z:language>
@@ -847,6 +881,23 @@ uuid: 000D8742-688D-4BB5-8D8A-A3B18004585D
                     Does not mention the placards of 1880</rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_0A18BC06-9797-400A-A90B-B538D088C9CE">
+      <z:itemType>attachment</z:itemType>
+      <dc:title/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#uuid_CA841630-F366-4C67-B117-74A394A223C4">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Midhat Bey, Ali Haydar/1903 The life of Midhat Pasha a record of his services, political reforms, banishment, and judicia.txt"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#uuid_BFEFE40D-BB4C-4315-B742-113FBAC55F3F">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Midhat Bey, Ali Haydar/1903 The life of Midhat Pasha a record of his services, political reforms, banishment, and judicia.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Image rdf:about="#AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5">
       <z:itemType>map</z:itemType>
       <dcterms:isPartOf/>
@@ -863,6 +914,8 @@ uuid: 000D8742-688D-4BB5-8D8A-A3B18004585D
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5-notes"/>
+      <link:link rdf:resource="#uuid_697FEC32-F2DD-4F11-BA64-19CCDFE6FB8C"/>
+      <link:link rdf:resource="#uuid_CD33EE01-3891-4057-88D9-9684BF19945D"/>
       <dcterms:isReferencedBy rdf:resource="#AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5-abstract"/>
       <dc:subject/>
       <dc:subject>20th century</dc:subject>
@@ -918,6 +971,18 @@ uuid: AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_697FEC32-F2DD-4F11-BA64-19CCDFE6FB8C">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1958 Alep, Series K922.jpg"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#uuid_CD33EE01-3891-4057-88D9-9684BF19945D">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1958 Alep, Series K922.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Book rdf:about="#00E0BE23-6A51-4826-B320-C742B433A1D3">
       <z:itemType>book</z:itemType>
       <dcterms:isPartOf>
@@ -955,6 +1020,7 @@ uuid: AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#00E0BE23-6A51-4826-B320-C742B433A1D3-notes"/>
+      <link:link rdf:resource="#uuid_4D19B0C3-1DF2-4447-94D8-EADE87DD28B3"/>
       <dcterms:isReferencedBy rdf:resource="#00E0BE23-6A51-4826-B320-C742B433A1D3-abstract"/>
       <dc:subject/>
       <dc:subject>18th century</dc:subject>
@@ -979,6 +1045,7 @@ uuid: AD8D3F8F-C73B-4F88-BBD4-F63CE1C1E2C5
       <dc:subject>Syria</dc:subject>
       <dc:subject>Topic</dc:subject>
       <dc:subject>Topic &gt; Ottoman Empire</dc:subject>
+      <dc:subject>status_Started</dc:subject>
       <dc:date>1998</dc:date>
       <z:libraryCatalog>SOAS, StaBi, FU Islamwissenschaft</z:libraryCatalog>
       <dc:subject>
@@ -1161,6 +1228,12 @@ uuid: 00E0BE23-6A51-4826-B320-C742B433A1D3
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_4D19B0C3-1DF2-4447-94D8-EADE87DD28B3">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0&#xA;            IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBs&#xA;            ZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAi&#xA;            Pgo8ZGljdD4KCTxrZXk+UmVsYXRpdmUgUGF0aDwva2V5PgoJPHN0cmluZz5QaGlsaXBwLCBU&#xA;            aG9tYXMvUGhpbGlwcCAxOTk4IFRoZSBTeXJpYW4gbGFuZCBwcm9jZXNzZXMgb2YgaW50ZWdy&#xA;            YXRpb24gYW5kIGZyYWdtZW50YXRpb247IEJpbMSBZCBBbC1TaMSBbSBmcm9tIHRoZSAxOC5w&#xA;            ZGY8L3N0cmluZz4KPC9kaWN0Pgo8L3BsaXN0Pgo=&#xA;            "/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Legislation rdf:about="#0457860B-D71B-448A-9EFB-CDD3AFC55E07">
       <z:itemType>bill</z:itemType>
       <dcterms:isPartOf>
@@ -1209,6 +1282,7 @@ uuid: 00E0BE23-6A51-4826-B320-C742B433A1D3
       <dcterms:isReferencedBy rdf:resource="#uuid_38A96C12-732E-47D2-AA1A-1F19CCD5C313"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_4FE625C7-EDA4-4219-981A-3545B4672F21"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_0471408E-4EED-4456-9070-58C2D26E64E1"/>
+      <link:link rdf:resource="#uuid_1BB2A5D3-EA37-4B18-9CC6-8090A49C7CB5"/>
       <dc:subject>Digital copy</dc:subject>
       <dc:subject>Legal text</dc:subject>
       <dc:subject>Ottoman Empire</dc:subject>
@@ -1217,6 +1291,7 @@ uuid: 00E0BE23-6A51-4826-B320-C742B433A1D3
       <dc:subject>coercion</dc:subject>
       <dc:subject>forced labour</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Currently-reading:-Till</dc:subject>
       <bib:pages>261-267</bib:pages>
       <dc:date>1885</dc:date>
       <z:archive>AUB</z:archive>
@@ -1512,6 +1587,12 @@ volume: 2
     </rdf:value>
       <dc:subject>colour_unknown</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_1BB2A5D3-EA37-4B18-9CC6-8090A49C7CB5">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Nawfal, Nawfal Efendi Niʿmat Allāh/1885 al-Dustūr tarjamahu min al-lughat al-turkiyya ilā al-ʿarabiyya Nawfal Niʿmat Allāh Nawfal bās #5.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Article rdf:about="#004FDF22-6FC7-4FEA-929F-69FE2C7CA4A8">
       <z:itemType>newspaperArticle</z:itemType>
       <dc:title>Servet-i Fünūn</dc:title>
@@ -1527,12 +1608,14 @@ volume: 2
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#004FDF22-6FC7-4FEA-929F-69FE2C7CA4A8-notes"/>
+      <link:link rdf:resource="#uuid_6CE73DD1-EBDD-4D40-8F0A-D2B26FCD6E88"/>
       <dcterms:isReferencedBy rdf:resource="#004FDF22-6FC7-4FEA-929F-69FE2C7CA4A8-abstract"/>
       <dc:subject>Damascus</dc:subject>
       <dc:subject>Hijaz Railway</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>newspaper/periodical</dc:subject>
       <dc:subject>weekly</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:identifier>
          <dcterms:URI>
             <rdf:value>http://gazeteler.ankara.edu.tr/dergiler/482/171366/32640.pdf</rdf:value>
@@ -1573,6 +1656,12 @@ volume: 14/27
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_6CE73DD1-EBDD-4D40-8F0A-D2B26FCD6E88">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1904 Servet-i Fünūn 696 32640.pdf"/>
+      <dc:title>PDF</dc:title>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Article rdf:about="#006C0BE1-C4D4-49F8-98C4-48F40E972EB3">
       <z:itemType>newspaperArticle</z:itemType>
       <dc:title>Ḥadīqat al-Akhbār</dc:title>
@@ -1588,6 +1677,7 @@ volume: 14/27
          </foaf:Organization>
       </dc:publisher>
       <dcterms:isReferencedBy rdf:resource="#006C0BE1-C4D4-49F8-98C4-48F40E972EB3-notes"/>
+      <link:link rdf:resource="#uuid_86708E74-93C6-49BB-961B-2BA805C678E6"/>
       <dc:subject>Source</dc:subject>
       <dc:subject>newspaper/periodical</dc:subject>
       <dc:subject>weekly</dc:subject>
@@ -1607,6 +1697,12 @@ volume: 6
 </dc:description>
       <z:language>ar</z:language>
    </bib:Article>
+   <z:Attachment rdf:about="#uuid_86708E74-93C6-49BB-961B-2BA805C678E6">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/1863 Ḥadīqat al-Akhbār 265 265 #2.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Article rdf:about="#003057D3-2DD7-4F24-B7F4-258EFDFBC8CE">
       <z:itemType>newspaperArticle</z:itemType>
       <dcterms:isPartOf>
@@ -1769,6 +1865,7 @@ uuid: B4B947DD-C061-43FC-90E7-4675C271DFE7
       <dc:subject>Read</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1880-02-10</dc:date>
       <z:archive>PRO</z:archive>
       <dc:coverage>FO 84/1571</dc:coverage>
@@ -1900,6 +1997,7 @@ uuid: 09CEAFFE-495C-4D10-960D-44F2F12FC151
       <dcterms:isReferencedBy rdf:resource="#uuid_CB41F01A-6BDB-40F8-B66F-9F4EDF504D9A"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_8446C408-8420-41F2-A322-B61161767979"/>
       <dcterms:isReferencedBy rdf:resource="#uuid_0A22C512-C444-423F-89DE-62C86378153F"/>
+      <link:link rdf:resource="#uuid_9A922614-383C-4772-862B-16E895E8CC08"/>
       <dcterms:isReferencedBy rdf:resource="#3BF740DD-8754-4485-9036-51AB808B9AA8-abstract"/>
       <dc:subject/>
       <dc:subject>19th century</dc:subject>
@@ -1945,6 +2043,7 @@ uuid: 09CEAFFE-495C-4D10-960D-44F2F12FC151
       <dc:subject>Topic &gt; Conflict &gt; Discontent &gt; Public protest &gt; Riot &gt; Food riot</dc:subject>
       <dc:subject>journal/diary</dc:subject>
       <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:date>2012</dc:date>
       <z:libraryCatalog>OIB</z:libraryCatalog>
       <dc:subject>
@@ -1954,8 +2053,6 @@ uuid: 09CEAFFE-495C-4D10-960D-44F2F12FC151
       </dc:subject>
       <dcterms:dateSubmitted/>
       <dc:description>Citation Key: Büssow+2012
-isbn: 978-3-89913-906-8
-place: Würzburg
 uuid: 3BF740DD-8754-4485-9036-51AB808B9AA8
 </dc:description>
       <z:language>en</z:language>
@@ -4513,6 +4610,12 @@ uuid: 3BF740DD-8754-4485-9036-51AB808B9AA8
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#uuid_9A922614-383C-4772-862B-16E895E8CC08">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/BachCore/SenteLibrary/BachSecondary.sente6lib/Contents/Attachments/Büssow, Johann/Büssow 2012 Damascus Affairs Egyptian Rule in Syria through the Eyes of an Anonymous Damascene Chr.pdf"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#96E4AF27-95CA-47B6-8FAF-073A1DC1FE04">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Dienstlicher Schriftwechsel, 1898-1916</dc:title>
@@ -4664,6 +4767,7 @@ uuid: 8BFBE6D8-8D98-4E45-A7EC-03AEB25AAAF8
             <foaf:name/>
          </foaf:Organization>
       </dc:publisher>
+      <link:link rdf:resource="#d4e4540"/>
       <dcterms:isReferencedBy rdf:resource="#C96AB808-532F-4DA7-9325-4C3BE430549F-abstract"/>
       <dc:subject>2011 Cairo</dc:subject>
       <dc:subject>Damascus</dc:subject>
@@ -4671,6 +4775,7 @@ uuid: 8BFBE6D8-8D98-4E45-A7EC-03AEB25AAAF8
       <dc:subject>Ottoman source</dc:subject>
       <dc:subject>Police</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:date>1895-06-22</dc:date>
       <z:archive>BOA</z:archive>
       <dc:coverage>BEO 628/47037</dc:coverage>
@@ -4700,6 +4805,11 @@ uuid: C96AB808-532F-4DA7-9325-4C3BE430549F
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#d4e4540">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1895%20BOA%20BEO%20628_47037%2C%2028%20Dhu%20II%201312%20aH%20%5B22%20Jun.%201895%5D.pdf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Şam'da münteşir Bred ...</dc:title>
@@ -4720,6 +4830,7 @@ uuid: C96AB808-532F-4DA7-9325-4C3BE430549F
       <dc:subject>Press</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_To-be-read</dc:subject>
       <dc:date>1912-09-09</dc:date>
       <z:archive>BOA</z:archive>
       <dc:coverage>BEO 4082/306107</dc:coverage>
@@ -4759,6 +4870,8 @@ uuid: F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE
             <foaf:name>Harrison and Sons</foaf:name>
          </foaf:Organization>
       </dc:publisher>
+      <link:link rdf:resource="#d4e4717"/>
+      <link:link rdf:resource="#d4e4723"/>
       <dcterms:isReferencedBy rdf:resource="#7319621C-6E16-44AA-B9FC-9DACF27CE8BE-abstract"/>
       <dc:subject>British source</dc:subject>
       <dc:subject>Digital copy</dc:subject>
@@ -4768,6 +4881,7 @@ uuid: F5B0C1DB-D663-49A4-83AD-A9EFDC6F7CAE
       <dc:subject>Source</dc:subject>
       <dc:subject>Trade and Commerce -- International Trade and Navigation -- Commercial Reports -- Commercial Reports</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_To-be-read</dc:subject>
       <dc:identifier>
          <dcterms:URI>
             <rdf:value>https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054667?accountid=11004</rdf:value>
@@ -4792,6 +4906,16 @@ volume: Commercial No.1, Part I
                     Beirut, </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#d4e4717">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial%20No.1%20(1878).%20Reports%20from%20H.M.%20Consuls%20on%20Manufactures%20and%20Commerce%20of%20their%20Consul.pdf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#d4e4723">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial%20No.1%20(1878).%20Reports%20from%20H.M.%20Consuls%20on%20Manufactures%20and%20Commerce%20of%20their%20Consul.pdf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#8D37BB50-595D-4CA1-9CF9-DA19BFD6332E">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Commercial. No. 10 (1878). (Trade reports.) Reports from Her Majesty's consuls on the manufactures, commerce, &amp;amp;c., of their consular districts. Part II.</dc:title>
@@ -4806,6 +4930,7 @@ volume: Commercial No.1, Part I
             <foaf:name>Harrison and Sons</foaf:name>
          </foaf:Organization>
       </dc:publisher>
+      <link:link rdf:resource="#d4e4809"/>
       <dcterms:isReferencedBy rdf:resource="#8D37BB50-595D-4CA1-9CF9-DA19BFD6332E-abstract"/>
       <dc:subject>British source</dc:subject>
       <dc:subject>Digital copy</dc:subject>
@@ -4813,6 +4938,7 @@ volume: Commercial No.1, Part I
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
       <dc:subject>statistics</dc:subject>
+      <dc:subject>status_Reviewed</dc:subject>
       <dc:identifier>
          <dcterms:URI>
             <rdf:value>https://parlipapers.proquest.com/parlipapers/docview/t70.d75.1878-054668</rdf:value>
@@ -4835,6 +4961,11 @@ uuid: 8D37BB50-595D-4CA1-9CF9-DA19BFD6332E
                     Damascus (514-517)</rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#d4e4809">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1878%20Commercial.%20No.%2010%20(1878).%20(Trade%20reports.)%20Reports%20from%20Her%20Majesty%27s%20consuls%20on%20the%20manufact.pdf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#48D7FF32-AE89-49BB-921D-18E8B0B8B0A8">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Consul General at Beirut; Eldridge, Drafts and Dispatches, Political. 1878 July-Dec.</dc:title>
@@ -4874,12 +5005,14 @@ uuid: 48D7FF32-AE89-49BB-921D-18E8B0B8B0A8
             <foaf:name/>
          </foaf:Organization>
       </dc:publisher>
+      <link:link rdf:resource="#d4e4952"/>
       <dcterms:isReferencedBy rdf:resource="#6BA7D40D-0230-4EB5-9EAC-BD4B71D00937-abstract"/>
       <dc:subject>British source</dc:subject>
       <dc:subject>Damascus</dc:subject>
       <dc:subject>Digital copy</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Started</dc:subject>
       <dc:date>1880</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
@@ -4910,6 +5043,12 @@ uuid: 6BA7D40D-0230-4EB5-9EAC-BD4B71D00937
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#d4e4952">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1880%20FO%2078_3156%2C%20Consuls%20General%20at%20Bagdad%2C%20Robertson%2C%20Miles%2C%20Plowden%2C%20Eldridge.%20Vice-Consul%20at%20Dam.pdf"/>
+      <dc:title>Local file</dc:title>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
    <bib:Manuscript rdf:about="#C725363F-E65E-4BB4-99E4-A4E35CB219F0">
       <z:itemType>manuscript</z:itemType>
       <dc:title>Consul General at Beyrout. Eldridge. Consuls at Smyrna, Samos, Dennis, Moore. Vice-Consuls at Beyrout, Damascus, Scio and Tchesme. Block, Jago, Dickson, Anamissaki. Consular, Commercial and Sanitary. 1882 Jan.-Dec.</dc:title>
@@ -4923,6 +5062,8 @@ uuid: 6BA7D40D-0230-4EB5-9EAC-BD4B71D00937
             <foaf:name/>
          </foaf:Organization>
       </dc:publisher>
+      <link:link rdf:resource="#d4e5210"/>
+      <link:link rdf:resource="#d4e5216"/>
       <dcterms:isReferencedBy rdf:resource="#C725363F-E65E-4BB4-99E4-A4E35CB219F0-abstract"/>
       <dc:subject>British source</dc:subject>
       <dc:subject>Damascus</dc:subject>
@@ -4931,6 +5072,7 @@ uuid: 6BA7D40D-0230-4EB5-9EAC-BD4B71D00937
       <dc:subject>Saida</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1882</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
@@ -5410,6 +5552,16 @@ uuid: C725363F-E65E-4BB4-99E4-A4E35CB219F0
                 </rdf:value>
       <dc:subject>abstract</dc:subject>
    </bib:Memo>
+   <z:Attachment rdf:about="#d4e5210">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1882%20FO%2078_3423%2C%20Consul%20General%20at%20Beyrout.%20Eldridge.%20Consuls%20at%20Smyrna%2C%20Samos%2C%20Dennis%2C%20Moore.%20Vice.pdf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
+   <z:Attachment rdf:about="#d4e5216">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1882%20FO%2078_3423%2C%20Consul%20General%20at%20Beyrout.%20Eldridge.%20Consuls%20at%20Smyrna%2C%20Samos%2C%20Dennis%2C%20Moore.%20Vice.rtf"/>
+      <z:linkMode>1</z:linkMode>
+   </z:Attachment>
    <bib:Letter rdf:about="#B482243C-FBF3-4A7A-93A2-A2ED8ED20F45">
       <z:itemType>letter</z:itemType>
       <dc:title>481</dc:title>
@@ -5441,6 +5593,7 @@ uuid: C725363F-E65E-4BB4-99E4-A4E35CB219F0
       <dc:subject>Source</dc:subject>
       <dc:subject>Violence</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1878-11-20</dc:date>
       <z:archive>PA AA</z:archive>
       <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
@@ -5507,6 +5660,7 @@ uuid: B482243C-FBF3-4A7A-93A2-A2ED8ED20F45
       <dc:subject>Read</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1895-04-23</dc:date>
       <z:archive>PA AA</z:archive>
       <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
@@ -5545,6 +5699,7 @@ uuid: B52146DF-3D30-47C7-8B0B-5E8B9D096F89
       <dc:subject>Read</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1890-08-05</dc:date>
       <z:archive>PA AA</z:archive>
       <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
@@ -5604,6 +5759,7 @@ uuid: 71FD38EF-7B2D-4680-B929-31E7156E2AA9
       <dc:subject>Read</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1914-11-23</dc:date>
       <z:archive>PA AA</z:archive>
       <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
@@ -5664,6 +5820,7 @@ uuid: 32A1FFB5-A819-420F-9857-F836A3E73CA9
       <dc:subject>Surveillance</dc:subject>
       <dc:subject>expanding government control</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1901-11-28</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
@@ -5726,6 +5883,7 @@ uuid: 08D3EE85-F9B0-4155-80D3-E376895D8B2B
       <dc:subject>exilation</dc:subject>
       <dc:subject>official records</dc:subject>
       <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1902-02-26</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
@@ -5801,6 +5959,7 @@ uuid: 3C73D2C4-11A6-4A86-B77D-1E5F4CFC87A5
       <dc:subject>official records</dc:subject>
       <dc:subject>provincial administration</dc:subject>
       <dc:subject>salaries</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1902-03-12</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
@@ -5862,6 +6021,7 @@ uuid: EAEE0CC3-AD59-4ADB-9B81-DE239F285FD3
       <dc:subject>Reception</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1902-08-13</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives Kew</z:libraryCatalog>
@@ -5951,6 +6111,7 @@ uuid: 4AFB5E21-A304-4EC3-8F87-676AD9253FB3
       <dc:subject>prices: high</dc:subject>
       <dc:subject>provincial administration</dc:subject>
       <dc:subject>water works</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1908-10-01</dc:date>
       <z:archive>PRO</z:archive>
       <dc:coverage>FO 618/3</dc:coverage>
@@ -6100,6 +6261,7 @@ uuid: 0A7E7815-3248-41FA-B91B-A4E6EF90EF78
       <dc:subject>prices: cereals</dc:subject>
       <dc:subject>prices: fruit</dc:subject>
       <dc:subject>statistics</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1917-07-17</dc:date>
       <z:archive>PA AA</z:archive>
       <z:libraryCatalog>Politisches Archiv des Auswärtigen Amts</z:libraryCatalog>
@@ -6299,13 +6461,13 @@ uuid: B2BCC68E-CAA9-4365-BD5C-3579718227D7
                     &lt;p&gt;
         &lt;br/&gt;
     Wird noch ein weiterer Zehnt von jedem Produkt zwangsweise angekauft, wie vorgeschlagen ist, so ermässigt sich der Fehlbetrag auf 
-        &lt;tei:measure commodity="grain" unit="kg" quantity="142500"&gt;1425000 kg Brotgetreide
+        &lt;tei:measure commodity="grain" quantity="142500" unit="kg"&gt;1425000 kg Brotgetreide
                 &lt;/tei:measure&gt;
             , 
-        &lt;tei:measure commodity="fodder" unit="kg" quantity="1220200"&gt;1220200 kg Viehfutter
+        &lt;tei:measure commodity="fodder" quantity="1220200" unit="kg"&gt;1220200 kg Viehfutter
                 &lt;/tei:measure&gt;
              und 
-        &lt;tei:measure commodity="vegetables" unit="kg" quantity="3093750"&gt;3093750 kg Trockengemüse
+        &lt;tei:measure commodity="vegetables" quantity="3093750" unit="kg"&gt;3093750 kg Trockengemüse
                 &lt;/tei:measure&gt;
             . Dieser Fehlbetrag wäre dann wohl, da "freie" Aufkäufe im hiesigen Bezirk mit Rücksicht auf die Bedürfnisse der Zivilbevölkerung schwerlich mehr möglich sein würden, vom Norden her mit der Bahn heranzuschaffen. &lt;/p&gt;
                 
@@ -6314,38 +6476,38 @@ uuid: B2BCC68E-CAA9-4365-BD5C-3579718227D7
         &lt;br/&gt;
     Bei diesen geplanten grossen Zwangsankäufen von insgesamt 3/8 der Ernte an Brotgetreide für die Armee bleibt der leidende Teil der Zivilbevölkerung. Ihr 
         &lt;tei:measureGrp&gt;
-        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglicher Bedarf
+        &lt;tei:measure commodity="ration" quantity="1" unit="day"&gt;täglicher Bedarf
                 &lt;/tei:measure&gt;
              ist von Djemal Pascha auf 
-        &lt;tei:measure commodity="grain" unit="gr" quantity="250"&gt;250 gr Getreide
+        &lt;tei:measure commodity="grain" quantity="250" unit="gr"&gt;250 gr Getreide
                 &lt;/tei:measure&gt;
              (
-        &lt;tei:measure commodity="bread" unit="gr" quantity="300"&gt;300 g Brot
+        &lt;tei:measure commodity="bread" quantity="300" unit="gr"&gt;300 g Brot
                 &lt;/tei:measure&gt;
             )
                 &lt;/tei:measureGrp&gt;
              festgesetzt worden; in Friedenszeiten verbrauchte der Landeseinwohner 
         &lt;tei:measureGrp&gt;
-        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglich
+        &lt;tei:measure commodity="ration" quantity="1" unit="day"&gt;täglich
                 &lt;/tei:measure&gt;
              
-        &lt;tei:measure commodity="bread" unit="gr" quantity="600"&gt;600
+        &lt;tei:measure commodity="bread" quantity="600" unit="gr"&gt;600
                 &lt;/tei:measure&gt;
              - 
-        &lt;tei:measure commodity="bread" unit="gr" quantity="800"&gt;800 g Brot
+        &lt;tei:measure commodity="bread" quantity="800" unit="gr"&gt;800 g Brot
                 &lt;/tei:measure&gt;
             
                 &lt;/tei:measureGrp&gt;
             , so dass die jetzige Rationierung für ihn eine schwer erträgliche Einschränkung bedeutet. Es fragt sich aber, ob die Regierung überhaupt imstande sein wird, der Bevölkerung, die ihr zugemessene Menge verschaffen zu können. Nimmt man die gesamt Bevölkerungszahl der der Etappe Jerusalem unterstehenden Gebiete (Jerusalem, der westliche Teil von Kerak und Nablus) mit 
-        &lt;tei:measure commodity="people" unit="person" quantity="1"&gt;612081 Seelen
+        &lt;tei:measure commodity="people" quantity="1" unit="person"&gt;612081 Seelen
                 &lt;/tei:measure&gt;
              an - was vielleicht ziemlich genau stimmen könnte - , so würden diese jährlich 
         &lt;tei:pb n="6"/&gt; (
         &lt;tei:measureGrp&gt;
-        &lt;tei:measure commodity="wheat" unit="gr" quantity="250"&gt;250 g
+        &lt;tei:measure commodity="wheat" quantity="250" unit="gr"&gt;250 g
                 &lt;/tei:measure&gt;
              
-        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;pro Kopf täglich
+        &lt;tei:measure commodity="ration" quantity="1" unit="day"&gt;pro Kopf täglich
                 &lt;/tei:measure&gt;
             
                 &lt;/tei:measureGrp&gt;
@@ -6363,10 +6525,10 @@ uuid: B2BCC68E-CAA9-4365-BD5C-3579718227D7
     Die in Liquidation befindliche Getreidekommission hat auch jetzt noch der Regierung ihre Dienste zur Verfügung gestellt und hoffe, mit den ihr zu Transportzwecken über-
         &lt;tei:pb n="8"/&gt;lassenen 500 Eseln monatlich 125000 kg Getreide heranschaffen zu können. Dies würde ungefähr etwas mehr als der vierte Teil des monatlichen Bedarfs sein (
         &lt;tei:measureGrp&gt;
-        &lt;tei:measure commodity="wheat" unit="gr" quantity="250"&gt;250 g
+        &lt;tei:measure commodity="wheat" quantity="250" unit="gr"&gt;250 g
                 &lt;/tei:measure&gt;
              
-        &lt;tei:measure commodity="ration" unit="day" quantity="1"&gt;täglich
+        &lt;tei:measure commodity="ration" quantity="1" unit="day"&gt;täglich
                 &lt;/tei:measure&gt;
             
                 &lt;/tei:measureGrp&gt;
@@ -6459,6 +6621,7 @@ uuid: B2BCC68E-CAA9-4365-BD5C-3579718227D7
       <dc:subject>official records</dc:subject>
       <dc:subject>referenced: PhD thesis</dc:subject>
       <dc:subject>report on state of affairs</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1913-07-10</dc:date>
       <z:archive>PRO</z:archive>
       <dc:coverage>FO 618/3</dc:coverage>
@@ -6650,6 +6813,7 @@ uuid: CB8E0905-7871-403B-83DE-6AAFCF42E669
       <dc:subject>US source</dc:subject>
       <dc:subject>assault</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <prism:volume>8</prism:volume>
       <dc:date>1878-06-25</dc:date>
       <z:archive>NACP</z:archive>
@@ -6715,6 +6879,7 @@ volume: 8
       <dc:subject>Source</dc:subject>
       <dc:subject>US source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <prism:volume>17</prism:volume>
       <dc:date>1890-10-02</dc:date>
       <z:archive>NACP</z:archive>
@@ -6775,6 +6940,7 @@ volume: 17
       <dc:subject>US source</dc:subject>
       <dc:subject>official records</dc:subject>
       <dc:subject>statistics</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <prism:volume>17</prism:volume>
       <dc:date>1891-04-29</dc:date>
       <z:archive>NACP</z:archive>
@@ -6848,6 +7014,7 @@ volume: 17
       <dc:subject>critique</dc:subject>
       <dc:subject>official records</dc:subject>
       <dc:subject>referenced: PhD thesis</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1908-05-16</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
@@ -6915,6 +7082,7 @@ uuid: 5DD4F7A3-C36B-4C6C-A877-D1CC6BCB5EAC
       <dc:subject>Source</dc:subject>
       <dc:subject>critique</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1908-05-16</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
@@ -6981,6 +7149,7 @@ uuid: B5E7AC1C-6351-4998-9066-1718F288AADD
       <dc:subject>Public gathering</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1908-09-21</dc:date>
       <z:archive>PRO</z:archive>
       <z:libraryCatalog>National Archives, Kew</z:libraryCatalog>
@@ -7042,6 +7211,7 @@ uuid: 0D7C7D08-B006-41AB-974F-204CAD9D7A18
       <dc:subject>Digital copy</dc:subject>
       <dc:subject>Source</dc:subject>
       <dc:subject>official records</dc:subject>
+      <dc:subject>status_Complete</dc:subject>
       <dc:date>1910-01-22</dc:date>
       <z:archive>PRO</z:archive>
       <dc:coverage>FO 371/1002</dc:coverage>
