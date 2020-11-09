@@ -648,9 +648,11 @@
         <dc:subject><xsl:value-of select="."/></dc:subject>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf">
-        <dc:subject>
-            <xsl:text>status_</xsl:text><xsl:value-of select="replace(.,' ','-')"/>
-        </dc:subject>
+        <xsl:if test=".!=''">
+            <dc:subject>
+                <xsl:text>status_</xsl:text><xsl:value-of select="replace(.,' ','-')"/>
+            </dc:subject>
+        </xsl:if>
     </xsl:template>
     
     <!-- titles -->
