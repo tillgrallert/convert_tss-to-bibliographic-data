@@ -381,29 +381,32 @@
     <xsl:template match="tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field">
         <!-- try to establish the calendar -->
         <xsl:variable name="v_calendar-guessed" select="oape:date-establish-calendar(.)"/>
-        <xsl:variable name="v_calendar">
+        <xsl:variable name="v_year" select="number(replace(., '^.*(\d{4}).*$', '$1'))"/>
+        <xsl:variable name="v_date-normalised">
             <xsl:choose>
                 <xsl:when test="$v_calendar-guessed != ''">
-                    <xsl:value-of select="$v_calendar-guessed"/>
+                    <xsl:value-of select="oape:date-normalise-input(.,'ar-Latn-x-sente', $v_calendar-guessed)"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:text>#cal_julian</xsl:text>
+                    <xsl:value-of select="."/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="v_date-normalised" select="oape:date-normalise-input(.,'ar-Latn-x-sente', $v_calendar)"/>
-        <!--<xsl:message>
-            <xsl:value-of select="$v_date-normalised"/>
-        </xsl:message>-->
         <!-- content -->
         <xsl:text>date_</xsl:text>
         <xsl:choose>
-            <xsl:when test="$v_calendar = '#cal_julian'">
+            <xsl:when test="$v_calendar-guessed = '#cal_julian'">
                 <xsl:text>rumi</xsl:text>
             </xsl:when>
-            <xsl:when test="$v_calendar = '#cal_ottomanfiscal'">
+            <xsl:when test="$v_calendar-guessed = '#cal_ottomanfiscal'">
                 <xsl:text>mali</xsl:text>
             </xsl:when>
+            <xsl:when test="$v_year &lt;= $p_ottoman-fiscal-last-year">
+                <xsl:text>mali</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>rumi</xsl:text>
+            </xsl:otherwise>
         </xsl:choose>
         <xsl:value-of select="concat($v_separator-key-value, $v_date-normalised, $v_new-line)"/>
     </xsl:template>
