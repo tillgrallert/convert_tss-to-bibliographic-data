@@ -90,11 +90,11 @@
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Journal Entry</tei:form>
-                <tei:form n="zotero"></tei:form>
+                <tei:form n="zotero">manuscript</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">Manuscript</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">manuscript</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Archival Letter</tei:form>

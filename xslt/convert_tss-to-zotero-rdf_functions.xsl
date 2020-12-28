@@ -37,9 +37,11 @@
         + DOI is currently only mapped to the extra field
     -->
     
-    <!-- undecided mappings:
-        + Archival File -> manuscript
-        + Archival Journal Entry
+    <!--  mappings:
+        + Archival File -> manuscript 
+            - plus: type/genre "file"
+        + Archival Journal Entry -> manuscript
+            - plus: type/genre "journal entry"
         + Archival Letter -> letter
             - issue: used for numbers of letters and series, i.e. "Slave Trade 1"
                 - mapped to the extra field as:
@@ -107,7 +109,8 @@
                 </xsl:choose>
         </xsl:variable>
         <xsl:variable name="v_reference-type-sente" select="$v_reference-type/tei:nym/tei:form[@n = 'tss']"/>
-        <xsl:variable name="v_reference-is-section" select="if($tss_reference/descendant::tss:characteristic[@name = 'articleTitle'] != '') then(true()) else(false())"/>
+        <!--<xsl:variable name="v_reference-is-section" select="if($tss_reference/descendant::tss:characteristic[@name = 'articleTitle'] != '') then(true()) else(false())"/>-->
+        <xsl:variable name="v_reference-is-section" select="if($v_reference-type-bib = ('BookSection', 'Article', 'Legislation')) then(true()) else(false())"/>
         <xsl:variable name="v_reference-is-part-of-series" select="if($tss_reference/descendant::tss:characteristic[@name = 'Series'] != '') then(true()) else(false())"/>
         <xsl:variable name="v_series">
             <dcterms:isPartOf>
@@ -265,6 +268,7 @@
             <!-- extra field: map all sorts of custom fields -->
             <dc:description>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Citation identifier']" mode="m_extra-field"/>
+                <!-- dates -->
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Date Hijri']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'DOI']" mode="m_extra-field"/>
@@ -272,12 +276,15 @@
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'OCLCID']" mode="m_extra-field"/>
                 
                 <!-- original date, title -->
+                <xsl:apply-templates select="$tss_reference/descendant::tss:date[@type = 'Original']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Original publication year']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Orig.Title']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Translated title']" mode="m_extra-field"/>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'issue']" mode="m_extra-field"/>
                 <!-- make this dependent on the reference type: letter etc. -->
-                <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field"/>
+                <xsl:if test="not(contains($v_reference-type-zotero, ('newspaper'))) and not(contains($v_reference-type-zotero, ('book')))">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field"/>
+                </xsl:if>
                 <xsl:if test="contains($v_reference-type-sente, 'Archival')">
                     <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']" mode="m_extra-field"/>
                 </xsl:if>
@@ -296,6 +303,11 @@
             <xsl:if test="$v_reference-type-sente = 'Archival File'">
                 <xsl:element name="z:type">
                     <xsl:text>File</xsl:text>
+                </xsl:element>
+            </xsl:if>
+            <xsl:if test="$v_reference-type-sente = 'Archival Journal Entry'">
+                <xsl:element name="z:type">
+                    <xsl:text>Journal entry</xsl:text>
                 </xsl:element>
             </xsl:if>
         </xsl:element>
@@ -340,7 +352,18 @@
                        <vcard:locality><xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']"/></vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name><xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = ('publisher', 'affiliation')]"/></foaf:name>
+                <!-- why would one want to map affiliation to publisher? -->
+                <foaf:name>
+                    <xsl:choose>
+                        <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'publisher']">
+                            <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'publisher']"/>
+                        </xsl:when>
+                        <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'affiliation']">
+                            <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'affiliation']"/>
+                        </xsl:when>
+                    </xsl:choose>
+<!--                    <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = ('publisher', 'affiliation')]"/>-->
+                </foaf:name>
             </foaf:Organization>
         </dc:publisher>
     </xsl:function>
@@ -465,7 +488,7 @@
              </xsl:choose>
          </xsl:if>
     </xsl:template>
-    <!-- not needed for book,  -->
+    <!-- not needed for book, newspaper article -->
     <xsl:template match="tss:characteristic[@name = 'publicationCountry']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <xsl:choose>
@@ -476,16 +499,14 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="tss:date[@type = 'Original']" mode="m_extra-field">
+        <xsl:value-of select="concat('original-date', $v_separator-key-value, oape:date-tss-to-iso(.),$v_new-line)"/>
+    </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
         </xsl:if>
     </xsl:template>
-    <!--<xsl:template match="tss:characteristic[@name = 'Original publication year']" mode="m_extra-field">
-        <xsl:if test=".!=''">
-            <xsl:value-of select="concat('original-date', $v_separator-key-value,.,$v_new-line)"/>
-        </xsl:if>
-    </xsl:template>-->
     <xsl:template match="tss:characteristic[@name = 'Orig.Title']" mode="m_extra-field">
         <xsl:if test=".!=''">
             <xsl:value-of select="concat('original-title', $v_separator-key-value,.,$v_new-line)"/>
@@ -720,20 +741,7 @@
     </xsl:template>
        <!-- transform dates -->
     <xsl:template match="tss:date" mode="m_tss-to-zotero-rdf">
-        <xsl:variable name="v_year" select="if(@year!='') then(format-number(@year,'0000')) else()"/>
-        <xsl:variable name="v_month" select="if(@month!='') then(format-number(@month,'00')) else('xx')"/>
-        <xsl:variable name="v_day" select="if(@day!='') then(format-number(@day,'00')) else('xx')"/>
-        <xsl:variable name="v_date-formatted">
-            <xsl:value-of select="if(@year!='') then(format-number(@year,'0000')) else()"/>
-            <xsl:if test="@month!=''">
-                <xsl:text>-</xsl:text>
-                <xsl:value-of select="format-number(@month,'00')"/>
-            </xsl:if>
-            <xsl:if test="@day!=''">
-                <xsl:text>-</xsl:text>
-                <xsl:value-of select="format-number(@day,'00')"/>
-            </xsl:if>
-        </xsl:variable>
+        <xsl:variable name="v_date-formatted" select="oape:date-tss-to-iso(.)"/>
         <xsl:choose>
             <xsl:when test="@type = 'Retrieval'">
                 <dcterms:dateSubmitted><xsl:value-of select="$v_date-formatted"/></dcterms:dateSubmitted>
@@ -758,27 +766,11 @@
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'volume']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
-            <!--<xsl:choose>
-                 <xsl:when test="oape:bibliography-tss-switch-volume-and-issue(ancestor::tss:reference) = true()">
-                    <prism:number><xsl:value-of select="."/></prism:number>
-                 </xsl:when>
-                 <xsl:otherwise>
-                     <prism:volume><xsl:value-of select="."/></prism:volume>
-                 </xsl:otherwise>
-             </xsl:choose>-->
             <prism:volume><xsl:value-of select="."/></prism:volume>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'issue']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
-            <!--<xsl:choose>
-                 <xsl:when test="oape:bibliography-tss-switch-volume-and-issue(ancestor::tss:reference) = false()">
-                    <prism:number><xsl:value-of select="."/></prism:number>
-                 </xsl:when>
-                 <xsl:otherwise>
-                     <prism:volume><xsl:value-of select="."/></prism:volume>
-                 </xsl:otherwise>
-             </xsl:choose>-->
             <xsl:choose>
                 <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Letter')"/>
                 <xsl:otherwise>
@@ -992,6 +984,19 @@
         <link:type></link:type>
     </xsl:template>
     
-   
+   <xsl:function name="oape:date-tss-to-iso">
+       <xsl:param name="tss_date"/>
+       <xsl:variable name="v_year" select="if($tss_date/@year!='') then(format-number($tss_date/@year,'0000')) else()"/>
+       <xsl:variable name="v_month" select="if($tss_date/@month!='') then(format-number($tss_date/@month,'00')) else('xx')"/>
+       <xsl:variable name="v_day" select="if($tss_date/@day!='') then(format-number($tss_date/@day,'00')) else('xx')"/>
+       <xsl:variable name="v_date-iso">
+           <xsl:value-of select="$v_year"/>
+           <xsl:if test="not($v_month = 'xx') or not($v_day = 'xx')">
+               <xsl:value-of select="concat('-', $v_month, '-', $v_day)"/>
+           </xsl:if>
+       </xsl:variable>
+       <!-- output -->
+       <xsl:value-of select="$v_date-iso"/>
+   </xsl:function>
     
 </xsl:stylesheet>
