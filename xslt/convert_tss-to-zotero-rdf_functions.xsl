@@ -141,6 +141,9 @@
                                     <xsl:if test="$v_reference-is-part-of-series = true()">
                                         <xsl:copy-of select="$v_series"/>
                                     </xsl:if>
+                                    <!-- volume -->
+                                    <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'volume']" mode="m_tss-to-zotero-rdf"/>
+                                    <!-- book title -->
                                     <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']" mode="m_tss-to-zotero-rdf"/>
                                 </bib:Book>
                             </xsl:when>
@@ -358,11 +361,10 @@
                         <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'publisher']">
                             <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'publisher']"/>
                         </xsl:when>
-                        <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'affiliation']">
+                        <!--<xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'affiliation']">
                             <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = 'affiliation']"/>
-                        </xsl:when>
+                        </xsl:when>-->
                     </xsl:choose>
-<!--                    <xsl:value-of select="$tss_reference/descendant::tss:characteristic[@name = ('publisher', 'affiliation')]"/>-->
                 </foaf:name>
             </foaf:Organization>
         </dc:publisher>
@@ -472,16 +474,10 @@
     <!-- not needed for book,  -->
      <xsl:template match="tss:characteristic[@name = 'volume']" mode="m_extra-field">
          <xsl:if test=".!=''">
-             <!--<xsl:choose>
-                 <xsl:when test="oape:bibliography-tss-switch-volume-and-issue(ancestor::tss:reference) = true()">
-                     <xsl:text>issue</xsl:text>
-                 </xsl:when>
-                 <xsl:otherwise>
-                     <xsl:text>volume</xsl:text>
-                 </xsl:otherwise>
-             </xsl:choose>-->
              <xsl:choose>
-                 <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Book Chapter', 'Journal Article')"/>
+                 <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = ('Book', 'Book Chapter', 'Journal Article')">
+                     <!--<xsl:message>reference is book, book chapter or journal article; volume will not be mapped to the extra field</xsl:message>-->
+                 </xsl:when>
                  <xsl:otherwise>
                      <xsl:value-of select="concat('volume', $v_separator-key-value,.,$v_new-line)"/>
                  </xsl:otherwise>
@@ -602,6 +598,8 @@
             <xsl:sort select="current-grouping-key()" order="ascending"/>
             <xsl:copy-of select="."/>
         </xsl:for-each-group>
+        <!-- add a tag to show that items were imported from Sente -->
+        <dc:subject>imported-from_sente</dc:subject>
     </xsl:template>
     <xsl:template match="tss:keyword" mode="m_tss-to-zotero-rdf">
         <dc:subject>
