@@ -16,17 +16,18 @@
   xmlns:oape="https://openarabicpe.github.io/ns"
     version="3.0">
     
-    <xsl:output method="xml" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
+    <xsl:output name="xml_no-indent" method="xml" indent="no" omit-xml-declaration="no" encoding="UTF-8"/>
     <xsl:include href="convert_tss-to-zotero-rdf_functions.xsl"/>
     
-    <xsl:param name="p_include-attachments" select="true()"/>
+    <xsl:param name="p_include-attachments" select="false()"/>
     <xsl:param name="p_include-notes" select="true()"/>
+    <xsl:param name="p_note-type" select="'both'"/>
     
     <xsl:variable name="v_file-name" select="substring-before(tokenize(base-uri(),'/')[last()],'.TSS.xml')"/>
     
     <!-- debugging -->
     <xsl:template match="/">
-        <xsl:result-document href="{$v_file-name}.Zotero.rdf">
+        <xsl:result-document format="xml_no-indent" href="{$v_file-name}.Zotero.rdf">
             <rdf:RDF>
                 <xsl:apply-templates select="descendant::tss:reference" mode="m_tss-to-zotero-rdf"/>
             </rdf:RDF>
@@ -34,6 +35,6 @@
     </xsl:template>
     
     <xsl:template match="tss:reference" mode="m_tss-to-zotero-rdf">
-         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., $p_include-attachments, $p_include-notes, 'both')"/>
+         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf(., $p_include-attachments, $p_include-notes, $p_note-type)"/>
     </xsl:template>
 </xsl:stylesheet>

@@ -15,22 +15,46 @@
      <xsl:function name="oape:bibliography-tss-note-to-html">
         <!-- expects a <tss:note> as input -->
         <xsl:param name="tss_note"/>
-         <![CDATA[<div style="background-color:]]><xsl:apply-templates select="$tss_note/@color" mode="m_tss-to-notes-html"/><![CDATA[">]]>
-        <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-to-notes-html"/>
-        <xsl:apply-templates select="$tss_note/tss:title" mode="m_tss-to-notes-html"/>
-        <xsl:apply-templates select="$tss_note/tss:quotation" mode="m_tss-to-notes-html"/>
-        <xsl:apply-templates select="$tss_note/tss:comment" mode="m_tss-to-notes-html"/>
+         <![CDATA[<div style="background-color:]]><xsl:apply-templates select="$tss_note/@color" mode="m_tss-notes-to-html"/><![CDATA[">]]>
+         <!-- add a first line: sorting and display in Zotero -->
+         <xsl:apply-templates select="$tss_note" mode="m_tss-note-summary"/>
+        <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-notes-to-html"/>
+        <xsl:apply-templates select="$tss_note/tss:title" mode="m_tss-notes-to-html"/>
+        <xsl:apply-templates select="$tss_note/tss:quotation" mode="m_tss-notes-to-html"/>
+        <xsl:apply-templates select="$tss_note/tss:comment" mode="m_tss-notes-to-html"/>
          <![CDATA[</div>]]>
     </xsl:function>
     
-    <xsl:template match="tss:title" mode="m_tss-to-notes-html">
+    <xsl:template match="tss:note" mode="m_tss-note-summary">
+        <![CDATA[<span>]]>
+        <xsl:if test="tss:pages != ''">
+            <xsl:value-of select="tss:pages"/>
+<!--            <xsl:value-of select="count(preceding-sibling::tss:note) + 1"/>-->
+            <xsl:text>: </xsl:text>
+        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="tss:title">
+                <xsl:value-of select=" substring(normalize-space(tss:title), 1, 50)"/>
+            </xsl:when>
+            <xsl:when test="tss:quotation">
+                <xsl:text>"</xsl:text><xsl:value-of select="substring(normalize-space(tss:quotation), 1, 50)"/><xsl:text>"</xsl:text>
+            </xsl:when>
+        </xsl:choose>
+        <![CDATA[</span><br/>]]>
+    </xsl:template>
+    
+    <xsl:template match="tss:title" mode="m_tss-notes-to-html">
         <![CDATA[<h1>]]><xsl:text># </xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</h1>]]>
     </xsl:template>
-    <xsl:template match="tss:pages" mode="m_tss-to-notes-html">
-        <![CDATA[<span>]]><xsl:text>(p.</xsl:text><xsl:apply-templates/><xsl:text>)</xsl:text><![CDATA[</span>]]>
+    <xsl:template match="tss:pages[.!='']" mode="m_tss-notes-to-html">
+        <![CDATA[<p>]]><xsl:text>(</xsl:text>
+        <xsl:if test="matches(.,'^\d')">
+            <xsl:text>p.</xsl:text>
+        </xsl:if>
+        <xsl:apply-templates/><xsl:text>)</xsl:text><![CDATA[</p>]]>
     </xsl:template>
-    <xsl:template match="tss:quotation" mode="m_tss-to-notes-html">
-        <![CDATA[<blockquote style="background-color:]]><xsl:apply-templates select="parent::tss:note/@color" mode="m_tss-to-notes-html"/><![CDATA[">]]>
+    <xsl:template match="tss:quotation" mode="m_tss-notes-to-html">
+        <![CDATA[<blockquote style="background-color:]]><xsl:apply-templates select="parent::tss:note/@color" mode="m_tss-notes-to-html"/><![CDATA[">]]>
         <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
         <![CDATA[</blockquote>]]>
     </xsl:template>
@@ -40,11 +64,11 @@
         <![CDATA[<p>]]><xsl:text>></xsl:text><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
         <![CDATA[</blockquote>]]>
     </xsl:template>
-    <xsl:template match="tss:comment" mode="m_tss-to-notes-html">
+    <xsl:template match="tss:comment" mode="m_tss-notes-to-html">
         <![CDATA[<p>]]><xsl:apply-templates mode="m_mark-up"/><![CDATA[</p>]]>
     </xsl:template>
     
-    <xsl:template match="@color" mode="m_tss-to-notes-html">
+    <xsl:template match="@color" mode="m_tss-notes-to-html">
         <xsl:choose>
             <xsl:when test=". = 'yellow'">
                 <xsl:text>#FFF9D6</xsl:text>
@@ -186,11 +210,11 @@
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Electronic Citation</tei:form>
-                <tei:form n="zotero"></tei:form>
+                <tei:form n="zotero">webpage</tei:form>
                 <tei:form n="marcgt"></tei:form>
-                <tei:form n="bib"></tei:form>
+                <tei:form n="bib">Document</tei:form>
                 <tei:form n="biblatex"></tei:form>
-                <tei:form n="csl"></tei:form>
+                <tei:form n="csl">webpage</tei:form>
             </tei:nym>
             <tei:nym>
                 <tei:form n="tss">Journal Article</tei:form>
@@ -314,6 +338,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <!-- in conjunction with the above template this will introduce unnecessary line breaks -->
     <xsl:template match="html:br" mode="m_mark-up">
         <![CDATA[<br/>]]>
     </xsl:template>

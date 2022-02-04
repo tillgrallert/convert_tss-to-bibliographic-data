@@ -16,8 +16,6 @@
   xmlns:oape="https://openarabicpe.github.io/ns"
     version="3.0">
     
-    <xsl:output method="xml" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
-    
         <!-- date conversion functions -->
 <!--    <xsl:include href="https://tillgrallert.github.io/xslt-calendar-conversion/functions/date-functions.xsl"/>-->
      <xsl:include href="../../../xslt-calendar-conversion/functions/date-functions.xsl"/> 
@@ -110,7 +108,20 @@
         </xsl:variable>
         <xsl:variable name="v_reference-type-sente" select="$v_reference-type/tei:nym/tei:form[@n = 'tss']"/>
         <!--<xsl:variable name="v_reference-is-section" select="if($tss_reference/descendant::tss:characteristic[@name = 'articleTitle'] != '') then(true()) else(false())"/>-->
-        <xsl:variable name="v_reference-is-section" select="if($v_reference-type-bib = ('BookSection', 'Article', 'Legislation')) then(true()) else(false())"/>
+        <!--<xsl:variable name="v_reference-is-section" select="if($v_reference-type-bib = ('BookSection', 'Article', 'Legislation')) then(true()) else(false())"/>-->
+        <xsl:variable name="v_reference-is-section">
+            <xsl:choose>
+                <xsl:when test="$v_reference-type-bib = ('BookSection', 'Article', 'Legislation')">
+                    <xsl:copy-of select="true()"/>
+                </xsl:when>
+                <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'articleTitle'] and $tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']">
+                    <xsl:copy-of select="true()"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:copy-of select="false()"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:variable name="v_reference-is-part-of-series" select="if($tss_reference/descendant::tss:characteristic[@name = 'Series'] != '') then(true()) else(false())"/>
         <xsl:variable name="v_series">
             <dcterms:isPartOf>
@@ -157,6 +168,11 @@
                             </xsl:when>
                             <!-- maps: it seems that the articleTitle should be mapped to Series -->
                             <xsl:when test="$v_reference-type-zotero = 'map'"/>
+                            <xsl:when test="$v_reference-type-zotero = 'webpage'">
+                                <z:Website>
+                                    <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']" mode="m_tss-to-zotero-rdf"/>
+                                </z:Website>
+                            </xsl:when>
                             <!-- fallback: book -->
                             <xsl:otherwise>
                                 <bib:Book>
@@ -172,12 +188,17 @@
                     <!-- check if an item is part of a series -->
                     <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'articleTitle']" mode="m_tss-to-zotero-rdf"/>
                 </xsl:when>
+                <!-- fallback: item is stand-alone -->
                 <xsl:otherwise>
                     <!-- check if reference is part of a series -->
                     <xsl:if test="$v_reference-is-part-of-series = true()">
                         <xsl:copy-of select="$v_series"/>
                     </xsl:if>
                     <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']" mode="m_tss-to-zotero-rdf"/>
+                    <!-- web pages are seemingly not covered by this policy: they have a page title but the larger website is not necessarily recorded as publicationTitle -->
+                    <xsl:if test="not($tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']) and $tss_reference/descendant::tss:characteristic[@name = 'articleTitle']">
+                        <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'articleTitle']" mode="m_tss-to-zotero-rdf"/>
+                    </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>
             <!-- short titles -->
@@ -220,6 +241,7 @@
             <xsl:apply-templates select="$tss_reference/descendant::tss:authors" mode="m_tss-to-zotero-rdf"/>
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Recipient']" mode="m_tss-to-zotero-rdf"/>
             <!-- publisher: name, location -->
+            <!-- this should be based on the availability of data -->
         <xsl:copy-of select="oape:bibliography-tss-to-zotero-rdf-publisher($tss_reference)"/>
             <!-- links to notes -->
             <xsl:if test="$p_include-notes = true()">
@@ -323,14 +345,10 @@
                     </xsl:apply-templates>
                 </xsl:when>
                 <xsl:when test="$p_note-type = 'single'">
-                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
-                        <xsl:sort select="tss:pages" order="ascending"/>
-                    </xsl:apply-templates>
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf"/>
                 </xsl:when>
                 <xsl:when test="$p_note-type = 'both'">
-                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf">
-                        <xsl:sort select="tss:pages" order="ascending"/>
-                    </xsl:apply-templates>
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:notes" mode="m_tss-to-zotero-rdf"/>
                     <xsl:apply-templates select="$tss_reference/descendant::tss:note" mode="m_tss-to-zotero-rdf">
                         <xsl:sort select="tss:pages" order="ascending"/>
                     </xsl:apply-templates>
@@ -348,6 +366,8 @@
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf-publisher">
         <!-- expects tss:reference -->
         <xsl:param name="tss_reference"/>
+        <!-- output should be based on the availability of data -->
+        <xsl:if test="$tss_reference/descendant::tss:characteristic[@name = ('publicationCountry', 'publisher')]">
     <dc:publisher>
             <foaf:Organization>
                 <vcard:adr>
@@ -368,6 +388,7 @@
                 </foaf:name>
             </foaf:Organization>
         </dc:publisher>
+        </xsl:if>
     </xsl:function>
     
     <!-- extra field -->
@@ -405,7 +426,7 @@
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field">
         <!-- try to establish the calendar -->
-        <xsl:variable name="v_calendar-guessed" select="oape:date-establish-calendar(.)"/>
+        <xsl:variable name="v_calendar-guessed" select="oape:date-establish-calendar(.,'date', false())"/>
         <xsl:variable name="v_year" select="number(replace(., '^.*(\d{4}).*$', '$1'))"/>
         <xsl:variable name="v_date-normalised">
             <xsl:choose>
@@ -599,7 +620,7 @@
             <xsl:copy-of select="."/>
         </xsl:for-each-group>
         <!-- add a tag to show that items were imported from Sente -->
-        <dc:subject>imported-from_sente</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
     </xsl:template>
     <xsl:template match="tss:keyword" mode="m_tss-to-zotero-rdf">
         <dc:subject>
@@ -672,7 +693,7 @@
     <xsl:template match="tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
             <dc:subject>
-                <xsl:text>status_</xsl:text><xsl:value-of select="replace(.,' ','-')"/>
+                <xsl:text>status: </xsl:text><xsl:value-of select="lower-case(replace(.,'\s+',' '))"/>
             </dc:subject>
         </xsl:if>
     </xsl:template>
@@ -791,8 +812,9 @@
     <xsl:template match="tss:characteristic[@name = 'abstractText']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=".!=''">
             <dcterms:abstract>
-                <xsl:apply-templates/>
-<!--                <xsl:apply-templates mode="m_mark-up"/>-->
+                <!-- as it stands this will remove all formatting -->
+<!--                <xsl:apply-templates/>-->
+                <xsl:apply-templates mode="m_html-to-mmd"/>
             </dcterms:abstract>
         </xsl:if>
     </xsl:template>
@@ -862,6 +884,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="generate-id($p_node)"/>
+<!--                <xsl:value-of select="concat($p_node/ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'UUID'], '-note_', count($p_node/preceding-sibling::tss:note))"/>-->
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
@@ -870,7 +893,7 @@
     <xsl:template match="tss:note" mode="m_tss-to-zotero-rdf">
         <bib:Memo>
             <!-- each note needs an ID -->
-            <xsl:attribute name="rdf:about" select="concat('#',@xml:id)"/>
+            <xsl:attribute name="rdf:about" select="concat('#',oape:get-id(.))"/>
             <rdf:value>
                 <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
             </rdf:value>
@@ -908,7 +931,7 @@
                 <xsl:attribute name="rdf:about" select="concat('#',parent::tss:characteristics/tss:characteristic[@name = 'UUID'],'-abstract')"/>
                 <rdf:value>
                     <![CDATA[<h1>]]><xsl:text># abstract</xsl:text><![CDATA[</h1>]]>
-                    <xsl:apply-templates select="." mode="m_mark-up"/>
+                    <xsl:apply-templates select="." mode="m_mmd-markup-to-html"/>
                 </rdf:value>
                 <dc:subject>abstract</dc:subject>
             </bib:Memo>
@@ -997,4 +1020,83 @@
        <xsl:value-of select="$v_date-iso"/>
    </xsl:function>
     
+    <xsl:template match="tss:characteristic" mode="m_mmd-markup-to-html">
+        <xsl:choose>
+            <xsl:when test="html:br">
+                <xsl:apply-templates select="html:br[1]/preceding-sibling::node()" mode="m_mmd-markup-to-html"/>
+                <xsl:for-each-group select="child::node()" group-starting-with="html:br">
+                    <xsl:if test="current-group() != ''">
+                        <![CDATA[<p>]]><xsl:apply-templates select="current-group()" mode="m_mmd-markup-to-html"/><![CDATA[</p>]]>
+                    </xsl:if>
+                </xsl:for-each-group>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates mode="m_mmd-markup-to-html"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <!-- in conjunction with the above template this will introduce unnecessary line breaks -->
+    <xsl:template match="html:br" mode="m_mmd-markup-to-html"/>
+    <xsl:template match="html:*" mode="m_mmd-markup-to-html">
+        <xsl:value-of select="concat('&lt;', local-name(), '>')" disable-output-escaping="no"/>
+        <!--<![CDATA[<]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>-->
+        <xsl:apply-templates mode="m_mmd-markup-to-html"/>
+        <xsl:value-of select="concat('&lt;/', local-name(), '>')" disable-output-escaping="no"/>
+        <!--<![CDATA[</]]><xsl:value-of select="replace(name(),'html:','')"/><![CDATA[>]]>-->
+    </xsl:template>
+    <xsl:template match="tei:*" mode="m_mmd-markup-to-html">
+        <xsl:value-of select="concat('&lt;code>&amp;lt;', name())" disable-output-escaping="no"/>
+        <xsl:if test="@*">
+            <xsl:apply-templates select="@*" mode="m_mmd-markup-to-html"/>
+        </xsl:if>
+        <xsl:choose>
+            <xsl:when test=".=''">
+                <xsl:value-of select="'/&amp;gt;&lt;/code>'" disable-output-escaping="no"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'&amp;gt;&lt;/code>'" disable-output-escaping="no"/>
+                <xsl:apply-templates mode="m_mmd-markup-to-html"/>
+                <xsl:value-of select="concat('&lt;code>&amp;lt;/', name(), '&amp;gt;&lt;/code>')" disable-output-escaping="no"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:*/@*" mode="m_mmd-markup-to-html m_html-to-mmd">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>="</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
+    </xsl:template>
+    
+    <!--<xsl:template match="tss:characteristic" mode="m_html-to-mmd">
+        <xsl:choose>
+            <xsl:when test="html:br">
+                <xsl:for-each-group select="child::node()" group-starting-with="html:br">
+                    <xsl:copy-of select="$v_new-line"/>
+                    <xsl:apply-templates select="current-group()" mode="m_html-to-mmd"/>
+                </xsl:for-each-group>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates mode="m_html-to-mmd"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>-->
+    <xsl:template match="html:br" mode="m_html-to-mmd">
+        <xsl:value-of select="$v_new-line"/>
+    </xsl:template>
+    <xsl:template match="tei:*" mode="m_html-to-mmd">
+        <xsl:value-of select="concat('&lt;', name())" disable-output-escaping="no"/>
+        <xsl:if test="@*">
+            <xsl:apply-templates select="@*" mode="m_html-to-mmd"/>
+        </xsl:if>
+        <xsl:choose>
+            <xsl:when test=".=''">
+                <xsl:value-of select="'/&gt;'" disable-output-escaping="no"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'&gt;'" disable-output-escaping="no"/>
+                <xsl:apply-templates mode="m_html-to-mmd"/>
+                <xsl:value-of select="concat('&lt;/', name(), '&gt;')" disable-output-escaping="no"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 </xsl:stylesheet>
