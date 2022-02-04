@@ -1066,23 +1066,17 @@
         <xsl:value-of select="name()"/>
         <xsl:text>="</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
     </xsl:template>
-    
-    <!--<xsl:template match="tss:characteristic" mode="m_html-to-mmd">
+    <xsl:template match="html:br[not(following-sibling::node()[1] = self::html:br)]" mode="m_html-to-mmd">
+        <xsl:value-of select="$v_new-line"/>
         <xsl:choose>
-            <xsl:when test="html:br">
-                <xsl:for-each-group select="child::node()" group-starting-with="html:br">
-                    <xsl:copy-of select="$v_new-line"/>
-                    <xsl:apply-templates select="current-group()" mode="m_html-to-mmd"/>
-                </xsl:for-each-group>
-            </xsl:when>
+            <!-- list items -->
+            <xsl:when test="preceding-sibling::node()[1][matches(., '^\s*[(\-|\+)]' )] and following-sibling::node()[1][matches(., '^\s*[(\-|\+)]' )]"/>
             <xsl:otherwise>
-                <xsl:apply-templates mode="m_html-to-mmd"/>
+                <xsl:value-of select="$v_new-line"/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>-->
-    <xsl:template match="html:br" mode="m_html-to-mmd">
-        <xsl:value-of select="$v_new-line"/>
     </xsl:template>
+    
     <xsl:template match="tei:*" mode="m_html-to-mmd">
         <xsl:value-of select="concat('&lt;', name())" disable-output-escaping="no"/>
         <xsl:if test="@*">

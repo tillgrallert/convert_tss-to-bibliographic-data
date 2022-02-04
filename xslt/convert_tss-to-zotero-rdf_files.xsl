@@ -17,6 +17,7 @@
     version="3.0">
     
     <xsl:output name="xml_no-indent" method="xml" indent="no" omit-xml-declaration="no" encoding="UTF-8"/>
+    <xsl:output name="xml_indent" method="xml" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
     <xsl:include href="convert_tss-to-zotero-rdf_functions.xsl"/>
     
     <xsl:param name="p_include-attachments" select="false()"/>
@@ -27,7 +28,7 @@
     
     <!-- debugging -->
     <xsl:template match="/">
-        <xsl:result-document format="xml_no-indent" href="{$v_file-name}.Zotero.rdf">
+        <xsl:result-document format="xml_indent" href="{$v_file-name}.Zotero.rdf">
             <rdf:RDF>
                 <xsl:apply-templates select="descendant::tss:reference" mode="m_tss-to-zotero-rdf"/>
             </rdf:RDF>
