@@ -1,0 +1,68 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <bib:Document rdf:about="https://github.com/dhcolumbia/pandoc-workflow/blob/master/main.md">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tenen</foaf:surname>
+                        <foaf:givenName>Dennis</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wythoff</foaf:surname>
+                        <foaf:givenName>Grant</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_42151"/>
+        <dc:subject>Digital copy</dc:subject>
+        <dc:subject>Digital Humanities</dc:subject>
+        <dc:subject>imported-from_sente</dc:subject>
+        <dc:subject>Introduction DH</dc:subject>
+        <dc:subject>Methodological essay</dc:subject>
+        <dc:subject>status_Complete</dc:subject>
+        <dc:subject>Tools</dc:subject>
+        <dc:title>Sustainable Authorship in Plain Text Using Pandoc and Markdown</dc:title>
+        <dc:date>2014-01-20</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://github.com/dhcolumbia/pandoc-workflow/blob/master/main.md</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2015-04-14</dcterms:dateSubmitted>
+        <dc:description>Place: 
+Citation Key: Tenen+2014
+uuid: 3C081A34-3357-4B4B-B10E-2B9315F1AADD</dc:description>
+    </bib:Document>
+    <bib:Memo rdf:about="#item_42151">
+        <rdf:value>&lt;h1&gt;# notes&lt;/h1&gt;
+                    
+                    
+         &lt;div style=&quot;background-color:&quot;&gt;
+        
+        &lt;span&gt;(p.)&lt;/span&gt;
+    
+        &lt;h1&gt;# It is important to understand that Markdown is ...&lt;/h1&gt;
+    
+        &lt;blockquote style=&quot;background-color:&quot;&gt;
+        &lt;p&gt;&gt;It is important to understand that Markdown is merely a convention. Markdown files are stored as plain text, further adding to the flexibility of the format. Plain text files have been around since the electronic typewriter. The longevity of this standard inherently makes plain text more sustainable and stable than proprietary formats.&lt;/p&gt;
+        &lt;/blockquote&gt;
+    
+        &lt;p&gt;$$main argument$$&lt;/p&gt;
+    
+         &lt;/div&gt;</rdf:value>
+    </bib:Memo>
+</rdf:RDF>

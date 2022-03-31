@@ -1,0 +1,88 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#">
+    <bib:Illustration rdf:about="http://www.delcampe.net/page/item/id,96537990,var,Syrien-Damas-Jahrmarkt-Karussell-Carrousel-Fete-foraine-Syria-prives-carte-photo-191718-serie-WW-I-de-lOrient-Syrie,language,E.html">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isReferencedBy rdf:resource="#item_223144"/>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Festivities</dc:subject>
+        <dc:subject>Funfair</dc:subject>
+        <dc:subject>German source</dc:subject>
+        <dc:subject>People</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Postcard</dc:subject>
+        <dc:subject>Public gathering</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>status: complete</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>V. Appropriation</dc:subject>
+        <dc:subject>Women</dc:subject>
+        <dc:subject>World War, 1914-1918</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.delcampe.net/page/item/id,96537990,var,Syrien-Damas-Jahrmarkt-Karussell-Carrousel-Fete-foraine-Syria-prives-carte-photo-191718-serie-WW-I-de-lOrient-Syrie,language,E.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>1917</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096537990</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:description>Series Number: [32]
+Series: Zur Erinnerung an den Weltkrieg 1917-18 im Orient
+Citation Key: DamaskusJahrmarktKarussell+1917
+place: Damaskus
+uuid: 40BC4143-CABB-441A-BFC1-1E1C9328740F</dc:description>
+        <dcterms:dateSubmitted>2013-02-27</dcterms:dateSubmitted>
+        <z:medium>Postcard</z:medium>
+        <dcterms:abstract>showing a large crowd at a funfair with carrousels. two women with covered faces</dcterms:abstract>
+        <dc:title>Damaskus. Jahrmarkt Karussell</dc:title>
+        <z:shortTitle>Damaskus</z:shortTitle>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#item_223144">
+        <rdf:value>&lt;h1&gt;# abstract&lt;/h1&gt;
+                    showing a large crowd at a funfair with carrousels. two women with covered faces</rdf:value>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+    <bib:Illustration rdf:about="http://www.delcampe.net/page/item/id,249473149,var,11-Banlieue-DAMAS--Distractions-des-Druzes--ed-L-Ferid-libraire,language,E.html">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isReferencedBy rdf:resource="#item_223146"/>
+        <dc:subject>coloured photograph</dc:subject>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Dancing</dc:subject>
+        <dc:subject>Druze</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Postcard</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.delcampe.net/page/item/id,249473149,var,11-Banlieue-DAMAS--Distractions-des-Druzes--ed-L-Ferid-libraire,language,E.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>249473149</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:description>Place: 
+Publisher: Bézier
+Series Number: 11
+Series: Édition J. Deychamps
+Citation Key: BanlieueDamasDistractionsDes
+uuid: D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28</dc:description>
+        <dcterms:dateSubmitted>2014-02-04</dcterms:dateSubmitted>
+        <z:medium>Postcard</z:medium>
+        <dcterms:abstract>Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps</dcterms:abstract>
+        <dc:title>Banlieue DAMAS Distractions des Druzes</dc:title>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#item_223146">
+        <rdf:value>&lt;h1&gt;# abstract&lt;/h1&gt;
+                    Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps</rdf:value>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+</rdf:RDF>

@@ -1,0 +1,63 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <bib:Article rdf:about="#item_218711">
+        <z:itemType>newspaperArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Newspaper><dc:title>Ḥadīqat al-Akhbār</dc:title></bib:Newspaper>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Bayrūt</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+            </foaf:Organization>
+        </dc:publisher>
+        <dcterms:isReferencedBy rdf:resource="#item_218712"/>
+        <dc:subject>2020 haditha</dc:subject>
+        <dc:subject>newspaper/periodical</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>status: reviewed</dc:subject>
+        <dc:subject>weekly</dc:subject>
+        <bib:pages>1-4</bib:pages>
+        <dc:date>1858-05-15</dc:date>
+        <dc:description>Number: 1
+Publisher: al-Maṭbaʿat al-Sūriyya
+Citation Key: hadiqat19
+date_rumi: 1858-05-03
+date_hijri: 1274-10-03
+issue: 1
+uuid: CD44642D-98F0-452D-829E-12BB71C4EF19
+volume: 19</dc:description>
+        <dcterms:dateSubmitted>2013-10-04</dcterms:dateSubmitted>
+        <z:language>ar</z:language>
+        <dcterms:abstract>&lt;tei:pb n=&quot;2&quot;/&gt;
+# ḥawādith dākhiliyya:
+## ḥawādith dākhiliyya: Beirut
+## ḥawādith dākhiliyya: Damascus, 10 May
+- murder on the streets of Ṣāliḥiyya
+- on the treasury of Damascus (*khizānat al-Shām*) located in one of the rooms at the Serail, money is kept at an iron trunk</dcterms:abstract>
+        <dc:title>19</dc:title>
+        <z:shortTitle>Ḥadīqat</z:shortTitle>
+        <z:archive>StaBi</z:archive>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_218712">
+        <rdf:value>&lt;div data-schema-version=&quot;5&quot;&gt;&lt;h1&gt;# abstract&lt;/h1&gt;
+&lt;p&gt;&amp;lt;pb n=&quot;1&quot;/&amp;gt; &lt;/p&gt;
+&lt;p&gt;# ḥawādith dākhiliyya:&lt;/p&gt;
+&lt;p&gt;## ḥawādith dākhiliyya: Beirut&lt;/p&gt;
+&lt;p&gt;## ḥawādith dākhiliyya: Damascus, 10 May&lt;/p&gt;
+&lt;p&gt;- murder on the streets of Ṣāliḥiyya&lt;/p&gt;
+&lt;p&gt;- on the treasury of Damascus (*khizānat al-Shām*) located in one of the rooms at the Serail, money is kept at an iron trunk&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+</rdf:RDF>

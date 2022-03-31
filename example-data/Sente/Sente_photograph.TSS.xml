@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tss:senteContainer version="1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd">
+    <tss:library>
+        <tss:references>
+            <tss:reference>
+                <tss:publicationType name="Photograph"/>
+                <tss:dates>
+                    <tss:date type="Publication" year="1917"/>
+                    <tss:date day="27" month="02" type="Retrieval" year="2013"/>
+                    <tss:date day="27" month="2" type="Entry" year="2013"/>
+                    <tss:date day="18" month="3" type="Modification" year="2022"/>
+                </tss:dates>
+                <tss:characteristics>
+                    <tss:characteristic name="publicationTitle">Damaskus. Jahrmarkt Karussell</tss:characteristic>
+                    <tss:characteristic name="abstractText">showing a large crowd at a funfair with carrousels. two women with covered faces </tss:characteristic>
+                    <tss:characteristic name="publicationCountry">Damaskus</tss:characteristic>
+                    <tss:characteristic name="rating">5</tss:characteristic>
+                    <tss:characteristic name="status">Complete</tss:characteristic>
+                    <tss:characteristic name="UUID">40BC4143-CABB-441A-BFC1-1E1C9328740F</tss:characteristic>
+                    <tss:characteristic name="Medium consulted">Web</tss:characteristic>
+                    <tss:characteristic name="call-num">096537990</tss:characteristic>
+                    <tss:characteristic name="Item">[32]</tss:characteristic>
+                    <tss:characteristic name="Collection description">Zur Erinnerung an den Weltkrieg 1917-18 im Orient</tss:characteristic>
+                    <tss:characteristic name="Web data source">delcampe.net</tss:characteristic>
+                    <tss:characteristic name="Citation identifier">DamaskusJahrmarktKarussell 1917</tss:characteristic>
+                    <tss:characteristic name="URL"
+                        >http://www.delcampe.net/page/item/id,96537990,var,Syrien-Damas-Jahrmarkt-Karussell-Carrousel-Fete-foraine-Syria-prives-carte-photo-191718-serie-WW-I-de-lOrient-Syrie,language,E.html</tss:characteristic>
+                    <tss:characteristic name="Medium">Postcard</tss:characteristic>
+                    <tss:characteristic name="publicationStatus">Published</tss:characteristic>
+                </tss:characteristics>
+                <tss:keywords>
+                    <tss:keyword assigner="Sente User Albert">writing: 2022 Entertainment</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Festivities</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Funfair</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">German source</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">People</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Photograph</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Postcard</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public gathering</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public ritual</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">V. Appropriation</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Women</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">World War, 1914-1918</tss:keyword>
+                </tss:keywords>
+                <tss:attachments>
+                    <tss:attachmentReference>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1917%20Damaskus.%20Jahrmarkt%20Karussell.jpg</URL>
+                    </tss:attachmentReference>
+                    <tss:attachmentReference>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1917%20Damaskus.%20Jahrmarkt%20Karussell%20%232.jpg</URL>
+                    </tss:attachmentReference>
+                </tss:attachments>
+            </tss:reference>
+            <tss:reference>
+                <tss:publicationType name="Photograph"/>
+                <tss:dates>
+                    <tss:date day="04" month="02" type="Retrieval" year="2014"/>
+                    <tss:date day="5" month="2" type="Entry" year="2014"/>
+                    <tss:date day="18" month="3" type="Modification" year="2022"/>
+                </tss:dates>
+                <tss:characteristics>
+                    <tss:characteristic name="publicationTitle">Banlieue DAMAS Distractions des Druzes</tss:characteristic>
+                    <tss:characteristic name="abstractText">Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps </tss:characteristic>
+                    <tss:characteristic name="publisher">Bézier</tss:characteristic>
+                    <tss:characteristic name="UUID">D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28</tss:characteristic>
+                    <tss:characteristic name="Medium consulted">Web</tss:characteristic>
+                    <tss:characteristic name="call-num">249473149</tss:characteristic>
+                    <tss:characteristic name="Item">11</tss:characteristic>
+                    <tss:characteristic name="Collection description">Édition J. Deychamps</tss:characteristic>
+                    <tss:characteristic name="Web data source">delcampe.net</tss:characteristic>
+                    <tss:characteristic name="Citation identifier">BanlieueDamasDistractionsDes</tss:characteristic>
+                    <tss:characteristic name="URL"
+                        >http://www.delcampe.net/page/item/id,249473149,var,11-Banlieue-DAMAS--Distractions-des-Druzes--ed-L-Ferid-libraire,language,E.html</tss:characteristic>
+                    <tss:characteristic name="Medium">Postcard</tss:characteristic>
+                    <tss:characteristic name="publicationStatus">Published</tss:characteristic>
+                </tss:characteristics>
+                <tss:keywords>
+                    <tss:keyword assigner="Sente User Albert">writing: 2022 Entertainment</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">coloured photograph</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Dancing</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Druze</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Photograph</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Postcard</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public ritual</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+                </tss:keywords>
+                <tss:attachments>
+                    <tss:attachmentReference>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/Banlieue%20DAMAS%20Distractions%20des%20Druzes.jpg</URL>
+                    </tss:attachmentReference>
+                </tss:attachments>
+            </tss:reference>
+        </tss:references>
+    </tss:library>
+</tss:senteContainer>

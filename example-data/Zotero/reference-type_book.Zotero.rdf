@@ -1,0 +1,84 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/">
+    <bib:Book rdf:about="#item_104">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>Princeton University Arabic collection, Phase II</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Damascus</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Maṭbaʿat al-Taraqqī</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jundī</foaf:surname>
+                        <foaf:givenName>Muḥammad Salīm</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_105"/>
+        <link:link rdf:resource="#item_106"/>
+        <link:link rdf:resource="#item_107"/>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Ḥimṣī, Qusṭākī / Criticism and interpretation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Iṣlāḥ al-fāsid min lughat al-jarāʾid: yaḥtawī ʿalá naqd kitāb Lughat al-jarāʾid lil-Shaykh Ibrāhīm al-Yāzijī, wa-al-radd ʿalá Qusṭākī Afandī al-Ḥimṣī</dc:title>
+        <dc:date>1925</dc:date>
+        <z:shortTitle>Iṣlāḥ al-fāsid min lughat al-jarāʾid</z:shortTitle>
+        <z:libraryCatalog>Library Catalog - gso.gbv.de</z:libraryCatalog>
+        <dc:description>Series Title: Princeton University Arabic collection, Phase II</dc:description>
+        <z:numPages>185</z:numPages>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_105">
+        <rdf:value>&lt;div&gt;&lt;span&gt;Princeton Arabic Microfilming Project&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span&gt;|0|US#NjP&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span&gt;|1|US#NjP&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span&gt;|2|DE#EROMM : 20040219&lt;/span&gt;&lt;/div&gt;</rdf:value>
+        <dc:subject>Project: Food Riots</dc:subject>
+        <dc:subject>test_tag</dc:subject>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_106">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Link to Library Catalog Entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://gso.gbv.de/DB=2.8/PPNSET?PPN=483514330</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2020-08-06 19:42:26</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_107">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Library Catalog Entry Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://gso.gbv.de/DB=2.8/PPNSET?PPN=483514330</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2020-08-06 19:42:29</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+</rdf:RDF>
