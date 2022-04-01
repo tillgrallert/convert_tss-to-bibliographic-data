@@ -18,11 +18,13 @@
     
     <xsl:output name="xml_no-indent" method="xml" indent="no" omit-xml-declaration="no" encoding="UTF-8"/>
     <xsl:output name="xml_indent" method="xml" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
-    <xsl:include href="convert_tss-to-zotero-rdf_functions.xsl"/>
+    <xsl:import href="convert_tss-to-zotero-rdf_functions.xsl"/>
     
     <xsl:param name="p_include-attachments" select="false()"/>
     <xsl:param name="p_include-notes" select="true()"/>
+    <!-- values are: individual, summary, both -->
     <xsl:param name="p_note-type" select="'both'"/>
+    <xsl:param name="p_debug" select="true()"/>
     
     <xsl:variable name="v_file-name" select="substring-before(tokenize(base-uri(),'/')[last()],'.TSS.xml')"/>
     

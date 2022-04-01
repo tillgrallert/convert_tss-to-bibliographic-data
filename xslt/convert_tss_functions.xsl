@@ -12,10 +12,11 @@
     version="3.0">
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no" version="1.0"/>
     
+    <xsl:variable name="v_css-div" select="'display: block; border: 1px solid black;'"/>
      <xsl:function name="oape:bibliography-tss-note-to-html">
         <!-- expects a <tss:note> as input -->
         <xsl:param name="tss_note"/>
-         <![CDATA[<div style="background-color:]]><xsl:apply-templates select="$tss_note/@color" mode="m_tss-notes-to-html"/><![CDATA[">]]>
+         <![CDATA[<div style="]]><xsl:value-of select="$v_css-div"/><![CDATA[background-color:]]><xsl:apply-templates select="$tss_note/@color" mode="m_tss-notes-to-html"/><![CDATA[">]]>
          <!-- add a first line: sorting and display in Zotero -->
          <xsl:apply-templates select="$tss_note" mode="m_tss-note-summary"/>
         <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-notes-to-html"/>
