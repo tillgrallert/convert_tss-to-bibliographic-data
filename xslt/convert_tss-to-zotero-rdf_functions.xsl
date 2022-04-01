@@ -312,8 +312,16 @@
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'issue']" mode="m_tss-to-zotero-rdf"/>
             </xsl:if>
                 <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'pages']" mode="m_tss-to-zotero-rdf"/>
-            <!-- dates -->
-            <xsl:apply-templates select="$tss_reference/descendant::tss:date[@type = 'Publication']" mode="m_tss-to-zotero-rdf"/>
+            <!-- publication dates -->
+            <xsl:choose>
+                <xsl:when test="$tss_reference/descendant::tss:date[@type = 'Publication']">
+                    <xsl:apply-templates select="$tss_reference/descendant::tss:date[@type = 'Publication']" mode="m_tss-to-zotero-rdf"/>
+                </xsl:when>
+                <!-- add an empty node to deal with an import bug in Zotero -->
+                <xsl:otherwise>
+                    <dc:date></dc:date>
+                </xsl:otherwise>
+            </xsl:choose>
             <!-- Medium -->
             <xsl:apply-templates select="$tss_reference/descendant::tss:characteristic[@name = 'Medium']" mode="m_tss-to-zotero-rdf"/>
             <!-- Archive, repository -->
