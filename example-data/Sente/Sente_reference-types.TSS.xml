@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../../tss_tools/tss.css"?>
-<tss:senteContainer version="1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tei="http://www.tei-c.org/ns/1.0"
+<tss:senteContainer version="1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary"
+    xmlns:fnxpath="http://www.w3.org/2005/xpath-functions" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:oap="https://openarabicpe.github.io/ns" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd">
     <tss:library>
         <tss:references>
-            <tss:reference xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary" xmlns:fnxpath="http://www.w3.org/2005/xpath-functions"
-                xmlns:oap="https://openarabicpe.github.io/ns">
+            <tss:reference>
                 <tss:publicationType name="Archival Book Chapter"/>
                 <tss:authors/>
                 <tss:dates>
@@ -554,8 +554,7 @@
                     </tss:attachmentReference>
                 </tss:attachments>
             </tss:reference>
-            <tss:reference xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary" xmlns:fnxpath="http://www.w3.org/2005/xpath-functions"
-                xmlns:oap="https://openarabicpe.github.io/ns">
+            <tss:reference>
                 <tss:publicationType name="Maps"/>
                 <tss:authors/>
                 <tss:dates>
@@ -610,8 +609,7 @@
                     </tss:attachmentReference>
                 </tss:attachments>
             </tss:reference>
-            <tss:reference xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary" xmlns:fnxpath="http://www.w3.org/2005/xpath-functions"
-                xmlns:oap="https://openarabicpe.github.io/ns">
+            <tss:reference>
                 <tss:publicationType name="Edited Book"/>
                 <tss:authors>
                     <tss:author role="Editor">
@@ -1106,8 +1104,7 @@
                 <tss:notes/>
                 <tss:attachments/>
             </tss:reference>
-            <tss:reference xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary" xmlns:fnxpath="http://www.w3.org/2005/xpath-functions"
-                xmlns:oap="https://openarabicpe.github.io/ns">
+            <tss:reference>
                 <tss:publicationType name="Book"/>
                 <tss:authors>
                     <tss:author role="Author">
@@ -1911,6 +1908,364 @@
                         <name/>
                         <URL storageMethod="Base Directory-Relative, Optionally Alias-Backed" xml:id="uuid_1A55A9D8-568D-4E2F-BB95-E22F4972D949"
                             >/BachCore/SenteLibrary/BachSecondary.sente6lib/Contents/Attachments/Büssow, Johann/Büssow 2012 Damascus Affairs Egyptian Rule in Syria through the Eyes of an Anonymous Damascene Chr.pdf</URL>
+                    </tss:attachmentReference>
+                </tss:attachments>
+            </tss:reference>
+            <tss:reference>
+                <tss:publicationType name="Book"/>
+                <tss:authors>
+                    <tss:author role="Author">
+                        <tss:surname>Büssow</tss:surname>
+                        <tss:forenames>Johann</tss:forenames>
+                        <tss:initials/>
+                    </tss:author>
+                    <tss:author role="Author">
+                        <tss:surname>Safi</tss:surname>
+                        <tss:forenames>Khaled</tss:forenames>
+                        <tss:initials/>
+                    </tss:author>
+                </tss:authors>
+                <tss:dates>
+                    <tss:date type="Publication" year="2012"/>
+                    <tss:date day="20" month="5" type="Entry" year="2013"/>
+                    <tss:date day="27" month="2" type="Modification" year="2019"/>
+                </tss:dates>
+                <tss:characteristics>
+                    <tss:characteristic name="publicationTitle">Damascus Affairs: Egyptian Rule in Syria through the Eyes of an Anonymous Damascene Chronicler, 1831-1841</tss:characteristic>
+                    <tss:characteristic name="abstractText">The translation is based on two manuscripts and a number of years are not covered in the chronicle: 1835, 1846</tss:characteristic>
+                    <tss:characteristic name="publicationCountry">Würzburg</tss:characteristic>
+                    <tss:characteristic name="publisher">Ergon</tss:characteristic>
+                    <tss:characteristic name="status">Started</tss:characteristic>
+                    <tss:characteristic name="UUID">3BF740DD-8754-4485-9036-51AB808B9AA8</tss:characteristic>
+                    <tss:characteristic name="ISBN">978-3-89913-906-8</tss:characteristic>
+                    <tss:characteristic name="Shortened title">Damascus Affairs</tss:characteristic>
+                    <tss:characteristic name="Citation identifier">Büssow 2012</tss:characteristic>
+                    <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+                </tss:characteristics>
+                <tss:keywords>
+                    <tss:keyword assigner="Sente User Sebastian">19th century</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Cereals</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Food prices</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Food riot</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">hoarding</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">journal/diary</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Project: Food Riots</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public protest</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Riot</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+                </tss:keywords>
+                <tss:notes>
+                    <tss:note>
+                        <title>He agreed that they should try to bring ...</title>
+                        <comment/>
+                        <quotation>He agreed that they should try to bring about a peace agreement, so the monasteries and the notables (afandiyya)231 [of Jerusalem] sent messengers to the shaykhs suing for peace. They [the shaykhs] answered:</quotation>
+                        <pages>96</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Glossary</title>
+                        <comment/>
+                        <quotation>Glossary</quotation>
+                        <pages>189-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Those of them who were hoarding supplies of ...</title>
+                        <comment>$$hoarding$$</comment>
+                        <quotation>Those of them who were hoarding supplies of wheat began to squirm, for the Vizier announced that anyone who knew that someone was concealing wheat and informed the government would receive a reward (bakhshish) of 100 kuruş</quotation>
+                        <pages>59</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>aʿyān and afandiyya as members of a council</title>
+                        <comment/>
+                        <quotation>On the same Friday, a session of the Administrative Council (diwan hukm) was held as usual. They set up a Consultative Council (majlis mashwara) made up of the notables (aʿyan), gentlemen (afandiyya) and merchants (tujjar), and an Egyptian Christian called Yusuf ʿAyrut474 became the council’s chief clerk (mubashir kitabat al-diwan), while Khawaja Rufaʾil remained director of the treasury.</quotation>
+                        <pages>165</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>The inflation in Damascus continued. At the beginning ...</title>
+                        <comment>$$food prices$$&lt;br&gt;&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1837&quot;&amp;gt;At the beginning of the harvest sea-son, the price of &amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;kile&quot; quantity=&quot;1&quot;&amp;gt;one kile of wheat&amp;lt;/measure&amp;gt; was &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;7.50&quot;&amp;gt;a bit above 7½ kuruş&amp;lt;/measure&amp;gt;, and there was plenty of it, but when this disruption happened, the wheat price started to rise, until in Lent (al-Sawm al-Kabir)266 it reached &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;35&quot; when=&quot;1837-02-08&quot;&amp;gt;35 kuruş&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;.</comment>
+                        <quotation>The inflation in Damascus continued. At the beginning of the harvest sea-son, the price of one kile of wheat was a bit above 7½ kuruş, and there was plenty of it, but when this disruption happened, the wheat price started to rise, until in Lent (al-Sawm al-Kabir)266 it reached 35 kuruş. Trade was at a standstill, because such a price rise had never happened before - and it was all due to the Druze revolt and its consequences.</quotation>
+                        <pages>106</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Coming back to the [issue of] bread, when ...</title>
+                        <comment>Coming back to the [issue of] bread, &amp;lt;measureGrp location=&quot;Damascus&quot; type=&quot;official&quot; when=&quot;1832-03-17&quot;&amp;gt;when the authorities [lowered and] set &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;the price of one ratl &amp;lt;/measure&amp;gt; at &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;1.50&quot;&amp;gt;60 fidda&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;, people waited to see what would happen. Within only a few days of their lowering the price, the bread [offered for sale] was as dark as liver 104 and even then it as hardly available. &amp;lt;measureGrp location=&quot;Damascus&quot;&amp;gt;By the end of January the &amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;price of [1 mudd of] wheat&amp;lt;/measure&amp;gt; was &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;8&quot; when=&quot;1832-01-29&quot;&amp;gt;8 kuruş&amp;lt;/measure&amp;gt;, but by the beginning of February, it had risen to &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;10&quot; when=&quot;1832-02-03&quot;&amp;gt;10 kuruş&amp;lt;/measure&amp;gt; and more &amp;lt;/measureGrp&amp;gt;. &amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-02-01&quot; dur=&quot;P14D&quot;&amp;gt;&amp;lt;measureGrp&amp;gt;One &amp;lt;measure commodity=&quot;flour&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl of flour&amp;lt;/measure&amp;gt; cost &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;3&quot;&amp;gt;3&amp;lt;/measure&amp;gt; kuruş&amp;lt;/measureGrp&amp;gt; and &amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-02-01&quot; dur=&quot;P14D&quot;&amp;gt;&amp;lt;measureGrp&amp;gt;a &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;loaf&quot; quantity=&quot;1&quot;&amp;gt;loaf of white bread&amp;lt;/measure&amp;gt; the size of a large biscuit (qataʾif) was &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;4&quot;&amp;gt;4&amp;lt;/measure&amp;gt; fidda&amp;lt;/measureGrp&amp;gt;, or &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;3.50&quot;&amp;gt;3½ kuruş&amp;lt;/measure&amp;gt; for a &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;&amp;lt;/measureGrp&amp;gt;. &amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-02-01&quot; dur=&quot;P14D&quot;&amp;gt;&amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;bread&quot; unit=&quot;loaf&quot; quantity=&quot;1&quot;&amp;gt;A loaf of white oven bread (tannuri)&amp;lt;/measure&amp;gt; was &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;0.2&quot;&amp;gt;8 fidda&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;&amp;lt;measureGrp&amp;gt;, or &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;4.50&quot;&amp;gt;about 4½ kuruş&amp;lt;/measure&amp;gt; for a &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;&amp;lt;/measureGrp&amp;gt;, and &amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-02-01&quot; dur=&quot;P14D&quot;&amp;gt;a &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl of brown rusks&amp;lt;/measure&amp;gt; cost &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;4.50&quot;&amp;gt;4½ kuruş&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;, too, as did a ratl of ‘military rice’ (al-ruzz al-ʿaskari),105 and other prices were at a similar level&amp;lt;/measureGrp&amp;gt;. This entire situation was due to the government’s inaction, while [real] au-thority  remained in the hands of local leaders (awlad al-balad), who  did whatever they wanted.</comment>
+                        <quotation>Coming back to the [issue of] bread, when the authorities [lowered and] set the price of one ratl at 60 fidda, people waited to see what would happen. Within only a few days of their lowering the price, the bread [offered for sale] was as dark as liver104 and even then it as hardly available. By the end of January the price of [1 mudd of] wheat was 8 kuruş, but by the beginning of February, it had risen to 10 kuruş and more. One ratl of flour cost 3 kuruş and a loaf of white bread the size of a large biscuit (qataʾif) was 4 fidda, or 3½ kuruş for a ratl. A loaf of white oven bread (tannuri) was 8 fidda, or about 4½ kuruş for a ratl, and a ratl of brown rusks cost 4½ kuruş, too, as did a ratl of ‘military rice’ (al-ruzz al-ʿaskari),105 and other prices were at a similar level. This entire situation was due to the government’s inaction, while [real] au-thority  remained in the hands of local leaders (awlad al-balad), who  did whatever they wanted.</quotation>
+                        <pages>61</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1833</title>
+                        <comment/>
+                        <quotation>1833</quotation>
+                        <pages>82-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Bibliography </title>
+                        <comment/>
+                        <quotation>Bibliography</quotation>
+                        <pages>194-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1834</title>
+                        <comment/>
+                        <quotation>1834</quotation>
+                        <pages>88-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Appendices</title>
+                        <comment/>
+                        <quotation>Appendices</quotation>
+                        <pages>169-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1837</title>
+                        <comment/>
+                        <quotation>1837</quotation>
+                        <pages>100-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Two Independent Versions of the Text: MS Petermann ...</title>
+                        <comment/>
+                        <quotation>Two Independent Versions of the Text:  MS Petermann 188 and MS Wetzstein</quotation>
+                        <pages>28</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1839</title>
+                        <comment/>
+                        <quotation>1839</quotation>
+                        <pages>123-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>A third type of causal explanation in the ...</title>
+                        <comment/>
+                        <quotation>A third type of causal explanation in the text is linked to the quality of government administration.</quotation>
+                        <pages>23</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>### Price Rises and the Death of the Zarbhane ...</title>
+                        <comment/>
+                        <quotation>Price Rises and the Death of the Zarbhane Emini</quotation>
+                        <pages>58-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1832</title>
+                        <comment/>
+                        <quotation>1832</quotation>
+                        <pages>58-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>The chronicle focuses on the following topics: the ...</title>
+                        <comment/>
+                        <quotation>The chronicle focuses on the following topics: the rebellion of the Damascenes against the Ottoman governor in 1831; the Egyptian government and its policies; the various rebellions against Egyptian rule, especially those in Palestine in 1834, in Hawran in 1837-39 and in Mount Lebanon in 1840; the Damascene blood libel case of 1840; and finally the end of Egyptian rule and the first effects of the Ottoman Tanzimat reforms in Damascus.</quotation>
+                        <pages>18</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>1840: Ps 6 for a raṭl of bread</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1840&quot;&amp;gt;the price of one &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl of bread&amp;lt;/measure&amp;gt; reached&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;6&quot;&amp;gt; 6&amp;lt;/measure&amp;gt; kuruş.&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>Some soldiers camped in the city’s artisan workshops and trading houses. Neither bread nor flour was to be found, because all the mills had been taken over by the government, as explained before, and the price of one ratl of bread reached 6 kuruş.</quotation>
+                        <pages>156</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Christian notables: wujūh</title>
+                        <comment/>
+                        <quotation>Now the notables (wujuh) of the Christians have gathered in the house of Master Ibrahim Tannus</quotation>
+                        <pages>161</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>okka97 of meat cost 20 fidda98 and one ...</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832&quot;&amp;gt;&amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;meat&quot; unit=&quot;okka&quot; quantity=&quot;1&quot;&amp;gt;One okka of meat&amp;lt;/measure&amp;gt; cost &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;0.5&quot;&amp;gt;20 fidda&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt; and &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;one ratl of bread&amp;lt;/measure&amp;gt; was sold for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;1.10&quot;&amp;gt;1 kuruş and 4 fidda&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;, and other prices rose in the same way&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>One okka of meat cost 20 fidda and one ratl of bread was sold for 1 kuruş and 4 fidda, and other prices rose in the same way. People became agitated and wanted the Vizier to arrive so that the situation would ease and prices come down.</quotation>
+                        <pages>59</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Political Actors</title>
+                        <comment/>
+                        <quotation>Political Actors</quotation>
+                        <pages>24ff</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Structure </title>
+                        <comment/>
+                        <quotation>Structure</quotation>
+                        <pages>20ff</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>rubʿa a dry measure. </title>
+                        <comment/>
+                        <quotation>rubʿa a dry measure.</quotation>
+                        <pages>193</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>A few days after the Vizier arrived, the ...</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832&quot;&amp;gt;A few days after the Vizier arrived, the price of &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;a ratl of bread&amp;lt;/measure&amp;gt; rose from&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;1.10&quot;&amp;gt; 44&amp;lt;/measure&amp;gt; to&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;1.5&quot;&amp;gt; 60&amp;lt;/measure&amp;gt; fidda&amp;lt;/measureGrp&amp;gt;, and &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;one mudd of wheat&amp;lt;/measure&amp;gt; which had cost&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;6&quot;&amp;gt; 6&amp;lt;/measure&amp;gt; kuruş was priced at&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;8&quot;&amp;gt; 8&amp;lt;/measure&amp;gt; kuruş&amp;lt;/measureGrp&amp;gt;, but could not be found [even at that price].&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>A few days after the Vizier arrived, the price of a ratl of bread rose from 44 to 60 fidda, and one mudd of wheat which had cost 6 kuruş was priced at 8 kuruş, but could not be found [even at that price]. Thus all the Vizier’s speeches had no effect.</quotation>
+                        <pages>59</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>1839: Ps 18 for the kile of wheat</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1839&quot;&amp;gt;&amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;kile&quot; quantity=&quot;1&quot;&amp;gt;Wheat&amp;lt;/measure&amp;gt; [for example] was sold from the threshing floor at&amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;18&quot;&amp;gt; 18&amp;lt;/measure&amp;gt; kuruş a kile&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>Wheat [for example] was sold from the threshing floor at 18 kuruş a kile</quotation>
+                        <pages>123</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>3) ‘honourable’ or ‘respectable people’</title>
+                        <comment>ahl al-ʿir</comment>
+                        <quotation>‘honourable’ or ‘respectable people’ (ahl al-ʿird or ashab al-ʿird).</quotation>
+                        <pages>24</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1831</title>
+                        <comment/>
+                        <quotation>1831</quotation>
+                        <pages>35-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1840</title>
+                        <comment/>
+                        <quotation>1840</quotation>
+                        <pages>135-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>A first type of causal expla-nation could be ...</title>
+                        <comment/>
+                        <quotation>A first type of causal expla-nation could be termed a ‘political economy approach’, which explains po-litical actions in terms of economic interests and distributional conflicts. </quotation>
+                        <pages>22</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>The bakeries were still crowded, but the thefts ...</title>
+                        <comment/>
+                        <quotation>The bakeries were still crowded, but the thefts ceased and every few days a load of wheat and flour arrived from Hama. The prices, however, remained at the same [high] level.</quotation>
+                        <pages>62</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>2) notables: Āğā, aʿyān, wujūh, and efendiyya</title>
+                        <comment>$$terminology$$</comment>
+                        <quotation>The principal political and military leaders of the Muslim majority population are the aghas or paramilitary chieftains, while the civil elites are referred to as ‘notables’ (aʿyan, wujuh, and in Muslim contexts also afandiyya). They act as political representatives of certain population groups, who negotiate with the Ottoman or Egyptian rulers. The Christian and Jewish communities have ‘notables’ of their own.</quotation>
+                        <pages>24</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>A second type of explanation builds on material ...</title>
+                        <comment/>
+                        <quotation>A second type of explanation builds on material facts and logic. For ex-ample, the text notes that the governor of Damascus resorted to burning the city down during the revolt of 1831, because the cannons of the citadel had proven ineffective.</quotation>
+                        <pages>23</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Then, because of the situation that had arisen, ...</title>
+                        <comment>$$food prices$$&lt;br&gt;&amp;lt;measureGrp location=&quot;Damascus&quot;&amp;gt;grain stopped arriving from the Hawran and within seven or eight days, &amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;kile&quot; quantity=&quot;1&quot;&amp;gt;the price of a kile of wheat&amp;lt;/measure&amp;gt;, which had been sold for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;17&quot; when=&quot;1839-02-20&quot;&amp;gt;17&amp;lt;/measure&amp;gt; kuruş, went up to &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;27&quot; when=&quot;1839-03-01&quot;&amp;gt;27&amp;lt;/measure&amp;gt; kuruş.&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>Then, because of the situation that had arisen, grain stopped arriving from the Hawran and within seven or eight days, the price of a kile of wheat, which had been sold for 17 kuruş, went up to 27 kuruş. Business life in Damascus came to a complete standstill. Gov-ernment decrees were issued to the people of Hawran, ordering them to re-turn to their villages and assuring them that no conscripts would be taken from them.</quotation>
+                        <pages>126</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>ghirāra (A) sack. In the eighteenth century, a ...</title>
+                        <comment/>
+                        <quotation>ghirāra (A) sack. In the eighteenth century, a ghirāra was equal to → 78 mudd.</quotation>
+                        <pages>190</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Causal Explanation of Events </title>
+                        <comment/>
+                        <quotation>Causal Explanation of Events </quotation>
+                        <pages>22ff</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>fiḍḍa (A) silver coin, synonym for → para. ...</title>
+                        <comment/>
+                        <quotation>fiḍḍa (A) silver coin, synonym for → para.</quotation>
+                        <pages>190</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Muslim notables: afandiyya</title>
+                        <comment/>
+                        <quotation>When the Mütesellim saw this, he said to the Muslim notables (afandiyya): ‘What do you have to say?</quotation>
+                        <pages>161</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>This leads to the fourth type of explanation ...</title>
+                        <comment/>
+                        <quotation>This leads to the fourth type of explanation in the text, namely divine de-cree. In this vein, the author writes with regard to alleged plans to stage anti-Christian riots in Damascus: ‘but God did not grant their wish’.</quotation>
+                        <pages>23</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title># Translation</title>
+                        <comment/>
+                        <quotation>Translation</quotation>
+                        <pages>35-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>People were counting the days till the new ...</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-05-01&quot; dur=&quot;P1M&quot;&amp;gt; But then came the new [harvest] season, and the &amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;price of wheat stabilized&amp;lt;/measure&amp;gt; at &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;5&quot;&amp;gt;5 kuruş&amp;lt;/measure&amp;gt; for one mudd. &amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>People were counting the days till the new wheat harvest [in fear of new price rises]. When they thought about the general situation and the soldiers advancing on the country, they went to bed at night and woke up in the morning in great fear. But then came the new [harvest] season, and the price of wheat stabilized at 5 kuruş for one mudd.</quotation>
+                        <pages>63</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>okka (A ūqiyya) a weight; according to Kremer ...</title>
+                        <comment/>
+                        <quotation>okka (A ūqiyya) a weight; according to Kremer (1853, 255) it equalled about 320 grams, according to Robinson (1841, xvi), it equalled ‘about 2 and 3/4 pounds English’. Two okka equalled 1 → ratl.</quotation>
+                        <pages>193</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>There was no selling and buying, apart from ...</title>
+                        <comment>$$food prices$$&lt;br&gt;&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1831&quot;&amp;gt;with &amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;one mudd of wheat&amp;lt;/measure&amp;gt; going for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;5&quot;&amp;gt;5 kuruş&amp;lt;/measure&amp;gt;.&amp;lt;/measureGrp&amp;gt;</comment>
+                        <quotation>There was no selling and buying, apart from food, with one mudd of wheat going for 5 kuruş.56 Other kinds of food were also available at reasonable prices, but imports of goods from the countryside ceased because no one ordered anything.</quotation>
+                        <pages>47</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>When the Vizier arrived, they began presenting him ...</title>
+                        <comment/>
+                        <quotation>When the Vizier arrived, they began presenting him with petitions about the bread situation.</quotation>
+                        <pages>59</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>## 1841</title>
+                        <comment/>
+                        <quotation>1841</quotation>
+                        <pages>162-</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>1) ahālī</title>
+                        <comment> $$terminology$$</comment>
+                        <quotation>Among them is the term ahali (here mostly translated as ‘the city’s local inhabitants’). Ahali was generally used as a neutral term for the population of a certain location, as in ‘the people of Damascus’. However, in the chronicle the term consistently refers to the Muslim population. Then there is a group designated as awlad al-balad (here: ‘the local towns-men’ or ‘the locals’). In the chronicle, this term mostly refers to members of the above-mentioned localist faction, who led the revolt of 1831. The author does not count himself and the Greek Orthodox among the ‘locals’.</quotation>
+                        <pages>24</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Hathaway 2008, 304</title>
+                        <comment> $$check source$$</comment>
+                        <quotation>Hathaway 2008, 304</quotation>
+                        <pages>60</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>At the beginning of Lent (al-Sawm al-Kabir),106 the ...</title>
+                        <comment>$$food riot$$ $$looting$$&lt;br&gt;&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832-03-14&quot;&amp;gt;At the beginning of Lent (al-Sawm al-Kabir),106 the situation worsened. &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;wheat&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;One mudd of wheat&amp;lt;/measure&amp;gt; was sold in the city107 for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;14&quot;&amp;gt;14 kuruş&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;, &amp;lt;measureGrp&amp;gt;one &amp;lt;measure commodity=&quot;barley&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;mudd of barley&amp;lt;/measure&amp;gt; for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;8&quot;&amp;gt;8&amp;lt;/measure&amp;gt; kuruş&amp;lt;/measureGrp&amp;gt;, &amp;lt;measureGrp&amp;gt;&amp;lt;measure commodity=&quot;maize&quot; unit=&quot;madd&quot; quantity=&quot;1&quot;&amp;gt;maize&amp;lt;/measure&amp;gt; for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;10&quot;&amp;gt;10&amp;lt;/measure&amp;gt; kuruş&amp;lt;/measureGrp&amp;gt;, and &amp;lt;measureGrp&amp;gt;a &amp;lt;measure commodity=&quot;rice&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;ratl of rice&amp;lt;/measure&amp;gt; for &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;5&quot;&amp;gt;5&amp;lt;/measure&amp;gt; kuruş&amp;lt;/measureGrp&amp;gt;.&amp;lt;/measureGrp&amp;gt; Because the bakers in the market received only small quantities of flour, the situation at the bakeries was dreadful, and people waited half the day to get their bread. By the first Friday of Lent, things had become even worse. The people, stretched to the limit, snatched about 50 trays108 of bread in the streets and from the bakeries. They even stole dough in the streets, and from the knead-ing troughs inside the bakeries.</comment>
+                        <quotation>At the beginning of Lent (al-Sawm al-Kabir),106 the situation worsened. One mudd of wheat was sold in the city107 for 14 kuruş, one mudd of barley for 8 kuruş, maize for 10 kuruş, and a ratl of rice for 5 kuruş. Because the bakers in the market received only small quantities of flour, the situation at the bakeries was dreadful, and people waited half the day to get their bread. By the first Friday of Lent, things had become even worse. The people, stretched to the limit, snatched about 50 trays108 of bread in the streets and from the bakeries. They even stole dough in the streets, and from the knead-ing troughs inside the bakeries.</quotation>
+                        <pages>61</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>On the day when the price of bread ...</title>
+                        <comment>&amp;lt;measureGrp location=&quot;Damascus&quot; when=&quot;1832&quot;&amp;gt;when &amp;lt;measure commodity=&quot;bread&quot; unit=&quot;ratl&quot; quantity=&quot;1&quot;&amp;gt;the price of bread&amp;lt;/measure&amp;gt; reached &amp;lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;1.50&quot;&amp;gt;60 fidda&amp;lt;/measure&amp;gt;&amp;lt;/measureGrp&amp;gt;&lt;br&gt;$$food riot$$</comment>
+                        <quotation>On the day when the price of bread reached 60 fidda, the local artisans rose up and demonstrated against the high cost of bread.1</quotation>
+                        <pages>60</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>mudd (A) dry measure equal to 12 → ...</title>
+                        <comment/>
+                        <quotation>mudd (A) dry measure equal to 12 → rubʿas.</quotation>
+                        <pages>192</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>ratl (A raṭl) a weight, equivalent to 2 ...</title>
+                        <comment/>
+                        <quotation>ratl (A raṭl) a weight, equivalent to 2 → okka.</quotation>
+                        <pages>193</pages>
+                    </tss:note>
+                    <tss:note>
+                        <title>Biographical Appendix </title>
+                        <comment/>
+                        <quotation>Biographical Appendix</quotation>
+                        <pages>178-</pages>
+                    </tss:note>
+                </tss:notes>
+                <tss:attachments>
+                    <tss:attachmentReference>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Bu%CC%88ssow%2C%20Johann/2012%20Damascus%20Affairs%20Egyptian%20Rule%20in%20Syria%20through%20the%20Eyes%20of%20an%20Anonymous%20Damascene%20Chronicler.pdf</URL>
                     </tss:attachmentReference>
                 </tss:attachments>
             </tss:reference>
