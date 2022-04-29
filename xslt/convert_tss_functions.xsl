@@ -7,6 +7,7 @@
     xmlns="http://www.loc.gov/mods/v3"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:oape="https://openarabicpe.github.io/ns"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xpath-default-namespace="http://www.loc.gov/mods/v3"
     exclude-result-prefixes="#all"
     version="3.0">
@@ -370,4 +371,27 @@
         <xsl:value-of select="name()"/>
         <xsl:text>="</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
     </xsl:template>
+    <xsl:function name="oape:string-clean-urls">
+        <xsl:param name="p_input" as="xs:string"/>
+        <xsl:choose>
+            <!-- URL components -->
+            <xsl:when test="matches($p_input, '&amp;locale=\w+')">
+                <xsl:value-of select="oape:string-clean-urls(replace($p_input, '&amp;locale=\w+', ''))"/>
+            </xsl:when>
+            <!-- specific sites -->
+            <xsl:when test="matches($p_input, 'https://babel.hathitrust.org/shcgi/pt?id=')">
+                <xsl:value-of select="replace($p_input, '^https*://babel.hathitrust.org/shcgi/pt?id=(.+)$', 'https://hdl.handle.net/2027/$1')"/>
+            </xsl:when>
+            <!-- rawgit error -->
+            <xsl:when test="matches($p_input, 'rawgit.com')">
+                <xsl:message>
+                    <xsl:text>Error: link to rawgit</xsl:text>
+                </xsl:message>
+                <xsl:value-of select="$p_input"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$p_input"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
 </xsl:stylesheet>
