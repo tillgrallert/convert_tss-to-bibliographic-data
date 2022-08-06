@@ -86,4 +86,80 @@ uuid: D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28</dc:description>
                     Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps</rdf:value>
         <dc:subject>abstract</dc:subject>
     </bib:Memo>
+    <bib:Illustration rdf:about="http://hdl.handle.net/10020/2008r3">
+        <z:itemType>artwork</z:itemType>
+        <z:artists>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ḥakīm</foaf:surname>
+                        <foaf:givenName>Sulaymān</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:artists>
+        <dcterms:isReferencedBy rdf:resource="#item_225529"/>
+        <dc:subject>approximate date</dc:subject>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Digital copy</dc:subject>
+        <dc:subject>Hajj departure</dc:subject>
+        <dc:subject>Midan</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Public gathering</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>referenced: PhD thesis</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>status: complete</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>V. Appropriation</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://hdl.handle.net/10020/2008r3</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>1887</dc:date>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>Box T56</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dc:description>Series Number: gri_2008_r_3_1972
+Series: Ken and Jenny Jacobson Orientalist Photography Collection
+Citation Key: Ḥakīm+1880
+place: Damas
+uuid: 96CFA9FC-8829-4593-9EC5-3DA2C5299B0A</dc:description>
+        <dcterms:dateSubmitted>2013-09-24</dcterms:dateSubmitted>
+        <z:libraryCatalog>The Getty Research Institute</z:libraryCatalog>
+        <dcterms:abstract>el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.
+
+The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.
+
+The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. 
+
+the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.
+
+From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.
+
+15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92</dcterms:abstract>
+        <dc:title>Damas, depart à la caravane par la Mecque</dc:title>
+        <z:shortTitle>Damas, depart à la caravane</z:shortTitle>
+        <z:archive>GRI</z:archive>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#item_225529">
+        <rdf:value>&lt;h1&gt;# abstract&lt;/h1&gt;
+                    el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.
+                        &lt;p&gt;el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.&lt;/p&gt;
+                    
+                        &lt;p&gt;The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.&lt;/p&gt;
+                    
+                        &lt;p&gt;The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. &lt;/p&gt;
+                    
+                        &lt;p&gt;the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.&lt;/p&gt;
+                    
+                        &lt;p&gt;From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.&lt;/p&gt;
+                    
+                        &lt;p&gt;15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92&lt;/p&gt;</rdf:value>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
 </rdf:RDF>
