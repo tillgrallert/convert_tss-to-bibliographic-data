@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <tss:senteContainer version="1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd">
     <tss:library>
@@ -24,8 +24,7 @@
                     <tss:characteristic name="Collection description">Zur Erinnerung an den Weltkrieg 1917-18 im Orient</tss:characteristic>
                     <tss:characteristic name="Web data source">delcampe.net</tss:characteristic>
                     <tss:characteristic name="Citation identifier">DamaskusJahrmarktKarussell 1917</tss:characteristic>
-                    <tss:characteristic name="URL"
-                        >http://www.delcampe.net/page/item/id,96537990,var,Syrien-Damas-Jahrmarkt-Karussell-Carrousel-Fete-foraine-Syria-prives-carte-photo-191718-serie-WW-I-de-lOrient-Syrie,language,E.html</tss:characteristic>
+                    <tss:characteristic name="URL">https://www.delcampe.net/en_GB/collectables/item/096537990.html</tss:characteristic>
                     <tss:characteristic name="Medium">Postcard</tss:characteristic>
                     <tss:characteristic name="publicationStatus">Published</tss:characteristic>
                 </tss:characteristics>
@@ -72,8 +71,7 @@
                     <tss:characteristic name="Collection description">Édition J. Deychamps</tss:characteristic>
                     <tss:characteristic name="Web data source">delcampe.net</tss:characteristic>
                     <tss:characteristic name="Citation identifier">BanlieueDamasDistractionsDes</tss:characteristic>
-                    <tss:characteristic name="URL"
-                        >http://www.delcampe.net/page/item/id,249473149,var,11-Banlieue-DAMAS--Distractions-des-Druzes--ed-L-Ferid-libraire,language,E.html</tss:characteristic>
+                    <tss:characteristic name="URL">https://www.delcampe.net/en_GB/collectables/item/249473149.html</tss:characteristic>
                     <tss:characteristic name="Medium">Postcard</tss:characteristic>
                     <tss:characteristic name="publicationStatus">Published</tss:characteristic>
                 </tss:characteristics>
