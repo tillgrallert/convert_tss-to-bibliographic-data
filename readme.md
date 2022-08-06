@@ -9,8 +9,12 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 
 # to do
 
-- some fields and reference types are not yet mapped
-- reference types
+- [ ] some fields and reference types are not yet mapped
+	+ [x] photographer -> `z:artists`
+- [ ] reference types
+	+ [ ] **Sālnāmes**: 
+		* should be classified as books. 
+		* volume should become series number
 
 # features
 ## abstracts
