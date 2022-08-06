@@ -599,7 +599,7 @@
     <!-- contributors -->
     <xsl:template match="tss:authors" mode="m_tss-to-zotero-rdf">
         <!-- the authors should be further differentiated -->
-        <xsl:if test="tss:author/@role = ('Author', 'Compiler', 'Photographer')">
+        <xsl:if test="tss:author/@role = ('Author', 'Compiler')">
             <xsl:choose>
                 <xsl:when test="ancestor::tss:reference/tss:publicationType/@name = 'Presentation'">
                     <z:presenters>
@@ -611,7 +611,7 @@
                 <xsl:otherwise>
                     <bib:authors>
                         <rdf:Seq>
-                            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="tss:author[@role = ('Author', 'Compiler', 'Photographer')]"/>
+                            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="tss:author[@role = ('Author', 'Compiler')]"/>
                         </rdf:Seq>
                     </bib:authors>
                 </xsl:otherwise>
@@ -637,6 +637,13 @@
                     <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="tss:author[@role = 'Contributor']"/>
                 </rdf:Seq>
             </bib:contributors>
+        </xsl:if>
+        <xsl:if test="tss:author/@role = 'Photographer'">
+            <z:artists>
+                <rdf:Seq>
+                    <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="tss:author[@role = 'Photographer']"/>
+                </rdf:Seq>
+            </z:artists>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Recipient']" mode="m_tss-to-zotero-rdf">
