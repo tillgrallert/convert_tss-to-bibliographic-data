@@ -20,7 +20,7 @@
     -->
 
     <!-- fields not yet covered 
-        + Date read
+        - rating
         + DOI is currently only mapped to the extra field
             - which works well upon import into Zotero
     -->
@@ -301,6 +301,7 @@
             <!-- tags, keywords etc. -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:keywords"/>
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'status']"/>
+            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'rating']"/>
             <!-- URLs -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'URL']"/>
             <!-- Identitifiers -->
@@ -760,10 +761,10 @@
             <xsl:value-of select="."/>
         </dc:subject>
     </xsl:template>
-    <xsl:template match="tss:characteristic[@name = 'status']" mode="m_tss-to-zotero-rdf">
+    <xsl:template match="tss:characteristic[@name = ('status', 'rating')]" mode="m_tss-to-zotero-rdf">
         <xsl:if test=". != ''">
             <dc:subject>
-                <xsl:text>status: </xsl:text>
+                <xsl:value-of select="concat(@name, $v_separator-key-value)"/>
                 <xsl:value-of select="lower-case(replace(., '\s+', ' '))"/>
             </dc:subject>
         </xsl:if>
@@ -1032,7 +1033,10 @@
                     <![CDATA[<h1>]]><xsl:text># notes</xsl:text><![CDATA[</h1>]]>
                     <!-- notes -->
                     <xsl:for-each select="tss:note">
-                        <xsl:sort data-type="number" order="ascending" select="tss:pages"/>
+                        <xsl:sort data-type="number" order="ascending" select="number(replace(tss:pages, '^§*(\d+).*$', '$1'))"/>
+                        <xsl:message>
+                            <xsl:value-of select="replace(tss:pages, '^§*(\d+).*$', '$1')"/>
+                        </xsl:message>
                         <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
                     </xsl:for-each>
                 </rdf:value>
