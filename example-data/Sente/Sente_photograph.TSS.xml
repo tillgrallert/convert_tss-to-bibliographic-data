@@ -94,6 +94,64 @@
                     </tss:attachmentReference>
                 </tss:attachments>
             </tss:reference>
+            <tss:reference>
+                <tss:publicationType name="Photograph"/>
+                <tss:authors>
+                    <tss:author role="Photographer">
+                        <tss:surname>Ḥakīm</tss:surname>
+                        <tss:forenames>Sulaymān</tss:forenames>
+                        <tss:initials/>
+                    </tss:author>
+                </tss:authors>
+                <tss:dates>
+                    <tss:date type="Publication" year="1887"/>
+                    <tss:date day="24" month="9" type="Retrieval" year="2013"/>
+                    <tss:date day="6" month="5" type="Entry" year="2013"/>
+                    <tss:date day="27" month="4" type="Modification" year="2022"/>
+                </tss:dates>
+                <tss:characteristics>
+                    <tss:characteristic name="articleTitle">Damas, depart à la caravane par la Mecque</tss:characteristic>
+                    <tss:characteristic name="publicationTitle">Damas, depart à la caravane par la Mecque</tss:characteristic>
+                    <tss:characteristic name="abstractText">el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.&lt;br&gt;The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.&lt;br&gt;The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. &lt;br&gt;the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.&lt;br&gt;From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.&lt;br&gt;15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92</tss:characteristic>
+                    <tss:characteristic name="publicationCountry">Damas</tss:characteristic>
+                    <tss:characteristic name="rating">4</tss:characteristic>
+                    <tss:characteristic name="status">Complete</tss:characteristic>
+                    <tss:characteristic name="UUID">96CFA9FC-8829-4593-9EC5-3DA2C5299B0A</tss:characteristic>
+                    <tss:characteristic name="Caption">Damas, depart à la caravane par la Mecque</tss:characteristic>
+                    <tss:characteristic name="Item">gri_2008_r_3_1972</tss:characteristic>
+                    <tss:characteristic name="Signatur">Box T56</tss:characteristic>
+                    <tss:characteristic name="Collection description">Ken and Jenny Jacobson Orientalist Photography Collection</tss:characteristic>
+                    <tss:characteristic name="Repository">GRI</tss:characteristic>
+                    <tss:characteristic name="Standort">The Getty Research Institute</tss:characteristic>
+                    <tss:characteristic name="Citation identifier">Ḥakīm 1880</tss:characteristic>
+                    <tss:characteristic name="URL">http://hdl.handle.net/10020/2008r3</tss:characteristic>
+                    <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+                </tss:characteristics>
+                <tss:keywords>
+                    <tss:keyword assigner="Sente User Albert">writing: 2022 Entertainment</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">approximate date</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Damascus</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Digital copy</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Hajj departure</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Midan</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Photograph</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public gathering</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Public ritual</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian">V. Appropriation</tss:keyword>
+                    <tss:keyword assigner="Sente User XSLT">referenced: PhD thesis</tss:keyword>
+                </tss:keywords>
+                <tss:attachments>
+                    <tss:attachmentReference>
+                        <name>Hage</name>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n/1887%20Damas%2C%20depart%20a%CC%80%20la%20caravane%20par%20la%20Mecque%20H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n.jpg</URL>
+                    </tss:attachmentReference>
+                    <tss:attachmentReference>
+                        <name>Getty</name>
+                        <URL>file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n/1887%20Damas%2C%20depart%20a%CC%80%20la%20caravane%20par%20la%20Mecque%20H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n.png</URL>
+                    </tss:attachmentReference>
+                </tss:attachments>
+            </tss:reference>
         </tss:references>
     </tss:library>
 </tss:senteContainer>
