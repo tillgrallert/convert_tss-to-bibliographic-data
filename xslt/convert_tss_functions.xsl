@@ -382,6 +382,9 @@
             <xsl:when test="matches($p_input, 'https://babel.hathitrust.org/shcgi/pt?id=')">
                 <xsl:value-of select="replace($p_input, '^https*://babel.hathitrust.org/shcgi/pt?id=(.+)$', 'https://hdl.handle.net/2027/$1')"/>
             </xsl:when>
+            <xsl:when test="matches($p_input, 'delcampe.net', 'i')">
+                <xsl:value-of select="concat('https://www.delcampe.net/en_GB/collectables/item/', parent::tss:characteristics/tss:characteristic[@name = 'call-num'], '.html')"/>
+            </xsl:when>
             <!-- rawgit error -->
             <xsl:when test="matches($p_input, 'rawgit.com')">
                 <xsl:message>
