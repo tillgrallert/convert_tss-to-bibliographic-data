@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0" xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns"
+    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:vcard="http://nwalsh.com/rdf/vCard#" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:z="http://www.zotero.org/namespaces/export#">
@@ -53,12 +53,12 @@
     -->
 
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf">
-        <xsl:param name="tss_reference"/>
+        <xsl:param name="tss_reference" as="node()"/>
         <!--        <xsl:param name="p_individual-notes"/>-->
         <xsl:param name="p_include-attachments"/>
         <xsl:param name="p_include-notes"/>
         <!-- values are: individual, summary, both -->
-        <xsl:param name="p_note-type"/>
+        <xsl:param name="p_note-type" as="xs:string"/>
         <!-- check reference type, since the first child after the root depends on it -->
         <xsl:variable name="v_reference-type">
             <xsl:variable name="v_temp" select="lower-case($tss_reference/tss:publicationType/@name)"/>
@@ -1041,9 +1041,12 @@
                     <!-- notes -->
                     <xsl:for-each select="tss:note">
                         <xsl:sort data-type="number" order="ascending" select="number(replace(tss:pages, '^§*(\d+).*$', '$1'))"/>
-                        <xsl:message>
-                            <xsl:value-of select="replace(tss:pages, '^§*(\d+).*$', '$1')"/>
-                        </xsl:message>
+                        <xsl:if test="$p_debug = true()">
+                            <xsl:message>
+                                <xsl:text>Note on page: </xsl:text>
+                                <xsl:value-of select="replace(tss:pages, '^§*(\d+).*$', '$1')"/>
+                            </xsl:message>
+                        </xsl:if>
                         <xsl:copy-of select="oape:bibliography-tss-note-to-html(.)"/>
                     </xsl:for-each>
                 </rdf:value>
