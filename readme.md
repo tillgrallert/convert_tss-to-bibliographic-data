@@ -41,6 +41,7 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 
 # to do
 
+- [ ] chunk output into files with 1000 references for easier import into Zotero
 - [ ] some fields and reference types are not yet mapped
 	+ [x] photographer -> `z:artists`
 - [ ] reference types
