@@ -1035,6 +1035,13 @@
                     </dc:subject>
                 </xsl:matching-substring>
             </xsl:analyze-string>
+            <!-- add note if the note has both a quotation and comment -->
+            <xsl:if test="tss:quotation != ''">
+                <dc:subject>note with quotation</dc:subject>
+            </xsl:if>
+            <xsl:if test="tss:comment != ''">
+                <dc:subject>note with comment</dc:subject>
+            </xsl:if>
         </bib:Memo>
     </xsl:template>
     <xsl:template match="tss:notes" mode="m_tss-to-zotero-rdf">
