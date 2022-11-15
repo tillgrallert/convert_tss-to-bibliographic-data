@@ -1245,4 +1245,31 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:variable name="v_css-div" select="'display: block; border: 1px solid black;'"/>
+    <xsl:function name="oape:bibliography-tss-note-to-html">
+        <!-- expects a <tss:note> as input -->
+        <xsl:param as="node()" name="tss_note"/>
+        <xsl:variable name="v_css-background-color">
+            <xsl:text>background-color:</xsl:text>
+            <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/@color"/>
+            <xsl:text>;</xsl:text>
+        </xsl:variable>
+        <!-- Zotero does not support display of Divs anymore `display: block` has no effect and thus, the background-colour is only used as text highligt. 
+             It would therefore make sense to have separator lines and to add the background colour only to the quotation section -->
+        <![CDATA[<div style="]]><xsl:value-of select="$v_css-div"/><![CDATA[">]]>
+        <!-- add a first line: sorting and display in Zotero -->
+        <xsl:apply-templates mode="m_tss-citation" select="$tss_note"/><xsl:text>: </xsl:text><xsl:apply-templates mode="m_tss-summary" select="$tss_note"/>
+        <!--        <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-notes-to-html"/>-->
+        <![CDATA[<br/>]]>
+        <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:title">
+            <xsl:with-param name="p_css" select="$v_css-background-color"/>
+        </xsl:apply-templates>
+        <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:quotation">
+            <xsl:with-param name="p_css" select="$v_css-background-color"/>
+        </xsl:apply-templates>
+        <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:comment"/>
+        <![CDATA[</div>]]>
+        <![CDATA[<hr/>]]>
+    </xsl:function>
 </xsl:stylesheet>
