@@ -47,8 +47,20 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 	+ [ ] **Sālnāmes**: 
 		* should be classified as books. 
 		* volume should become series number
+		* this can be done manually once after import into Zotero, as Salnames acount for not more than 50 references
 
 # features
+## citation keys
+
+The Sente "Citation Identifier" is converted to BibTeX cite keys and added to Zotero's extra field to be used with the "Better BibTeX" add-on as
+
+```
+Citation Key: value
+BibTeX Key: value
+```
+
+Any whitespace in the "Citation identifier" is replaced with a character string specified in the variable `$v_cite-key-whitespace-replacement`.
+
 ## abstracts
 
 abstracts are converted to Zotero notes and tagged with `<dc:subject>abstract</dc:subject>`
