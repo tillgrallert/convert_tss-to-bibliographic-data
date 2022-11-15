@@ -1025,7 +1025,7 @@
             </rdf:value>
             <!-- add tag for colour -->
             <dc:subject>
-                <xsl:value-of select="concat('colour_', @color)"/>
+                <xsl:value-of select="concat('colour', $v_separator-key-value, @color)"/>
             </dc:subject>
             <!-- add tags from SenteAssistant of the pattern $$some note$$ -->
             <xsl:analyze-string regex="\$\$([^\$]+)\$\$" select="tss:comment">
