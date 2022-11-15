@@ -7,6 +7,38 @@ ORCID: orcid.org/0000-0002-5739-8094
 
 This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to other, more standard, bibliography formats, namely Zotero RDF (XML)
 
+# Bugs
+
+- [x] Generating Notes from abstracts:  if there is a `<html:br>` element, the first paragraph is repeated. This seems to be a bug in the `m_mmd-markup-to-html` mode. I suppose, I had incorrectly understood the `@group-starting-with` attribute on `xsl:for-each-group`.
+	
+```xsl
+<xsl:template match="tss:characteristic" mode="m_mmd-markup-to-html">
+    <xsl:choose>
+        <xsl:when test="html:br">
+            <!-- convert everything before the first <br/> -->
+            <!-- this seems completely unnecessary -->
+            <!--<![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="html:br[1]/preceding-sibling::node()"/><![CDATA[</p>]]>-->
+            <!-- convert each group staring with a <br/> -->
+            <xsl:for-each-group group-starting-with="html:br" select="child::node()">
+                <xsl:if test="$p_debug = true()">
+                    <xsl:message>
+                        <xsl:text/>
+                        <xsl:value-of select="current-group()"/>
+                    </xsl:message>
+                </xsl:if>
+                <xsl:if test="current-group() != ''">
+                    <![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="current-group()"/><![CDATA[</p>]]>
+                </xsl:if>
+            </xsl:for-each-group>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:apply-templates mode="m_mmd-markup-to-html"/>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+```
+
+
 # to do
 
 - [ ] some fields and reference types are not yet mapped

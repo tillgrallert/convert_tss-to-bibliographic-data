@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0" xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns"
     xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:vcard="http://nwalsh.com/rdf/vCard#" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:vcard="http://nwalsh.com/rdf/vCard#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:z="http://www.zotero.org/namespaces/export#">
 
     <!-- date conversion functions -->
@@ -52,12 +52,12 @@
     -->
 
     <xsl:function name="oape:bibliography-tss-to-zotero-rdf">
-        <xsl:param name="tss_reference" as="node()"/>
+        <xsl:param as="node()" name="tss_reference"/>
         <!--        <xsl:param name="p_individual-notes"/>-->
         <xsl:param name="p_include-attachments"/>
         <xsl:param name="p_include-notes"/>
         <!-- values are: individual, summary, both -->
-        <xsl:param name="p_note-type" as="xs:string"/>
+        <xsl:param as="xs:string" name="p_note-type"/>
         <!-- check reference type, since the first child after the root depends on it -->
         <xsl:variable name="v_reference-type">
             <xsl:variable name="v_temp" select="lower-case($tss_reference/tss:publicationType/@name)"/>
@@ -919,8 +919,6 @@
     <xsl:template match="tss:characteristic[@name = 'abstractText']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=". != ''">
             <dcterms:abstract>
-                <!-- as it stands this will remove all formatting -->
-<!--                <xsl:apply-templates/>-->
                 <xsl:apply-templates mode="m_html-to-mmd"/>
             </dcterms:abstract>
         </xsl:if>
@@ -1166,8 +1164,17 @@
     <xsl:template match="tss:characteristic" mode="m_mmd-markup-to-html">
         <xsl:choose>
             <xsl:when test="html:br">
-                <xsl:apply-templates mode="m_mmd-markup-to-html" select="html:br[1]/preceding-sibling::node()"/>
+                <!-- convert everything before the first <br/> -->
+                <!-- this seems completely unnecessary -->
+                <!--<![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="html:br[1]/preceding-sibling::node()"/><![CDATA[</p>]]>-->
+                <!-- convert each group staring with a <br/> -->
                 <xsl:for-each-group group-starting-with="html:br" select="child::node()">
+                    <xsl:if test="$p_debug = true()">
+                        <xsl:message>
+                            <xsl:text/>
+                            <xsl:value-of select="current-group()"/>
+                        </xsl:message>
+                    </xsl:if>
                     <xsl:if test="current-group() != ''">
                         <![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="current-group()"/><![CDATA[</p>]]>
                     </xsl:if>
