@@ -19,7 +19,7 @@
                 <!--            <xsl:value-of select="count(preceding-sibling::tss:note) + 1"/>-->
             </xsl:if>
         </xsl:variable>
-        <![CDATA[<span>]]><xsl:value-of select="$v_citation"/><![CDATA[</span>]]>
+        <xsl:value-of select="$v_citation"/>
     </xsl:template>
     <xsl:template match="tss:note" mode="m_tss-summary">
         <xsl:variable name="v_summary">
@@ -32,7 +32,7 @@
                 </xsl:when>
             </xsl:choose>
         </xsl:variable>
-        <![CDATA[<span>]]><xsl:value-of select="$v_summary"/><![CDATA[</span>]]>
+        <xsl:value-of select="$v_summary"/>
     </xsl:template>
 
     <xsl:template match="tss:title" mode="m_tss-notes-to-html">

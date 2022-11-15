@@ -475,8 +475,18 @@
     </xsl:template>
     <!-- if used with Better BibTeX, one can set the citation key in the extra field -->
     <xsl:template match="tss:characteristic[@name = 'Citation identifier']" mode="m_extra-field">
+        <xsl:variable name="v_bibtex-key">
+            <xsl:apply-templates select="." mode="m_bibtex"/>
+        </xsl:variable>
+        <xsl:if test="$v_bibtex-key != ''">
+            <xsl:value-of select="concat('Citation Key', $v_separator-key-value, $v_bibtex-key, $v_new-line)"/>
+            <xsl:value-of select="concat('BibTeX Key', $v_separator-key-value, $v_bibtex-key, $v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <!-- simple pre-processing template for citation keys -->
+    <xsl:template match="tss:characteristic[@name = 'Citation identifier']" mode="m_bibtex">
         <xsl:if test=". != ''">
-            <xsl:value-of select="concat('Citation Key', $v_separator-key-value, replace(., '\s+', $v_cite-key-whitespace-replacement), $v_new-line)"/>
+            <xsl:value-of select="replace(., '\s+', $v_cite-key-whitespace-replacement)"/>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field">
@@ -1255,19 +1265,27 @@
             <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/@color"/>
             <xsl:text>;</xsl:text>
         </xsl:variable>
+        <xsl:variable name="v_pandoc-citation">
+            <xsl:text>@</xsl:text>
+            <xsl:apply-templates mode="m_bibtex" select="$tss_note/ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Citation identifier']"/>
+            <xsl:if test="$tss_note/tss:pages != ''">
+                <xsl:text>, </xsl:text>
+                <xsl:value-of select="$tss_note/tss:pages"/>
+            </xsl:if>
+        </xsl:variable>
         <!-- Zotero does not support display of Divs anymore `display: block` has no effect and thus, the background-colour is only used as text highligt. 
              It would therefore make sense to have separator lines and to add the background colour only to the quotation section -->
         <![CDATA[<div style="]]><xsl:value-of select="$v_css-div"/><![CDATA[">]]>
         <!-- add a first line: sorting and display in Zotero -->
-        <xsl:apply-templates mode="m_tss-citation" select="$tss_note"/><xsl:text>: </xsl:text><xsl:apply-templates mode="m_tss-summary" select="$tss_note"/>
-        <!--        <xsl:apply-templates select="$tss_note/tss:pages" mode="m_tss-notes-to-html"/>-->
-        <![CDATA[<br/>]]>
+        <![CDATA[<p>]]><xsl:apply-templates mode="m_tss-citation" select="$tss_note"/><xsl:text>: </xsl:text><xsl:apply-templates mode="m_tss-summary" select="$tss_note"/><![CDATA[</p>]]>
         <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:title">
             <xsl:with-param name="p_css" select="$v_css-background-color"/>
         </xsl:apply-templates>
         <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:quotation">
             <xsl:with-param name="p_css" select="$v_css-background-color"/>
         </xsl:apply-templates>
+        <!-- add pandoc citation -->
+        <![CDATA[<p style="text-align: right;">]]>{<xsl:value-of select="$v_pandoc-citation"/>}<![CDATA[</p>]]>
         <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:comment"/>
         <![CDATA[</div>]]>
         <![CDATA[<hr/>]]>
