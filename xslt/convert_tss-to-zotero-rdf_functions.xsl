@@ -20,7 +20,6 @@
     -->
 
     <!-- fields not yet covered 
-        - rating
         + DOI is currently only mapped to the extra field
             - which works well upon import into Zotero
     -->
