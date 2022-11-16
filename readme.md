@@ -1,7 +1,7 @@
 ---
 title: "Read me: convert Sente XML (TSS) to bibliographic formats"
 author: Till Grallert
-date: 2020-08-06
+date: 2022-11-16
 ORCID: orcid.org/0000-0002-5739-8094
 ---
 
@@ -9,36 +9,51 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 
 # Bugs
 
-- [x] Generating Notes from abstracts:  if there is a `<html:br>` element, the first paragraph is repeated. This seems to be a bug in the `m_mmd-markup-to-html` mode. I suppose, I had incorrectly understood the `@group-starting-with` attribute on `xsl:for-each-group`.
-	
-```xsl
-<xsl:template match="tss:characteristic" mode="m_mmd-markup-to-html">
-    <xsl:choose>
-        <xsl:when test="html:br">
-            <!-- convert everything before the first <br/> -->
-            <!-- this seems completely unnecessary -->
-            <!--<![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="html:br[1]/preceding-sibling::node()"/><![CDATA[</p>]]>-->
-            <!-- convert each group staring with a <br/> -->
-            <xsl:for-each-group group-starting-with="html:br" select="child::node()">
-                <xsl:if test="$p_debug = true()">
-                    <xsl:message>
-                        <xsl:text/>
-                        <xsl:value-of select="current-group()"/>
-                    </xsl:message>
-                </xsl:if>
-                <xsl:if test="current-group() != ''">
-                    <![CDATA[<p>]]><xsl:apply-templates mode="m_mmd-markup-to-html" select="current-group()"/><![CDATA[</p>]]>
-                </xsl:if>
-            </xsl:for-each-group>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:apply-templates mode="m_mmd-markup-to-html"/>
-        </xsl:otherwise>
-    </xsl:choose>
-</xsl:template>
+## import of files into Zotero
+
+in many instances, images files do not make it into Zotero upon import
+
+* example: reference "BD77A86A-C82F-4168-B7F3-4C2D6FAE154E"
+* the files **are** available at the location specified in the XML
+    - Path: `/Users/Shared/BachUni/BachSources/Sente/BachBibliographie/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg`
+    - XML: `<rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg"/>`
+        + the `Attachments/` folder, in this case, is a symlink pointing to the location above
+        + changing the path in the Zotero XML **doesn't change** the result
+
+The following are examples of Zotero RDF XML that does not result in imported files. The failed files all had a `#` in their filename.
+
+- uuid: BD77A86A-C82F-4168-B7F3-4C2D6FAE154E
+
+```xml
+<z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             rdf:about="#uuid_F4F32E0C-BFB2-4AC4-A438-9C4CDED9F192">
+  <z:itemType>attachment</z:itemType>
+  <rdf:resource rdf:resource="/Users/Shared/BachUni/BachSources/Sente/BachBibliographie/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg"/>
+  <dc:title>Scan 1</dc:title>
+  <z:linkMode>2</z:linkMode>
+</z:Attachment>
 ```
 
+- uuid: 4135A6A8-F7D8-48DA-A0AF-DDBB2EB9D5B1
+    + the first file made
+    + the second did not
 
+```xml
+<z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 rdf:about="#uuid_2841851E-BD71-49E4-9599-8470F051A30B">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii.jpg"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
+   <z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 rdf:about="#uuid_7283E593-207F-41DB-A26E-5128C6FCE228">
+      <z:itemType>attachment</z:itemType>
+      <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii #2.jpg"/>
+      <dc:title/>
+      <z:linkMode>2</z:linkMode>
+   </z:Attachment>
+```
 # to do
 
 - [ ] chunk output into files with 1000 references for easier import into Zotero
