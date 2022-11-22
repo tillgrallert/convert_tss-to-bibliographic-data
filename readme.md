@@ -13,6 +13,13 @@ This repository contains XSLT stylesheets to convert custom Sente/ TSS XML to ot
 
 in many instances, images files do not make it into Zotero upon import
 
+- *current* **theory**: The failed files all had a `#` in their filename
+    + this is standard for multiple attachments renamed by Sente
+    + plan:
+        * rename all files: replace `\s*\#` with `-file_`
+        * change all the paths linking to the files with the same replacement
+            - this should be done with XSLT
+
 * example: reference "BD77A86A-C82F-4168-B7F3-4C2D6FAE154E"
 * the files **are** available at the location specified in the XML
     - Path: `/Users/Shared/BachUni/BachSources/Sente/BachBibliographie/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg`
@@ -27,10 +34,10 @@ The following are examples of Zotero RDF XML that does not result in imported fi
 ```xml
 <z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
              rdf:about="#uuid_F4F32E0C-BFB2-4AC4-A438-9C4CDED9F192">
-  <z:itemType>attachment</z:itemType>
-  <rdf:resource rdf:resource="/Users/Shared/BachUni/BachSources/Sente/BachBibliographie/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg"/>
-  <dc:title>Scan 1</dc:title>
-  <z:linkMode>2</z:linkMode>
+    <z:itemType>attachment</z:itemType>
+    <rdf:resource rdf:resource="/Users/Shared/BachUni/BachSources/Sente/BachBibliographie/Bonfils/Album 405 [c 1867-c 1914] Image 116 Vue générale de Sofar et de l'hôtel [c 1867-c 1914]. LEBANON, #2.jpg"/>
+    <dc:title>Scan 1</dc:title>
+    <z:linkMode>2</z:linkMode>
 </z:Attachment>
 ```
 
@@ -40,19 +47,19 @@ The following are examples of Zotero RDF XML that does not result in imported fi
 
 ```xml
 <z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 rdf:about="#uuid_2841851E-BD71-49E4-9599-8470F051A30B">
-      <z:itemType>attachment</z:itemType>
-      <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii.jpg"/>
-      <dc:title/>
-      <z:linkMode>2</z:linkMode>
-   </z:Attachment>
-   <z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 rdf:about="#uuid_7283E593-207F-41DB-A26E-5128C6FCE228">
-      <z:itemType>attachment</z:itemType>
-      <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii #2.jpg"/>
-      <dc:title/>
-      <z:linkMode>2</z:linkMode>
-   </z:Attachment>
+             rdf:about="#uuid_2841851E-BD71-49E4-9599-8470F051A30B">
+    <z:itemType>attachment</z:itemType>
+    <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii.jpg"/>
+    <dc:title/>
+    <z:linkMode>2</z:linkMode>
+</z:Attachment>
+<z:Attachment xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             rdf:about="#uuid_7283E593-207F-41DB-A26E-5128C6FCE228">
+    <z:itemType>attachment</z:itemType>
+    <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/! Unknown Author(s)/damaskus bahnhof kadem foto ak i ii #2.jpg"/>
+    <dc:title/>
+    <z:linkMode>2</z:linkMode>
+</z:Attachment>
 ```
 # to do
 
