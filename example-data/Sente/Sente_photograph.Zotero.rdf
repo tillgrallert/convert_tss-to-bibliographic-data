@@ -1,207 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:z="http://www.zotero.org/namespaces/export#"
-         xmlns:bib="http://purl.org/net/biblio#"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
-         xmlns:dc="http://purl.org/dc/elements/1.1/"
-         xmlns:dcterms="http://purl.org/dc/terms/"
-         xmlns:vcard="http://nwalsh.com/rdf/vCard#"
-         xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0"
-         xmlns:tei="http://www.tei-c.org/ns/1.0"
-         xmlns:html="http://www.w3.org/1999/xhtml"
-         xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
-         xmlns:link="http://purl.org/rss/1.0/modules/link/"
-         xmlns:oape="https://openarabicpe.github.io/ns">
-   <bib:Book rdf:about="#40BC4143-CABB-441A-BFC1-1E1C9328740F">
-      <z:itemType>artwork</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Series>
-            <dc:title>Zur Erinnerung an den Weltkrieg 1917-18 im Orient</dc:title>
-            <dc:identifier>[32]</dc:identifier>
-         </bib:Series>
-      </dcterms:isPartOf>
-      <dc:title>Damaskus. Jahrmarkt Karussell</dc:title>
-      <z:shortTitle>Damaskus</z:shortTitle>
-      <dc:publisher>
-         <foaf:Organization>
-            <vcard:adr>
-               <vcard:Address>
-                  <vcard:locality>Damaskus</vcard:locality>
-               </vcard:Address>
-            </vcard:adr>
-            <foaf:name/>
-         </foaf:Organization>
-      </dc:publisher>
-      <dcterms:isReferencedBy rdf:resource="#40BC4143-CABB-441A-BFC1-1E1C9328740F-abstract"/>
-      <dc:subject>Damascus</dc:subject>
-      <dc:subject>Festivities</dc:subject>
-      <dc:subject>Funfair</dc:subject>
-      <dc:subject>German source</dc:subject>
-      <dc:subject>People</dc:subject>
-      <dc:subject>Photograph</dc:subject>
-      <dc:subject>Postcard</dc:subject>
-      <dc:subject>Public gathering</dc:subject>
-      <dc:subject>Public ritual</dc:subject>
-      <dc:subject>Source</dc:subject>
-      <dc:subject>V. Appropriation</dc:subject>
-      <dc:subject>Women</dc:subject>
-      <dc:subject>World War, 1914-1918</dc:subject>
-      <dc:subject>writing: 2022 Entertainment</dc:subject>
-      <dc:subject>status: imported from Sente</dc:subject>
-      <dc:subject>status: complete</dc:subject>
-      <dc:subject>rating: 5</dc:subject>
-      <dc:identifier>
-         <dcterms:URI>
-            <rdf:value>https://www.delcampe.net/en_GB/collectables/item/096537990.html</rdf:value>
-         </dcterms:URI>
-      </dc:identifier>
-      <dc:date>1917</dc:date>
-      <z:medium>Postcard</z:medium>
-      <z:libraryCatalog>delcampe.net</z:libraryCatalog>
-      <dc:subject>
-         <dcterms:LCC>
-            <rdf:value>096537990</rdf:value>
-         </dcterms:LCC>
-      </dc:subject>
-      <dcterms:dateSubmitted>2013-02-27</dcterms:dateSubmitted>
-      <dc:description>Citation Key: DamaskusJahrmarktKarussell+1917
+<rdf:RDF xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns"
+    xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:vcard="http://nwalsh.com/rdf/vCard#" xmlns:z="http://www.zotero.org/namespaces/export#">
+    <bib:Illustration rdf:about="#D46AC804-1FCF-4194-B5BE-2082E801E422">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <z:archive>The Fouad Debbas Collection</z:archive>
+                        <dc:identifier>679</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:title>Album 407 [c 1867-c 1914]</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:title>Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</dc:title>
+        <z:shortTitle>Image 80</z:shortTitle>
+        <z:artists>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bonfils</foaf:surname>
+                        <foaf:givenName/>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:artists>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                        <vcard:locality>Beyrouth</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Maison Bonfils</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dcterms:isReferencedBy rdf:resource="#D46AC804-1FCF-4194-B5BE-2082E801E422-notes"/>
+        <link:link rdf:resource="#uuid_6E50ABF8-182E-4F7F-919B-65332E371EF3"/>
+        <link:link rdf:resource="#uuid_483A7A2C-8881-4BF1-B0C2-7E84184CCBD4"/>
+        <dcterms:isReferencedBy rdf:resource="#D46AC804-1FCF-4194-B5BE-2082E801E422-abstract"/>
+        <dc:subject/>
+        <dc:subject>Lebanon</dc:subject>
+        <dc:subject>Locations</dc:subject>
+        <dc:subject>Locations &gt; Lebanon</dc:subject>
+        <dc:subject>People</dc:subject>
+        <dc:subject>People &gt; Portrait</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Portrait</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>Source &gt; Photograph</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://eap.bl.uk/archive-file/EAP644-1-40</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date/>
+        <z:medium>Photograph</z:medium>
+        <z:libraryCatalog>EAP</z:libraryCatalog>
+        <z:archive>The Fouad Debbas Collection</z:archive>
+        <dc:coverage>TFDC_407_126_0679</dc:coverage>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>EAP644/1/40</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dcterms:dateSubmitted/>
+        <dc:description>Citation Key: TFDC_407_126_0679
+BibTeX Key: TFDC_407_126_0679
+place: Beyrouth
+Album: Album 407 [c 1867-c 1914]
+caption: Jeune fille du Liban coiffée du tentour
+uuid: D46AC804-1FCF-4194-B5BE-2082E801E422
+</dc:description>
+        <dcterms:abstract>Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</dcterms:abstract>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#D46AC804-1FCF-4194-B5BE-2082E801E422-abstract">
+        <rdf:value>
+                    &lt;h1&gt;# abstract&lt;/h1&gt;
+                    Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</rdf:value>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+    <z:Attachment rdf:about="#uuid_6E50ABF8-182E-4F7F-919B-65332E371EF3">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Bonfils/Album 407 [c 1867-c 1914] Image 80 Jeune fille du Liban coiffée du
+            tentour [c 1867-c 1914]. LEBANO #2.jpg"/>
+        <dc:title>Scan 1</dc:title>
+        <z:linkMode>2</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#uuid_483A7A2C-8881-4BF1-B0C2-7E84184CCBD4">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>URL Scan 2</dc:title>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
+    <bib:Illustration rdf:about="#40BC4143-CABB-441A-BFC1-1E1C9328740F">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>Zur Erinnerung an den Weltkrieg 1917-18 im Orient</dc:title>
+                <dc:identifier>[32]</dc:identifier>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:title>Damaskus. Jahrmarkt Karussell</dc:title>
+        <z:shortTitle>Damaskus</z:shortTitle>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                        <vcard:locality>Damaskus</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name/>
+            </foaf:Organization>
+        </dc:publisher>
+        <link:link rdf:resource="#d4e249"/>
+        <link:link rdf:resource="#d4e254"/>
+        <dcterms:isReferencedBy rdf:resource="#40BC4143-CABB-441A-BFC1-1E1C9328740F-abstract"/>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Festivities</dc:subject>
+        <dc:subject>Funfair</dc:subject>
+        <dc:subject>German source</dc:subject>
+        <dc:subject>People</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Postcard</dc:subject>
+        <dc:subject>Public gathering</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>V. Appropriation</dc:subject>
+        <dc:subject>Women</dc:subject>
+        <dc:subject>World War, 1914-1918</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>status: complete</dc:subject>
+        <dc:subject>rating: 5</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.delcampe.net/en_GB/collectables/item/096537990.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>1917</dc:date>
+        <z:medium>Postcard</z:medium>
+        <z:libraryCatalog>delcampe.net</z:libraryCatalog>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>096537990</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dcterms:dateSubmitted>2013-02-27</dcterms:dateSubmitted>
+        <dc:description>Citation Key: DamaskusJahrmarktKarussell+1917
+BibTeX Key: DamaskusJahrmarktKarussell+1917
 place: Damaskus
 uuid: 40BC4143-CABB-441A-BFC1-1E1C9328740F
 </dc:description>
-      <dcterms:abstract>showing a large crowd at a funfair with carrousels. two women with covered faces </dcterms:abstract>
-   </bib:Book>
-   <bib:Memo rdf:about="#40BC4143-CABB-441A-BFC1-1E1C9328740F-abstract">
-      <rdf:value>
+        <dcterms:abstract>showing a large crowd at a funfair with carrousels. two women with covered faces </dcterms:abstract>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#40BC4143-CABB-441A-BFC1-1E1C9328740F-abstract">
+        <rdf:value>
                     &lt;h1&gt;# abstract&lt;/h1&gt;
                     showing a large crowd at a funfair with carrousels. two women with covered faces </rdf:value>
-      <dc:subject>abstract</dc:subject>
-   </bib:Memo>
-   <bib:Book rdf:about="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28">
-      <z:itemType>artwork</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Series>
-            <dc:title>Édition J. Deychamps</dc:title>
-            <dc:identifier>11</dc:identifier>
-         </bib:Series>
-      </dcterms:isPartOf>
-      <dc:title>Banlieue DAMAS Distractions des Druzes</dc:title>
-      <z:shortTitle>Banlieue DAMAS Distractions des Druzes</z:shortTitle>
-      <dc:publisher>
-         <foaf:Organization>
-            <vcard:adr>
-               <vcard:Address>
-                  <vcard:locality/>
-               </vcard:Address>
-            </vcard:adr>
-            <foaf:name>Bézier</foaf:name>
-         </foaf:Organization>
-      </dc:publisher>
-      <dcterms:isReferencedBy rdf:resource="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28-abstract"/>
-      <dc:subject>Damascus</dc:subject>
-      <dc:subject>Dancing</dc:subject>
-      <dc:subject>Druze</dc:subject>
-      <dc:subject>Photograph</dc:subject>
-      <dc:subject>Postcard</dc:subject>
-      <dc:subject>Public ritual</dc:subject>
-      <dc:subject>Source</dc:subject>
-      <dc:subject>coloured photograph</dc:subject>
-      <dc:subject>writing: 2022 Entertainment</dc:subject>
-      <dc:subject>status: imported from Sente</dc:subject>
-      <dc:identifier>
-         <dcterms:URI>
-            <rdf:value>https://www.delcampe.net/en_GB/collectables/item/249473149.html</rdf:value>
-         </dcterms:URI>
-      </dc:identifier>
-      <dc:date/>
-      <z:medium>Postcard</z:medium>
-      <z:libraryCatalog>delcampe.net</z:libraryCatalog>
-      <dc:subject>
-         <dcterms:LCC>
-            <rdf:value>249473149</rdf:value>
-         </dcterms:LCC>
-      </dc:subject>
-      <dcterms:dateSubmitted>2014-02-04</dcterms:dateSubmitted>
-      <dc:description>Citation Key: BanlieueDamasDistractionsDes
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+    <z:Attachment rdf:about="#d4e249">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1917%20Damaskus.%20Jahrmarkt%20Karussell.jpg"/>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#d4e254">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/1917%20Damaskus.%20Jahrmarkt%20Karussell%20%232.jpg"/>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
+    <bib:Illustration rdf:about="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>Édition J. Deychamps</dc:title>
+                <dc:identifier>11</dc:identifier>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:title>Banlieue DAMAS Distractions des Druzes</dc:title>
+        <z:shortTitle>Banlieue DAMAS Distractions des Druzes</z:shortTitle>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                        <vcard:locality/>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Bézier</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <link:link rdf:resource="#d4e351"/>
+        <dcterms:isReferencedBy rdf:resource="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28-abstract"/>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Dancing</dc:subject>
+        <dc:subject>Druze</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Postcard</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>coloured photograph</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.delcampe.net/en_GB/collectables/item/249473149.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date/>
+        <z:medium>Postcard</z:medium>
+        <z:libraryCatalog>delcampe.net</z:libraryCatalog>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>249473149</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dcterms:dateSubmitted>2014-02-04</dcterms:dateSubmitted>
+        <dc:description>Citation Key: BanlieueDamasDistractionsDes
+BibTeX Key: BanlieueDamasDistractionsDes
 uuid: D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28
 </dc:description>
-      <dcterms:abstract>Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps </dcterms:abstract>
-   </bib:Book>
-   <bib:Memo rdf:about="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28-abstract">
-      <rdf:value>
+        <dcterms:abstract>Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps </dcterms:abstract>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#D3ECAAEC-4CAC-48CA-94FC-C917E24F6E28-abstract">
+        <rdf:value>
                     &lt;h1&gt;# abstract&lt;/h1&gt;
                     Coloured version of a postcard showing a sword dance. According to the seller Édition L. Férid. Judged by the characteristic font used for “DAMAS”, I would reckon Édition J. Deychamps </rdf:value>
-      <dc:subject>abstract</dc:subject>
-   </bib:Memo>
-   <bib:Book rdf:about="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A">
-      <z:itemType>artwork</z:itemType>
-      <dcterms:isPartOf>
-         <bib:Series>
-            <dc:title>Ken and Jenny Jacobson Orientalist Photography Collection</dc:title>
-            <dc:identifier>gri_2008_r_3_1972</dc:identifier>
-         </bib:Series>
-      </dcterms:isPartOf>
-      <dc:title>Damas, depart à la caravane par la Mecque</dc:title>
-      <z:shortTitle>Damas, depart à la caravane</z:shortTitle>
-      <z:artists>
-         <rdf:Seq>
-            <rdf:li>
-               <foaf:Person>
-                  <foaf:surname>Ḥakīm</foaf:surname>
-                  <foaf:givenName>Sulaymān</foaf:givenName>
-               </foaf:Person>
-            </rdf:li>
-         </rdf:Seq>
-      </z:artists>
-      <dc:publisher>
-         <foaf:Organization>
-            <vcard:adr>
-               <vcard:Address>
-                  <vcard:locality>Damas</vcard:locality>
-               </vcard:Address>
-            </vcard:adr>
-            <foaf:name/>
-         </foaf:Organization>
-      </dc:publisher>
-      <dcterms:isReferencedBy rdf:resource="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A-abstract"/>
-      <dc:subject>Damascus</dc:subject>
-      <dc:subject>Digital copy</dc:subject>
-      <dc:subject>Hajj departure</dc:subject>
-      <dc:subject>Midan</dc:subject>
-      <dc:subject>Photograph</dc:subject>
-      <dc:subject>Public gathering</dc:subject>
-      <dc:subject>Public ritual</dc:subject>
-      <dc:subject>Source</dc:subject>
-      <dc:subject>V. Appropriation</dc:subject>
-      <dc:subject>approximate date</dc:subject>
-      <dc:subject>referenced: PhD thesis</dc:subject>
-      <dc:subject>writing: 2022 Entertainment</dc:subject>
-      <dc:subject>status: imported from Sente</dc:subject>
-      <dc:subject>status: complete</dc:subject>
-      <dc:subject>rating: 4</dc:subject>
-      <dc:identifier>
-         <dcterms:URI>
-            <rdf:value>http://hdl.handle.net/10020/2008r3</rdf:value>
-         </dcterms:URI>
-      </dc:identifier>
-      <dc:date>1887</dc:date>
-      <z:archive>GRI</z:archive>
-      <z:libraryCatalog>The Getty Research Institute</z:libraryCatalog>
-      <dc:subject>
-         <dcterms:LCC>
-            <rdf:value>Box T56</rdf:value>
-         </dcterms:LCC>
-      </dc:subject>
-      <dcterms:dateSubmitted>2013-09-24</dcterms:dateSubmitted>
-      <dc:description>Citation Key: Ḥakīm+1880
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+    <z:Attachment rdf:about="#d4e351">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/!%20Unknown%20Author(s)/Banlieue%20DAMAS%20Distractions%20des%20Druzes.jpg"/>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
+    <bib:Illustration rdf:about="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A">
+        <z:itemType>artwork</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Ken and Jenny Jacobson Orientalist Photography Collection</dc:title>
+                        <dc:identifier>gri_2008_r_3_1972</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:title>Damas, depart à la caravane par la Mecque</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:title>Damas, depart à la caravane par la Mecque</dc:title>
+        <z:shortTitle>Damas, depart à la caravane</z:shortTitle>
+        <z:artists>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ḥakīm</foaf:surname>
+                        <foaf:givenName>Sulaymān</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:artists>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                        <vcard:locality>Damas</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name/>
+            </foaf:Organization>
+        </dc:publisher>
+        <link:link rdf:resource="#d4e482"/>
+        <link:link rdf:resource="#d4e489"/>
+        <dcterms:isReferencedBy rdf:resource="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A-abstract"/>
+        <dc:subject>Damascus</dc:subject>
+        <dc:subject>Digital copy</dc:subject>
+        <dc:subject>Hajj departure</dc:subject>
+        <dc:subject>Midan</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Public gathering</dc:subject>
+        <dc:subject>Public ritual</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>V. Appropriation</dc:subject>
+        <dc:subject>approximate date</dc:subject>
+        <dc:subject>referenced: PhD thesis</dc:subject>
+        <dc:subject>writing: 2022 Entertainment</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:subject>status: complete</dc:subject>
+        <dc:subject>rating: 4</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://hdl.handle.net/10020/2008r3</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>1887</dc:date>
+        <z:medium>Photograph</z:medium>
+        <z:archive>GRI</z:archive>
+        <z:libraryCatalog>The Getty Research Institute</z:libraryCatalog>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>Box T56</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dcterms:dateSubmitted>2013-09-24</dcterms:dateSubmitted>
+        <dc:description>Citation Key: Ḥakīm+1880
+BibTeX Key: Ḥakīm+1880
 place: Damas
+caption: Damas, depart à la caravane par la Mecque
 uuid: 96CFA9FC-8829-4593-9EC5-3DA2C5299B0A
 </dc:description>
-      <dcterms:abstract>el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.&lt;br&gt;The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.&lt;br&gt;The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. &lt;br&gt;the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.&lt;br&gt;From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.&lt;br&gt;15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92</dcterms:abstract>
-   </bib:Book>
-   <bib:Memo rdf:about="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A-abstract">
-      <rdf:value>
+        <dcterms:abstract>el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.&lt;br&gt;The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.&lt;br&gt;The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. &lt;br&gt;the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.&lt;br&gt;From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.&lt;br&gt;15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92</dcterms:abstract>
+    </bib:Illustration>
+    <bib:Memo rdf:about="#96CFA9FC-8829-4593-9EC5-3DA2C5299B0A-abstract">
+        <rdf:value>
                     &lt;h1&gt;# abstract&lt;/h1&gt;
                     el-Hage 2000@172 attributes the image to Tancrède Dumas et fils, ca. 1880. Yet Getty Research Institute has a copy that is signed by Sulaymān Ḥakīm.&lt;br&gt;The image was published as early as 1899 in Germany in  {Oberhummer 1899@38a}.&lt;br&gt;The image shows the Maḥmal after it passed the Ṣābūniyya Mosque. Soldiers and Bedouins accompany the Maḥmal. The caravan is headed by  a music corps can be seen with  a row of 4 tubas and a row of 10 trumpets. the conductor is carried on a sedan/ platform, as he turns his back to the south. In front walk some other people, who do not look very official. &lt;br&gt;the road is heavily crowded with men AND WOMEN. Many people sit and stand on the roofs of the lining buildings, again including many women.&lt;br&gt;From the state of the vegetation, and a woman on the roofs carrying an umbrella to protect her from the sun, we can safely deduce summer as the time of the event.&lt;br&gt;15 Shawwāl as the date for the procession fell between May and late September, 1880-1892 and 1912-1924. When the Mīdān road was paved in 1885/86, the tomb of Mukhtār Pasha had not yet been torn down, which means, the image must have been taken 1886-92</rdf:value>
-      <dc:subject>abstract</dc:subject>
-   </bib:Memo>
+        <dc:subject>abstract</dc:subject>
+    </bib:Memo>
+    <z:Attachment rdf:about="#d4e482">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource
+            rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n/1887%20Damas%2C%20depart%20a%CC%80%20la%20caravane%20par%20la%20Mecque%20H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n.jpg"/>
+        <dc:title>Hage</dc:title>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#d4e489">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource
+            rdf:resource="file:///BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n/1887%20Damas%2C%20depart%20a%CC%80%20la%20caravane%20par%20la%20Mecque%20H%CC%A3aki%CC%84m%2C%20Sulayma%CC%84n.png"/>
+        <dc:title>Getty</dc:title>
+        <z:linkMode>1</z:linkMode>
+    </z:Attachment>
 </rdf:RDF>

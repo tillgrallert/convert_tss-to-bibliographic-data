@@ -3,6 +3,62 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd">
     <tss:library>
         <tss:references>
+            <tss:reference xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" xmlns:bin="http://expath.org/ns/binary" xmlns:fnxpath="http://www.w3.org/2005/xpath-functions"
+                xmlns:oap="https://openarabicpe.github.io/ns">
+                <tss:publicationType name="Photograph"/>
+                <tss:authors>
+                    <tss:author role="Photographer">
+                        <tss:surname>Bonfils</tss:surname>
+                        <tss:forenames/>
+                        <tss:initials/>
+                    </tss:author>
+                </tss:authors>
+                <tss:dates>
+                    <tss:date day="" month="" type="Publication" year=""/>
+                    <tss:date day="22" month="10" type="Entry" year="2015"/>
+                    <tss:date day="10" month="8" type="Modification" year="2022"/>
+                    <tss:date day="" month="" type="Retrieval" year=""/>
+                </tss:dates>
+                <tss:characteristics>
+                    <tss:characteristic name="UUID">D46AC804-1FCF-4194-B5BE-2082E801E422</tss:characteristic>
+                    <tss:characteristic name="publicationTitle">Album 407 [c 1867-c 1914]</tss:characteristic>
+                    <tss:characteristic name="articleTitle">Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</tss:characteristic>
+                    <tss:characteristic name="abstractText">Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</tss:characteristic>
+                    <tss:characteristic name="Caption">Jeune fille du Liban coiffée du tentour</tss:characteristic>
+                    <tss:characteristic name="call-num">EAP644/1/40 TFDC_407_126_0679</tss:characteristic>
+                    <tss:characteristic name="URL">https://eap.bl.uk/archive-file/EAP644-1-40</tss:characteristic>
+                    <tss:characteristic name="Item">679</tss:characteristic>
+                    <tss:characteristic name="publisher">Maison Bonfils</tss:characteristic>
+                    <tss:characteristic name="Signatur">EAP644/1/40 TFDC_407_126_0679</tss:characteristic>
+                    <tss:characteristic name="Collection description">The Fouad Debbas Collection</tss:characteristic>
+                    <tss:characteristic name="publicationCountry">Beyrouth</tss:characteristic>
+                    <tss:characteristic name="User rating">2</tss:characteristic>
+                    <tss:characteristic name="Repository">EAP</tss:characteristic>
+                    <tss:characteristic name="Citation identifier">TFDC_407_126_0679</tss:characteristic>
+                    <tss:characteristic name="Album">407</tss:characteristic>
+                    <tss:characteristic name="URL">http://eap.bl.uk/EAPDigitalItems/EAP644/EAP644_1_40-TFDC_407_126_0679_01_L.jpg</tss:characteristic>
+                    <tss:characteristic name="publicationStatus">Unknown</tss:characteristic>
+                </tss:characteristics>
+                <tss:keywords>
+                    <tss:keyword assigner="Sente User Sebastian" quickTagHierarchy="People|">People</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian" quickTagHierarchy="Portrait|People|">Portrait</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian" quickTagHierarchy="Source|">Source</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian" quickTagHierarchy="Lebanon|Locations|">Lebanon</tss:keyword>
+                    <tss:keyword assigner="Sente User Sebastian" quickTagHierarchy="Photograph|Source|">Photograph</tss:keyword>
+                </tss:keywords>
+                <tss:notes/>
+                <tss:attachments>
+                    <tss:attachmentReference editor="Sente User Sebastian" type="" when-iso="2015-10-22T13:54:30+0000" xml:id="uuid_6E50ABF8-182E-4F7F-919B-65332E371EF3">
+                        <name>Scan 1</name>
+                        <URL storageMethod="Base Directory-Relative, Optionally Alias-Backed" xml:id="uuid_5AEEF5E4-3F40-4BEA-8E70-495507112F8D"
+                            >/Users/Shared/BachCore/SenteLibrary/BachBibliographie.sente6lib/Contents/Attachments/Bonfils/Album 407 [c 1867-c 1914] Image 80 Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANO #2.jpg</URL>
+                    </tss:attachmentReference>
+                    <tss:attachmentReference editor="Sente User Sebastian" type="" when-iso="2015-10-22T13:05:21+0000" xml:id="uuid_483A7A2C-8881-4BF1-B0C2-7E84184CCBD4">
+                        <name>URL Scan 2</name>
+                        <URL storageMethod="Remote URL" xml:id="uuid_3EC1CA6D-64B0-4790-A727-184E1D45E8FA">http://eap.bl.uk/EAPDigitalItems/EAP644/EAP644_1_40-TFDC_407_126_0679_02_L.jpg</URL>
+                    </tss:attachmentReference>
+                </tss:attachments>
+            </tss:reference>
             <tss:reference>
                 <tss:publicationType name="Photograph"/>
                 <tss:dates>

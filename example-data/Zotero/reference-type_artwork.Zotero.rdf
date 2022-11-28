@@ -1,5 +1,50 @@
 <rdf:RDF xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:z="http://www.zotero.org/namespaces/export#">
+    <bib:Illustration rdf:about="https://eap.bl.uk/archive-file/EAP644-1-40">
+        <z:itemType>artwork</z:itemType>
+        <z:artists>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bonfils</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:artists>
+        <dc:subject>Lebanon</dc:subject>
+        <dc:subject>Locations</dc:subject>
+        <dc:subject>Locations &gt; Lebanon</dc:subject>
+        <dc:subject>People</dc:subject>
+        <dc:subject>People &gt; Portrait</dc:subject>
+        <dc:subject>Photograph</dc:subject>
+        <dc:subject>Portrait</dc:subject>
+        <dc:subject>Source</dc:subject>
+        <dc:subject>Source &gt; Photograph</dc:subject>
+        <dc:subject>status: imported from Sente</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://eap.bl.uk/archive-file/EAP644-1-40</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:subject>
+            <dcterms:LCC>
+                <rdf:value>EAP644/1/40</rdf:value>
+            </dcterms:LCC>
+        </dc:subject>
+        <dc:coverage>TFDC_407_126_0679</dc:coverage>
+        <dc:description>Publisher: Maison Bonfils
+            Series Number: 679
+            Series: The Fouad Debbas Collection
+            Citation Key: TFDC_407_126_0679
+            BibTeX Key: TFDC_407_126_0679
+            place: Beyrouth
+            uuid: D46AC804-1FCF-4194-B5BE-2082E801E422</dc:description>
+        <z:medium>Photograph</z:medium>
+        <z:libraryCatalog>EAP</z:libraryCatalog>
+        <dcterms:abstract>Image 80: Jeune fille du Liban coiffée du tentour [c 1867-c 1914]. LEBANON, Types &amp; Scenes.</dcterms:abstract>
+        <dc:title>Album 407 [c 1867-c 1914]</dc:title>
+        <z:archive>The Fouad Debbas Collection</z:archive>
+    </bib:Illustration>
     <bib:Illustration
         rdf:about="http://www.delcampe.net/page/item/id,96537990,var,Syrien-Damas-Jahrmarkt-Karussell-Carrousel-Fete-foraine-Syria-prives-carte-photo-191718-serie-WW-I-de-lOrient-Syrie,language,E.html">
         <z:itemType>artwork</z:itemType>
