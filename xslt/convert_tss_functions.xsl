@@ -270,7 +270,7 @@
                 <tei:form n="tss">Photograph</tei:form>
                 <tei:form n="zotero">artwork</tei:form>
                 <tei:form n="marcgt"/>
-                <tei:form n="bib"/>
+                <tei:form n="bib">Illustration</tei:form>
                 <tei:form n="biblatex"/>
                 <tei:form n="csl"/>
             </tei:nym>

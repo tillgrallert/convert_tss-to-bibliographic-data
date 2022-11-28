@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="3.0" xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns"
+<xsl:stylesheet exclude-result-prefixes="#all" version="3.0" xmlns:bib="http://purl.org/net/biblio#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:link="http://purl.org/rss/1.0/modules/link/" xmlns:oape="https://openarabicpe.github.io/ns"
     xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns:vcard="http://nwalsh.com/rdf/vCard#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:z="http://www.zotero.org/namespaces/export#">
@@ -137,6 +137,8 @@
                             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Collection description']"/>
                             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Item']"/>
                         </xsl:when>
+                        <!-- photos from the Fouad Debbas Collection, which are part of albums -->
+                        <!-- everything else -->
                         <xsl:otherwise>
                             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Series']"/>
                             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Series number']"/>
@@ -301,8 +303,8 @@
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:keywords"/>
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'status']"/>
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'rating']"/>
-            <!-- URLs -->
-            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'URL']"/>
+            <!-- URLs; references should not have more than one URL, but in case they do, we can select them here -->
+            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'URL'][1]"/>
             <!-- Identitifiers -->
             <!-- edition -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Edition']"/>
@@ -324,8 +326,13 @@
             </xsl:choose>
             <!-- Medium -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Medium']"/>
+            <!-- in case something is a postcard and Medium is not specified -->
+            <xsl:if test="$v_reference-type-sente = 'Photograph' and not($tss_reference/descendant::tss:characteristic[@name = 'Medium'])">
+                <z:medium>Photograph</z:medium>
+            </xsl:if>
             <!-- Archive, repository -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Repository']"/>
+            <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]"/>
             <!-- Library catalogue, Standort -->
             <xsl:choose>
                 <xsl:when test="$tss_reference/descendant::tss:characteristic[@name = 'Standort'] != ''">
@@ -337,6 +344,7 @@
             </xsl:choose>
             <!-- call number -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'Signatur']"/>
+            <!-- since call-number is processed here, it will always overwrite Signatur data upon import into Zotero -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:characteristic[@name = 'call-num']"/>
             <!-- retrieval date -->
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:date[@type = 'Retrieval']"/>
@@ -362,8 +370,11 @@
                 <xsl:if test="not(contains($v_reference-type-zotero, ('newspaper'))) and not(contains($v_reference-type-zotero, ('book')))">
                     <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'publicationCountry']"/>
                 </xsl:if>
-                <xsl:if test="contains($v_reference-type-sente, 'Archival')">
+                <xsl:if test="contains($v_reference-type-sente, 'Archival') or $tss_reference/descendant::tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]">
                     <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'publicationTitle']"/>
+                </xsl:if>
+                <xsl:if test="contains($v_reference-type-sente, 'Photograph')">
+                    <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'Caption']"/>
                 </xsl:if>
                 <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'UUID']"/>
                 <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'volume']"/>
@@ -476,7 +487,7 @@
     <!-- if used with Better BibTeX, one can set the citation key in the extra field -->
     <xsl:template match="tss:characteristic[@name = 'Citation identifier']" mode="m_extra-field">
         <xsl:variable name="v_bibtex-key">
-            <xsl:apply-templates select="." mode="m_bibtex"/>
+            <xsl:apply-templates mode="m_bibtex" select="."/>
         </xsl:variable>
         <xsl:if test="$v_bibtex-key != ''">
             <xsl:value-of select="concat('Citation Key', $v_separator-key-value, $v_bibtex-key, $v_new-line)"/>
@@ -602,6 +613,11 @@
     <xsl:template match="tss:characteristic[@name = 'Translated title']" mode="m_extra-field">
         <xsl:if test=". != ''">
             <xsl:value-of select="concat('translated-title', $v_separator-key-value, ., $v_new-line)"/>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Caption']" mode="m_extra-field">
+        <xsl:if test=". != ''">
+            <xsl:value-of select="concat('caption', $v_separator-key-value, ., $v_new-line)"/>
         </xsl:if>
     </xsl:template>
 
@@ -823,23 +839,28 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="tss:characteristic[@name = 'publicationTitle'][contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')]" mode="m_extra-field">
+    <xsl:template match="tss:characteristic[@name = 'publicationTitle']" mode="m_extra-field">
         <!-- need to test if title is only an automatically formatted reference: indicator is the presence of the call number -->
-        <xsl:variable name="v_call-num">
-            <xsl:choose>
-                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur'] != ''">
-                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Signatur']"/>
-                </xsl:when>
-                <xsl:when test="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num'] != ''">
-                    <xsl:value-of select="ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'call-num']"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:if test=". != ''">
-            <xsl:if test="$v_call-num != '' and contains(., $v_call-num)">
-                <!-- write Citation to extra field -->
-                <xsl:value-of select="concat('Citation', $v_separator-key-value, ., $v_new-line)"/>
+        <xsl:if test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')">
+            <xsl:variable name="v_call-num">
+                <xsl:choose>
+                    <xsl:when test="parent::tss:characteristics/tss:characteristic[@name = 'Signatur'] != ''">
+                        <xsl:value-of select="parent::tss:characteristics/tss:characteristic[@name = 'Signatur']"/>
+                    </xsl:when>
+                    <xsl:when test="parent::tss:characteristics/tss:characteristic[@name = 'call-num'] != ''">
+                        <xsl:value-of select="parent::tss:characteristics/tss:characteristic[@name = 'call-num']"/>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:variable>
+            <xsl:if test=". != ''">
+                <xsl:if test="$v_call-num != '' and contains(., $v_call-num)">
+                    <!-- write Citation to extra field -->
+                    <xsl:value-of select="concat('Citation', $v_separator-key-value, ., $v_new-line)"/>
+                </xsl:if>
             </xsl:if>
+        </xsl:if>
+        <xsl:if test="parent::tss:characteristics/tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]">
+            <xsl:value-of select="concat('Album', $v_separator-key-value, ., $v_new-line)"/>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = ('Short Titel', 'Shortened title')]" mode="m_tss-to-zotero-rdf">
@@ -937,9 +958,19 @@
     <!-- information for locating physical artefact -->
     <xsl:template match="tss:characteristic[@name = 'Repository']" mode="m_tss-to-zotero-rdf">
         <xsl:if test=". != ''">
-            <z:archive>
-                <xsl:value-of select="."/>
-            </z:archive>
+            <xsl:choose>
+                <!-- add processing for Debbas collection -->
+                <xsl:when test="parent::tss:characteristics/tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]">
+                    <z:libraryCatalog>
+                        <xsl:value-of select="."/>
+                    </z:libraryCatalog>
+                </xsl:when>
+                <xsl:otherwise>
+                    <z:archive>
+                        <xsl:value-of select="."/>
+                    </z:archive>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = ('Standort', 'Web data source')]" mode="m_tss-to-zotero-rdf">
@@ -947,6 +978,13 @@
             <z:libraryCatalog>
                 <xsl:value-of select="."/>
             </z:libraryCatalog>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]" mode="m_tss-to-zotero-rdf">
+        <xsl:if test=". != ''">
+            <z:archive>
+                <xsl:value-of select="."/>
+            </z:archive>
         </xsl:if>
     </xsl:template>
     <xsl:template match="tss:characteristic[@name = 'Medium']" mode="m_tss-to-zotero-rdf">
@@ -963,7 +1001,15 @@
             <dc:subject>
                 <dcterms:LCC>
                     <rdf:value>
-                        <xsl:apply-templates/>
+                        <xsl:choose>
+                            <!-- processing for Debbas collection -->
+                            <xsl:when test="matches(., 'TFDC_')">
+                                <xsl:value-of select="replace(., '^(.*?)\s*TFDC_.+$', '$1')"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:apply-templates/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </rdf:value>
                 </dcterms:LCC>
             </dc:subject>
@@ -976,6 +1022,11 @@
                 <xsl:when test="contains(ancestor::tss:reference/tss:publicationType/@name, 'Archival')">
                     <dc:coverage>
                         <xsl:apply-templates/>
+                    </dc:coverage>
+                </xsl:when>
+                <xsl:when test="parent::tss:characteristics/tss:characteristic[@name = 'Collection description'][contains(., 'Fouad Debbas')]">
+                    <dc:coverage>
+                        <xsl:value-of select="replace(., '^.*(TFDC_.+)$', '$1')"/>
                     </dc:coverage>
                 </xsl:when>
                 <xsl:otherwise>
@@ -1262,7 +1313,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:variable name="v_css-div" select="'display: block; border: 1px solid black;'"/>
     <xsl:function name="oape:bibliography-tss-note-to-html">
         <!-- expects a <tss:note> as input -->
