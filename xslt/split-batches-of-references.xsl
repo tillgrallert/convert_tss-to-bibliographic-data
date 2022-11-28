@@ -25,9 +25,12 @@
         <xsl:param name="p_onset" select="1"/>
         <xsl:param name="p_batch" select="1"/>
         <xsl:variable name="v_terminus" select="$p_onset + $p_batch-size - 1"/>
+        <xsl:variable name="v_total" select="count(tss:reference)"/>
         <xsl:message>
             <xsl:text>there are </xsl:text>
-            <xsl:value-of select="ceiling(count(element()) div $p_batch-size)"/>
+            <xsl:value-of select="$v_total"/>
+            <xsl:text> references in </xsl:text>
+            <xsl:value-of select="ceiling($v_total div $p_batch-size)"/>
             <xsl:text> batches</xsl:text>
         </xsl:message>
         <!-- current batch -->
@@ -40,14 +43,20 @@
                 <xsl:apply-templates select="ancestor::tss:senteContainer/@*"/>
                 <xsl:element name="tss:library">
                     <xsl:element name="tss:references">
-                        <xsl:apply-templates select="element()[position() &gt;= $p_onset][position() &lt;= $v_terminus]"/>
+                        <xsl:for-each select="tss:reference">
+                            <xsl:variable name="v_position" select="count(preceding-sibling::tss:reference) + 1"/>
+                            <xsl:if test="($v_position &gt;= $p_onset) and ($v_position &lt;= $v_terminus)">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+<!--                        <xsl:apply-templates select="tss:reference[position() &gt;= $p_onset][position() &lt;= $v_terminus]"/>-->
                     </xsl:element>
                 </xsl:element>
             </xsl:element>
         </xsl:result-document>
         <!-- next batch -->
         <!-- check if there is anything left -->
-        <xsl:if test="element()[position() gt $v_terminus]">
+        <xsl:if test="tss:reference[position() gt $v_terminus]">
             <xsl:message>
                 <xsl:text>there is another batch</xsl:text>
             </xsl:message>
@@ -56,6 +65,15 @@
                 <xsl:with-param name="p_batch" select="$p_batch + 1"/>
             </xsl:apply-templates>
         </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tss:reference">
+        <!--<xsl:message>
+            <xsl:value-of select="@xml:id"/>
+        </xsl:message>-->
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
     </xsl:template>
 
     <xsl:template match="rdf:RDF">
