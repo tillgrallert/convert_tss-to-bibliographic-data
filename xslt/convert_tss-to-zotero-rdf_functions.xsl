@@ -1343,7 +1343,7 @@
             <xsl:with-param name="p_css" select="$v_css-background-color"/>
         </xsl:apply-templates>
         <!-- add pandoc citation -->
-        <![CDATA[<p style="text-align: right;">]]>{<xsl:value-of select="$v_pandoc-citation"/>}<![CDATA[</p>]]>
+        <![CDATA[<p style="text-align: right;">]]>[<xsl:value-of select="$v_pandoc-citation"/>]<![CDATA[</p>]]>
         <xsl:apply-templates mode="m_tss-notes-to-html" select="$tss_note/tss:comment"/>
         <![CDATA[</div>]]>
         <![CDATA[<hr/>]]>
