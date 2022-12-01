@@ -350,7 +350,10 @@
             <xsl:apply-templates mode="m_tss-to-zotero-rdf" select="$tss_reference/descendant::tss:date[@type = 'Retrieval']"/>
             <!-- extra field: map all sorts of custom fields -->
             <dc:description>
-                <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'Citation identifier']"/>
+<!--                <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'Citation identifier']"/>-->
+                <xsl:call-template name="t_bibtex-extra">
+                    <xsl:with-param name="tss_reference" select="$tss_reference"/>
+                </xsl:call-template>
                 <!-- dates -->
                 <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'Date Rumi']"/>
                 <xsl:apply-templates mode="m_extra-field" select="$tss_reference/descendant::tss:characteristic[@name = 'Date Hijri']"/>
@@ -485,10 +488,12 @@
         </xsl:if>
     </xsl:template>
     <!-- if used with Better BibTeX, one can set the citation key in the extra field -->
-    <xsl:template match="tss:characteristic[@name = 'Citation identifier']" mode="m_extra-field">
-        <xsl:variable name="v_bibtex-key">
+    <xsl:template name="t_bibtex-extra">
+        <xsl:param name="tss_reference"/>
+        <!--<xsl:variable name="v_bibtex-key">
             <xsl:apply-templates mode="m_bibtex" select="."/>
-        </xsl:variable>
+        </xsl:variable>-->
+        <xsl:variable name="v_bibtex-key" select="oape:bibtex-key($tss_reference)"/>
         <xsl:if test="$v_bibtex-key != ''">
             <xsl:value-of select="concat('Citation Key', $v_separator-key-value, $v_bibtex-key, $v_new-line)"/>
             <xsl:value-of select="concat('BibTeX Key', $v_separator-key-value, $v_bibtex-key, $v_new-line)"/>
@@ -500,6 +505,18 @@
             <xsl:value-of select="replace(., '\s+', $v_cite-key-whitespace-replacement)"/>
         </xsl:if>
     </xsl:template>
+    <xsl:function name="oape:bibtex-key">
+        <xsl:param name="tss_reference" as="node()"/>
+        <xsl:choose>
+            <xsl:when test="$tss_reference/tss:characteristics/tss:characteristic[@name = 'Citation identifier'] != ''">
+                <xsl:value-of select="replace($tss_reference/tss:characteristics/tss:characteristic[@name = 'Citation identifier'], '\s+', $v_cite-key-whitespace-replacement)"/>
+            </xsl:when>
+            <!-- use UUID for fallback -->
+            <xsl:otherwise>
+                <xsl:value-of select="$tss_reference/tss:characteristics/tss:characteristic[@name = 'UUID']"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
     <xsl:template match="tss:characteristic[@name = 'Date Rumi']" mode="m_extra-field">
         <!-- try to establish the calendar -->
         <xsl:variable name="v_calendar-guessed" select="oape:date-establish-calendar(., 'date', false())"/>
@@ -1325,7 +1342,8 @@
         </xsl:variable>
         <xsl:variable name="v_pandoc-citation">
             <xsl:text>@</xsl:text>
-            <xsl:apply-templates mode="m_bibtex" select="$tss_note/ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Citation identifier']"/>
+<!--            <xsl:apply-templates mode="m_bibtex" select="$tss_note/ancestor::tss:reference/tss:characteristics/tss:characteristic[@name = 'Citation identifier']"/>-->
+            <xsl:value-of select="oape:bibtex-key($tss_note/ancestor::tss:reference)"/>
             <xsl:if test="$tss_note/tss:pages != ''">
                 <xsl:text>, </xsl:text>
                 <xsl:value-of select="$tss_note/tss:pages"/>
